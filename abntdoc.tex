@@ -138,7 +138,7 @@ publicado, pois isto \'e feito automaticamente
 O usu\'ario do Bib\TeX\ tem apenas dois comandos \`a disposi{\ca}:
 o comando \verb+\bibliographystyle{+ {\it filename}\verb+}+, 
 que define o estilo bibliogr\'afico,
-e o comando \verb+\bibliography{+{\it filename1, filename2,}\verb+...}+, que
+e o comando \verb+\bibliography{+{\it filename1, filename2,}\verb+\ldots}+, que
 indica em quais arquivos est\~ao os dados bibliogr\'aficos. Voc\^e pode
 ter mais de um arquivo: por exemplo, um arquivo com trabalhos publicados
 por voc\^e ou pelo seu grupo, e outro arquivo com trabalhos publicados
@@ -182,19 +182,19 @@ O funcionamento em conjunto acontece da seguinte maneira:
 \begin{enumerate}
 \item 
 Ao processar o arquivo {\it filename}\verb+.tex+,
-o \LaTeX\ ignora o comando \verb+\bibli+ \verb+ographystyle{...}+,
+o \LaTeX\ ignora o comando \verb+\bibli+ \verb+ographystyle{\ldots}+,
 que para ele n\~ao tem sentido. Pela presen\c{c}a do comando
-\verb+\bibliography{...}+, ele recebe a instru{\ca} de processar a
+\verb+\bibliography{\ldots}+, ele recebe a instru{\ca} de processar a
 bibliografia no arquivo {\it filename}\verb+.bbl+. 
 \item
 Ao ser rodado, o Bib\TeX\, procura no arquivo
-{\it filename}\verb+.tex+ pelos comandos \verb+\bibliographystyle{...}+
-e \verb+\bibliography{...}+. Um define o estilo bibliogr\'afico, o outro
+{\it filename}\verb+.tex+ pelos comandos \verb+\bibliographystyle{\ldots}+
+e \verb+\bibliography{\ldots}+. Um define o estilo bibliogr\'afico, o outro
 indica em qual arquivo est\~ao os dados bibliogr\'aficos.
 A seguir, o Bib\TeX\ busca no arquivo
 {\it filename}\verb+.aux+ as refer\^encias que foram citadas,
 e procura estas refer\^encias no(s) arquivo(s) ``\verb+.bib+'' que
-aparecem no comando \verb+\bibliography{...}+.
+aparecem no comando \verb+\bibliography{\ldots}+.
 Por fim, estas refer\^encias s\~ao formatadas de acordo com o estilo que
 voc\^e escolheu e escritas no arquivo {\it filename}\verb+.bbl+.
 \end{enumerate}

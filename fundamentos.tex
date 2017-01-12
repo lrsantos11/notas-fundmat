@@ -31,6 +31,7 @@
   urlcolor=blue]{hyperref}
 \fi
 \usepackage{natbib}
+\usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[dvips]{graphicx}
@@ -79,13 +80,16 @@
 \newcommand{\rr}{$r$ }
 \newcommand{\parametro}{par\^ametro }
 \graphicspath{{Fig/}}
-\newcommand{\sen}{\mathrm{sen}\,}
+\DeclareMathOperator{\sen}{sen}
 \newcommand{\fim}{\begin{flushright}$\Box$\end{flushright}}
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\espaco}{\textrm{  }}
 \newcommand{\uni}{\cup}
 \newcommand{\inter}{\cap}
 \newcommand{\bola}{\circ}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\Ima}{Im}
+
 \setstretch{1.0}
 \makeindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +122,7 @@
   leftline=true,
   bottomline=true,]{axiob}{Axioma}[chapter]
 \newtheorem{coro}{Corol\'a rio}
-\newtheorem{prop}{Proposi\cao } 
+\newtheorem{prop}{Proposi\cao }
 \newtheorem{lem}{Lema }
 \newtheorem{ejem}{Exemplo}
 \newtheorem{nota}{Nota}

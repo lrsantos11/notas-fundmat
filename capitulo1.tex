@@ -684,12 +684,12 @@ Quando ganhamos uma discuss\aoi? Claramente, tirando intimida\caoi, coer\cao ou 
 
 Um {\it argumento}\index{Argumento} (ou teorema) \'e uma proposi\cao da forma
 \[
-(p_1\ee p_2\ee ... \ee p_n)\to q.
+(p_1\ee p_2\ee \ldots \ee p_n)\to q.
 \] 
 
-Diremos que $p_1$, $p_2$, ..., $p_n$ s\ao {\it premissas}\index{Premissas} (ou hip\'otese\index{Hip\'otese}) e $q$ \'e a {\it conclus\aoi}.\index{Conclus\aoi} Um argumento \'e v\'alido (ou um teorema \'e verdade) se \'e uma tautologia. Neste caso, dizemos que $q$ (a conclus\aoi) \'e uma {\it consequ\^encia l\'ogica}\index{Consequ\^encia L\'ogica} de $p_1$, $p_2$, ..., $p_n$ (as premissas). 
+Diremos que $p_1$, $p_2$, \ldots, $p_n$ s\ao {\it premissas}\index{Premissas} (ou hip\'otese\index{Hip\'otese}) e $q$ \'e a {\it conclus\aoi}.\index{Conclus\aoi} Um argumento \'e v\'alido (ou um teorema \'e verdade) se \'e uma tautologia. Neste caso, dizemos que $q$ (a conclus\aoi) \'e uma {\it consequ\^encia l\'ogica}\index{Consequ\^encia L\'ogica} de $p_1$, $p_2$, \ldots, $p_n$ (as premissas). 
 
-Observe que um argumento v\'alido \'e uma implica\cao l\'ogica. Pensando em tabelas verdade para a implica\cao vemos que isto significa que sempre que $p_1$, $p_2$, ..., $p_n$ s\ao verdade ent\ao $q$ tamb\'em \'e verdade. Vista por esta perspectiva, a defini\cao de argumento v\'alido dada acima parecer concordar com o significado que usualmente damos. Se as premissas s\ao todas verdade e o argumento \'e v\'alido ent\ao a conclus\ao \'e necessariamente verdade. Note que, se o argumento \'e v\'alido, a conclus\ao pode ser verdade ou falsa, tudo que est\'a afirmado \'e que se as premissas s\ao todas verdade ent\ao a conclus\ao necessariamente \'e verdade. Por exemplo, considere o seguinte argumento:
+Observe que um argumento v\'alido \'e uma implica\cao l\'ogica. Pensando em tabelas verdade para a implica\cao vemos que isto significa que sempre que $p_1$, $p_2$, \ldots, $p_n$ s\ao verdade ent\ao $q$ tamb\'em \'e verdade. Vista por esta perspectiva, a defini\cao de argumento v\'alido dada acima parecer concordar com o significado que usualmente damos. Se as premissas s\ao todas verdade e o argumento \'e v\'alido ent\ao a conclus\ao \'e necessariamente verdade. Note que, se o argumento \'e v\'alido, a conclus\ao pode ser verdade ou falsa, tudo que est\'a afirmado \'e que se as premissas s\ao todas verdade ent\ao a conclus\ao necessariamente \'e verdade. Por exemplo, considere o seguinte argumento:
 \[
 (\nao q \ee (p\to q))\to \nao p.
 \]
@@ -770,7 +770,7 @@ Embora o procedimento acima de usar tabelas verdade para verificar a validade do
 
 Outro m\'etodo de demonstrar (provar) a validade de um argumento \'e chamada de {\it princ\ih pio de demonstra\cao}:\index{Princ\ih pio de Demonstra\cao}
 
-A demonstra\cao de que o argumento $(p_1\ee p_2\ee ...\ee p_n)\to q$ \'e v\'alido \'e uma sequ\^encia de proposi\coes $s_1,s_2,...,s_k$ de forma que $s_k$ (a \'ultima proposi\cao na sequ\^encia) \'e \qq e cada $s_i$, $1\leq i \leq k$, na sequ\^encia satisfaz um ou mais dos seguintes requerimentos:  
+A demonstra\cao de que o argumento $(p_1\ee p_2\ee \ldots\ee p_n)\to q$ \'e v\'alido \'e uma sequ\^encia de proposi\coes $s_1,s_2,\ldots,s_k$ de forma que $s_k$ (a \'ultima proposi\cao na sequ\^encia) \'e \qq e cada $s_i$, $1\leq i \leq k$, na sequ\^encia satisfaz um ou mais dos seguintes requerimentos:  
 \begin{enumerate}[{\bf a)}]
 \item $s_i$ \'e uma das hip\'oteses.
 \item $s_i$ \'e uma tautologia.
@@ -847,7 +847,7 @@ Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
 
 Uma extens\ao do princ\ih pio de demonstra\caoi, chamado de m\'etodo de {\it demonstra\cao indireta}\index{Demonstra\caoi!Indireta} (ou demonstra\cao por contradi\caoi\index{Demonstra\caoi!Contradi\caoi}) \'e baseada na equival\^encia l\'ogica reductio ad absurdum (item 14 da lista de tautologias). Aplicando esta forma para nosso argumento temos:
 \[
-((p_1\ee p_2\ee ... \ee p_n)\to q)\leftrightarrow((p_1\ee p_2\ee ... \ee p_n \ee \nao q)\to{\bf c}).
+((p_1\ee p_2\ee \ldots \ee p_n)\to q)\leftrightarrow((p_1\ee p_2\ee \ldots \ee p_n \ee \nao q)\to{\bf c}).
 \]
 Como esta \'e uma equival\^encia l\'ogica podemos substituir o lado esquerdo pelo lado direito. Isto significa que em nossa demonstra\cao temos uma hip\'otese adicional, $\nao q$ (a nega\cao da conclus\aoi). Nossa demonstra\cao estar\'a completa assim que obtermos uma contradi\caoi.
 
@@ -1045,13 +1045,13 @@ ser\'a dado valor verdade de V se $p(x)$ for verdade para cada interpreta\cao de
 \[
 \exists x \textrm{ em } D \ni p(x)
 \] 
-ser\'a dado valor verdade de V se $p(x)$ \'e verdade para pelo menos uma interpreta\cao de $x$ em $D$, caso contr\'ario ser\'a dado o valor verdade de F. Portanto, vemos que se $D$ \'e finito, digamos com elementos $x_1,x_2,...,x_n$, ent\ao
+ser\'a dado valor verdade de V se $p(x)$ \'e verdade para pelo menos uma interpreta\cao de $x$ em $D$, caso contr\'ario ser\'a dado o valor verdade de F. Portanto, vemos que se $D$ \'e finito, digamos com elementos $x_1,x_2,\ldots,x_n$, ent\ao
 \[
 \forall x \textrm{ em } D, p(x)
 \] 
 \'e equivalente a uma conjun\caoi, isto \'e,
 \[
-p(x_1)\ee p(x_2)\ee ... \ee p(x_n),
+p(x_1)\ee p(x_2)\ee \ldots \ee p(x_n),
 \]
 enquanto
 \[
@@ -1059,7 +1059,7 @@ enquanto
 \]
 \'e equivalente a uma disjun\caoi, isto \'e
 \[
-p(x_1)\ou p(x_2)\ou ... \ou p(x_n).
+p(x_1)\ou p(x_2)\ou \ldots \ou p(x_n).
 \]
 Por exemplo, se $D=\{1,2,3,4\}$, $S=\{-1,0,1,2\}$ e $p$ \'e a fun\cao proposicional dada por $p(x)$ \'e ``$x<3$'' ent\ao 
 \[
@@ -1187,7 +1187,7 @@ Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' 
 \item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.
 
 %excercicio3
-\item Sejam $D$ o conjunto dos n\'umeros naturais (isto \'e, $D=\{1,2,3,4,5,...\}$), $p(x)$ ``$x$ \'e par'', $q(x)$ ``$x$ \'e divis\ih vel por $3$'' e $r(x)$ ``$x$ \'e div\ih sivel por $4$.'' Para cada uma das proposi\coes abaixo, expresse em Portugu\^es, determine seu valor verdade e d\^e uma nega\cao em Portugu\^es.  
+\item Sejam $D$ o conjunto dos n\'umeros naturais (isto \'e, $D=\{1,2,3,4,5,\ldots\}$), $p(x)$ ``$x$ \'e par'', $q(x)$ ``$x$ \'e divis\ih vel por $3$'' e $r(x)$ ``$x$ \'e div\ih sivel por $4$.'' Para cada uma das proposi\coes abaixo, expresse em Portugu\^es, determine seu valor verdade e d\^e uma nega\cao em Portugu\^es.  
 \begin{enumerate}[a)]
 \item $\forall x \textrm{ em } D, p(x)$.
 \item $\forall x \textrm{ em } D, p(x)\ou q(x)$.
@@ -1224,7 +1224,17 @@ Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' 
 
 \section{Mais quantificadores}\label{mquantificadores}
 
-Muitas senten\cc as matem\'aticas envolvem mais de um quantificador. Alguns exemplos destas senten\cc as s\ao ``Para cada n\'umero inteiro $n$ existe um inteiro $k$ tal que $n=2k$,'' ``Para cada linha $l$ e para cada ponto $p$ n\ao pertencente a $l$, existe uma linha $l'$ que passa por $p$ e \'e paralela a $l$,'' ``Para todo $y$ em $B$ existe um $x$ em $A$ tal que $f(x)=y,$'' ``Para todo $x$ no dom\ih nio de $f$  e para cada $\epsilon >0$ existe um $\delta >0$ tal que $|x-c|<\delta$ implica $|f(x)-L|<\epsilon,$'' ``Para cada $x$ em $G$ existe um $x'$ em $G$ tal que $xx'=e.$'' Como pode ser esperado, as dificuldades que se apresentavam quando consideramos um quantificador persiste quando temos mais de um quantificador e, adicionalmente, novas dificuldades surgem, portanto teremos que ser especialmente cuidadosos nas an\'alises destas quantifica\coes de n\ih vel superior.
+Muitas senten\cc as matem\'aticas envolvem mais de um quantificador. Alguns exemplos destas senten\cc as são:
+\begin{itemize}
+ 	\item  ``Para cada n\'umero inteiro $n$ existe um inteiro $k$ tal que $n=2k$'', 
+ 	\item ``Para cada linha $\ell$ e para cada ponto $p$ n\ao pertencente a $\ell$, existe uma linha $\ell'$ que passa por $p$ e \'e paralela a $\ell$'', 
+ 	\item ``Para todo $y$ em $B$ existe um $x$ em $A$ tal que $f(x)=y$'', 
+ 	\item ``Para todo $x$ no dom\ih nio de $f$  e para cada $\epsilon >0$ existe um $\delta >0$ tal que $|x-c|<\delta$ implica $|f(x)-L|<\epsilon$'', 
+ 	\item ``Para cada $x$ em $G$ existe um $x'$ em $G$ tal que $xx'=e$''. 
+ \end{itemize}
+
+ Como pode ser esperado, as dificuldades que se apresentavam quando consideramos um quantificador persiste quando temos mais de um quantificador e, adicionalmente, novas dificuldades surgem, portanto teremos que ser especialmente cuidadosos nas an\'alises destas quantifica\coes de n\ih vel superior.
+
 
 Vamos dar uma olhada na estrutura de uma proposi\cao envolvendo dois quantificadores diferentes, digamos
 \[
@@ -1342,14 +1352,19 @@ ser verdade deve existir uma linha horizontal inteira de ret\^angulos. Assim, pa
 
 Para um exemplo mais ``caseiro'' disso, sejam $S$ o conjunto de todas as pessoas e $p(x,y)$ representando ``$y$ \'e m\~ae de $x$.'' Ent\ao $\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)$ significa todo mundo tem uma m\~ae enquanto $\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)$ significa que existe uma pessoa que \'e m\~ae de todo mundo, claramente duas senten\cc as diferentes.
 
-Vamos tentar entender outro exemplo caseiro: ``Para cada cachorro no sof\'a existe uma pulga no carpete com a propriedade que se o cachorro \'e preto ent\ao a pulga mordeu o cachorro.'' Algumas quest\oes que devemos ser capazes de responder (se entendemos o significado da senten\cc a) s\ao ``Qual \'e a nega\cao desta senten\cc a?'' O que podemos dizer de seus valores verdade se
+Vamos tentar entender outro exemplo caseiro: ``Para cada cachorro no sof\'a existe uma pulga no carpete com a propriedade que se o cachorro \'e preto ent\ao a pulga mordeu o cachorro.'' Algumas quest\oes que devemos ser capazes de responder (se entendemos o significado da senten\cc a) são: 
+\begin{itemize}
+	\item ``Qual \'e a nega\cao desta senten\cc a?'' 
+	\item ``O que podemos dizer de seus valores verdade se
 \begin{enumerate}[a)]
 \item n\ao h\'a nenhum cachorro preto no sof\'a? 
 \item uma pulga em particular mordeu todos os cachorros?
 \item existe um cachorro preto n\ao mordido?
-\item n\ao h\'a pulgas no carpete?
+\item n\ao h\'a pulgas no carpete?''
 \end{enumerate}
-Como responder\ih amos estas quest\ois? Se n\ao podemos responder-las imediatamente, uma boa maneira para come\cc ar \'e traduzir a proposi\cao para a forma simb\'olica. Sejam $S$ o conjunto dos cachorros, $C$ o conjunto das pulgas no carpete, $p(x)$ ``$x$ \'e preto'', e $q(x,y)$  ``$y$ mordeu $x$.'' Ent\ao a proposi\cao \'e
+
+\end{itemize}
+Como responder\ih amos estas quest\ois? Se n\ao podemos respondê-las imediatamente, uma boa maneira para come\cc ar \'e traduzir a proposi\cao para a forma simb\'olica. Sejam $S$ o conjunto dos cachorros, $C$ o conjunto das pulgas no carpete, $p(x)$ ``$x$ \'e preto'', e $q(x,y)$  ``$y$ mordeu $x$.'' Ent\ao a proposi\cao \'e
 \[
 \forall x \textrm{ em } S, \exists y \textrm{ em } C \ni  p(x)\to q(x,y).
 \]
@@ -1396,13 +1411,13 @@ Isto se deve ao fato, como observamos acima, que se o lado esquerdo \'e verdadei
 H\'a outro conjunto de dificuldades que podem surgir, e que \'e distinguir, por exemplo
 \begin{equation*}
  \begin{aligned}
-  \textrm{ `` Todo inteiro \'e par ou \ih mpar,'' }
+  \text{``Todo inteiro \'e par ou \ih mpar,''}
    \end{aligned}
 \end{equation*}
 e
 \begin{equation*}
  \begin{aligned}
-  \textrm{ `` Todo inteiro \'e par ou todo inteiro \'e \ih mpar.'' }
+  \text{``Todo inteiro \'e par ou todo inteiro \'e \ih mpar.''}
    \end{aligned}
 \end{equation*}
 
@@ -1471,7 +1486,7 @@ As ideias e m\'etodos de an\'alise que usamos para senten\cc as envolvendo dois 
 \item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.
 
 %excercicio3
-\item Sejam $p(x,y)$ representando ``$x+2>y$'' e $D$ o conjunto dos n\'umeros naturais ($D=\{1,2,3,...\}$, tamb\'em denotado por $\mathbb{N}$). Escreva em palavras e determine o valor verdade de
+\item Sejam $p(x,y)$ representando ``$x+2>y$'' e $D$ o conjunto dos n\'umeros naturais ($D=\{1,2,3,\ldots\}$, tamb\'em denotado por $\mathbb{N}$). Escreva em palavras e determine o valor verdade de
 \begin{enumerate}[a)]
 \item $\forall x \textrm{ em } D, \exists y \textrm{ em } D \ni p(x,y)$.
 \item $\exists x \textrm{ em } D \ni \forall y \textrm{ em } D, p(x,y)$.
