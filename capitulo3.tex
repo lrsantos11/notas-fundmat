@@ -1,0 +1,382 @@
+%!TEX root = fundamentos.tex
+\chapter{Indu\cao Matem\'atica}
+
+\section{Introdu\cao}\label{cap3introd}
+
+Com frequ\^encia temos que demonstrar proposi\coes da forma $\forall n\in\mathbb{N}, P(n)$. For exemplo, talvez quisessemos mostrar que
+\begin{eqnarray}
+&& \forall n\in\mathbb{N}, 1=2+3+...+n=\frac{1}{2}n(n+1),\label{cap3eq1}\\
+&& \forall n\in\mathbb{N}, (n-2)^2=n^2-2n+4,\label{cap3eq2}\\
+&& \forall n\in\mathbb{N}, n \textrm{ \ih mpar implica } n^2 \textrm{ \ih mpar}. \label{cap3eq3}
+\end{eqnarray}
+Proposi\coes (\ref{cap3eq2}) e (\ref{cap3eq3}) podem ser facilmente demonstradas usando nossa t\'ecnica de vari\'avel fixa mas arbitr\'aria (o leitor poderia tentar fazer estas demonstra\cois), mas a proposi\cao (\ref{cap3eq1}) n\ao pode ser demonstada por este m\'etodo. Uma raz\ao para esta dificuldade \'e que o lado esquerdo da igualdade n\ao \'e uma forma fechada e n\ao podemos lidar com ela algebricamente. De fato, para mesmo entendermos o que o lado esquerdo significa temos que contar com uma certa propriedade dos n\'umeros naturais, a saber, que dado um n\'umero natural $k$ existe um ``pr\'oximo'' n\'umero natural, que chamamos de $k+1$. Assim devemos esperar que uma demonstra\cao de (\ref{cap3eq1}) envolver\'a esta propriedade do ``pr\'oximo'' dos n\'umeros naturais. Este \'e, de fato, o caso que examinaremos na pr\'oxima se\caoi, a propriedade de $\mathbb{N}$ que nos permite demonstrar proposi\coes deste tipo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Princ\ih pio da Indu\cao Matem\'atica}\label{inducao}
+
+
+$\mathbb{N}$, conjunto dos n\'umeros naturais, \'e um objeto matem\'atico familiar que nos familiarizamos desde nossa inf\^ancia. Sabemos de muitas de suas propriedades por experi\^encia, mas provavelmente n\ao pensamos muito sobres elas de um ponto de vista axiomatico. Embora esta seja uma atividade emocionante e recompensadora, temos outros objetivos em mente. O leitor interessado poderia ver a refer\^encia \cite{landau:1966} para um bom tratamento axiom\'atico, que come\cc a com apenas cinco postulados para os n\'umeros naturais (chamados postulados de Peano) e em um procedimento l\'ogico constroe as estruturas maravilhosas dos n\'umeros inteiros, do n\'umeros racionais e dos n\'umeros reais. Aqui, estamos interessados com o seguinte axioma, que \'e o quinto dos cinco postulados de Peano para os n\'umeros naturais:
+\begin{axiob}[Princ\ih pio da Indu\cao Matem\'atica (PIM)]
+\index{Princ\ih pio da Indu\cao Matem\'atica} Seja $S$ um subconjunto de $\mathbb{N}$ com a propriedade que:
+\begin{enumerate}[{\bf a)}]
+\item $1\in S$.
+\item $\forall k\in \mathbb{N}, k\in S \rightarrow k+1\in S$. 
+\end{enumerate}
+Ent\ao $S=\mathbb{N}$. 
+\end{axiob}
+
+Em palavras, este axioma nos diz que se tivermos um conjunto de n\'umeros naturais que cont\'em $1$ e qualquer n\'umero natural que estiver no conjunto, o pr\'oximo n\'umero tamb\'em est\'a no conjunto, ent\ao nosso conjunto cont\'em todos os n\'umeros naturais. Esta propriedade \'e intuitivamente atraente, se $1$ est\'a em $S$ ent\ao o pr\'oximo n\'umero, $2$, deve estar em $S$. Mas se $2$ e\'ta em $S$, $3$ deve estar no conjunto e assim por diante, implicando que todos os n\'umeros naturais pertencem a $S$. Claramente, \'e o ``e assim por diante'' que n\ao pode ser demonstrado, logo este princ\ih pio (o qual chamaremos de o {\it princ\ih pio da indu\cao matem\'atica}) deve ser tomado como um axioma, isto \'e, uma propriedade assumida do conjunto dos n\'umeros naturais.
+
+Podemos utilizar o princ\ih pio da indu\cao matem\'atica para demonstrar uma proposi\cao da forma $\forall n\in\mathbb{N}, p(n)$ deixando $S$ ser o conjunto de n\'umeros naturais para o qual $p$ \'e verdade, isto \'e
+\[
+S=\{n\in\mathbb{N}: p(n) \textrm{ \'e verdade}\}.
+\]
+Assim se podemos mostrar que $p(1)$ \'e verdade ($1\in S$) e $p(k)\rightarrow p(k+1)$ ($k\in S \rightarrow k+1\in S$) ent\ao $S=\mathbb{N}$ ou $\forall n\in \mathbb{N}, p(n)$. Consequentemente, demonstra\coes usando o princ\ih pio da indu\cao matem\'atica usualmente t\^em a seguinte forma:
+\begin{enumerate}[{\bf a)}]
+\item Mostre que $p(1)$ \'e verdade (\`as vezes chamado de {\it passo base}). 
+\item Mostre que $p(k)\to p(k+1)$ (\`as vezes chamado de {\it passo de indu\caoi}).   
+\end{enumerate}
+
+Como um exemplo, considere o cl\'assico teorema, frequentemente associado com uma hit\'oria divertida envolvendo o famoso matem\'atico Gauss quando era um jovem rapaz:
+\[
+\forall n\in\mathbb{N}, 1+2+3+...+n=\frac{n(n+1)}{2}.
+\]
+
+Aqui $p(n)$ \'e ``$1+2+3+...+n=\frac{n(n+1)}{2}$,'' assim $p(1)$ \'e ``$1=\frac{1(1+1)}{2}$,'' que claramente \'e verdade (passo base completo). Para completar o passo da indu\caoi, devemos mostrar que uma certa implica\cao ($\forall k, p(k)\rightarrow p(k+1)$) \'e verdade. Usaremos nosso m\'etodo usual de demonstra\cao direta para demonstrar tal proposi\caoi: escolha um n\'umero natural fixo mas arbritr\'ario $k$, assuma que a hip\'otese ($p(k)$) \'e verdadeira e deduza a verdade da conclus\ao (p(k+1)). Pra come\cc ar, seja $k\in\mathbb{N}$. Suponha que $p(k)$ seja verdade, isto \'e, $1=2+3+...+k=\frac{k(k+1)}{2}$. Ent\ao
+\begin{eqnarray*}
+1+2+3+...+k+(k+1)&=& \frac{k(k+1)}{2}+(k+1)\\
+                 &=& (k+1)\left(\frac{k}{2}+1\right)\\
+                 &=& \frac{(k+1)(k+2)}{2}
+\end{eqnarray*}  
+logo $p(k+1)$ \'e verdade, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi. Portanto, demonstramos pelo princ\ih pio da indu\cao que 
+\[
+\forall n\in\mathbb{N}, 1=2+3+...+n=\frac{n(n+1)}{2}.
+\] 
+
+Daremos alguns exemplos mais gerai com menos coment\'arios. Veja se voc\^e detecta a forma geral da demonstra\cao e segue os passos envolvidos.
+
+\paragraph{{\bf Exemplos}}
+\begin{enumerate}[{\bf 1.}]
+\item Se $x\geq 0$, ent\ao $\forall n\in\mathbb{N}$, $(1+x)^n\geq1+x^n$. Quando $n=1$ temos $1+x\geq 1+x$, que obviamente \'e verdade. Suponha $x\geq 0$, $k\in\mathbb{N}$ e $(1+x)^k\geq1+x^k$. Ent\ao
+\begin{eqnarray*}
+(1+x)^{k+1}&=& (1+x)^k(1+x)\\
+           &\geq& (1+x^k)(1+x)\\
+           &=& 1+x^{k+1}+x+x^k\\
+           &\geq& 1+x^{k+1},
+\end{eqnarray*} 
+que completa nosso passo de indu\caoi. Portanto, $\forall n\in\mathbb{N}$, $(1+x)^n\geq1+x^n$.(O leitor \'e convidado a analisar onde a hip\'otese $x\geq 0$ foi usada.)
+
+\item $\forall n\in\mathbb{N}$, $n^2\leq n$. Quando $n=1$ temos $1^2\leq 1$, que \'e verdade. Agora suponha que $k\in\mathbb{N}$ e $k^2\leq k.$ Ent\ao
+\begin{eqnarray*}
+(k+1)^2&\leq& (k+1) \textrm{ implica}\\
+k^2+2k+1&\leq& (k+1) \textrm{ ou}\\
+k^2+2k &\leq& k  \textrm{ que implica que}\\
+k^2   &\leq& k,
+\end{eqnarray*}
+nossa hip\'otese original, que assumimos ser verdade, assim a demonstra\cao est\'a completa. 
+
+Um resultado surpreendente. Com indu\cao podemos provar coisas super interessantes! Claramente, o resultado n\ao \'e verdade, ent\ao alguma coisa deve estar errado na demonstra\caoi. O que temos acima \'e um exemplo de um erro comum frequentemente feito por ``indutores'' principiantes. Um exame mais detalhado revela que no passo da indu\cao assumimos nossa conclus\ao e ent\ao obtivemos nossa hip\'otese, a forma de demonstra\cao que nunca \'e v\'alida. Se todas as implica\coes pudessem ser revertidas, podemos construir uma demonstra\cao v\'alida revertendo a ordem dos passos, mas em nosso caso o \'ultimo passo n\ao pode ser revertido ($k^2\leq k$ n\ao implica $k^2+2k\leq k$). O ponto para lembrar \'e: se tentamos trabalhar de ``forma reversa'' partindo da conclus\ao at\'e a hip\'otese, para obter uma demonstra\cao v\'alida devemos ser capazes de reverter todas as implica\cois.
+
+\item $\forall n\in\mathbb{N}$, $D_x x^n=nx^{n-1}$ (aqui $D_x$ representa diferencia\cao com respeito a $x$). Quando $n=1$ temos $D_x x^1=1x^{1}=1$ que \'e verdade. Agora, suponha $k\in\mathbb{N}$ e $D_x x^k=kx^{k-1}$. Ent\ao
+\begin{eqnarray*}
+D_x x^{k+1}&=& D_x x x^{k} = 1x^{k}+xkx^{k-1} \textrm{ (usando a regra do produto)}\\
+           &=& x^{k}+kx^{k}\\
+           &=& (k+1)x^{k},
+\end{eqnarray*}  
+que completa a demonstra\caoi. Assim, $\forall n\in\mathbb{N}$, $D_x x^n=nx^{n-1}$.
+
+\item Para cada n\'umero natural $n$, $n^3-n$ \'e divis\ih vel por $3$. Em s\ih mbolos escrever\ih amos $\forall n\in\mathbb{N}, 3|(n^3-n)$. Lembre-se que $a|b$ se e somente se $\exists c\in\mathbb{Z}\ni b=ac$. Quando $n=1$ temos $3|1^3-1$ ou $3|0$ que \'e verdade pois $0=3\cdot 0$. Agora suponha que $k\in\mathbb{N}$ e $3|(k^3-k)$. Isto significa que existe um inteiro, digamos $m$, tal que $k^3=k=3m$. Assim,
+\begin{eqnarray*}
+(k+1)^3-(k+1)&=& k^3+3k^2+3k+1-k-1\\
+&=& (k^3-k)+3(k^2-k)\\
+&=& 3m+3(k^2-k)\\
+&=& 3(m+k^2-k),
+\end{eqnarray*}
+assim $(k+1)^3-(k+1)$ \'e claramente divis\ih vel por $3$, que completa a demonstra\caoi.
+
+O princ\ih pio da indu\cao matem\'atica pode ser generalizado da seguinte maneira: Seja $S\subseteq\mathbb{Z}$ com a propriedade que
+\begin{enumerate}[{\bf a)}]
+\item $n_0\in S$.
+\item $\forall n\in \mathbb{Z}, n\in S \rightarrow n+1\in S$, ent\ao $\{n\in\mathbb{Z}:n\geq n_0\}\subseteq S$. Se $n_0$ \'e o menor elemento de $S$, ent\ao $S=\{n\in\mathbb{Z}:n\geq n_0\}$. 
+\end{enumerate}
+
+Vemos que o PIM \'e um caso especial disto com $n_0=1$. Como um exemplo da aplica\cao disto, considere:
+
+\item $\forall n\in\mathbb{N}$, $n\geq 13$, $n^2<(\frac{3}{2})^n$. Aqui nosso passo base \'e $n=13$. Note que $13^2=169<194=(\frac{3}{2})^{13}$, portanto nosso passo base est\'a completo. Agora suponha que $n>13$ e $n^2<(\frac{3}{2})^n$. Ent\ao
+\begin{eqnarray*}
+(n+1)^2&=& \left(1+\frac{1}{n}\right)^2n^2\\
+&<& \left(1+\frac{1}{13}\right)^2n^2\\
+&<& \frac{3}{2}n^2\\
+&<& \frac{3}{2}\left(\frac{3}{2}\right)^n=\left(\frac{3}{2}\right)^{n+1},
+\end{eqnarray*}
+\end{enumerate}
+que completa a demonstra\caoi.
+
+Agora o leitor ter\'a a chance de praticar um pouco usando o princ\ih pio da indu\cao matem\'atica.
+
+\paragraph{Excerc\ih cios \ref{inducao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item\label{inducaoexce1} Demonstre as seguintes proposi\cois:
+\begin{enumerate}[a)]
+\item\label{inducaoexce1a} $\forall n\in\mathbb{N}, 1^2+2^2+3^2+...+n^2=\frac{1}{6}n(n+1)(2n+1)$.
+\item\label{inducaoexce1b} $\forall n\in\mathbb{N}, 1^3+2^3+3^3+...+n^3=(\frac{1}{2}n(n+1))^2$.
+\item $\forall n\in\mathbb{N}, 1+3+5+...+(2n-1)=n^2$.
+\item $\forall n\in\mathbb{N}, 1+2^{-1}+2^{-2}+...+2^{-n}\leq 2$.
+\item $\forall n\in\mathbb{N}, n\geq 2, \forall x,y\in\mathbb{R}, x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+...+xy^{n-2}+y^{n-1})$.
+\item $\forall n\in\mathbb{N}, 2|n(n+1)$.
+\item $\forall n\in\mathbb{N}, 7|(3^{2n+1}+2^{n+2})$ [Dica: $9=7+2$].
+\item $\forall n\in\mathbb{N}, 11|(8\cdot 10^{2n}+6\cdot 10^{2n-1}+9)$.
+\item $\forall n\in\mathbb{N}, D^n_x x^n=n!$.
+\item $\forall n\in\mathbb{N}, 2^n>n$.
+\item $\forall n\in\mathbb{N}, \forall a,b\in\mathbb{R}, a>b>0$ implica $a^n>b^n$.
+\item $\forall n\in\mathbb{N}, n^n\geq n!$.
+\item $\forall n\in\mathbb{N}, 9|(2\cdot 10^n+3\cdot 10^{n-1}+4)$.
+\item $\forall n\in\mathbb{N}, (1+1^{-1})(1+2^{-1})(1+3^{-1})...(1+n^{-1})=n+1$.
+\item $\forall n\in\mathbb{N}, 3+11+17+...+(8n-5)=4n^2-n$.
+\item $\forall n\in\mathbb{N}, 1+1/2^2+1/3^2+...+1/n^2\leq 2-1/n$.
+\item $\forall n\in\mathbb{N}, \forall a,b\in\mathbb{R}, a\geq 0, b\geq 0, a^n+b^n\geq(a+b/2)^n$.
+\item $\forall n\in\mathbb{N}, \forall a\in\mathbb{R}, a\neq 1, 1+a+a^2+...+a^n=(1-a^{n+1})/(1-a)$.
+\item $\forall n\in\mathbb{N}, (1\cdot 3\cdot 5)+(3\cdot 5\cdot 7)+...+[(2n-1)\cdot (2n+1)\cdot (2n+3)]=n(2n^3+8n^2+7n-2)$.
+\item $\forall n\in\mathbb{N}, 1/(1\cdot 3)+1/(2\cdot 4)+...1/[n\cdot(n+2)]=(3n^2+5n)/[4(n+1)(n+2)]$.
+\item $\forall n\in\mathbb{N}, (1-\frac{1}{2})(1-\frac{1}{3})...(1-\frac{1}{n})=\frac{1}{n}$.
+\item $\forall n\in\mathbb{N}, (1-\frac{1}{2^2})(1-\frac{1}{3^2})...(1-\frac{1}{n^2})=\frac{1}{2}(1+\frac{1}{n})$.
+\end{enumerate}
+
+%excercicio2
+\item Mostre que para todos os n\'umeros naturais $n$, $n\geq 2$, existem inteiros n\ao negativos $a$ e $b$ tai que $n=2a+3b$.
+
+%excercicio3
+\item Encontre $n_0$ tal que $\forall n\in\mathbb{N}, n\geq n_0, n^2<(\frac{5}{4})^n$ e demonstre que o resultados est\'a correto.
+
+%excercicio4
+\item Suponha que a sequ\^encia de n\'umeros $(a_n)$ recursivamente como se segue: $a_1=1$ e para $n\geq 2$, seja $a_n=a_{n-1}+2\sqrt{a_{n-1}}+1$. Mostre que $\forall n\in\mathbb{N}, a_n$ \'e um inteiro.
+
+%excercicio5
+\item Para $n\in\mathbb{N}$, seja $a_n=1+2^{-1}+3^{-1}+...+n^{-1}$. Mostre que para cada $M\in\mathbb{N}$ existe um $n\in\mathbb{N}$ tal que $a_n>M$.
+
+%excercicio6
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} $\forall n\in\mathbb{N}$, $n\geq 783$, $3n^4+15n-7$ \'e par.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Quando $n=783$, $3n^4+15n-7=1.127.634.377.502$, que \'e par. Agora suponha, $n\geq 783$ e que $3n^4+15n-7$ seja par, assim existe $m\in\mathbb{N}$ tal que $3n^4+15n-7=2m$. Ent\ao
+\begin{eqnarray*}
+3(n+1)^4+15(n+1)-7&=& 3(n^4+4n^3+6n^2+4n+1)+15n+15-7\\
+                  &=& 3n^4+15n-7+12n^3+18n^2+12n+18 \\
+                  &=& 2(m+6n^3+9n^2+6n+9),
+\end{eqnarray*}  
+que \'e par.   
+
+\noindent \textit{\textbf{``Contraexemplo'':}} Quando $n=1000$, $3n^4+15n-7$ \'e \ih mpar, pois $3n^4+15n$ \'e claramente divis\ih vel por $1000$, assim quando o $7$ \'e subtra\ih do, o resultado ser\'a \ih mpar.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Formas Equivalentes do Princ\ih pio da Indu\cao Matem\'atica}\label{eqvinducao}
+
+Nesta se\cao discutiremos duas outras proposi\coes que s\ao equivalentes ao princ\ih pio da indu\cao matem\'atica. Em algumas situa\coes uma destas formas podem ser mais f\'aceis do que as outras. O primeiro \'e conhecido como o {\it princ\ih pio da boa ordena\cao}\index{Princ\ih pio da Boa Ordena\caoi} (PBO).
+\\
+\\
+
+{\bf Princ\ih pio da Boa Ordena\caoi:} Seja $S$ um subconjunto n\ao vazio de $\mathbb{N}$. Ent\ao $S$ tem um elemento m\'inimo, isto \'e, existe um $y\in S$ tal que para todo $x\in S, y\leq x$.
+\\
+\\
+
+O segundo \'e conhecido como a {\it princ\ih pio da indu\cao completa}\index{Princ\ih pio da Indu\cao Completa} (PIC).
+\\
+\\
+
+{\bf Princ\ih pio da Indu\cao Completa:} Se $S$ \'e um subconjunto de $\mathbb{N}$ tal que:
+\begin{enumerate}[{\bf a)}]
+\item $1\in S$.
+\item $\forall n\in \mathbb{N}, \{1,2,3,...,n\}\subseteq S \rightarrow n+1\in S$. 
+\end{enumerate}
+Ent\ao $S=\mathbb{N}$. 
+\\
+\\
+
+Enquanto que o PIC parece estar fortemente relacionado ao PIM, a conec\cao entre estes dois e o PBO n\ao \'e t\ao clara. Como assumimos o PIM como um axioma poder\ih amos us\'a-lo para demonstar os outros dois como teoremas. O que mostraremos, entretanto, \'e de alguma forma mais forte, isto \'e, que os tr\^es princ\ih pios s\ao equivalentes:
+\begin{center}
+PIM $\to$ PBO, \\
+PBO $\to$ PIC, \\
+PIC $\to$ PIM. \\
+\end{center}
+
+As implica\coes acima mostrar\ao que os tr\^es princ\ih pios s\ao logicamente equivalentes e assim poder\ih amos ter escolhido um deles como axioma e demonstrado os outros dois como teoremas. Para come\cc ar nosso programa de implica\cois, assumiremos que o princ\ih pio da indu\cao matem\'atica vale e demonstrar:
+\begin{teob}\label{indteo1}
+Seja $S$ um subconjunto n\ao vazio de $\mathbb{N}$. Ent\ao $S$ tem um elemento m\ih nimo.
+\end{teob}
+\begin{proof}
+Usaremos uma demonstra\cao indireta. Suponha que $S$ seja um subconjunto n\ao vazio de $\mathbb{N}$ que n\ao tenha um elemento m\ih nimo. Seja $S^C$ o complemento de $S$, isto \'e, $S^C=\mathbb{N}-S$. Definimos $T=\{x\in\mathbb{N}: \forall y\leq x, y\in S^C\}$. En\tao como $1\in S^C$ (se $1\in S$ ent\ao $1$ seria o elemento m\ih nimo de $S$, pois $\forall x\mathbb{N}, 1\leq x$), $1\in T$. Agora suponha $k\in T$. Pela maneira que $T$ est\'a definido, significa que $1,2,3,...,k$ devem, necessariamente, ser elementos de $S^C$. O que podemos dizer sobre $k+1$? Se $k+1$ estivesse em $S$ ent\ao seria o elemento m\ih nimo de $S$, o que \'e imposs\ih vel pois estamos assumindo que $S$ n\ao tem um elemento m\ih nimo. Portanto, $k+1\in S^C$ que implica $k+1\in T$. Logo, pelo princ\ih pio da indu\cao matem\'atica, $T=\mathbb{N}$. Isto significa que $S^C=\mathbb{N}$ que implica $S=\emptyset$, uma contradi\caoi. Portanto, $S$ deve ter um elemento m\ih nimo. 
+\end{proof}
+\\
+
+No pr\'oximo teorema assumiremos que o princ\ih pio da boa ordena\cao vale e demonstrar o princ\ih pio da indu\cao completa:
+\begin{teob}\label{indteo2}
+Seja $S$ \'e um subconjunto de $\mathbb{N}$ tal que:
+\begin{enumerate}[{\bf a)}]
+\item $1\in S$.
+\item $\forall n\in \mathbb{N}, \{1,2,3,...,n\}\subseteq S \rightarrow n+1\in S$. 
+\end{enumerate}
+Ent\ao $S=\mathbb{N}$. 
+\\
+\end{teob}
+\begin{proof}
+Suponha $S$ como acima e considere $S^C$. Se $S^C=\emptyset$ ent\ao n\ao h\'a nada por fazer, assim suponha que $S^C$ seja n\ao vazio. Ent\ao pelo princ\ih pio da boa ordena\caoi, $S^C$ tem um elemento m\ih nimo, digamos $y$. Mas $y\neq 1$ pois $1\in S$. O que podemos dizer sobre $1,2,...,y-1$? Todos eles t\^em que pertencer a $S$, caso contr\'ario um deles seria o elemento m\ih nimo de $S^C$ ao inv\'es de $y$. Assim pela condi\cao b) temos $y\in S$, uma contradi\caoi. Portanto, $S^C$ deve ser vazio, que implica que $S=\mathbb{N}$.
+\end{proof}
+\\
+
+Seguindo em frente, finalizaremos nosso programa de implica\coes assumindo que o princ\ih pio da indu\cao completa vale e provando o princ\ih pio da indu\cao matem\'atica:
+\begin{teob}\label{indteo3}
+Seja $S$ um subconjunto de $\mathbb{N}$ tal que:
+\begin{enumerate}[{\bf a)}]
+\item $1\in S$.
+\item $\forall n\in \mathbb{N}, n\in S \rightarrow n+1\in S$. 
+\end{enumerate}
+Ent\ao $S=\mathbb{N}$. 
+\end{teob}
+\begin{proof}
+Suponha que $S$ tenha as pro[riedade a) e b) acima. Usaremos o princ\ih pio da indu\cao completa para demonstrar que $S=\mathbb{N}$. Como $\forall n \in\mathbb{N}, \{1,2,3,...,n\}\subseteq S \rightarrow n\in S$ \'e uma proposi\cao obviamente verdadeira, temos
+\[
+(\forall n \in\mathbb{N}, \{1,2,3,...,n\}\subseteq S \rightarrow n\in S)\ee(n\in \mathbb{N}, n\in S \rightarrow n+1\in S)
+\] 
+que implica $\forall n \in\mathbb{N}, \{1,2,3,...,n\}\subseteq S \rightarrow n+1\in S$. Logo, $S$ satisfaz as hip\'oteses do princ\ih pio da indu\cao completa e consequentemente $S=\mathbb{N}$.
+\end{proof}
+\\
+
+
+Para ver como estas formula\coes alternativas do princ\ih pio da indu\cao matem\'atica podem ser usados para demonstrar proposi\cois, vamos demonstrar a j\'a familiar:
+\[
+\forall n\in\mathbb{N}, 1+2+3+...+n=\frac{n(n+1)}{2}.
+\]
+usando o princ\ih pio da boa ordena\caoi. Primeiro, seja $p(n)$ ``$1+2+3+...+n=\frac{n(n+1)}{2}$.'' Seja $S=\{n\in\mathbb{N}: p(n) \textrm{ seja falsa}\}$. Se $S=\emptyset$, n\ao h\'a nada que demonstrar, portanto suponha que $S\neq\emptyset$. Assim, pelo princ\ih pio da boa ordena\caoi, $S$ tem um elemento m\ih nimo, digamos $x$. Como $p(1)$ \'e obviamente verdade, $1\notin S$, logo $x\neq 1$. Considere $x-1$. Como $x\neq 1$, $x-1\in\mathbb{N}$ e $x-1\notin S$ que implica que $p(x-1)$ \'e verdade. Assim temos
+\begin{eqnarray*}
+1+2+3+...+(x-1)+x &=& \frac{(x-1)x}{2}+x\\
+                  &=& x\left(\frac{x-1}{2}+1\right) \\
+                  &=& \frac{x(x+1)}{2},
+\end{eqnarray*} 
+ou $p(x)$ \'e verdadeiro, uma contradi\caoi, pois $x\in S$ significa que $p(x)$ \'e falso. Portanto, $S$ deve ser vazio, o que completa a demonstra\caoi.
+
+Os passos envolvidos na demonstra\cao acima s\ao muito similares \`aqueles na demonstra\cao onde usamos o princ\ih pio da indu\cao matem\'atica e de fato o princ\ih pio da indu\cao matem\'atica parece ser a escolha mais natural para este teorema. Para uma situa\cao onde o princ\ih pio da boa ordena\cao \'e mais natural vamos demonstrar que $\sqrt{2}$ \'e um n\'umero irracional:
+\begin{teob}\label{indteo4}
+$\sqrt{2}$ \'e irracional.
+\end{teob}
+\begin{proof}
+Vamos proceder indiretamente. Suponha que $\sqrt{2}$ seja racional, isto \'e, suponha que existem n\'umeros naturais $r,s$ tai que $\sqrt{2}=r/s$. Ent\ao $S=\{k\in\mathbb{N}: k=n\sqrt{2} \textrm{ para algum } n\in\mathbb{N}\}$ \'e um conjunto de n\'umeros naturais (em particular, $s\sqrt{2}=r$ ent\ao $r\in S$). Pelo princ\ih pio da boa ordena\caoi, $S$ tem um elemento m\ih nimo, digamos $x$. Seja $y\in\mathbb{N}$ tal que $x=y\sqrt{2}$. Agora $y(\sqrt{2}-1)=x-y$ \'e um n\'umero natural menor que $y$ (pois $0<\sqrt{2}-1<1$) assim $z=y(\sqrt{2}-1)\sqrt{2}$ \'e menor que $x$. Mas $z=2y-x$ logo $z\in\mathbb{N}$ e $z\in S$. Portanto temos uma contradi\caoi, pois encontramos um elemento de $S$ menor que que $x$. Consequentemente, $S$ deve ser vazio e assim $\sqrt{2}$ \'e irracional.
+\end{proof}
+\\
+
+Agora mostraremos um outro exemplo do uso do princ\ih pio da boa ordena\cao para demonstrar um resultado familiar:
+\begin{teob}[O algoritmo da divis\aoi]\label{indteo5}
+Sejam $a,b\in\mathbb{N}$. Ent\ao existem inteiros $q,r$ tais que
+\[
+a=bq+r \quad\quad\textrm{ com } 0\leq r<b.
+\]
+\end{teob}
+\begin{proof}
+Sejam $a,b\in\mathbb{N}$ e seja
+\[
+S=\{a-bk: k\in\mathbb{Z}, a-bk\geq 0\}.
+\]
+Note que $S\neq\emptyset$ pois $a=a-b\cdot 0\in S$. Pelo princ\ih pio da boa ordena\cao, $S$ tem um elemento m\ih nimo, digamos $r=a-bq$. Claramente, $r$ \'e um inteiro e $a=bq+r$, portanto tudo que resta ser mostrado \'e que $0\leq r<b$. Pela defini\cao de $S$, $r\geq 0$. Se $r\geq b$, ent\ao
+\[
+a-b(q+1)=r-b\geq 0,
+\]
+logo $r-b$ \'e um elemento de $S$. Mas $r>r-b$, uma contradi\caoi, assim devemos ter $r<b$.
+\end{proof}
+\\
+
+Como o leitor provavelmente j\'a notou, a chave para a demonstra\cao usando o princ\ih pio da boa ordena\cao est'a na sele\cao de um conjunto cujo elemento m\ih nimo tem um papel importante na demonstra\caoi. Uma ves que isto est\'a pronto, a demonstra\cao \'e usualmente f\'acil de se seguir. Algu\'em precisa de um {\it insight} para fazer tal sele\cao corretamente. Este {\it insight} vem da experi\^encia e muita pr\'atica, portanto o leitor n\ao deve se desencorajar se tais demonstra\coes parecem dif\ih ceis em um primeiro momento.
+
+Para um exemplo de um teorema usando o princ\ih pio da indu\cao completa, considere:  
+\begin{teob}\label{indteo6}
+Seja $n\in\mathbb{N}$. Ent\ao $n=1$, $n$ \'e um n\'umero primo ou $n$ \'e um produto de n\'umeros primos.
+\end{teob}
+\begin{proof}
+Se tom\'assemos a senten\cc a ``$n=1$, $n$ \'e um n\'umero primo ou $n$ \'e um produto de n\'umeros primos'' ent\ao desejar\ih amos mostrar $\forall n\in\mathbb{N}, p(n)$. Seja $S=\{n\in\mathbb{N}: p(n) \textrm{ \'e verdade}\}$. Claramente $1\in S$. Agora suponha que $1,2,...,k$ s\ao todos elementos de $S$ e considere $k+1$. Se $k+1$ for um primo, ent\ao a demonstra\cao estaria finalizada, ent\ao suponha que $k+1$ n\ao seja primo. Como $k+1$ n\ao \'e um primo ent\ao deve ter fatores menores que ele mesmo (e maiores que $1$), digamos $r$ e $s$, isto \'e, $k+1=r\cdot s$. Agora $r$ e $s$ s\ao ambos elementos de $S$ e assim s\ao primos ou s\ao produtos de primos. Mas ent\ao escrevemos $k+1$ como um produto de primos, portanto $k+1\in S$ e pelo princ\ih pio de indu\cao completa, $S=\mathbb{N}$. 
+\end{proof}
+\\
+
+A raz\ao para que o princ\ih pio da indu\cao completa foi mais \'util aqui do que o princ\ih pio da indu\cao matem\'atica foi que a fatora\cao de $k+1$ n\ao nos levou a $k$, mas a alguns outros n\'umeros menores e usando o princ\ih pio da indu\cao matem\'atica n\ao ter\ih amos tido como parte de nossas hip\'oteses que esses n\'umeros fossem elementos de $S$.
+
+\paragraph{Excerc\ih cios \ref{eqvinducao}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Da demonstra\cao do teorema \ref{indteo1} definiu-se os conjuntos $T$ e $S^C$. Mostre que $T\subseteq S^C$.
+
+%excercicio2
+\item Mostre que $\mathbb{Z}$ n\ao tem o princ\ih pio da boa ordena\cao v\'alido, isto \'e, de um exemplo de um subconjunto n\ao vazio de $\mathbb{Z}$ que n\ao tenha um elemento m\ih nimo.
+
+%excercicio3
+\item Use o princ\ih pio da boa ordena\cao para mostrar que $\sqrt{3}$ \'e irracional. Tente a mesma t\'ecnica usada na demonstra\cao do teorema \ref{indteo4}. Mostre onde esta t\'ecnica falharia se ela fosse utilizada para mostrar que $\sqrt{4}$ \'e irracional.
+
+%excercicio4
+\item Use o princ\ih pio da boa ordena\cao para mostrar que $\sqrt{17}$ \'e irracional.
+
+%excercicio5
+\item Demonstre os excerc\ih cio \ref{inducaoexce1a} e \ref{inducaoexce1a} da se\cao \ref{inducao} usando o princ\ih pio da boa ordena\caoi.
+
+%excercicio6
+\item Demonstre as seguintes proposi\cois usando qualquer m\'etodo de sua prefer\^encia:
+\begin{enumerate}[a)]
+\item $\forall n\in\mathbb{N}, 1^4+2^4+...+n^4=\displaystyle\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$.
+\item $\forall n\in\mathbb{N}, 1^5+2^5+...+n^5=\displaystyle\frac{n^2(n+1)^2(2n^2+2n-1)}{12}$.
+\item $\forall n\in\mathbb{N}, 1^6+2^6+...+n^6=\displaystyle\frac{n^7}{7}+\frac{n^6}{2}+\frac{n^5}{2}-\frac{n^3}{6}+\frac{n}{42}$.
+\item $\forall n\in\mathbb{N}, 1\cdot 2+ 2\cdot 3+...+n(n+1)=\displaystyle\frac{n(n+1)(n+2)}{3}$.
+\item $\forall n\in\mathbb{N}, 2304|(7^{2n}-48n-1)$.
+\item $\forall n\in\mathbb{N}, \displaystyle\frac{1}{\sqrt{1}}+\frac{1}{\sqrt{2}}+...+\frac{1}{\sqrt{n}}\leq 2\sqrt{n}-1$.
+\item $\forall n\in\mathbb{N}, \forall k\in\mathbb{N}, 1^k+2^k+...+n^k\leq n^{k+1}$.
+\end{enumerate}
+
+%excercicio7
+\item Sejam $\alpha,\beta$ as solu\coes da equa\cao $x^2-x-1=0$, com $\alpha >0$. Para todo $n\in\mathbb{N}$, seja $F_n=(\alpha^n-\beta^n)/(\alpha-\beta)$.
+\begin{enumerate}[a)]
+\item Encontre $F_1,F_3$ e $F_4$. [Nota: Estes n\'umeros s\ao conhecidos como os {\it n\'umeros de Fibonacci}.] 
+\item Mostre que $\forall n\in\mathbb{N}$, $F_{n+2}=F_{n+1}+F_n$. [Nota: Esta recorr\^encia ser\'a \'util para o restante deste excerc\ih cio.]  
+\item Mostre que $\forall n\in\mathbb{N}$, $F_n$ \'e um inteiro.
+\item Mostre que $\forall n\in\mathbb{N}$, $F_n<(\frac{13}{8})^n$.
+\item Mostre que $\forall n\in\mathbb{N}$, $F^2_{n+1}-F_nF_{n+2}=(-1)^n$.
+\item Mostre que $\forall n\in\mathbb{N}$, $2|F_{3n}$, $2\not|\espaco F_{3n+1}$ e $2\not|\espaco F_{3n+2}$.
+\item Mostre que $\forall n\in\mathbb{N}$, 
+\[
+\sum_{i=1}^{n}F_i=F_{n+2}-1.
+\]
+\item Mostre que $\forall m,n\in\mathbb{N}$, $F_mF_n+F_{m+1}F_{n+1}=F_{m+n+1}$. 
+\item Suponha que definimos $S_n=F_{1}^{2}+F_{2}^{2}+...+F_{n}^{2}$. Encontre uma f\'ormula fechada para $S_n$ e demonstre que seu resultados est\'a correto.
+\end{enumerate}
+
+%excercicio8
+\item Suponha que definimos a sequ\^encia de n\'umeros $(r_n)$ recursivamente como se segue: $r_1=1$, $r_2=1/4$ e para $n\geq 2$,
+\[
+r_{n+1}=\frac{r_nr_{n-1}}{r_n+r_{n-1}+2\sqrt{r_nr_{n-1}}}.
+\]
+Mostre que $\forall n\in\mathbb{N}$, $r_n=F^{-2}_{n+1}$. ($F_n$ do excerc\ih cio anterior).
+
+%excercicio9
+\item Mostre que para todo $n\in\mathbb{N}:$
+\begin{enumerate}[a)]
+\item $6400|(9^{2n}-80n-1)$.
+\item $3|(4^n+2)$.
+\item $13|(4^{2n+1}+3^{n+2})$.
+\item $24|(16^n+9^{3n-2}-1)$.
+\end{enumerate}
+
+%excercicio10
+\item Extenda o algoritmo da divis\ao (teorema \ref{indteo5}) para incluir o caso quando $a\leq 0$. Tamb\'em mostre que $q$ e $r$ s\ao \'unicos.
+
+%excercicio11
+\item Defina a sequ\^encia $(a_n)$ por $a_1=a_2=1$, e para $n\geq 3$, $a_n=4a_{n-1}+5a_{n-2}$. Mostre que para $n\geq 3$, $a_n=\frac{1}{15}5^n+\frac{2}{3}(-1)^{n+1}$.
+
+%excercicio12
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} $\forall n\in\mathbb{N}, n$ \'e um primo ou $\exists p,q\in\mathbb{Z} \ni n=2^p3^q$. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Claramente a asserc\ao \'e verdadeira quando $n=1$, pois $1=2^03^0$. Agora, suponha que isto seja verdade quando $1,2,...,k$. Se $k+1$ for primo, a demonstra\cao estar\'a terminada, potanto suponha que $k+1$ n\ao seja primo. Ent\ao $k+1=ab$, onde $1<a<k+1$ e $1<b<k+1$. Pela hip\'otese de indu\caoi, $a=2^p3^q$ e $b=2^r3^s$ para $p,q,r,s\in\mathbb{Z}$. Assim $k+1=2^{p+r}3^{q+s}$, que completa a demonstra\caoi.
+
+\noindent \textit{\textbf{``Contraexemplo'':}} Considere $25$. $25$ n\ao \'e primo e como $2\not|\espaco 25$ e $3\not|\espaco 25$, $25\neq 2^p3^q$ para quaisquer inteiros $p$ e $q$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

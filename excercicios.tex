@@ -1,0 +1,3063 @@
+%!TEX root = fundamentos.tex
+\chapter*{Exerc\ih cios Resolvidos}
+\addcontentsline{toc}{chapter}{Exerc\ih cios Resolvidos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{eounao}}
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Determine os valores verdade das seguintes proposi\coes 
+\begin{enumerate}[a)]
+\item $3\leq7$ e $4$ \'e um inteiro \ih mpar. 
+
+{\bf{\it Resposta:} F}
+
+\item $3\leq7$ ou $4$ \'e um inteiro \ih mpar. 
+
+\item $2+1=3$ mas $4<4$. 
+
+{\it Resposta:} {\bf F} (lembre que ``mas'' tem significado l\'ogico de ``e'')
+
+\item $5$ \'e \ih mpar ou divis\ih vel por $4$. 
+
+{\bf{\it Resposta:} V}
+
+\item N\ao \'e verdade que $2+2=5$ e $5>7$.
+
+\item N\ao \'e verdade que $2+2=5$ ou $5>7$. 
+
+{\bf{\it Resposta:} V}
+
+\item $3 \geq 3$. 
+
+{\bf{\it Resposta:} V}
+\end{enumerate}
+
+%excercicio2
+\item Suponha que representamos ``$7$ \'e um n\'umero par'' por \pp e ``$3+1=4$'' por \qq e ``$24$ \'e di\ih sivel por $8$'' por $r$. 
+\begin{enumerate}[a)]
+\item Escreva na forma s\ih mb\'olica e determine os valores verdade para:
+\begin{enumerate}[i)]
+\item $3+1 \neq 4$ e 24 \'e div\ih sivel por 8. 
+
+{\bf{\it Resposta:} ${\bf \lnot q \ee r}$. F.}
+
+\item N\ao \'e verdade que $7$ \'e \ih mpar ou $3+1=4$. 
+
+{\bf{\it Resposta:} ${\bf\lnot (\lnot p \ou q)}$. F.}
+
+\item $3+1=4$ mas 24 n\ao \'e div\ih sivel por 8.
+\end{enumerate}
+
+\item Escreva o que vem a seguir em palavras e determine os valores verdade para:
+\begin{enumerate}[i)]
+\item \pp $\ou$ $\nao$ $q$.
+
+{\bf{\it Resposta:} ${\bf 7}$ \'e um n\'umero par ou ${\bf 3+1\neq 4}$. Falso.}
+
+\item $\nao$ ($r$ $\ee$ $q$).
+
+\item $\nao$ $r$ $\ou$ $\nao$ $q$.
+\end{enumerate}
+\end{enumerate}
+
+%excercicio3
+\item Construa a tabela verdade para:
+\begin{enumerate}[a)]
+\item $\nao$ $p$ $\ou$ $q$.
+
+\item $\nao$ $p$ $\ee$ $q$.
+
+\item ($\nao$ $p$ $\ou$ $q$) $\ee$ $r$.
+
+\item\label{3d} $\nao$ ($p$ $\ee$ $q$).
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c c c r|}
+\hline
+\pp & & \qq &  &   $\nao$       & \pp  & $\ee$  & \qq  &      \\
+\hline
+V   & & V   &  &   {\bf F}      &  V   &   V    &  V   &       \\
+V   & & F   &  &   {\bf V}      &  V   &   F    &  F   &       \\
+F   & & V   &  &   {\bf V}      &  F   &   F    &  V   &      \\
+F   & & F   &  &   {\bf V}      &  F   &   F    &  F   &     \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $\nao$ $p$ $\ee$ $\nao$ $q$.
+
+\item\label{3f}$\nao$ $p$ $\ou$ $\nao$ $q$.
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c c c c r|}
+\hline
+\pp & & \qq &  & $\nao$   & \pp  &   $\ou$       & $\nao$ & \qq  &     \\
+\hline
+V   & & V   &  &   F      &  V   &   {\bf V}    &   F     &  V   &     \\
+V   & & F   &  &   F      &  V   &   {\bf V}    &   V     &  F   &     \\
+F   & & V   &  &   V      &  F   &   {\bf V}    &   F     &  V   &    \\
+F   & & F   &  &   V      &  F   &   {\bf V}    &   V     &  F   &   \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $p$ $\ou$ $\nao$ $p$.
+
+\item $\nao$ ($\nao$ $p$).
+\end{enumerate}
+
+
+%excercicio4
+\item Construa nega\coes \'uteis para:
+\begin{enumerate}[a)]
+\item $3-4<7$. {\bf{\it Resposta:} $3-4 \geq 7$.}
+\item $3+1=5$ e $2 \leq 4$.
+\item $8$ \'e divis\ih vel por 3 mas $4$ n\ao \'e.
+\end{enumerate}
+
+%excercicio5
+\item Suponha que definimos o conectivo $\star$ dizendo que $p \star q$ \'e verdade somente quando \qq \'e verdade e \pp \'e falso, e \'e falso caso contr\'ario.
+\begin{enumerate}[a)]
+\item Escreva a tabela verdade de $p \star q$. 
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\star$ \qq \\
+\hline
+V   & & V   & F \\
+V   & & F   & F \\
+F   & & V   & V \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\item Escreva a tabela verdade de $q \star p$.
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \qq $\star$ \pp \\
+\hline
+V   & & V   & F \\
+V   & & F   & V \\
+F   & & V   & F \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Escreva a tabela verdade de $(p \star p) \star q$.
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c c c|}
+\hline
+\pp & & \qq & \pp $\star$ \pp & $\star$ & \qq \\
+\hline
+V   & & V   &        F        &  {\bf V}&  V   \\
+V   & & F   &        F        &  {\bf F}&  F    \\
+F   & & V   &        F        &  {\bf V}&  V    \\
+F   & & F   &        F        &  {\bf F}&  F    \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+%excercicio6
+\item Vamos denotar o ``ou exclusivo'' \`as vezes utilizado nas conversas do dia a dia por $\oplus$. Portanto, $p\oplus q$ ser\'a verdade exatamente quando uma condi\cao de $p,q$ \'e verdade e falso caso contr\'ario.
+\begin{enumerate}[a)]
+\item Escreva a tabela verdade de $p \oplus q$.
+
+{\bf{\it Resposta:}}
+ \begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\oplus$ \qq \\
+\hline
+V   & & V   & F \\
+V   & & F   & V \\
+F   & & V   & V \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Escreva a tabela verdade de $p \oplus p$ e $(p \oplus q) \oplus q$.
+
+{\bf{\it Resposta:}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \pp & \pp $\oplus$ \pp \\
+\hline
+V   & & V   & F \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c r|}
+\hline
+\pp & & \qq &    &   & (\pp & & $\oplus$ & & $q$) & & $\oplus$ &\qq &  \\
+\hline
+V & & V &  &    & V & & F & & V & & {\bf V} & V&  \\
+V & & F &  &    & V & & V & & F & & {\bf V} & F&  \\
+F & & V &  &    & F & & V & & V & & {\bf F} & V&  \\
+F & & F &  &    & F & & F & & F & & {\bf F} & F&  \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Mostre que ``e/ou'' realmente significa ``e ou ou'', isto \'e, a tabela verdade para $(p \ee q)\oplus(p \oplus q)$ \'e a mesma tabela verdade que $(p \ou q)$.
+
+{\bf{\it Resposta:}}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c |c c c c c c c  r|}
+\hline
+\pp & & \qq &  &$p \ou q$ &  & &($p \ee q$)&  &$\oplus$&  & $(p \oplus q)$&   &     \\
+\hline
+V   & & V   &  &   {\bf V}      &  & &    V      &  &    {\bf V}    &  &       F         &   &     \\
+V   & & F   &  &   {\bf V}      &  & &    F      &  &    {\bf V}    &  &       V         &   &     \\
+F   & & V   &  &   {\bf V}      &  & &    F      &  &    {\bf V}    &  &       V         &   &    \\
+F   & & F   &  &   {\bf F}      &  & &    F      &  &    {\bf F}    &  &       F         &   &   \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Mostre que n\ao faz diferen\cc a se tomamos o ``ou'' em ``e/ou'' como sendo inclusivo ($\ou$) ou exclusivo ($\oplus$).
+
+{\bf{\it Resposta:}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c| c c c c c c|}
+\hline
+\pp & & \qq &  & ($p \ee q$) &  &$\oplus$ & & $(p \oplus q)$ & & ($p \ee q$)  & & $\ou$  & & $(p \ou q)$     \\
+\hline
+V   & & V   &  &    V        &  &   {\bf V}     & &      F         & &    V         & &    {\bf V}   & &     V            \\
+V   & & F   &  &    F        &  &   {\bf V}     & &      V         & &    F         & &    {\bf V}   & &     V            \\
+F   & & V   &  &    F        &  &   {\bf V}     & &      V         & &    F         & &    {\bf V}   & &     V            \\
+F   & & F   &  &    F        &  &   {\bf F}     & &      F         & &    F         & &    {\bf F}   & &     F            \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+%excercicio7
+\item Explique a seguinte piada: Ansioso, o pai pergunta ao parteiro: ``Doutor, \'e homem ou mulher?'' O m\'edico responde: ``Sim.''
+{\bf{\it Resposta:} Sejam \pp a proposi\cao ``\'e homem'' e \qq a proposi\cao ``\'e mulher''. Portanto, a pergunta feita pelo pai \'e $p\ou q$? Analisemos o caso, \pp \'e verdade, ent\ao \qq \'e falsa, neste caso $p\ou q$ \'e verdade. Por outro lado, se \pp \'e falsa, \qq \'e verdade, portanto $p\ou q$ \'e verdade. Por isso o m\'edico responde sim. }
+
+
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{implicacao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Quais das seguintes proposi\coes s\ao logicamente equivalentes?
+\begin{enumerate}[a)]
+\item $p \ee \lnot q$.
+\item $p \to q$.
+\item $\lnot(\lnot p \ou q)$.
+\item $q \to \lnot p$.
+\item $\nao p \ou q$.
+\item $\lnot (p \to q)$.
+\item $p \to \nao q$.
+\item $\nao p \to \nao q$.
+{\bf{\it Resposta:} a), c) e f) s\ao logicamente equivalentes, b) e e) s\ao l\'ogicamente equivalente, d) e g) s\ao logicamente equivalentes e h) n\ao \'e l\'ogicamente equivalente a nenhum outro.}
+\end{enumerate}
+
+%excercicio2
+\item Mostre que os seguintes pares s\ao logicamente equivalentes:
+\begin{enumerate}[a)]
+\item $p\ee(q\ou r)$; $(p\ee q)\ou(p\ee r)$ .
+\item $p\ou(q\ee r)$; $(p\ou q)\ee(p\ou r)$.
+\item $p\leftrightarrow q$; $(p \to q)\ee(q \to p)$.
+\item $p \to q$; $\lnot q \to \lnot p$.
+\end{enumerate}
+
+%excercicio3
+\item Mostre que os seguintes pares n\ao s\ao logicamente equivalentes:
+\begin{enumerate}[a)]
+\item $\nao(p \ee q)$; $\nao p \ee \nao q$. 
+
+{\bf{\it Resposta:} Usa-se as tabelas verdade ou, apenas, observe que quando ${\bf p}$ \'e V e ${\bf q}$ \'e F ent\ao ${\bf \nao(p \ee q)}$ \'e V enquanto ${\bf \nao p \ee \nao q}$ \'e F.}
+
+\item $\nao(p \ou q)$; $\nao p \ou \nao q$. 
+
+{\bf{\it Resposta:} Usa-se as tabelas verdade ou, apenas, observe que quando ${\bf p}$ \'e V e ${\bf q}$ \'e F ent\ao ${\bf \nao(p \ou q)}$ \'e F enquanto ${\bf \nao p \ou \nao p}$ \'e V.}
+
+\item $p \to q$; $q \to p$.
+
+{\bf{\it Resposta:} Usa-se as tabelas verdade ou, apenas, observe que quando ${\bf p}$ \'e V e ${\bf q}$ \'e F ent\ao ${\bf (p\to q)}$ \'e F enquanto ${\bf q\to p}$ \'e V.}
+
+\item $\lnot (p \to q)$; $\lnot p \to \lnot q$.
+
+{\bf{\it Resposta:} Usa-se as tabelas verdade ou, apenas, observe que quando ${\bf p}$ \'e V e ${\bf q}$ \'e V ent\ao ${\bf \lnot (p \to q)}$ \'e F enquanto ${\bf \lnot p \to \lnot q}$ \'e V.}
+\end{enumerate}
+
+%excercicio4
+\item Determine:
+\begin{enumerate}[a)]
+\item A contrapositiva de $\lnot p\to q$. 
+
+{\bf{\it Resposta:} ${\bf \nao q \to p}$.}
+
+\item A rec\ih proca de $\lnot q \to p$.
+
+{\bf{\it Resposta:} ${\bf p \to \nao q}$.}
+
+\item O inverso do contr\'ario de $q \to \lnot p$.
+
+\item A nega\cao de $p \to \lnot q$. 
+
+{\bf{\it Resposta:} ${\bf \nao (p \to\nao q)}$.}
+
+\item A rec\ih proca de $\lnot p \ee q$.
+\end{enumerate}
+
+%excercicio5
+\item Indique quais das proposi\coes a seguir s\ao verdadeiras:
+\begin{enumerate}[a)]
+\item Se $2+1=4$ ent\ao $3+2=5$. {\bf{\it Resposta:} V}
+\item Vermelho \'e branco se, e somente se, verde \'e azul. {\bf{\it Resposta:} V}
+\item $2+1=3$ e $3+1=5$ implicam que $4$ \'e \ih mpar. {\bf{\it Resposta:} V}
+\item Se $4$ \'e \ih mpar ent\ao $5$ \'e \ih mpar. {\bf{\it Resposta:} V}
+\item Se $4$ \'e \ih mpar ent\ao $5$ \'e par. {\bf{\it Resposta:} V}
+\item Se $5$ \'e \ih mpar ent\ao $4$ \'e \ih mpar.  {\bf{\it Resposta:} F}
+\end{enumerate}
+
+%excercicio6
+\item Explique ou d\^e exemplos porque nenhum dos exemplos a seguir existem:
+\begin{enumerate}[a)]
+\item Uma implica\cao verdadeira com uma conclus\ao falsa.{\bf{\it Resposta:} Se $2+3=5$ ent\ao $4<2$.}
+\item Uma implica\cao verdadeira com uma conclus\ao verdadeira.
+\item Uma implica\cao falsa com uma conclus\ao verdadeira.
+\item Uma implica\cao falsa com uma conclus\ao falsa.
+\item Uma implica\cao falsa com uma hip\'otese falsa.
+\item Uma implica\cao falsa com uma hip\'otese verdadeira.
+\item Uma implica\cao verdadeira com uma hip\'otese verdadeira.
+\item Uma implica\cao verdadeira com uma hip\'otese falsa. 
+\end{enumerate}
+
+%excercicio7
+\item Traduza em s\ih mbolos:
+\begin{enumerate}[a)]
+\item \pp sempre que $q$.
+\item \pp a menos que $q$.
+\end{enumerate}
+
+%excercicio8
+\item D\^e a nega\cao para $p \leftrightarrow q$ na forma que n\ao envolva uma bicondicional.
+
+{\bf{\it Resposta:} ${\bf (p\leftrightarrow q)\Leftrightarrow [(p\to q)\ee(q\to p)]}$. Mas ${\bf (p\to q)\Leftrightarrow \nao(p \ee \nao q)\Leftrightarrow(\nao p\ou q)}$. Assim, ${\bf (p\leftrightarrow q)\Leftrightarrow[(\nao p\ou q)\ee(\nao q\ou p)]}$. Logo, ${\bf (\nao p\leftrightarrow\nao q)\Leftrightarrow[(p\ou \nao q)\ee(q\ou \nao p)]}$.}
+
+%excercicio9
+\item Suponha que $p$, $\lnot q$ e $r$ s\ao verdade. Quais a seguir s\ao proposi\coes verdadeiras?
+\begin{enumerate}[a)]
+\item $p \to q$. {\bf{\it Resposta:} F}
+\item $q \to p$. {\bf{\it Resposta:} V}
+\item $p \to (q \ou r)$. {\bf{\it Resposta:} V}
+\item $p \leftrightarrow q$. {\bf{\it Resposta:} F}
+\item $p \leftrightarrow r$. {\bf{\it Resposta:} V}
+\item $(p \ou q) \to p$. {\bf{\it Resposta:} V}
+\item $(p \ee q) \to q$. {\bf{\it Resposta:} V}
+\end{enumerate}
+
+%excercicio10
+\item Note que temos cinco ``conectivos'' l\'ogicos: $\ee$, $\ou$, $\to$, $\leftrightarrow$ e $\nao$, cada qual corresponde a uma constru\cao da linguagem comum. Do ponto de vista l\'ogico isto \'e de alguma forma um deperd\ih cio, desde que podemos expressar todos estes em termos de, apenas, $\nao$ e $\ee$. Ainda mais, se definirmos $p|q$ para ser falsa quando ambos \pp e \qq s\ao verdadeiros, e verdadeiro caso contr\'ario, podemos expressar todas as cinco formas em termos deste \'unico conectivo ($|$ \'e conhecido como Conectivo de Sheffer ou Conectivo Nou). Verifique parcialmente que os argumentos dados acima por
+\begin{enumerate}[a)]
+\item Econtrando a proposi\cao a qual equivale a $p \ou q$ usando apenas $\ee$ e $\nao$.
+
+{\bf{\it Resposta:} ${\bf (p\ou q) \Leftrightarrow \nao(\nao p \ee \nao q)}$.}
+
+\item Escrevendo a tabela verdade para $p|q$.
+
+{\bf{\it Resposta:}}
+ \begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $|$ \qq \\
+\hline
+V   & & V   & F \\
+V   & & F   & V \\
+F   & & V   & V \\
+F   & & F   & V \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Mostrando que $p|p$ \'e logicamente equivalente a $\nao p$.
+
+{\bf{\it Resposta:}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c |}
+\hline
+\pp       & \pp $|$ \pp   &   $\nao p$  \\
+\hline
+V         &   F     &     F       \\
+F         &   V     &     V       \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Mostrando que $(p|q)|(q|p)$ \'e logicamente equivalente a $p \ee q$.
+
+{\bf{\it Resposta:}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r| c c c c c c c| c|}
+\hline
+\pp & & \qq & (\pp & $|$ & \qq) &    $|$    & (\qq & $|$ & \pp) & $p\ee q$ \\
+\hline
+V   & & V   &  V  &  F  &  V  &  {\bf V}  &  V  &  F  &  V  &  {\bf V} \\ 
+V   & & F   &  V  &  V  &  F  &  {\bf F}  &  F  &  V  &  V  &  {\bf F} \\
+F   & & V   &  F  &  V  &  V  &  {\bf F}  &  V  &  V  &  F  &  {\bf F} \\
+F   & & F   &  F  &  V  &  F  &  {\bf F}  &  F  &  V  &  F  &  {\bf F} \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+%excercicio11
+\item Escreva a rec\ih proca, a nega\cao e a contrapositiva das seguintes afirma\cois:
+\begin{enumerate}[a)]
+\item C\ao que ladra n\ao morde.
+\item Nem tudo que reluz \'e ouro.
+\item O que n\ao mata engorda.
+\item Quem n\ao tem c\ao ca\cc a com gato.
+\item Em boca fechada n\ao entra mosca.
+\item Onde h\'a fuma\cc a, h\'a fogo.
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{tautologias}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Verifique que 7 a), 9 b), 13 e 14 da lista acima s\ao tautologias.
+
+{\bf{\it Resposta: 7 a) da lista}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c c c r|c c c c c c c|}
+\hline
+\pp & & \qq &  & \rr & $[(p$ & $\ou$ &   $(q\ou r)]$   & $\leftrightarrow$   & $[(p\ou q)$ & $\ou$ &  $r)]$   \\
+\hline
+V   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    V     \\
+V   & &  V  &  &  F  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    F      \\
+V   & &  F  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    V      \\
+V   & &  F  &  &  F  &   V   &   V   &        F        &   {\bf V}           &      V      &    V  &    F      \\
+F   & &  V  &  &  V  &   F   &   V   &        V        &   {\bf V}           &      V      &    V  &    V      \\
+F   & &  V  &  &  F  &   F   &   V   &        V        &   {\bf V}           &      V      &    V  &    F      \\
+F   & &  F  &  &  V  &   F   &   V   &        V        &   {\bf V}           &      F      &    V  &    V      \\
+F   & &  F  &  &  F  &   F   &   F   &        F        &   {\bf V}           &      F      &    F  &    F      \\
+\hline
+\end{tabular}
+\end{table}
+
+
+{\bf{\it Resposta: 9 b) da lista}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|c| c c c|}
+\hline
+\pp & $(p\ee {\bf c})$ &    $\leftrightarrow$    & ${\bf c}$  \\
+\hline
+V   &       F        &        {\bf V}          &   F   \\
+F   &       F        &        {\bf V}          &   F   \\
+\hline
+\end{tabular}
+\end{table}
+
+
+{\bf{\it Resposta: 13 da lista}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r| c c c c c|}
+\hline
+\pp & & \qq & $p\to q$ &    $\leftrightarrow$    & ($\nao$\qq & $\to$ & $\nao$\pp) \\
+\hline
+V   & & V   &    V     &        {\bf V}          &   F  &    V  &      F \\
+V   & & F   &    F     &        {\bf V}          &   V  &    F  &      F \\
+F   & & V   &    V     &        {\bf V}          &   F  &    V  &      V \\
+F   & & F   &    V     &        {\bf V}          &   V  &    V  &      V  \\
+\hline
+\end{tabular}
+\end{table}
+
+{\bf{\it Resposta: 14 da lista}}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r| c c c c c c c|}
+\hline
+\pp & & \qq & $p\to q$ &    $\leftrightarrow$    & (\pp & $\ee$ & $\nao$\qq & $\to$ & ${\bf c})$ \\
+\hline
+V   & & V   &    V     &        {\bf V}          &   V  &    F  &      F     &   V   &  F         \\
+V   & & F   &    F     &        {\bf V}          &   V  &    V  &      V     &   F   &  F         \\
+F   & & V   &    V     &        {\bf V}          &   F  &    F  &      F     &   V   &  F         \\
+F   & & F   &    V     &        {\bf V}          &   F  &    F  &      V     &   V   &  F         \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%excercicio2
+\item Determine quais das seguintes proposi\coes t\^em alguma forma presente na lista de tautologias (por exemplo, $(\nao q\ee p)\to\nao q$ tem a forma 18 da lista) e nestes casos, indique qual forma:
+\begin{enumerate}[a)]
+\item $\nao q\to(\nao q \ou\nao p)$. {\bf{\it Resposta:} 18 (simplifica\caoi)}
+\item $q\to (q\ee\nao p)$. {\bf{\it Resposta:} Esta n\ao \'e uma tautologia, portanto n\ao est\'a na lista.}
+\item $(r\to\nao p)\leftrightarrow(\nao r\ou\nao p)$. {\bf{\it Resposta:} 12a (implica\caoi)}
+\item $(p\to\nao q)\leftrightarrow\nao(\nao p\to q)$. {\bf{\it Resposta:} Esta n\ao \'e uma tautologia, portanto n\ao est\'a na lista.}
+\item $(\nao r\to q)\leftrightarrow(\nao q\to r)$. {\bf{\it Resposta:} 13 (contrapositiva)}
+\item $(p\to(\nao r\ou q))\leftrightarrow((r\ee\nao q)\to\nao p)$. {\bf{\it Resposta:} 13 (contrapositiva)}
+\item $r\to\nao(q\ee\nao r)$.   {\bf{\it Resposta:} 17 (adi\caoi)}
+\item $(\nao q\ou p)\ee q)\to p$.  {\bf{\it Resposta:} 22 (silogismo disjuntivo)}
+\end{enumerate}
+
+%excercicio3
+\item D\^e exemplos ou diga porque as proposi\coes a seguir n\ao existem:
+\begin{enumerate}[a)]
+\item Uma implica\cao l\'ogica com uma falsa conclus\aoi. 
+
+{\bf{\it Resposta:} Se $2<1$ e $3=2+1$ ent\ao $2<1$. Esta implica\caoi, ${\bf (p\ee q)\to p}$, \'e uma implica\cao l\'ogica:}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c|}
+\hline
+\pp & & \qq & $p\ee q$ &   $\to$   & \pp \\
+\hline
+V   & & V   &    V     &  {\bf V}  &  V  \\
+V   & & F   &    F     &  {\bf V}  &  V  \\
+F   & & V   &    F     &  {\bf V}  &  F  \\
+F   & & F   &    F     &  {\bf V}  &  F  \\
+\hline
+\end{tabular}
+\end{table}
+
+\item Uma implica\cao l\'ogica com uma conclus\ao verdadeira.
+
+\item Uma implica\cao l\'ogica com uma hip\'otese verdadeira e uma conclus\ao falsa.
+\end{enumerate}
+
+%excercicio4
+\item Quais das seguintes s\ao corretas?
+\begin{enumerate}[a)]
+\item $(p\to(q\ou r))\Rightarrow(p\to q)$.  {\bf{\it Resposta:} N\ao \'e correto. Pode-se provar o contr\'ario com as tabelas verdade ou observando que quando ${\bf p}$ \'e V, ${\bf q}$ \'e F e ${\bf r}$ \'e V ent\ao ${\bf (p\to(q\ou r))}$ \'e V, mas ${\bf (p\to q)}$ \'e F.}
+
+
+\item $((p\ou q)\to r)\Rightarrow(p\to r)$.
+{\bf{\it Resposta:} Correto:}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c c c r|c c c c c|}
+\hline
+\pp & & \qq &  & \rr & $[(p\ou q$ & $\to$ &       $r]$      &    $\to$            & $(p\to r)$   \\
+\hline
+V   & &  V  &  &  V  &   V        &   V   &        V        &   {\bf V}           &      V           \\
+V   & &  V  &  &  F  &   V        &   F   &        F        &   {\bf V}           &      F           \\
+V   & &  F  &  &  V  &   V        &   V   &        V        &   {\bf V}           &      V            \\
+V   & &  F  &  &  F  &   V        &   F   &        F        &   {\bf V}           &      F            \\
+F   & &  V  &  &  V  &   V        &   V   &        V        &   {\bf V}           &      V            \\
+F   & &  V  &  &  F  &   V        &   F   &        F        &   {\bf V}           &      V            \\
+F   & &  F  &  &  V  &   F        &   V   &        V        &   {\bf V}           &      V            \\
+F   & &  F  &  &  F  &   F        &   V   &        F        &   {\bf V}           &      V            \\
+\hline
+\end{tabular}
+\end{table}
+
+\item $(p\ou(p\ee q))\iff p$.
+{\bf{\it Resposta:} Correto:}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c|}
+\hline
+\pp & & \qq & [\pp & $\ou$ & $(p\ee q)]$ & $\leftrightarrow$ & \pp \\
+\hline
+V   & & V   &   V  &   V   &    V        &      {\bf V}     &  V  \\
+V   & & F   &   V  &   V   &    F        &      {\bf V}     &  V  \\
+F   & & V   &   F  &   F   &    F        &      {\bf V}     &  F  \\
+F   & & F   &   F  &   F   &    F        &      {\bf V}     &  F  \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $((p\to q)\ee\nao p)\Rightarrow\nao q$. {\bf{\it Resposta:} N\ao \'e correto. Pode-se provar o contr\'ario com as tabelas verdade ou observando que quando ${\bf p}$ \'e F e ${\bf q}$ \'e V ent\ao ${\bf (p\to q)\ee\nao p}$ \'e V, mas ${\bf \nao q}$ \'e F.}
+\end{enumerate}
+
+%excercicio5
+\item Quais das seguintes s\ao tautologias, contradi\coes ou nenhuma das duas?
+\begin{enumerate}[a)]
+\item $(p\ee\nao q)\to(q \ou \nao p)$. {\bf{\it Resposta:} Nenhuma das duas}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c c c|}
+\hline
+\pp & & \qq & (\pp & $\ee$ & $\nao q)$ & $\rightarrow$     & (\qq  & $\ou$  & $\nao p$) \\
+\hline
+V   & & V   &   V  &   F   &    F        &      {\bf V}     &  V   &    V   &     F    \\
+V   & & F   &   V  &   V   &    V        &      {\bf F}     &  F   &    F   &     F      \\
+F   & & V   &   F  &   F   &    F        &      {\bf V}     &  V   &    V   &     V      \\
+F   & & F   &   F  &   F   &    V        &      {\bf V}     &  F   &    V   &     V      \\
+\hline
+\end{tabular}
+\end{table}
+
+\item $\nao p \to p$. {\bf{\it Resposta:} Nenhuma das duas}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l|c c c|}
+\hline
+\pp       & $\nao$ \pp   & $\to$       &  \pp  \\
+\hline
+V         &   F          &   {\bf V}   &  V  \\
+F         &   V          &   {\bf F}   &  F  \\
+\hline
+\end{tabular}
+\end{table}
+
+\item $\nao p \leftrightarrow p$. {\bf{\it Resposta:} Contradi\cao}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l|c c c|}
+\hline
+\pp       & $\nao$ \pp   & $\leftrightarrow$       &  \pp  \\
+\hline
+V         &   F          &   {\bf F}   &  V  \\
+F         &   V          &   {\bf F}   &  F  \\
+\hline
+\end{tabular}
+\end{table}
+
+\item $(p\ee\nao p)\to p$. {\bf{\it Resposta:} Tautologia}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l|c c c c c|}
+\hline
+\pp       & (\pp & $\ee$ & $\nao$\pp)   & $\to$       &  \pp  \\
+\hline
+V         &   V  &   F   &   F          &  {\bf V}    &   V    \\
+F         &   F  &   F   &   V          &  {\bf V}    &   F    \\
+\hline
+\end{tabular}
+\end{table}
+
+\item $(p\ee\nao p)\to q$. {\bf{\it Resposta:} Tautologia}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c|}
+\hline
+\pp & & \qq & (\pp & $\ee$ & $\nao$\pp)   & $\to$       &  \qq  \\
+\hline
+V   & &  V  &   V  &   F   &   F          &  {\bf V}    &   V    \\
+V   & &  F  &   V  &   F   &   F          &  {\bf V}    &   F    \\
+F   & &  V  &   F  &   F   &   V          &  {\bf V}    &   V    \\
+F   & &  F  &   F  &   F   &   V          &  {\bf V}    &   F    \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $(p\ee\nao q)\leftrightarrow(p\to q)$. {\bf{\it Resposta:} Contradi\cao}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c|}
+\hline
+\pp & & \qq & (\pp & $\ee$ & $\nao$\qq)   & $\leftrightarrow$       &  $(p\to q)$  \\
+\hline
+V   & &  V  &   V  &   F   &   F          &  {\bf F}    &   V    \\
+V   & &  F  &   V  &   V   &   V          &  {\bf F}    &   F    \\
+F   & &  V  &   F  &   F   &   F          &  {\bf F}    &   V    \\
+F   & &  F  &   F  &   F   &   V          &  {\bf F}    &   V    \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $[(p\to q) \leftrightarrow r]\leftrightarrow[p\to(q\leftrightarrow r)]$. {\bf{\it Resposta: } Nenhuma das duas}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c c c r|c c c c c c c|}
+\hline
+\pp & & \qq &  & \rr & $[(p\to q)$ & $\leftrightarrow$ &   $r]$   & $\leftrightarrow$   & $[p$ & $\to$ &  $(q\leftrightarrow r)]$   \\
+\hline
+V   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    V     \\
+V   & &  V  &  &  F  &   V   &   F   &        F        &   {\bf V}           &      V      &    F  &    F      \\
+V   & &  F  &  &  V  &   F   &   F   &        V        &   {\bf V}           &      V      &    F  &    F      \\
+V   & &  F  &  &  F  &   F   &   V   &        F        &   {\bf V}           &      V      &    V  &    V      \\
+F   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      F      &    V  &    V      \\
+F   & &  V  &  &  F  &   V   &   F   &        F        &   {\bf F}           &      F      &    V  &    F      \\
+F   & &  F  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      F      &    V  &    F      \\
+F   & &  F  &  &  F  &   V   &   F   &        F        &   {\bf F}           &      F      &    V  &    V      \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+%excercicio6
+\item Quais dos seguintes s\ao corretos?
+\begin{enumerate}[a)]
+\item $(p\leftrightarrow q)\Rightarrow(p\to q)$. {\bf{\it Resposta:} Correto, pois ${\bf (p\leftrightarrow q)\to(p\to q)}$ \'e uma tautologia, vide a tabela verdade abaixo:}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c|}
+\hline
+\pp & & \qq & $(p \leftrightarrow q)$ &   $\to$   & $(p\to q)$ \\
+\hline
+V   & &  V  &           V             &  {\bf V}  &     V      \\
+V   & &  F  &           F             &  {\bf V}  &     F      \\
+F   & &  V  &           F             &  {\bf V}  &     V      \\
+F   & &  F  &           V             &  {\bf V}  &     V      \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $(p\to q)\Rightarrow(p\leftrightarrow q)$. {\bf{\it Resposta:} Incorreto, pois ${\bf (p\to q)\to(p\leftrightarrow q)}$ n\~ao  \'e uma tautologia, vide a tabela verdade abaixo:}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c|}
+\hline
+\pp & & \qq & $(p \to q)$ &   $\to$   & $(p \leftrightarrow q)$ \\
+\hline
+V   & &  V  &    V        &  {\bf V}  &           V      \\
+V   & &  F  &    F        &  {\bf V}  &           F      \\
+F   & &  V  &    V        &  {\bf F}  &           F      \\
+F   & &  F  &    V        &  {\bf V}  &           V      \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item $(p\to q)\Rightarrow q$. {\bf{\it Resposta:} Incorreto, pois ${\bf (p\to q)\to q}$ n\~ao  \'e uma tautologia, vide a tabela verdade abaixo:}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c|}
+\hline
+\pp & & \qq & $(p \to q)$ &   $\to$   & $q$ \\
+\hline
+V   & &  V  &    V        &  {\bf V}  &  V      \\
+V   & &  F  &    F        &  {\bf V}  &  F      \\
+F   & &  V  &    V        &  {\bf V}  &  V      \\
+F   & &  F  &    V        &  {\bf F}  &  F      \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+%excercicio7
+\item $\to$ \'e associoativa? Isto \'e $((p \to q) \to r)\iff((p \to (q \to r))$.
+
+{\bf{\it Resposta: } $\to$ n\ao \'e associativa, pois}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c c c r|c c c c c c c|}
+\hline
+\pp & & \qq &  & \rr & $[(p\to q)$ & $\to$ &   $r]$   & $\leftrightarrow$   & $[p$ & $\to$ &  $(q\to r)]$   \\
+\hline
+V   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    V     \\
+V   & &  V  &  &  F  &   V   &   F   &        F        &   {\bf V}           &      V      &    F  &    F      \\
+V   & &  F  &  &  V  &   F   &   V   &        V        &   {\bf V}           &      V      &    V  &    V      \\
+V   & &  F  &  &  F  &   F   &   V   &        F        &   {\bf V}           &      V      &    V  &    V      \\
+F   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      F      &    V  &    V      \\
+F   & &  V  &  &  F  &   V   &   F   &        F        &   {\bf F}           &      F      &    V  &    F      \\
+F   & &  F  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      F      &    V  &    V      \\
+F   & &  F  &  &  F  &   V   &   F   &        F        &   {\bf F}           &      F      &    V  &    V      \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%excercicio8
+\item $\leftrightarrow$ \'e associoativa? Isto \'e $((p \leftrightarrow q) \leftrightarrow r)\iff((p \leftrightarrow (q \leftrightarrow r))$.
+
+{\bf{\it Resposta: } $\leftrightarrow$ \'e associativa, pois}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c c c r|c c c c c c c|}
+\hline
+\pp & & \qq &  & \rr & $[(p\leftrightarrow q)$ & $\leftrightarrow$ &   $r]$   & $\leftrightarrow$   & $[p$ & $\leftrightarrow$ &  $(q\leftrightarrow r)]$   \\
+\hline
+V   & &  V  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      V      &    V  &    V     \\
+V   & &  V  &  &  F  &   V   &   F   &        F        &   {\bf V}           &      V      &    F  &    F      \\
+V   & &  F  &  &  V  &   F   &   F   &        V        &   {\bf V}           &      V      &    F  &    F      \\
+V   & &  F  &  &  F  &   F   &   V   &        F        &   {\bf V}           &      V      &    V  &    V      \\
+F   & &  V  &  &  V  &   F   &   F   &        V        &   {\bf V}           &      F      &    F  &    V      \\
+F   & &  V  &  &  F  &   F   &   V   &        F        &   {\bf V}           &      F      &    V  &    F      \\
+F   & &  F  &  &  V  &   V   &   V   &        V        &   {\bf V}           &      F      &    V  &    F      \\
+F   & &  F  &  &  F  &   V   &   F   &        F        &   {\bf V}           &      F      &    F  &    V      \\
+\hline
+\end{tabular}
+\end{table}
+
+%excercicio9
+\item Quais das seguintes proposi\coes verdadeiras s\ao tautologias?
+\begin{enumerate}[a)]
+\item Se $2+2=4$ ent\ao $5$ \'e \ih mpar. {\bf{\it Resposta:} N\ao \'e uma tautologia}
+\item $3+1=4$ e $5+3=8$ implica $3+1=4$. {\bf{\it Resposta:} Tautologia}
+\item $3+1=4$ e $5+3=8$ implica $3+2=5$.  {\bf{\it Resposta:} N\ao \'e uma tautologia}
+\item Vermelho \'e amarelo ou vermelho n\ao \'e amarelo. {\bf{\it Resposta:} Tautologia}
+\item Vermelho \'e amarelo e vermelho \'e vermelho. {\bf{\it Resposta:} N\ao \'e uma tautologia}
+\item $4$ \'e \ih mpar ou $2$ \'e par e $2$ \'e \ih mpar implica que $4$ \'e \ih mpar.  {\bf{\it Resposta:} Tautologia}
+\item $4$ \'e \ih mpar ou $2$ \'e par e $2$ \'e \ih mpar implica que $4$ \'e par.  {\bf{\it Resposta:} N\ao \'e uma tautologia}
+\end{enumerate}
+
+%excercicio10
+\item Quais das seguintes s\ao consequ\^encias l\'ogicas do conjunto de proposi\coes $p\ou q$, $r\to\nao q$, $\nao p$?
+\begin{enumerate}[a)]
+\item $q$.
+\item $r$.
+\item $\nao p\ou s$.
+\item $\nao r$.
+\item $\nao(\nao q\ee r)$.
+\item $q\to r$.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{demonstracao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Determine a validade dos seguintes argumentos usando tabelas verdade:
+
+\begin{enumerate}[a)]
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\underline{\nao p\ou q}$ \\
+$q\to p$.
+\end{tabular}
+
+{\bf{\it Resposta:} Inv\'alido,}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c|}
+\hline
+\pp & & \qq & $(p \to q)$ &   $\ee$   & $(\nao p\ou q)$ &   $\to$    &  $(q\to p)$ \\
+\hline
+V   & &  V  &       V     &     V     &         V       &   {\bf V}  &        V    \\
+V   & &  F  &       F     &     F     &         F       &   {\bf V}  &        V    \\
+F   & &  V  &       V     &     V     &         V       &   {\bf F}  &        F    \\
+F   & &  F  &       V     &     V     &         V       &   {\bf V}  &        V    \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$r \to q$ \\
+$\underline{q}$ \\
+$\nao r$.
+\end{tabular}
+
+{\bf{\it Resposta:} Inv\'alido, pode-se mostrar usando a tabela verdade ou observar que quando \pp \'e V, \qq \'e V e $r$ \'e V ou seja, as hip\'otese s\ao verdadeiras mas a conclus\ao \'e falsa.}
+
+\item \begin{tabular}{l}
+$p\ou \nao q$ \\
+$\underline{\nao p}$ \\
+$\nao q$.
+\end{tabular}
+
+{\bf{\it Resposta:} V\'alido,}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c|}
+\hline
+\pp & & \qq & $(p \ou \nao q)$ &   $\ee$   & $\nao p$ &   $\to$    &  $\nao q$ \\
+\hline
+V   & &  V  &       V          &     F     &    F    &   {\bf V}   &        F    \\
+V   & &  F  &       V          &     F     &    F    &   {\bf V}   &        V    \\
+F   & &  V  &       F          &     F     &    V    &   {\bf V}   &        F    \\
+F   & &  F  &       V          &     V     &    V    &   {\bf V}   &        V    \\
+\hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+
+%excercicio2
+\item D\^e exemplos nos \ih tens a seguir sempre que poss\ih vel. Se n\ao for poss\ih vel, diga porque:
+\begin{enumerate}[a)]
+\item Um argumento inv\'alido com conclus\ao falsa.
+\item Um argumento v\'alido com uma conclus\ao verdadeira. 
+\item Um argumento inv\'alido com uma conclus\ao verdadeira.
+\item Um argumento v\'alido com uma conclus\ao falsa.
+\item Um argumento v\'alido com hip\'oteses verdeiras e uma conclus\ao falsa. {\bf{\it Resposta:} N\ao h\'a tal exemplo porque se um argumento \'e v\'alido e as hip\'oteses s\ao verdadeiras ent\ao a conclus\ao deve necessariamente ser verdadeira.}
+\item Um argumento inv\'alido com hip\'oteses verdeiras e uma conclus\ao falsa.
+\item Um argumento v\'alido com hip\'oteses falsas e uma conclus\ao verdadeira. {\bf{\it Resposta:} \begin{tabular}{l}
+$2+2=5$ \\
+\underline{$2+2=5$ implica $1<3$} \\
+$1<3$.
+\end{tabular}}
+\end{enumerate}
+
+%excercicio3
+\item Determine a validade dos seguintes argumentos usando o princ\ih pios de demonstra\cao ou mostre por contra exemplo que \'e inv\'alido:
+
+\begin{enumerate}[a)]
+\item \begin{tabular}{l}
+$\nao p\ou q$ \\
+\underline{$p$} \\
+$q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao p \ou q$ & & hip\'otese \\
+2. $p\to q$ & & consequ\^encia l\'ogica de 1. \\
+3. $p$ & & hip\'otese. \\
+4. $\nao p$ & & consequ\^encia l\'ogica de 2. e 3. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+\underline{$r\to \nao q$} \\
+$p\to\nao r$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $r\to\nao q$ & & hip\'otese \\
+2. $q\to\nao r$ & & consequ\^encia l\'ogica de 1. (contrapositiva) \\
+3. $p\to q$ & & hip\'otese. \\
+4. $p\to \nao r$ & & consequ\^encia l\'ogica de 3. e 2. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$\nao p\ou q$ \\
+\underline{$\nao r\to \nao q$} \\
+$p\to\nao r$.
+\end{tabular}
+
+{\it Resposta:} Inv\'alido, se \pp \'e V, $r$ \'e V e \qq \'e V, ent\ao todas as hip\'oteses s\ao verdade mas a conclus\ao \'e falsa. 
+
+\item \begin{tabular}{l}
+$q\ou\nao p$ \\
+\underline{$\nao q$} \\
+$p$.
+\end{tabular}
+
+{\it Resposta:} Inv\'alido, se \pp \'e F e \qq \'e F, ent\ao todas as hip\'oteses s\ao verdade mas a conclus\ao \'e falsa.
+
+\item \begin{tabular}{l}
+\underline{$\nao p$} \\
+$p\to q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao (p\to q)$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $p\ee\nao q$ & & consequ\^encia l\'ogica de 1. \\
+3. $p$ & & consequ\^encia l\'ogica de 2. \\
+4. $\nao p$ & & hip\'otese \\
+5. $p\ee\nao p$ & & consequ\^encia l\'ogica de 3. e 4. (contradi\caoi) \\
+6. $p\to q$ & & consequ\^encia l\'ogica de 5. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$(p\ee q)\to(r\ee s)$ \\
+\underline{$\nao r$} \\
+$\nao p\ou\nao q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao (\nao p\ou\nao q)$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $p\ee q$ & & consequ\^encia l\'ogica de 1. \\
+3. $(p\ee q)\to(r\ee s)$ & & hip\'otese \\
+4. $r\ee s$ & & consequ\^encia l\'ogica de 2. e 3. \\
+5. $r$ & & consequ\^encia l\'ogica de 4.\\
+6. $\nao r$ & & hip\'otese \\
+7. $r\ee \nao r$ & & consequ\^encia l\'ogica de 5. e 6. (contradi\caoi) \\
+8. $\nao p\ou\nao q$ & & consequ\^encia l\'ogica de 7. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\nao q \to \nao r$ \\
+$s\to(p\ou r)$ \\
+\underline{$s$} \\
+$q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao q\to \nao r$ & & hip\'otese \\
+2. $r\to q$ & & consequ\^encia l\'ogica de 1. \\
+3. $p\to q$ & & hip\'otese \\
+4. $(p\ou r)\to q$ & & consequ\^encia l\'ogica de 2. e 3. \\
+5. $s$ & & hip\'otese \\
+6. $s\to (p\ou r)$ & & hip\'otese \\
+7. $(p\ou r)$ & & consequ\^encia l\'ogica de 5. e 6. \\
+8. $q$ & & consequ\^encia l\'ogica de 4. e 7. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$q\to \nao r$ \\
+\underline{$\nao r\to\nao p$} \\
+$\nao(p\ee q)$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $p\ee q$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $\nao(p\to\nao q)$ & & consequ\^encia l\'ogica de 1. \\
+3. $q\to \nao r$ & & hip\'otese \\
+4. $r\to \nao q$ & & consequ\^encia l\'ogica de 3. \\
+5. $\nao r\to\nao p$ & & hip\'otese \\
+6. $p\to r$ & & consequ\^encia l\'ogica de 5. \\
+7. $p\to \nao q$ & & consequ\^encia l\'ogica de 6. e 4. \\
+8. $(p\to \nao q)\ee\nao(p\to \nao q)$ & & consequ\^encia l\'ogica de 7. e 2. (contradi\caoi) \\
+9. $\nao(p\ee q)$ & & consequ\^encia l\'ogica de 8. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+Note que a hip\'otese $p\ou q$ n\ao foi utilizada.
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\nao r \to \nao q$ \\
+\underline{$r\to\nao p$} \\
+$\nao p$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $p$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $\nao r\to\nao q$ & & hip\'otese \\
+3. $q\to r$ & & consequ\^encia l\'ogica de 2. \\
+4. $p\to q$ & & hip\'otese \\
+5. $p\to r$ & & consequ\^encia l\'ogica de 4. e 3. \\
+6. $r\to\nao p$ & & hip\'otese \\
+7. $p\to \nao p$ & & consequ\^encia l\'ogica de 5. e 6. \\
+8. $\nao p$ & & consequ\^encia l\'ogica de 1. e 7. \\
+9. $p\ee \nao p$ & & consequ\^encia l\'ogica de 1. e 8. (contradi\caoi)\\
+10. $\nao p$ & & consequ\^encia l\'ogica de 9. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+\underline{$p\to\nao p$} \\
+$\nao p$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $p$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $p\to\nao p$ & & hip\'otese \\
+3. $\nao p$ & & consequ\^encia l\'ogica de 1. e 2. \\
+4. $p\ee\nao p$ & & consequ\^encia l\'ogica de 1. e 3. (contradi\caoi) \\
+5. $\nao p$ & & consequ\^encia l\'ogica de 4. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$p\to r$ \\
+\underline{$\nao r$} \\
+$q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao r$ & & hip\'otese \\
+2. $p\to r$ & & hip\'otese \\
+3. $\nao r\to\nao p$ & & consequ\^encia l\'ogica de 2. \\
+4. $\nao p$ & & consequ\^encia l\'ogica de 1. e 3. \\
+5. $p\ou q$ & & hip\'otese \\
+6. $q$ & & consequ\^encia l\'ogica de 4. e 5. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p$ \\
+$q\to\nao p$ \\
+$\nao q\to(r\ou\nao s)$ \\
+\underline{$\nao r$} \\
+$\nao s$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $q\to\nao p$ & & hip\'otese \\
+2. $p\to \nao q$ & & consequ\^encia l\'ogica de 1. \\
+3. $\nao q\to(r\ou\nao s)$ & & hip\'otese \\
+4. $p\to r\ou\nao s$ & & consequ\^encia l\'ogica de 2. e 3. \\
+5. $p$ & & hip\'otese \\
+6. $r\ou\nao s$ & & consequ\^encia l\'ogica de 4. e 5. \\
+7. $\nao r$ & & hip\'otese \\
+8. $\nao s$ & & consequ\^encia l\'ogica de 6. e 7. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p\to(q\ou s)$ \\
+\underline{$q\to r$} \\
+$p\to(r\ou s)$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $p\to(q\ou s)$ & & hip\'otese \\
+2. $\nao q\ee\nao s\to\nao p$ & & consequ\^encia l\'ogica de 1. \\
+3. $(\nao q\to(\nao s\to\nao p))$ & & consequ\^encia l\'ogica de 2. \\
+4. $q\to r$ & & hip\'otese \\
+5. $\nao r\to\nao q$ & & consequ\^encia l\'ogica de 4. \\
+6. $(\nao r\to(\nao s\to\nao p))$ & & consequ\^encia l\'ogica de 5. e 3. \\
+7. $\nao r\ee\nao s\to\nao p$ & & consequ\^encia l\'ogica de 6. \\
+8. $p\to(r\ou s)$ & & consequ\^encia l\'ogica de 7. \\\tabucline[2pt]{-}
+\end{tabu}
+
+\item \begin{tabular}{l}
+$p\to\nao q$ \\
+$q\to p$ \\
+\underline{$r\to p$} \\
+$\nao q$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $q$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $q\to p$ & & hip\'otese \\
+3. $p\to\nao q$ & & hip\'otese \\
+4. $q\to\nao q$ & & consequ\^encia l\'ogica de 2. e 3. \\
+5. $\nao q$ & & consequ\^encia l\'ogica de 1. e 4.\\
+6. $q\ee \nao q$ & & consequ\^encia l\'ogica de 1. e 5. (contradi\caoi) \\
+7. $\nao q$ & & consequ\^encia l\'ogica de 6. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+
+Note que a hip\'otese $r\to p$ n\ao foi utilizada.
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$r\to s$ \\
+\underline{$\nao(p\to s)$} \\
+$q\ee\nao r$.
+\end{tabular}
+
+{\it Resposta:}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao(q\ee\nao r)$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $\nao q\ou r$ & & consequ\^encia l\'ogica de 1. \\
+3. $p\to q$ & & hip\'otese \\
+4. $\nao q\to \nao p$ & & consequ\^encia l\'ogica de 3. \\
+5. $r\to s$ & & hip\'otese \\
+6. $(\nao q\ou r)\to (\nao p\ou s)$ & & consequ\^encia l\'ogica de 4. e 5. \\
+7. $\nao p\ou s$ & & consequ\^encia l\'ogica de 2. e 6. \\
+8. $p\to s$ & & consequ\^encia l\'ogica de 7.\\
+9. $\nao(p\to s)$ & & hip\'otese \\
+10. $(p\to s)\ee\nao(p\to s)$ & & consequ\^encia l\'ogica de 8. e 9. (contradi\caoi)\\
+11. $q\ee\nao r$ & & consequ\^encia l\'ogica de 10. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu}
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{quantificadores}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Traduza as seguintes senten\cc as para a forma simb\'olica, indicando as escolhas apropriadas para dom\ih nios:
+\begin{enumerate}[a)]
+\item Existe um inteiro $x$ tal que $4=x+2$.
+
+{\bf{\it Resposta:} Seja $\mathbb{Z}$ o conjunto de n\'umeros inteiros e ${\bf p(x)}$ ``${\bf 4=x+2}$.'' Ent\ao a proposi\cao \'e ${\bf \exists x \textrm{ em } \mathbb{Z} \ni p(x)}$.}
+
+\item Para todos inteiros $x$, $4=x+2$.
+
+{\bf{\it Resposta:} Seja $\mathbb{Z}$ o conjunto de n\'umeros inteiros e ${\bf p(x)}$ ``${\bf 4=x+2}$.'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } \mathbb{Z}, p(x)}$.}
+
+\item Todo tri\^angulo equil\'atero \'e equi\^angulo.
+\item Todos estudantes gostam de l\'ogica.
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto de todos os estudantes e ${\bf p(x})$ ``${\bf x}$ gosta de l\'ogica.'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } D, p(x)}$.}
+
+\item Alguns estudantes n\ao gostam de l\'ogica.
+\item Nenhum homem \'e uma ilha.
+\item Todo mundo que entende l\'ogica gosta dela.
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto de todas as pessoas, ${\bf p(x)}$ ``${\bf x}$ entende l\'ogica'' e ${\bf q(x)}$ ``${\bf x}$ gosta de l\'ogica'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } D, p(x)\to q(x)}$.}
+
+\item Cada pessoa tem uma m\~ae.
+\item Entre todos os inteiros existem uns que s\ao primos.
+\item Alguns inteiros s\ao pares e divis\ih veis por 3.
+\item Alguns inteiros s\ao pares ou divis\ih veis por 3. 
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto dos inteiros, ${\bf p(x)}$ ``${\bf x}$ \'e par'' e ${\bf q(x)}$ ``${\bf x}$ \'e divis\ih vel por $3$.'' Ent\ao a proposi\cao \'e ${\bf \exists x \textrm{ em } D \ni p(x)\ou q(x)}$.}
+
+\item Todos grupos c\ih clicos s\ao abelianos.
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto dos grupos, ${\bf p(x)}$ ``${\bf x}$ \'e um grupo c\ih clico'' e ${\bf q(x)}$ ``${\bf x}$ \'e grupo abeliano.'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } D, p(x)\to q(x)}$.}
+
+\item Pelo menos uma das letras de {\it banana} \'e uma vogal.
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto de todas as letras, ${\bf p(x)}$ ``${\bf x}$ uma das letras de {\it banana}'' e ${\bf q(x)}$ ``${\bf x}$ \'e uma vogal'' Ent\ao a proposi\cao \'e ${\bf \exists x \textrm{ em } D \ni p(x)\ee q(x)}$.}
+
+\item Um dia no pr\'oximo m\^es \'e uma sexta-feira.
+\item $x^2-4=0$ tem uma solu\cao positiva.
+\item Cada solu\cao de $x^2-4=0$ \'e positiva.  
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto dos n\'umeros reais, ${\bf p(x)}$ ``${\bf x}$ \'e solu\cao de ${\bf x^2-4=0}$'' e ${\bf q(x)}$ ``${\bf x}$ \'e positiva.'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } D, p(x)\to q(x)}$.}
+
+\item Nenhuma solu\cao de $x^2-4=0$ \'e positiva.
+\item Um candidato ser\'a o vencedor.
+\item Cada elemento do conjunto $A$ \'e um elemento do conjunto $B$.
+
+{\bf{\it Resposta:} Seja ${\bf q(x)}$ ``${\bf x}$ \'e um elemento do conjunto $B$.'' Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } A, q(x)}$.}
+\end{enumerate}
+
+%excercicio2
+\item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.\\
+{\bf{\it Resposta d):} ${\bf\exists x \textrm{ em } D \ni \nao p(x).}$ Existe um estudante que n\ao gosta de l\'ogica.}\\
+{\bf{\it Resposta k):} ${\bf\forall x \textrm{ em } D, \nao(p(x)\ou q(x)).}$ Todos os inteiros s\ao \ih mpares e n\ao divis\ih veis por $3$.}\\
+{\bf{\it Resposta p):} ${\bf\bf\exists x \textrm{ em } D \ni \nao (p(x)\to q(x)).}$ Existe uma solu\cao de ${\bf x^2-4=0}$ que n\ao \'e positiva.}\\
+
+%excercicio3
+\item Sejam $D$ o conjunto dos n\'umeros naturais (isto \'e, $D=\{1,2,3,4,5,...\}$), $p(x)$ ``$x$ \'e par'', $q(x)$ ``$x$ \'e divis\ih vel por $3$'' e $r(x)$ ``$x$ \'e div\ih sivel por $4$.'' Para cada uma das proposi\coes abaixo, expresse em Portugu\^es, determine seu valor verdade e d\^e uma nega\cao em Portugu\^es.  
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, p(x)$.
+\item $\forall x \textrm{ em } D, p(x)\ou q(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to q(x)$. {\bf{\it Resposta:} Cada n\'umero natural par \'e divis\ih vel por $3$; falso; existe um n\'umero natural par que n\ao \'e divis\ih vel por $3$.}
+\item $\forall x \textrm{ em } D, p(x)\ou r(x)$.
+\item $\forall x \textrm{ em } D, p(x)\ee q(x)$.
+\item $\exists x \textrm{ em } D \ni r(x)$.
+\item $\exists x \textrm{ em } D \ni p(x)\ee q(x)$.
+\item $\exists x \textrm{ em } D \ni p(x)\to q(x)$.
+\item $\exists x \textrm{ em } D \ni q(x)\to q(x+1)$. {\bf{\it Resposta:} Existe um n\'umero natural tal que se \'e divis\ih vel por $3$ ent\ao o pr\'oximo n\'umero natural \'e divis\ih vel por $3$; verdade; todos n\'umeros naturais s\ao divis\ih veis por $3$ e o pr\'oximo n\'umero natural n\ao \'e divis\ih vel por $3$.}
+\item $\exists x \textrm{ em } D \ni p(x) \leftrightarrow q(x+1)$.
+\item $\forall x \textrm{ em } D, r(x)\to p(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to\nao q(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to p(x+2)$.
+\item $\forall x \textrm{ em } D, r(x)\to r(x+4)$.
+\item $\forall x \textrm{ em } D, q(x)\to q(x+1)$.
+\end{enumerate}
+
+%excercicio4
+\item Para cada uma das proposi\coes do exerc\ih cio acima (se poss\ih vel) d\^e um exemplo de um dom\ih nio $D'$ tal que as proposi\coes tenham o valor verdade oposto daquele que tinha em $D$, o conjunto dos n\'umeros naturais.\\
+{\bf{\it Resposta c):} Se ${\bf D'}$ \'e o conjunto dos n\'umeros naturais divis\ih veis por $3$ ent\ao esta proposi\cao ser\'a verdade.}\\
+
+%excercicio5
+\item As seguintes proposi\coes s\ao sempre, \`as vezes ou nunca verdade? D\^e exemplos de dom\ih nios $D$ e a fun\cao proposicional $p$ ou raz\oes para justificar suas respostas. 
+\begin{enumerate}[a)]
+\item $[\forall x \textrm{ em } D, p(x)]\to[\exists x \textrm{ em } D \ni p(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\to[\forall x \textrm{ em } D, p(x)]$. {\bf{\it Resposta:} \`As vezes correta; ser\'a verdade quando $D$ cont\'em no m\'aximo um elemento ou se $p(x)$ \'e verdade para todo $x$ em $D$ e ser\'a falso se existir pelo menos um elemento $x$ em $D$ para o qual $p(x)$ \'e verdade e um elemento em $D$ para o qual \'e falso. }
+\item $[\forall x \textrm{ em } D, \nao p(x)]\to\nao[\forall x \textrm{ em } D, p(x)]$.
+\item $[\exists x \textrm{ em } D \ni \nao p(x)]\to \nao[\exists x \textrm{ em } D \ni p(x)]$.
+\item $\nao[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, \nao p(x)]$.
+\item $\nao[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni \nao p(x)]$.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{mquantificadores}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Traduza as seguintes senten\cc as para a forma simb\'olica, indicando as escolhas apropriadas para dom\ih nios:
+\begin{enumerate}[a)]
+\item Para cada inteiro par $n$ existe um inteiro $k$ tal que $n=2k$.
+\item Para cada reta $l$ e cada ponto $p$ que n\ao est\'a em $l$ existe uma reta $l'$ que passa por $p$ que \'e paralela a $l$.
+\item Para cada $y$ em $B$ existe um $x$ em $A$ tal que $f(x)=y$.
+
+{\bf{\it Resposta:} Seja ${\bf p(x,y)}$ ``${\bf f(x)=y}$.'' Ent\ao a proposi\cao \'e ${\bf \forall y \textrm{ em } B, \exists x \textrm{ em } A \ni p(x,y)}$.}
+
+\item Para cada $x$ no dom\ih nio de $f$ e para cada $\epsilon >0$ existe $\delta >0$ tal que $|x-c|<\delta$ implica $|f(x)-L|<\epsilon$.
+\item Para cada $x$ em $G$ existe um $x'$ em $G$ tais que $xx'=e$.
+
+{\bf{\it Resposta:}  Seja ${\bf p(x,y)}$ ``${\bf xy=e}$''. Ent\ao a proposi\cao \'e ${\bf \forall x \textrm{ em } G, \exists x' \textrm{ em } G  \ni p(x,x')}$.}
+
+\item Se todo inteiro \'e \ih mpar ent\ao todo inteiro \'e par. 
+
+{\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto dos inteiros, ${\bf p(x)}$ ``${\bf x}$ \'e \ih mpar.'' Ent\ao a proposi\cao \'e ${\bf(\forall x \textrm{ em } D, p(x))\to(\forall x \textrm{ em } D, \nao p(x))}$.}
+
+\item Algu\'em ama algu\'em em algum momento.
+\item Entre todas as pulgas do carpete existe uma para a qual existe em todos os cachorros no sof\'a uma mordida que aquela pulga fez.
+\item Para cada inteiro $n$ existe outro inteiro maior que $2n$.
+
+{\bf{\it Resposta:}  Sejam ${\bf D}$ o conjunto dos n\'umeros inteiros, ${\bf p(x,y)}$ ``${\bf x>2y}$''. Ent\ao a proposi\cao \'e ${\bf \forall n \textrm{ em } D, \exists m \textrm{ em } D  \ni p(m,n)}$.}
+
+\item A soma de quaisquer dois inteiros pares \'e par.
+
+{\bf{\it Resposta:}  Sejam ${\bf D}$ o conjunto dos n\'umeros inteiros pares, ${\bf p(x,y)}$ ``${\bf x+y}$ pertence \`a D''. Ent\ao a proposi\cao \'e ${\bf \forall x,y \textrm{ em } D, p(x,y)}$.}
+
+\item Todo subconjunto fechado e limitado de $\mathbb{R}$ \'e compacto.
+
+{\bf{\it Resposta:}  Sejam ${\bf D}$ o conjunto dos subconjuntos de $\mathbb{R}$, ${\bf p(x)}$ ``${\bf x}$ \'e fechado'', ${\bf q(x)}$ ``${\bf x}$ \'e limitado'', ${\bf r(x)}$ ``${\bf x}$ \'e compacto''. Ent\ao a proposi\cao \'e \\ ${\bf \forall x \textrm{ em } D, p(x)\ee q(x)\to r(x)}$.}
+\end{enumerate}
+
+%excercicio2
+\item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.\\
+{\bf{\it Resposta f):} Todo inteiro \'e \ih mpar e existe um inteiro \ih mpar.}\\
+
+%excercicio3
+\item Sejam $p(x,y)$ representando ``$x+2>y$'' e $D$ o conjunto dos n\'umeros naturais ($D=\{1,2,3,...\}$, tamb\'em denotado por $\mathbb{N}$). Escreva em palavras e determine o valor verdade de
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, \exists y \textrm{ em } D \ni p(x,y)$.
+\item $\exists x \textrm{ em } D \ni \forall y \textrm{ em } D, p(x,y)$.
+\item $\forall x \textrm{ em } D, \forall y \textrm{ em, } p(x,y)$. {\bf{\it Resposta:} Para cada n\'umero natural ${\bf x}$ e cada n\'umero natural ${\bf y}$, ${\bf x+2>y}$. Falsa.}
+\item $\exists x \textrm{ em } D \ni \exists y \textrm{ em } D \ni p(x,y)$.
+\item $\forall y \textrm{ em } D, \exists x \textrm{ em } D \ni p(x,y)$.
+\item $\exists y \textrm{ em } D \ni \forall x \textrm{ em } D, p(x,y)$.
+\end{enumerate} 
+
+%excercicio4
+\item Sejam $D=\{1,2\}$, $p(x)$ ``$x$ \'e par'' e $q(x)$ ``$x$ \'e \ih mpar.'' Escreva em detalhes as seguintes quantifica\coes como conjun\coes e disjun\coes  das interpreta\coes (como feito no come\cc o desta se\caoi):
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, [p(x)\ee q(x)]$.
+\item $[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]$.
+\item $\forall x \textrm{ em } D, [p(x)\ou q(x)]$. {\bf{\it Resposta:} [$1$ \'e par ou $1$ \'e \ih mpar] e [$2$ \'e par ou $2$ \'e \ih mpar.]}
+\item $[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ou q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]$.
+\end{enumerate}
+
+%excercicio5
+\item D\^e alguns exemplos para mostrar que as seguintes implica\coes l\'ogicas n\ao s\ao equival\^encias l\'ogicas:
+\begin{enumerate}[a)]
+\item $\{[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]\}\Rightarrow \forall x \textrm{ em } D, [p(x)\ou q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]\}$. {\bf{\it Resposta:} Sejam ${\bf D}$ o conjunto dos n\'umeros naturais, ${\bf p(x)}$ ``$x$ \'e par'' e ${\bf q(x)}$ ``x \'e \ih mpar.''}
+\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]\}$.
+\end{enumerate}
+
+%excercicio6
+\item Determine a rela\cao (se existir uma) entre
+\[
+\exists x \textrm{ em } D \ni [p(x)\to q(x)]
+\]
+e
+\[
+[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)].
+\]
+
+%excercicio7
+\item Mostre que a segunda equival\^encia l\'ogica em cada uma dos pares pode ser obtida da primeira por nega\caoi: 
+\begin{enumerate}[a)]
+\item 
+\[
+[\exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y)]\Leftrightarrow[\exists y \textrm{ em } T \ni \exists x \textrm{ em } S \ni p(x,y)]
+\]
+e
+\[
+[\forall x \textrm{ em } S, \forall y \textrm{ em } T, p(x,y)]\Leftrightarrow[\forall y \textrm{ em } T, \forall x \textrm{ em } S, p(x,y)]
+\]
+
+\item 
+\[
+\{[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]\}\Leftrightarrow \forall x \textrm{ em } D, [p(x)\ee q(x)]
+\]
+e
+\[
+\exists x \textrm{ em } D \ni [p(x)\ou q(x)]\Leftrightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]\}.
+\]
+\end{enumerate}
+
+%excercicio8
+\item Considere as seguinte proposic\aoi: ``Para toda galinha na gaiola e para toda cadeira na cozinha existe uma frigideira no arm\'ario tal que se o ovo da galinha est\'a na frigideira ent\ao a galinha est\'a a menos de dois metros da cadeira.''
+\begin{enumerate}[a)]
+\item Traduza esta proposic\ao para a forma simb\'olica.
+\item Expresse a nega\cao em s\ih mbolos e em Portugu\^es.
+\item D\^e dois exemplos de ciscunst\^ancias nas quais a proposi\cao seria verdade.
+\item D\^e dois exemplos de ciscunst\^ancias nas quais a proposi\cao seria falsa.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 1.8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{metdem}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Escreva a primeira e  \'ultima linhas da demonstra\cao direta, por contrapositiva e indireta dos seguintes teoremas abaixo: 
+\begin{enumerate}[a)]
+\item Se $m$ \'e um inteiro par ent\ao $m^2$ \'e par. 
+
+{\bf{\it Resposta:} Direta:(Seja ${\bf m}$ \'e um inteiro par.) e (Assim ${\bf m^2}$ \'e par.); Contrapositiva:(Suponha que ${\bf m^2}$ n\ao seja par, ou seja, \ih mpar.) e (Assim ${\bf m}$ \'e \ih mpar.); Indireta:(Suponha que ${\bf m}$ seja inteiro par e que ${\bf m^2}$ se \ih mpar.) e (Alguma contradi\caoi.)}
+
+\item Se $f$ \'e uma fun\cao diferenci\'avel ent\ao $f$ \'e uma fun\cao cont\ih nua. 
+
+{\bf{\it Resposta:} Direta:(Seja ${\bf f}$ uma fun\cao diferenci\'avel.) e (Assim ${\bf f}$ \'e cont\ih nua.); Contrapositiva:(Suponha que ${\bf f}$ n\ao seja uma fun\cao cont\ih nua.) e (Assim ${\bf f}$ n\ao \'e diferenci\'avel.); Indireta:(Suponha que ${\bf f}$ seja uma fun\cao diferenci\'avel a qual n\ao \'e cont\ih nua.) e (Alguma contradi\caoi.)}
+
+\item $L$ \'e uma tranforma\cao linear injetora se e somente se $Ker(L)=\{0\}$.
+\item Se ($a_n$) \'e monot\^onica e limitada ent\ao ($a_n$) converge.
+\item A imagem homom\'orfica de um grupo c\ih clico \'e um grupo c\ih clico. 
+
+{\bf{\it Resposta:} Direta:(Seja ${\bf H}$ a imagem homom\'ofica de um grupo c\ih clico ${\bf G}$.) e (Assim, ${\bf H}$ \'e c\ih clico.); Contrapositiva:(Suponha que ${\bf H}$ n\ao seja um grupo c\ih clico.) e (Assim ${\bf H}$ n\ao \'e a imagem homom\'orfica de qualquer grupo c\ih clico.); Indireta:(Suponha que ${\bf H}$ \'e a imagem homom\'orfica de um grupo c\ih clico e que $H$ n\ao seja c\ih clico.) e (Alguma contradi\caoi.)}
+
+\item Se o \'unico termos n\ao zero de uma expans\ao $p-$\'adica de $n$ \'e $1$ ent\ao $n=p^k$ para algum $k\leq 0$.
+\item Se $f$ n\ao \'e cont\ih nua em $c$ ent\ao $\lim_{x\to c}f(x)$ n\ao existe ou $\lim_{x\to c}f(x)\neq f(c)$. 
+\item Todo conjunto fechado e limitado de $\mathbb{R}$ \'e compacto.
+\item Se $m$ \'e um inteiro da forma $2,4,p^n,2p^n$ onde $p$ \'e um primo \ih mpar e $n$ \'e um inteiro positivo ent\ao $m$ tem ra\ih zes primitivas.
+\end{enumerate}
+
+%excercicio2
+\item Determine quais das seguintes ``demonstra\cois'' s\ao corretas e quais s\ao incorretas. Se a demonstra\cao est\'a correta, indique o tipo e se a demonstra\cao est\'a incorreta, indique porque a demonstra\cao \'e incorreta.
+\\
+\\
+{\bf Teorema:} Se $x$ e $y$ s\ao inteiros pares ent\ao $x-y$ \'e um inteiro par.
+
+\begin{enumerate}[a)]
+\item ``Demonstra\cao 1'': Suponha que $x$ e $y$ s\ao ambos inteiros \ih mpares. Ent\ao existem inteiros $j,k$ tais que $x=2j+1$ e $y=2k+1$. Assim,
+\[
+x-y=2j+1-(2k+1)=2(j-k)
+\] 
+que \'e par.
+
+{\bf{\it Resposta:} Incorreta. A hip\'otese est\'a incorreta, apesar de a conclus\ao estar correta.}
+
+\item ``Demonstra\cao 2'': Suponha que $x-y$ seja par e $x$ \ih mpar. Ent\ao existem inteiros $j,k$ tais que $x-y=2j$ e $x=2k+1$. Assim,
+\[
+y=y-x+x=-2j+(2k+1)=2(k-j)+1
+\] 
+portanto $y$ \'e \ih mpar, uma contradi\caoi.
+\item ``Demonstra\cao 3'': Suponha que $x-y$ seja \ih mpar. Ent\ao existe um inteiro $j$ tal que $x-y=2j+1$. Se $y$ \'e par , oteorema est\'a demonstrado. Portanto, suponha que $y$ seja \ih mpar, digamos $y=2k+1$ para algum inteiro $k$. Assim,
+\[
+x=x-y+y=2j+1-(2k+1)=2(j-k)+1
+\]
+logo $x$ \'e par e a demonstra\cao est\'a completa.  
+
+{\bf{\it Resposta:} Incorreta. ${\bf x-y}$ \ih mpar \'e a nega\cao da conclus\ao, portanto, para usar o m\'etodo da contrapositiva para demonstrar, ter\ih amos que mostrar que ${\bf x}$ \'e \ih mpar ou ${\bf y}$ \'e \ih mpar, o que esta ``demonstra\caoi'' n\ao o faz.}
+
+\item ``Demonstra\cao 4'': Suponha que $x$ seja par e $x-y$ seja par tamb\'em. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $x-y=2k$. Assim,
+\[
+y=x-(x-y)=2j-2k=2(j-k)
+\]
+logo $y$ tamb\'em \'e par.
+
+\item ``Demonstra\cao 5'': Suponha que $x,y$ sejam pares e $x-y$ \ih mpar. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $y=2k$. Assim,
+\[
+x-y=2j-2k=2(j-k)
+\] 
+portanto $x-y$ \'e par. Mas isto contradiz nossa premissa que $x-y$ \'e \ih mpar, logo a demonstra\cao est\'a completa.
+
+{\bf{\it Resposta:} Correta. Demonstra\cao indireta.}
+
+\item ``Demonstra\cao 6'': Suponha que $x-y$ seja \ih mpar, digamos $x-y=2j+1$ para algum inteiro $j$. Se $x$ \'e \ih mpar o teorema estar\'a demonstrado. Portanto, assuma que $x$ seja par, digamos $x=2k$ para algum inteiro $k$. Ent\aoi,
+\[
+y=x-(x-y)=2k-(2j+1)=2(k-j)-1=2(k-j-1)+1
+\]
+logo, $y$ \'e \ih mpar e o teorema est\'a demonstrado.
+\item ``Demonstra\cao 7'': Suponha que $x$ e $y$ sejam ambos pares. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $y=2k$. Assim,
+\[
+x-y=2j-2k=2(j-k)
+\]
+portanto, $x-y$ \'e par.
+\item ``Demonstra\cao 8'': Suponha que $x-y$ seja par. Ent\ao se $x$ for \ih mpar, o teorema estar\'a demonstrado. Logo, suponha que $x$ seja par. Ent\ao existem inteiros $j,k$ tais que $x-y=2j$ e $x=2k$. Assim, 
+\[
+y=x-(x-y)=2k-2j=2(k-j)
+\]
+logo, $y$ tamb\'em \'e par.
+\item ``Demonstra\cao 9'': Suponha que $x-y$ seja \ih mpar, digamos $x-y=2j+1$ para algum inteiro $j$. Ent\ao se $x$ \'e \ih mpar, digamos $x=2k+1$ para algum $k$, teremos
+\[
+y=x-(x-y)=2k+1-(2j+1)=2(k-j)
+\]
+logo $y$ \'e par e a demonstra\cao est\'a completa.
+\item ``Demonstra\cao 10'': Suponha que $x$ e $y$ sejam \ih mpares e $x-y$ \ih mpar tamb\'em. Ent\ao existem inteiros $j,k$ tais que $x=2j+1$ e $y=2k+1$. Assim,
+\[
+x-y=2j+1-(2k+1)=2(j-k)
+\]
+logo, $x-y$ \'e \ih mpar e par, uma contradi\caoi.
+\end{enumerate}
+
+%excercicio3
+\item D\^e a demonstra\cao direta, por contrapositiva e indireta (se poss\ih vel) de:
+\begin{enumerate}[a)]
+\item Se $x$ \'e um inteiro par e $y$ \'e um inteiro \ih mpar ent\ao $x+y$ \'e um inteiro \ih mpar. 
+
+{\bf{\it Resposta:} \underline{Direta}: Suponha que ${\bf x}$ seja par e ${\bf y}$ \ih mpar. Ent\ao existem inteiros ${\bf j,k}$ tais que ${\bf x=2k}$ e ${\bf y=2j+1}$. Assim,
+\[
+{\bf x+y=2k+2j+1=2(k+j)+1}
+\]
+e portanto ${\bf x+y}$ \'e \ih mpar.
+
+\noindent \underline{Contrapositiva}: Suponha que ${\bf x+y}$ seja par. Ent\ao existe um inteiro ${\bf k}$ tal que ${\bf x+y=2k}$. Se ${\bf x}$ for \ih mpar ent\ao a demonstra\cao estar\'a completa. Suponha que ${\bf x}$ seja par, digamos ${\bf x=2j}$ para algum inteiro ${\bf j}$. Ent\aoi,
+\[
+{\bf y=2k-2j=2(k-j)}
+\]
+portanto, ${\bf y}$ \'e par e a demonstra\cao est\'a completa.
+
+\noindent \underline{Indireta}: Suponha que ${\bf x}$ seja par, que ${\bf y}$ seja \ih mpar e que ${\bf x+y}$ seja par. Ent\ao esxistem inteiros ${\bf j,k}$ tais que ${\bf y=2j+1}$ e ${\bf x+y=2k}$. Logo,
+\[
+{\bf x=x+y-y=2j+1-2k=2(j-k)+1}
+\]
+\'e \ih mpar, contradizendo o fata que ${\bf x}$ \'e par, por hip\'otese.}
+
+\item Se $x$ e $y$ s\ao inteiros \ih mpares ent\ao $xy$ \'e um inteiro \ih mpar.
+\end{enumerate}
+
+%excercicio4
+\item Para as seguintes conjecturas, demonstre que \'e verdade ou d\^e um contra-exemplo para mostrar que \'e falso: 
+\begin{enumerate}[a)]
+\item Se $x$ \'e um inteiro e $4x$ \'e par ent\ao $x$ \'e par. 
+
+{\bf{\it Resposta:} Falsa, por exemplo, tome ${\bf x=3}.$}
+
+\item Se $x$ \'e um inteiro par ent\ao $4x$ \'e par.
+
+{\bf{\it Resposta:} Verdade. Suponha que ${\bf x}$ \'e um inteiro par, ent\ao exite um inteiro ${\bf k}$ tal que ${\bf x=2k}$. Logo,
+\[
+{\bf 4x=4(2k)=2(4k),}
+\]
+\'e par.}
+
+\item Se $x$ \'e um inteiro e $x^2$ \'e par ent\ao $x$ \'e par.
+
+{\bf{\it Resposta:} Verdade. Suponha que ${\bf x}$ seja \ih mpar, digamos ${\bf x=2k+1}$ para algum inteiro ${\bf k}$. Ent\ao 
+\[
+{\bf x^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1}
+\] 
+\'e \ih mpar. [Nota: Usamos a demonstra\cao por contrapositiva aqui, para a demonstra\cao direta ter\ih amos algum trabalho para ir de ${\bf x^2}$ para ${\bf x}$.]}
+
+\item Se $x$ \'e um inteiro e $3x$ \'e par ent\ao $x$ \'e par.
+
+{\bf{\it Resposta:} Verdade. Suponha que ${\bf x}$ seja \ih mpar, ent\ao existe ${\bf k}$ inteiro tal que ${\bf x=2k+1}$. Logo,
+\[
+{\bf 3x=3(2k+1)=6k+3=6k+2+1=2(3k+1)+1}
+\]
+\'e \ih par.}
+
+\item Se $x,y,z$ s\ao inteiros e $x+y+z$ \'e \ih mpar ent\ao um n\'umero de $x,y,z$ \'e \ih mpar.
+
+{\bf{\it Resposta:} Verdade. Se ${\bf x+y+x}$ \'e \ih mpar, ent\ao existe ${\bf k}$ inteiro tal que ${\bf x+y+z=2k+1}$. Se um dos ${\bf x,y,z}$ \'e \ih mpar, digamos ${\bf x}$, ent\ao existe ${\bf j}$ inteiro tal que ${\bf x=2j+1}$. Portanto,
+\[
+{\bf y+z=(x=y+z)-x=2k=1-(2j+1)=2(k-j)}
+\]
+\'e par. Mas se a soma de dois inteiros \'e par, ent\ao ou ambos s\ao pares ou ambos s\'ao \ih mpares.}
+\end{enumerate}
+
+%excercicio5
+\item Pareceria que poderia existir uma quarta forma de demonstra\caoi, uma demonstra\cao indireta da contrapositiva de um teorema. Explique porque este fato n\ao foi mencionado na discuss\ao acima.
+
+{\bf{\it Resposta:} A indireta da contrapositiva \'e:
+\[
+(\nao q \ee \nao(\nao p)\to c) \iff (\nao q \ee p\to c) \iff (p \ee \nao q\to c)
+\]
+que \'e o mesmo que a reduc\ao ao absurso.
+}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{conjuntos}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Sejam
+\begin{eqnarray*}
+\mathbb{U}&=&\{1,2,3,4,5,6,7,8\},\\
+A&=&\{1,2,3,4\},\\
+B&=&\{x:(x-2)^2(x-3)=0\},\\
+C&=&\{x:\espaco x \textrm{ \'e \ih mpar}\}.
+\end{eqnarray*}
+Encontre:
+\begin{enumerate}[a)]
+\item $A\cup B$. {\bf{\it Resposta:} ${\bf A}$}
+\item $A\cap(B\cup C)$. {\bf{\it Resposta:} ${\bf \{1,2,3\}}$}
+\item $C-A$. {\bf{\it Resposta:} ${\bf \{5,7\}}$}
+\item $C\uni A^C$. {\bf{\it Resposta:} ${\bf \{1,3,5,6,7,8\}}$}
+\item $(A\uni C)^C$. {\bf{\it Resposta:} ${\bf \{6,8\}}$}
+\item $A^C\inter C^C$. {\bf{\it Resposta:} ${\bf \{6,8\}}$}
+\item $\mathbb{P}(B)$. {\bf{\it Resposta:} ${\bf \{\emptyset,\{2\},\{3\},B\}}$}
+\end{enumerate}
+
+%excercicio2
+\item Escreva em Portugu\^es a nega\cao de $A\subseteq B$ dada nesta se\caoi.
+{\bf{\it Resposta:} A defini\cao dada no texto \'e ${\bf A \subseteq B \leftrightarrow (\forall x,\espaco x\in A \to x\in B)}$. Portanto, ${\bf A \not\subseteq B \leftrightarrow (\exists x \ni \espaco x\in A \ee x\notin B)}$. Assim em Portugu\^es temos, existe um elemento pertencente a ${\bf A}$ que n\ao pertence \`a ${\bf B}$.}
+
+%excercicio3
+\item Seja $\mathbb{U}=\mathbb{R}$, o conjunto dos n\'umeros reais. Considere os seguintes conjuntos:
+\begin{equation*}
+ \begin{aligned}
+(a,b)&=\{x:\espaco a<x<b\},\\
+(a,b]&=\{x:\espaco a<x\leq b\},\\
+[a,b)&=\{x:\espaco a\leq x< b\},\\
+[a,b]&=\{x:\espaco a\leq x\leq b\},\\
+(-\infty,a)&=\{x:\espaco x<a\},\\
+(-\infty,a]&=\{x:\espaco x\leq a\},\\
+(a,\infty)&=\{x:\espaco a<x\},\\
+[a,\infty)&=\{x:\espaco a\leq x\}.
+ \end{aligned}
+\end{equation*}
+Encontre:
+\begin{enumerate}[a)]
+\item $[1,3]\inter(2,4)$. {\bf{\it Resposta:} ${\bf (2,3]}$}
+\item $(-\infty,2)\inter[-1,0]$. {\bf{\it Resposta:} ${\bf [-1,0]}$}
+\item $(-\infty,2)\inter[-1,3]$. {\bf{\it Resposta:} ${\bf [-1,2)}$}
+\item $[0,10]\uni(1,11)$. {\bf{\it Resposta:} ${\bf [0,11)}$}
+\item $(0,\infty)\inter(-\infty,1)$. {\bf{\it Resposta:} ${\bf (0,1)}$}
+\item $(1,\infty)\inter(-\infty,0)$. {\bf{\it Resposta:} ${\bf \emptyset}$}
+\item $[-2,0]\uni[0,2]$. {\bf{\it Resposta:} ${\bf [-2,2]}$}
+\item $[-2,0]\uni(0,2]$. {\bf{\it Resposta:} ${\bf [-2,2]}$}
+\item $[-2,0)\uni(0,2]$. {\bf{\it Resposta:} ${\bf [-2,0)\uni(0,2]}$}
+\item $[-2,0]\uni[2,0]$. {\bf{\it Resposta:} ${\bf \emptyset}$}
+\item $(0,4]^C$. {\bf{\it Resposta:} ${\bf [-\infty,0]\uni(4,\infty]}$}
+\item $\mathbb{P}([1,1])$. {\bf{\it Resposta:} ${\bf \{\emptyset,\{1\}\}}$}
+\item $\mathbb{P}([0,1])$. {\bf{\it Resposta:} Para este precisamos de un n\'umero infinito de folhas de papel.}
+\end{enumerate}
+
+%excercicio4
+\item Mostre que dois conjuntos vazios, mencionados na discuss\ao de conjuntos vazios, s\ao iguais.
+
+%excercicio5
+\item \label{conjuntos5}Suponha que $A$, $B$, e $C$ sejam conjuntos e $\mathbb{U}$ \'e o conjunto universal. Prove que:
+\begin{enumerate}[a)]
+\item $A\uni\emptyset=A$.
+
+{\bf{\it Resposta:} Primeiro mostremos que ${\bf A\uni\emptyset\subseteq A}$. Seja ${\bf x\in A\uni\emptyset}$. Ent\ao ${\bf x\in A}$ ou ${\bf x\in\emptyset}$. Mas ${\bf x\notin\emptyset}$, logo ${\bf x\in A}$, assim ${\bf A\uni\emptyset\subseteq A}$. Agora, suponha que ${\bf x\in A}$. Ent\ao ${\bf x\in A}$ ou ${\bf x\in\emptyset}$ portanto ${\bf x\in A\uni\emptyset}$. Portanto, ${\bf A\uni\emptyset =A}$.}
+\item $A\inter\emptyset=\emptyset$.
+\item $A-\emptyset=A$.
+\item $A\uni\mathbb{U}=\mathbb{U}$.
+\item $A\inter\mathbb{U}=A$.
+\item $A\uni A^C=\mathbb{U}$.
+\item $A\inter A^C=\emptyset$.
+\item $A-A=\emptyset$.
+\item $A-B\subseteq A$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in A-B}$, logo ${\bf x\in A}$ e ${\bf x\notin B}$. Assim, ${\bf x\in A}$ e portanto ${\bf A-B\subseteq A}$.}
+
+\item $A\inter B \subseteq A$.
+\item $A\uni B \supseteq A$.
+\item $A\inter B\subseteq A\uni B$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in A\inter B}$, ent\ao ${\bf x\in A}$ e ${\bf x\in B}$. Logo, ${\bf x\in A}$ ou ${\bf x\in B}$ que implica que ${\bf A\inter B\subseteq A\uni B}$.}
+
+\item $(A^C)^C=A$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in(A^C)^C}$, portanto ${\bf x\notin A^C}$. Mas, ${\bf x\notin A^C}$ implica que ${\bf x\in A}$ e assim, ${\bf (A^C)^C\subseteq A}$. Agora, seja ${\bf x\in A}$, portanto ${\bf x\notin A^C}$ e assim, ${\bf x\in(A^C)^C}$. Logo, ${\bf A\subseteq (A^C)^C}$.}
+
+\item $(A\uni B)^C = A^C\inter B^C$.
+\item $(A\inter B)^C = A^C\uni B^C$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in (A\inter B)^C}$, assim ${\bf x\notin A\inter B}$ ou seja, ${\bf x\notin A}$ ou ${\bf x\notin B}$, portanto ${\bf x\in A^C}$ ou ${\bf x\in B^C}$. Logo, ${\bf x\in A^C\uni B^C}$. Por outro lado, seja ${\bf x\in A^C\uni B^C}$, assim ${\bf x\notin A}$ e ${\bf x\notin B}$, portanto ${\bf x\notin A\inter B}$ que implica que ${\bf x\in (A\inter B)^C}$.}
+
+\item $A\uni(B-A)=A\uni B$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in A\uni(B-A)}$. Se ${\bf x\in A}$, o teorema estar\'a demonstrado, logo suponha que ${\bf x\in B-A}$. Ent\ao ${\bf x\in B}$ e ${\bf x\notin A}$. Assim, ${\bf x\in A\uni B}$ e portanto, ${\bf A\uni(B-A)\subseteq A\uni B}$. Agora, suponha que ${\bf x\in A\uni B}$. Ent\ao ${\bf x\in A}$ ou ${\bf x\in B}$. Se ${\bf x\in A}$, o resultado est\'a provado, portanto suponha que ${\bf x\notin A}$. Ent\ao ${\bf x\in B}$ e consequentemente temos ${\bf x\in B-A}$ e assim completamos a demonstra\caoi.}
+\item $(A\uni B)-(A\inter B)=(A-B)\uni(B-A)$.
+
+\item $A-(B\uni C)=(A-B)\inter(A-C)$.
+
+{\bf{\it Resposta:} Seja ${\bf x\in A-(B\uni C)}$. Assim, ${\bf x\in A}$ e ${\bf x\notin B\uni C}$. Portanto, ${\bf x\in A}$ e ${\bf x\notin B}$ e ${\bf x\notin C}$. Logo, ${\bf x\in A-B}$ e ${\bf x\in A-C}$. Portanto, ${\bf x\in (A-B)\inter(A-C)}$. Agora, seja ${\bf x\in (A-B)\inter(A-C)}$, ent\ao ${\bf x\in A-B}$ e ${\bf x\in A-C}$. Logo, ${\bf x\in A}$ e ${\bf x\notin B}$ e, ${\bf x\in A}$ e ${\bf x\notin C}$. Portanto, ${\bf x\in A}$ e ${\bf x\notin B\uni C}$ e assim $x\in A\inter(B\uni C)$.}
+
+\item $A\uni(B\inter C)=(A\uni B)\inter(A\uni C)$.
+\item $A\inter(B\uni C)=(A\inter B)\uni(A\inter C)$.
+\end{enumerate}
+
+%excercicio6
+\item \label{conjuntos6} Suponha que $A$, $B$, $C$ e $D$ sejam conjuntos e $\mathbb{U}$ \'e o conjunto universal. Para cada dos seguintes teoremas enuncie as hip\'oteses e conclus\aoi e indique a forma de uma demonstra\cao direta. Ent\ao escreva a demonstra\cao para cada um deles.
+\begin{enumerate}[a)]
+\item $A\subseteq\emptyset\leftrightarrow A=\emptyset$.
+\item $A\subset B\ee B\subset C\to A\subset C$.
+\item $A\subseteq B\leftrightarrow A\uni B=B$. 
+
+{\bf{\it Resposta:} Primeiro mostremos que ${\bf A\subseteq B\to A\uni B=B}$. Seja ${\bf x\in B}$. Ent\ao ${\bf x\in A}$ ou ${\bf x\in B}$ assim ${\bf x\in A\uni B}$. Agora, seja ${\bf x\in A\uni B}$. Portanto, ${\bf x\in A}$ ou ${\bf x\in B}$. Se ${\bf x\in B}$ o teorema estar\'a pronto, portanto, suponha ${\bf x\in A}$. Como ${\bf A\subseteq B}$ temos ${\bf x\in B}$ e assim ${\bf A\uni B=B}$. Agora, mostremos que ${\bf A\uni B=B\to A\subseteq B}$. Seja ${\bf x\in A}$. Ent\ao ${\bf x\in A\uni B}$ e, portanto, ${\bf x\in B}$ pois ${\bf A\uni B=B}$.}
+
+\item $A\subseteq B\leftrightarrow \mathbb{P}(A)\subseteq\mathbb{P}(B)$.
+\item $A\subseteq B^C\leftrightarrow A\inter B=\emptyset$.
+
+{\bf{\it Resposta:} Nessa demonstração temos uma bicondicional então, para demonstrar ${\bf A\subseteq B^C\leftrightarrow A\inter B=\emptyset}$, temos que demonstrar ${\bf A\subseteq B^C\to A\inter B=\emptyset}$ \\ e ${\bf A\inter B=\emptyset\to A\subseteq B^C}$.
+
+Para demonstrar que ${\bf A\subseteq B^C\to A\inter B=\emptyset}$, a hipótese é ${\bf A\subseteq B^C}$ e a conclusão é ${\bf A\inter B=\emptyset}$. Para mostrar que um determinado conjunto é vazio, assumimos que este conjunto tem um elemento ${\bf x}$ e usando a hipótese chegamos a uma contradição. De fato, seja ${\bf x\in A\inter B}$, portanto ${\bf x\in A}$ e ${\bf x\in B}$. A hipótese diz que ${\bf A\subseteq B^C}$, portanto ${\bf x\in B^C}$, logo ${\bf x\notin B}$, contradição. Portanto, ${\bf A\inter B=\emptyset}$.
+
+Para demostrar que ${\bf A\inter B=\emptyset\to A\subseteq B^C}$, a hipótese é ${\bf A\inter B=\emptyset}$ e a conclusão é ${\bf A\subseteq B^C}$. Assim, seja ${\bf x\in A}$ como, por hipótese, ${\bf A\inter B=\emptyset}$, então ${\bf x\notin B}$ e assim ${\bf x\in B^C}$. Portanto, ${\bf A\subseteq B^C}$. }
+
+\item $(A\uni B=C\ee A\inter B=\emptyset)\to B=C-A$.
+
+{\bf{\it Resposta:} A hipótese desta demonstração é ${\bf A\uni B=C}$ e ${\bf A\inter B=\emptyset}$. Queremos demonstrar que ${\bf B=C\backslash A}$. Para isso, devemos mostrar duas inclusões ${\bf B\subseteq C\backslash A}$ e ${\bf C \backslash A\subseteq B}$. Para mostrar a primeira inclusão, suponha que ${\bf x\in B}$, logo ${\bf x\in A\uni B}$. Como ${\bf A\uni B=C}$, então ${\bf x\in C}$. Novamente, como ${\bf x\in B}$ e, por hipótese, ${\bf A\inter B=\emptyset}$, temos que ${\bf x\notin A}$. Assim, ${\bf x\in C}$ e ${\bf x\notin A}$, portanto ${\bf x\in C\backslash A}$. Com isso, provamos que ${\bf B\subseteq C\backslash A}$. Para provar a segunda inclusão, seja ${\bf x\in C\backslash A}$, portanto ${\bf x\in C}$ e ${\bf x\notin A}$. Do fato que ${\bf x\notin A}$ e da hipótese ${\bf A\inter B=\emptyset}$, concluímos que ${\bf x\in B}$, logo ${\bf C \backslash A\subseteq B}$ e consequentemente ${\bf B=C \backslash A}$.}
+
+\item $(A\subseteq C\ee B\subseteq C)\leftrightarrow A\uni B\subseteq C$.
+\item $(A\subseteq C\ee B\subseteq D)\to(A\uni B\subseteq C\uni D)$.
+\item $[(A\inter C=A\inter B)\ee(A\uni C=A\uni B)]\to B=C$.
+\item $A\subseteq B\leftrightarrow A^C\uni B=\mathbb{U}$.
+\item $A-B\subseteq B\leftrightarrow A\subseteq B$.
+
+{\bf{\it Resposta:} Primeiro mostremos que ${\bf A-B\subseteq B\rightarrow A\subseteq B}$. De fato, suponha ${\bf A-B\subseteq B}$ e ${\bf A\not\subseteq B}$, ou seja, ${\bf \exists x\in A}$ tal que ${\bf x\notin B}$, portanto ${\bf x\in A-B}$, como ${\bf A-B\subseteq B}$, ent\ao ${\bf x\in B}$, contradi\caoi. Desejamos agora demonstrar que ${\bf A\subseteq B\rightarrow A-B\subseteq B}$. De fato, seja ${\bf x\in A-B}$, ent\ao ${\bf x\in A}$ e ${\bf x\notin B}$, mas como ${\bf A\subseteq B}$, ent\ao ${\bf x\in B}$, contradi\caoi. Logo, ${\bf A-B=\emptyset\subseteq B}$.}
+
+
+\item $A\inter B=\mathbb{U}\leftrightarrow A=B=\mathbb{U}$.
+\item $A\uni B\neq\emptyset\leftrightarrow A\neq\emptyset \ou B\neq\emptyset $.
+\item $\mathbb{P}(A)=\mathbb{P}(B)\to A=B$.
+
+{\bf{\it Resposta:} Se ${\bf A\neq B}$, ent\ao ${\bf \exists x\in A}$ tal que ${\bf x\notin B}$, logo ${\bf \{x\}\in \mathbb{P}(A)}$ e ${\bf \{x\}\notin \mathbb{P}(B)}$, logo ${\bf \mathbb{P}(A)\neq\mathbb{P}(B)}$.}
+\end{enumerate}
+
+%excercicio7
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $A$ e $B$ conjuntos tais que $A\subseteq B$. Ent\ao $A-B=\emptyset$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha que $A$ e $B$ sejam conjuntos com $A\subseteq B$. Seja $x\in A-B$. Ent\ao $x\in B$ e $x\notin A$. Mas $A\subseteq B$ assim $x\notin A$ implica $x\notin B$, uma contradi\caoi. Logo, $A-B=\emptyset$.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Seja $A=\{1,2,3\}$, $B=\{2,3\}$. Ent\ao $A\subseteq B$ mas $A-B\neq\emptyset$.
+
+{\bf{\it Resposta:} Dica: A conjectura \'e verdadeira.}
+
+%excercicio8
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Sejam $A,B,C,D$ conjuntos com $A\subset C$ e $B\subset D$. Ent\ao $A\uni B \subset C\uni D$. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha $A,B,C,D$ sejam conjuntos tais que $A\subset C$ e $B\subset D$. Seja $x\in A\uni B$. Ent\ao $x\in A$ ou $x\in B$. Suponha que $x\in A$. Ent\aoi, como $A\subset C$, $x\in C$. Assim, $x\in C\uni D$. Se $x\in B$, tamb\'em obtemos $x\in C\uni D$, pois $B\subset D$. Portanto, $A\uni B\subset C\uni D$.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1\}$, $B=\{2\}$ e $C=D=\{1,2\}$. Ent\ao $A\subset B$, $C\subset D$ mas $A\uni B \not\subset C\uni D$.
+
+{\bf{\it Resposta:} Dica: A conjectura \'e falsa.}
+
+%excercicio9
+\item Com os exerc\ih cios acredite se quiser existem oito possibilidades: a conjectura \'e verdadeira ou falsa, a demonstra\cao \'e correta ou n\ao e o contra-exemplo \'e correto ou n\aoi. Qual destas oito possibilidades n\ao podem ocorrer?
+
+%excercicio10
+\item Sejam $A$, $B$ e $C$ conjuntos. Mostre usando alguns resultados dos exerc\ih cios \ref{conjuntos5} e \ref{conjuntos6} ao inv\'es do nosso m\'etodo usual de ir ao princ\ih pio com as defini\cois:
+\begin{enumerate}[a)]
+\item $A\subseteq B \to A\inter B^C=\emptyset$.
+
+{\bf{\it Resposta:} ${\bf A\subseteq B \espaco\xrightarrow[]{6j}\espaco A^C\uni B=\mathbb{U} \espaco\xrightarrow[5m]{5o}\espaco (A\inter B^C)^C=\mathbb{U} \espaco\xrightarrow[]{5m}\espaco A\inter B^C=\emptyset.}$}
+
+\item $A\uni(A\inter B)=A$.
+
+{\bf{\it Resposta:} ${\bf A\uni(A\inter B)\stackrel{\text{5j}}{\subseteq}A\uni A=A}$ e ${\bf A\stackrel{\text{5k}}{\subseteq} A\uni(A\inter B)}$.}
+
+\item $A\inter(A^C\uni B)=A\inter B$. 
+
+{\bf{\it Resposta:} ${\bf A\inter(A^C\uni B)\stackrel{\text{5t}}{=}(A\inter A^C)\uni(A\inter B)\stackrel{\text{5g}}{=}\emptyset\uni(A\inter B)\stackrel{\text{5a}}{=}A\inter B}$.}
+
+\item $A\inter C=\emptyset \to A\inter(B\uni C)=A\inter B$.
+
+{\bf{\it Resposta:} ${\bf A\inter(B\uni C)\stackrel{\text{5t}}{=}(A\inter B)\uni(A\inter C)\stackrel{\text{hip.}}{=}(A\inter B)\uni\emptyset\stackrel{\text{5a}}{=}A\inter B}$.}
+
+\item $A\subseteq B \to A=B-(B-A)$.
+
+{\bf{\it Resposta:} ${\bf B-(B-A)\stackrel{\text{Teo}}{=}B-(B\inter A^C)\stackrel{\text{Teo}}{=}B\inter(B\inter A^C)^C\stackrel{\text{5o}}{=}B\inter(B^C\uni A)\stackrel{\text{5t}}{=}}$ \\ ${\bf (B\inter B^C)\uni(B\inter A)\stackrel{\text{5g}}{=}\emptyset\uni(A\inter B)\stackrel{\text{5a}}{=}A\inter B\stackrel{\text{Hip}}{=}A}$.}
+\end{enumerate}
+
+%excercicio11
+\item Suponha que qualquer cole\cao se objetos pudesse ser um conjunto. Ent\ao poder\ih amos ter o ``conjunto de todos os conjuntos.'' Considere o subconjunto $S$ do conjunto de todos os conjuntos dados por
+\[
+S=\{A:A\notin A\}.
+\]
+Assim $S$ \'e o conjunto de todos os conjuntos que n\ao s\ao elementos de si mesmos.
+\begin{enumerate}[a)]
+\item D\^e exemplos de dois conjuntos que s\ao elementos de $S$.
+
+{\bf{\it Resposta:} ${\bf A=\{1,2,3,4,...\}}$.}
+
+\item D\^e exemplos de dois conjuntos que n\ao s\ao elementos de $S$.
+
+{\bf{\it Resposta:} ${\bf A=\{A,\{1\},\{2\},\{3\},\{4\},...\}}$.}
+
+\item Mostre que $S\notin S$.
+
+{\bf{\it Resposta:} Se ${\bf S\in S}$, ent\ao ${\bf S\notin S}$, absurdo.}
+
+\item Mostre que $S\notin S^C$.
+
+{\bf{\it Resposta:} Se ${\bf S\in S^C}$, ent\ao ${\bf S\notin S}$, logo ${\bf S\in S}$ e portanto, ${\bf S\notin S^C}$, absurdo.}
+
+\end{enumerate}
+
+%excercicio12
+\item Sejam $A$ e $B$ conjuntos. Considere as seguintes conjecturas. Prove as verdadeiras e d\^e contra-exemplos para as falsas.
+\begin{enumerate}[a)]
+\item $\mathbb{P}(A)\uni\mathbb{P}(B)\subseteq\mathbb{P}(A\uni B)$.
+
+{\bf{\it Resposta:} Se ${\bf C\in \mathbb{P}(A)\uni\mathbb{P}(B)\espaco\Rightarrow\espaco C\in \mathbb{P}(A) \text{ ou } C\in \mathbb{P}(B) \espaco\Rightarrow\espaco C\subseteq A \text{ ou } C\subseteq B  \espaco\Rightarrow\espaco}$ \\ ${\bf C\subseteq A\uni B \espaco\Rightarrow\espaco C\in \mathbb{P}(A\uni B)}$.}
+
+\item $\mathbb{P}(A)\inter\mathbb{P}(B)\subseteq\mathbb{P}(A\inter B)$.
+\item $\mathbb{P}(A\uni B)\subseteq \mathbb{P}(A)\uni\mathbb{P}(B)$. 
+
+{\bf{\it Resposta:} A conjectura \'e falsa, considere ${\bf A=\{a\}}$, logo ${\bf \mathbb{P}(A)=\{\emptyset,\{a\}\}}$ e ${\bf B=\{b\}}$, logo ${\bf \mathbb{P}(B)=\{\emptyset,\{b\}\}}$. Assim, ${\bf A\uni B=\{a,b\}}$ e ${\bf \mathbb{P}(A\uni B)=\{\emptyset,\{a\},\{b\},\{a,b\}\}}$.}
+
+\item $\mathbb{P}(A\inter B)\subseteq \mathbb{P}(A)\inter\mathbb{P}(B)$.
+\item $\mathbb{P}(A\inter B)\subseteq\mathbb{P}(A\uni B)$.
+\end{enumerate}
+
+%excercicio13
+\item Sejam $A$, $B$, $C$ e $D$ conjuntos tais que $A\subset C$ e $B\subset D$. Demonstre ou d\^e um contra-exemplo para a conjectura: $A\inter B\subset C\inter D$.
+
+%excercicio14
+\item Sejam $A$ e $B$ conjuntos de proposi\cois. Dizemos que $A$ \'e mais forte que $B$, denotado por
+\[
+A\Longrightarrow B,
+\]
+e se somente se,
+\[
+\forall p\in B,\exists q_1,q_2,...,q_n \in A \ni (q_1\ee q_2\ee ... \ee q_n)\Rightarrow p.
+\]
+Assim, se $A$ \'e mais forte que $B$, ent\ao toda proposi\cao pertencente a $B$ \'e uma consequ\^encia l\'ogica de uma conjun\cao de proposi\coes pertencentes a $A$. Por exemplo, se
+\begin{equation*}
+ \begin{aligned}
+A&=\{p\ou q, \nao q, r\to q\},\\
+B&=\{p, \nao r, \nao q, s\ou\nao q\},\\
+C&=\{p\ou q,q\},
+ \end{aligned}
+\end{equation*}
+ent\ao $A\Longrightarrow B$ mas $A\not\Longrightarrow C$.
+\begin{enumerate}[a)]
+\item Escreva em s\ih mbolos e em Portug\^es $\nao(A\Longrightarrow B)$.
+\item D\^e (outro) exemplo de conjuntos de proposi\coes $A,B,C$ tais que $A\Longrightarrow B$ mas $A\not\Longrightarrow C$. 
+\item Mostre que para qualquer conjunto de proposi\coes A, $A\Longrightarrow \emptyset$.
+\item Mostre que para qualquer conjunto de proposi\coes A, $A\Longrightarrow A$.
+\item Mostre que se $A$ e $B$ s\ao quaisquer conjuntos de proposi\cois, $A\subseteq B$ implica $B\Longrightarrow A$.
+\item Se $A\Longrightarrow B$ e $B\Longrightarrow A$, seria este o caso que $A=B$?
+\item Se $A \Longrightarrow B$ e $C\Longrightarrow D$, ent\ao $A\uni C\Longrightarrow B\uni D$?
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{conjuntosverdade}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Sejam $D=\{1,2,3,4,5,6,7,8\}$, $p(x)$ ``x \'e par'', $q(x)$, ``$x$ \'e \ih mpar'' e $r(x)$ ``$x$ \'e um n\'umero primo.'' Encontre:
+\begin{enumerate}[a)]
+\item O conjunto verdade para $p(x)\ee q(x)$.
+\item O conjunto verdade para $r(x)\to\nao p(x)$.  {\bf{\it Resposta:} ${\bf \{1,3,4,5,6,7,8\}}$.}
+\item $P^C\uni Q$.
+\item A fun\cao proposicional que tem $\{1,2,3,5,7\}$ como seu conjunto verdade. {\bf{\it Resposta:} ${\bf r(x)}$.}
+\item O conjunto verdade de $\exists x \in D \ni r(x)\to p(x)$.
+\item O conjunto verdade de $\forall x\in D, p(x)\ou q(x)$. {\bf{\it Resposta:} Verdade.}
+\item O conjunto verdade de $[\forall x\in D, p(x)]\ou[\forall x\in D, q(x)]$. 
+\item O conjunto verdade de $[\forall x\in D, q(x)]\to[\forall x\in D, r(x)]$.
+\end{enumerate}
+
+%excercicio2
+\item Encontre o conjunto verdade para a fun\cao proposicional ``$x^2-x-2\leq 0$.'' Tome $\mathbb{R}$ como dom\ih nio.
+
+{\bf{\it Resposta:} ${\bf [-1,2]}$.}
+
+%excercicio3
+\item Considere os seguintes pares de proposi\cois. Para cada proposi\cao do par determine as condi\coes para $P,Q$ que garantam que ela seja verdade. E mostrar que sempre que a segunda (de cada par) seja verdade, a primeira dever\'a ser verdade. D\^e um exemplo para mostrar que a primeira pode ser verdade e a segunda falsa.
+\begin{enumerate}[a)]
+\item $[\forall x\in D, p(x)\ou q(x)]; [\forall x\in D, p(x) \ou \forall x \in D, q(x)]$.
+
+{\bf{\it Resposta:} A primeira se\'a verdade quando ${\bf P\uni Q=D}$; a segunda ser\'a verdade quando ${\bf P=D}$ ou ${\bf Q=D}$. Certamente a segunda condi\cao implica a primeira. Se ${\bf D=\mathbb{N}}$, ${\bf p(x)}$, ${\bf p(x)}$ \'e ``${\bf x}$ \'e par'' e ${\bf q(x)}$ \'e ``${\bf x}$ \' \ih mpar'' ent\ao a primeira \'e verdade e a segunda \'e falsa.}
+
+\item $[\exists x\in D\ni p(x)\ee \exists x\in D\ni q(x)];[\exists x\in D\ni p(x)\ee q(x)]$.
+
+{\bf{\it Resposta:} A primeira se\'a verdade quando ${\bf P\neq\emptyset}$ e ${\bf Q\neq\emptyset}$; a segunda ser\'a verdade quando ${\bf P\inter Q\neq\emptyset}$ . Certamente a segunda condi\cao implica a primeira. Se ${\bf D=\mathbb{N}}$, ${\bf p(x)}$, ${\bf p(x)}$ \'e ``${\bf x}$ \'e par'' e ${\bf q(x)}$ \'e ``${\bf x}$ \' \ih mpar'' ent\ao a primeira \'e verdade e a segunda \'e falsa.}
+
+\item $[\exists x\in D\ni p(x)\to q(x)];[\exists x\in D\ni p(x) \to \exists x\in D\ni q(x)]$.
+\end{enumerate}
+
+%excercicio4
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Sejam $A,B$ conjuntos com $B\subseteq A$ e $p$ uma fun\cao proposicional. Ent\ao $\forall x\in A, p(x)$ implica $\forall x\in B, p(x)$. {\bf{\it Resposta:} Verdadeira.}
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha que $A,B$ sejam conjuntos como acima e que a implica\cao seja falsa. Ent\ao existe um $z\in B$ tal que $p(z)$ seja falsa. Como $B\subseteq A, \espaco z\in A$. Mas isto significa $\forall x \in A, p(x)$ \'e falso, uma contradi\caoi. {\bf{\it Resposta:} Verdadeira. A demonstra\cao \'e indireta, ${\bf (p\to q) \Longleftrightarrow \nao(p\to q)\to}$ contradi\caoi.}
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $p(x)$ ``$x<2$,'' $A=\{1,2,3\}$ e $B=\emptyset$. Ent\ao $B\subseteq A$, $\forall x \in A, p(x)$ \'e falso e $\forall x \in B, p(x)$ \'e verdadeiro. {\bf{\it Resposta:} Falsa. Para um contra-exemplo ser v\'alido, devemos encontrar um hip\'otese correta com uma conclus\ao falsa. N\ao \'e o caso aqui.}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{relacoes}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Sejam $A=\{a,b,c\}$, $B=\{1,2\}$ e $C=\{4,5,6\}$
+\begin{enumerate}[a)]
+\item Liste os elementos de $A\times B$, $B\times A$, e $A\times C$.
+\item D\^e exemplos de rela\coes de $A$ em $B$ e de $B$ em $A$, cada uma dos quais tem quatro elementos.
+\item D\^e exemplo de uma rela\cao sim\'etrica em $C$ que tenha tr\^es elementos.
+\end{enumerate}
+
+%excercicio2
+\item Suponha $A=\{1,2,3\}$. Para cada uma das rela\coes dadas abaixo, liste os elementos de $R$, encontre $Dom(R)$ e $Im(R)$ de diga quais das propriedades da defini\cao \ref{reldef1} $R$ tem:
+\begin{enumerate}[a)]
+\item $R$ \'e a rela\cao $<$ em A. {\bf{\it Resposta:} ${\bf \{(1,2),(1,3),(2,3)\}}$, ${\bf R}$ \'e transitiva, antissim\'etrica, irreflexiva, completa e assim\'etrica.}
+\item $R$ \'e a rela\cao $\geq$ em A.
+\item $R$ \'e a rela\cao $\subset$ em $\mathbb{P}(A)$.
+\end{enumerate}
+
+%excercicio3
+\item Suponha que $A,B,C,D$ sejam conjuntos. Prove ou d\^e contra-exemplos para as seguintes conjecturas:
+\begin{enumerate}[a)]
+\item $A\times(B\uni C)= (A\times B)\uni(A\times C)$.
+\item $A\times(B\inter C)=(A\times B)\inter(A\times C)$.
+\item $(A\times B)\inter(A^C\times B)=\emptyset$.
+\item $(A\subseteq B\ee C\subseteq D)\to A\times C\subseteq B\times D$. {\bf{\it Resposta:} Verdade. Seja ${\bf (x,y)\in A\times C}$. Ent\ao ${\bf x\in A}$ e ${\bf y\in C}$. Mas como ${\bf A\subseteq B}$ e ${\bf C\subseteq D}$ temos que ${\bf x\in B}$ e ${\bf y\in D}$ Assim ${\bf (x,y)\in B\times D}$.}
+\item $A\uni(B\times C)=(A\uni B)\times(A\uni C)$.
+\item $A\inter(B\times C)=(A\inter B)\times(A\inter C)$.
+\item $(A\times B)\inter(C\times D)=(A\inter C)\times(B\inter D)$.
+\item $A\times(B-C)=A\times B-A\times C$.
+\end{enumerate}
+
+%excercicio4
+\item Suponha que $R$ seja uma rela\cao em um conjunto n\ao vazio $A$. D\^e a forma de demonstra\cao direta para:
+\begin{enumerate}[a)]
+\item $R$ \'e antissim\'etrica.
+\item $R$ \'e irreflexiva. {\bf{\it Resposta:} Seja ${\bf x\in A}$ ... ent\ao ${\bf (x,x)\notin R}$.}
+\item $R$ \'e assim\'etrica.
+\end{enumerate}
+
+%excercicio5
+\item Sejam $A=\{1,2,3,4\}$ e $R$ uma rela\cao em $a$. D\^e um exemplo utilizando a representa\cao gr\'afica do que segue, assim como foi feito anteriormente para $R$ reflexiva e sim\'etrica.
+\begin{enumerate}[a)]
+\item Transitiva
+\item Irreflexiva
+\item Assim\'etrica
+\item Rela\cao de equival\^encia
+\end{enumerate}
+
+%excercicio6
+\item Sejam $A,B$ conjuntos com $R,S$ rela\coes de $A$ para $B$. Demonstre:
+\begin{enumerate}[a)]
+\item $Dom(R\uni S)=Dom(R)\uni Dom(S)$.
+\item $Dom(R\inter S)\subseteq Dom(R)\inter Dom(S)$ e d\^e um exemplo para mostrar que a igualdade n\ao \'e v\'alida.
+\item $Im(R\uni S)=Im(R)\uni Im(S)$
+\item $Im(R\inter S)\subseteq Im(R)\inter Im(S)$ e d\^e um exemplo para mostrar que a igualdade n\ao \'e v\'alida.
+\end{enumerate}
+
+%excercicio7
+\item Seja $A$ um conjunto n\ao vazio. Mostre que
+\begin{enumerate}[a)]
+\item Se $R=A\times A$ ent\ao $R$ \'e reflexiva, sim\'etrica, transitiva e completa. O que poderia se dizer se $R$ fosse assim\'etrica ou antissim\'etrica?  {\bf{\it Resposta:} (Resposta parcial) Como  ${\bf R=\{(x,y): x,y\in A\}}$, certamente ${\bf \{(x,x): x\in A\}\subseteq R}$. Se $A$ cont\'em mais de um elemento, ${\bf R}$ n\ao ser\'a assim\'etrica ou antissim\'etrica.}
+\item Se $R=\emptyset$ ent\ao $R$ \'e sim\'etrica, transitiva, assim\'etrica, antissim\'etrica, irreflexiva mas n\ao reflexiva.
+\item Se $R=\{(a,a):a\in A\}$ ent\ao $R$ \'e uma rela\cao de equival\^encia e tamb\'em \' antissim\'etrica mas n\ao assim\'etrica.
+\end{enumerate}
+
+%excercicio8
+\item Referente aos exemplos dados anteriormente nessa se\caoi, mostre que:
+\begin{enumerate}[a)]
+\item Exemplo \ref{relex1} \'e assim\'etrico mas n\ao reflexiva. {\bf{\it Resposta:} ${\bf R}$ n\ao \'e reflexiva pois ningu\'em \'e pai ou m\~ae de si mesmo. Se ${\bf xRy}$ ent\ao ${\bf y}$  \'e pai/m\~ae de ${\bf x}$ o que significa que ${\bf x}$ n\ao \'e pai/m\~ae de ${\bf y}$ logo temos ${\bf \nao(xRy)}$ \'e verdade e portanto ${\bf R}$ \'e assim\'etrica.} 
+\item Exemplos \ref{relex3}, \ref{relex11} s\ao rela\coes de equival\^encia.
+\item Exemplo \ref{relex3}, \ref{relex4}, \ref{relex9} s\ao ordens parciais.
+\item Exemplo \ref{relex2}, \ref{relex10} n\ao s\ao completas.
+\item Exemplo \ref{relex9} \'e uma ordem total.
+\end{enumerate}
+
+%excercicio9
+\item Seja $R$ a rela\cao de equival\^encia dada no exemplo \ref{relex11} acima. Determine todos os elementos nestes conjuntos:
+\begin{enumerate}[a)]
+\item $\{x:xR1\}$. {\bf{\it Resposta:} ${\bf \{1,6,11,16,...\}}.$}
+\item $\{x:xR2\}$.
+\item $\{x:xR7\}$.
+\end{enumerate}
+
+%excercicio10
+\item Seja $R$ a rela\cao $|$ em $\mathbb{Z}$ descrita no exemplo \ref{relex10} acima.
+\begin{enumerate}[a)]
+\item Liste tr\^es elementos de $\mathbb{Z}\times\mathbb{Z}$ que n\ao sejam elementos de $R$.
+\item Quais dos elementos $(0,0),(0,1),(1,0)$ s\ao elementos de $R$? {\bf{\it Resposta:} (Resposta parcial) ${\bf (0,1)\notin R}$.}
+\item Prove o seguinte:
+\begin{enumerate}[i)]
+\item $\forall n\in \mathbb{Z}, n|0$.
+\item $\forall n\in \mathbb{Z}, 0|n\to n=0$. 
+\item $\forall a,b,c\in \mathbb{Z}, (a|b\ee a|c)\to a|(b+c)$.
+\item $\forall a,b,c\in \mathbb{Z}, a|b\to a|bc$.
+\end{enumerate}
+\end{enumerate}
+
+%excercicio11
+\item Sejam $R,S$ rela\coes em um conjunto n\ao vazio $A$. Demonstre ou d\^e contra-exemplos para as seguintes conjecturas:
+\begin{enumerate}[a)]
+\item $R$ \'e completa $\to$ $R$ \'e reflexiva. {\bf{\it Resposta:} Falsa. Seja ${\bf A=\{1,2\}}$ e ${\bf R=\{(1,2),(2,1)\}}$.}
+\item $R$ \'e transitiva e irreflexiva $\to$ $R$ \'e assim\'etrica.
+\item $R$ \'e reflexiva $\to$ $R$ n\ao \'e assim\'etrica. 
+\item $R$ \'e assim\'etrica $\to$ $R$ n\ao \'e reflexiva.
+\item $Dom(R)\inter Im(R)=\emptyset\to$ $R$ \'e transitiva, antissim\'etrica, irreflexiva e assim\'etrica.
+\item $R$ uma rela\cao de ordem parcial estrita $\to$ $R$ \'e antissim\'etrica e assim\'etrica. 
+\item $R$ n\ao reflexiva $\to$ $R$ \'e irreflexiva.
+\item $R$ e $S$ sim\'etrica $\to$ $R\inter S$ sim\'etrica. {\bf{\it Resposta:} Seja ${\bf (x,y)\in R\inter S}$. Ent\ao ${\bf (x,y)}$ est\'a em ambos ${\bf R}$ e ${\bf S}$. Como ambos s\ao sim\'etricos, temos que ${\bf (y,x)}$ pertencem a ambos ${\bf R}$ e ${\bf S}$ logo, ${\bf (y,x)\in R\inter S}$.}
+\item $R$ ou $S$ sim\'etrica $\to$ $R\inter S$ sim\'etrica.
+\item $R$ e $S$ sim\'etrica $\to$ $R\uni S$ sim\'etrica.
+\item $R$ ou $S$ reflexiva $\to$ $R\uni S$ reflexiva.
+\item $R$ e $S$ transitiva $\to$ $R\uni S$ transitiva.
+\item $R$ e $S$ transitiva $\to$ $R\inter S$ transitiva.
+\end{enumerate}
+
+%excercicio12
+\item D\^e exemplos (se poss\ih vel) de rela\coes que sejam:
+\begin{enumerate}[a)]
+\item Reflexiva e sim\'etrica mas n\ao transitiva.
+
+{\bf{\it Resposta:} Sejam ${\bf A=\{1,2,3\}}$, ${\bf R=\{(1,1),(2,2),(3,3),(2,3),(3,2),(1,2),(2,1)\}}$. Note que, ${\bf (1,2)\in R}$ e ${\bf (2,3)\in R}$ mas ${\bf (1,3)\notin R}$.}
+
+\item Sim\'etrica e transitiva mas n\ao reflexiva.
+\item Assim\'etrica mas n\ao antissim\'etrica.
+\item Sim\'etrica e antissim\'etrica.
+\item Nem reflexiva, nem irreflexiva.
+\end{enumerate}
+
+%excercicio13
+\item\label{relexer13} Se $R$ \'e uma rela\cao de $A$ para $B$ e $C\subseteq A$, definimos {\it restri\cao de $R$ em $C$}, denotada por $R|_C$, como
+\[
+\{(x,y)\in R: x\in C\}.
+\]
+\begin{enumerate}[a)]
+\item Sejam $A=B=\{1,2,3,4\}$ e $C=\{2,4\}$. Seja $R$ a rela\cao $<$ de $A$ em $B$. Encontre $R$ e $R|_C$. 
+\item Se $R$ \'e uma rela\cao de $A$ em $B$ e $C\subseteq A$, mostre que $Dom(R|_C)=Dom(R)\inter C$. 
+\item Se $R$ \'e uma rela\cao de $A$ em $B$ e $B\subseteq A$, $R|_B$ \'e uma rela\cao em $B$? Prove ou de um contra-exemplo. {\bf{\it Resposta:} Dica, esta \'e falsa.}
+\end{enumerate}
+
+%excercicio14
+\item (Continua\cao do exerc\ih cio \ref{relexer13}) Suponha que $R$ seja uma rela\cao em $A$ com as propriedades listadas abaixo. Se $B\subseteq A$ e $R|_B$ \'e considerada como uma rela\cao em $A$, quais destas propriedades $R|_B$ deve tamb\'em ter? Prove ou d\^e contra-exemplos.
+\begin{enumerate}[a)]
+\item Sim\'etrica 
+\item Transitiva
+\item Antisim\'etrica
+\end{enumerate}
+
+%excercicio15
+\item Suponha que tiv\'essemos definido o par ordenado $(a,b)$ pot
+\[
+(a,b)=\{\{a\},\{a,b\}\}.
+\]
+Mostre que com essa defini\cao temos
+\[
+(a,b)=(c,d)\leftrightarrow(a=c\ee b=d).
+\]
+
+
+%excercicio16
+\item Suponha que tiv\'essemos definido ``tripla ordenada'' usando pares ordenados como
+\[
+(a,b,c)=((a,b),c).
+\]
+Mostre que a mesma tem a propriedade de ordena\cao desejada, isto \'e:
+\[
+(a,b,c)=(d,e,f)\textrm{ se e somente se }a=d,b=e,c=f.
+\]
+
+
+%excercicio17
+\item Seja $R$ uma ordem total estrita em um conjunto n\ao vazio $A$. Mostre que $R$ tem a propriedade da ``tricotomia,'' isto \'e,
+\[
+\forall a,b\in A, \textrm{ exatamente um dos seguintes \'e verdade } a=b, aRb, bRa.
+\]
+
+
+%excercicio18
+\item Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. O {\it fecho transitivo} de $R$ \'e a menor rela\cao transitiva contendo $R$, isto \'e, se $S$ \'e o fecho transitivo de $R$, e $T$ \'e uma rela\cao qualquer contendo $R$, ent\ao
+\[
+R\subseteq S\subseteq T.
+\]
+Criamos defini\coes similares para os fechos reflexivos e sim\'etricos. Vamos denotar estes fechos por $R_{trans}$, $R_{sim}$ e $R_{ref}$. 
+\begin{enumerate}[a)]
+\item Se $A$=\{1,2,3,4\} e $R=\{(1,2),(1,4),(2,3)\}$, encontre $R_{trans}$, $R_{sim}$ e $R_{ref}$. {\bf{\it Resposta:} ${\bf R_{sim}=\{(1,2),(1,4),(2,3),(2,1),(4,1),(3,2)\}}$.}
+\item Demonstre ou d\^e contra-exemplo para as seguintes conjecturas ($R,S$ s\ao rela\coes em um conjunto n\ao vazio $A$):
+\begin{enumerate}[i)]
+\item $(R\uni S)_{trans}=R_{trans}\uni R_{trans}$.
+\item $(R\inter S)_{trans}=R_{trans}\inter R_{trans}$.
+\item $(R\uni S)_{sim}=R_{sim}\uni R_{sim}$.
+\item $(R\inter S)_{sim}=R_{sim}\inter R_{sim}$.
+\item $(R\uni S)_{ref}=R_{ref}\uni R_{ref}$.
+\item $(R\inter S)_{ref}=R_{ref}\inter R_{ref}$.
+\end{enumerate}
+\item O que pode ser dito sobre os correpondentes conceitow de fechos antissim\'etrico e assim\'etrico?
+\end{enumerate}
+
+%excercicio19
+\item Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Suponha que $R$ \'e assim\'etrica e tamb\'em satifaz a condi\cao (\`as vezes tamb\'em chamada de {\it transitividade negativa}):
+\[
+\forall x,y\in A, xRz\to (xRy\ou yRz).
+\]
+\begin{enumerate}[a)]
+\item Mostre $R$ \'e transitiva. Tais rela\coes s\ao \`as vezes chamadas de {\it ordens fracas}. 
+\item Se $R$ fosse transitiva e assim\'etrica, ela tamb\'em deveria satifazer a condi\cao dada acima? Prove ou d\^e um contra-exemplo.
+\end{enumerate}
+
+
+%excercicio20
+\item Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Seja $x\in A$. Definimos uma {\it R-classe} de $x$, denotada por $<x>_R$, como
+\[
+<x>_R:=\{y:yRx\}.
+\]
+O s\ih mbolo $:=$ significa ``por defini\caoi.''
+\begin{enumerate}[a)]
+\item Seja $A=\{1,2,3,4\}$ e
+\[
+R=\{(1,2), (1,3), (2,1), (1,1), (2,3), (4,2)\}.
+\] 
+Encontre $<1>_R$, $<2>_R$, $<3>_R$ e $<4>_R$. {\bf{\it Resposta:} ${\bf <2>_R\espaco=\espaco \{1,4\}}$.}
+\item Mostre que $R$ \'e reflexiva se e somente se $\forall x\in A, x\in <x>_R\espaco$. 
+\item Mostre que $R$ \'e sim\'etrica se e somente se $\forall x,y\in A, x\in <y>_R\espaco\to\espaco y\in <x>_R$.
+\item Mostre que $\forall x\in A, <x>_R\espaco\neq\espaco\emptyset$ se e somente se $Im(R)=A$.
+\item Suponha que $Dom(R)=A$ e que $R$ seja sim\'etrica e transitiva. Mostre que
+\[
+\forall x,y\in A, <x>_R\espaco\subseteq\espaco<y>_R\espaco\to\espaco xRy.
+\]
+Mostre tamb\'em que,
+\[
+<x>_R\espaco\subseteq\espaco<y>_R\espaco\to\espaco <x>_R\espaco=\espaco<y>_R.
+\]
+\item Suponha que $R$ seja sim\'etrica e transitiva. Mostre que:
+\[
+\forall x,y\in A, <x>_R\espaco\inter <y>_R\espaco\neq\espaco\emptyset\to\espaco <x>_R\espaco=<x>_R.
+\]
+\end{enumerate}
+
+%excercicio21
+\item {\bf Acredite se quiser:}  {\bf{\it Resposta:} Dica, A conjectura \'e falsa, assim como o contra-exemplo.}
+
+\noindent \textit{\textbf{Conjectura:}} Suponha que $A$ e $B$ sejam conjuntos tais que $A\times B=B\times A$. Ent\ao $A=B$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha $A\times B=B\times A$. Seja $a\in A$, com $b\in B$ tais que $(a,b)\in A\times B$. Como $A\times B=B\times A$, $(a,b)\in B\times A$. Assim $a\in B$ e portanto $A\subseteq B$. Um argumentos similar mostra que $B\subseteq A$.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2,3\}$ e $B=\emptyset$. En\tao $A\times B=B\times A=\emptyset$, mas $A\neq B$. 
+
+%excercicio22
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Suponha que $R$ seja uma rela\cao em um conjunto n\ao vazio $A$. Se $R$ \'e n\ao sim\'etrica ent\ao $R$ \'e assim\'etrica. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Suponha $a,b\in A$ com $(a,b)\in R$. Como $R$ n\ao \'e sim\'etrica, $(b,a)\notin R$ logo $R$ \'e assim\'etrica.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2,3\}$ e $R=\{(1,2),(2,1),(1,3)\}$. Ent\ao $R$ n\ao \'e sim\'etrica nem assim\'etrica.
+
+%excercicio23
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Suponha que $R$ seja uma rela\cao em um conjunto n\ao vazio $A$. Se $R$ \'e sim\'etrica e transitiva ent\ao $R$ \'e reflexiva. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha que $R$ seja uma rela\cao sim\'etrica e transitiva em um conjunto n\ao vazio $A$. Sejam $a,b\in A$ com $(a,b)\in R$. Como $R$ \'e sim\'etrica, $(b,a)\in R$. Mas $R$ tamb\'em \'e transitiva, logo temos que $(a,a)\in R$ e consequentemente $R$ \'e reflexiva.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $a=\{a,b,c\}$ e $R=\{(a,b), (b,a), (a,c), (b,c), (a,a)\}$. Ent\ao $R$ \'e sim\'etrica e transitiva, mas n\ao \'e reflexiva pois $(b,b)\notin R$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{mrelacoes}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Sejam $A=\{1,2,4\}$ e $B=\{1,3,4\}$. Sejam $R=\{(1,3),(1,4),(4,4)\}$ uma rela\cao de $A$ em $B$, $S=\{(1,1),(3,4),(3,2)\}$ uma rela\cao de $B$ em $A$ e $T=\emptyset$ uma rela\cao de $A$ em $B$. Encontre:
+\begin{enumerate}[a)]
+\item $Dom(R)$. {\bf{\it Resposta:} ${\bf Dom(R)=\{1,4\}}$.}
+\item $Dom(S)$. {\bf{\it Resposta:} ${\bf Dom(S)=\{1,3\}}$.}
+\item $Dom(T)$. {\bf{\it Resposta:} ${\bf Dom(T)=\emptyset}$.}
+\item $Im(R)$. {\bf{\it Resposta:} ${\bf Im(R)=\{3,4\}}$.}
+\item $Im(S)$. {\bf{\it Resposta:} ${\bf Im(S)=\{1,2,4\}}$.}
+\item $Im(T)$. {\bf{\it Resposta:} ${\bf Im(S)=\emptyset}$.}
+\item $S\circ R$.
+\item $R\circ S$.
+\item $Dom(S\circ R)$.
+\item $Im(S\circ R)$.
+\item $Dom(R\circ S)$.
+\item $Im(R\circ S)$.
+\item $R^{-1}$. {\bf{\it Resposta:} ${\bf R^{-1}=\{(3,1),(4,1),(4,4)\}}$.}
+\item $S^{-1}$. {\bf{\it Resposta:} ${\bf S^{-1}=\{(1,1),(4,3),(2,3)\}}$.}
+\item $I_A$. {\bf{\it Resposta:} ${\bf I_A=\{(1,1),(2,2),(4,4)\}}$.}
+\item $I_B$. {\bf{\it Resposta:} ${\bf I_B=\{(1,1),(3,3),(4,4)\}}$.}
+\item $R^{-1}\circ S^{-1}$.
+\item $S^{-1}\circ R^{-1}$.
+\item $(R\circ S)^{-1}$.
+\item $(S\circ R)^{-1}$.
+\item $T^{-1}$.
+\item $I_B^{-1}$.
+\item $(R\bola S)\bola R$.
+\item $R\bola(S\bola R)$. 
+\end{enumerate}
+
+%excercicio2
+\item Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Mostre que:
+\begin{enumerate}[a)]
+\item $(R^{-1})^{-1}=R$
+\item $I_A^{-1}-I_A$
+\item $R$ \'e reflexiva se e somente se $I_A\subseteq R\subseteq R\bola R$.
+\item $R$ \'e sim\'etrica se e somente se $R=R^{-1}$. 
+
+{\bf{\it Resposta:} Suponha que ${\bf R}$ seja sim\'etrica. Seja ${\bf (x,y)\in R}$. Ent\ao ${\bf (y,x)\in R}$, logo ${\bf (x,y)\in R^{-1}}$ e ${\bf R\subseteq R^{-1}}$. Agora, suponha ${\bf (x,y)\in R^{-1}}$. Ent\ao ${\bf (y,x)\in R}$ logo ${\bf (x,y)\in R}$ e ${\bf R^{-1}\subset R}$ e assim temos que ${\bf R=R^{-1}}$. Para a outra implica\caoi, suponha que ${\bf R=R^{-1}}$. Seja ${\bf (x,y)\in R}$. Ent\ao ${\bf (x,y)\in R^{-1}}$ (pois ${\bf R=R^{-1}}$) portanto ${\bf (y,x)\in R}$ e ${\bf R}$ \'e sim\'etrica.} 
+
+\item $R$ \'e transitiva se e somente se $R^{-1}$ \'e transitiva.
+\item $R$ \'e uma rela\cao de equival\^encia e se somente se $R^{-1}$ \'e uma rela\cao de equival\^encia.
+\item Suponha que $Dom(R)=A$. $R$ \'e uma rela\cao de equival\^encia se e somente se $R=R^{-1}=R\bola R$.
+\item $R$ \'a assim\'etrica se e somente se $R\inter R^{-1}=\emptyset$.
+\item $R\uni R^{-1}=A\times A$ implica que $R$ \'e completa.
+\item $R$ sim\'etrica implica $R\bola R$ \'e sim\'etrica.
+\item $I_{Dom(R)}\subseteq R^{-1}\bola R$.
+\item $R$ \'e uma ordem parcial se e somente se $R^{-1}$ \'e uma ordem parcial.
+\item $R$ \'e uma ordem parcial se e somente se $R\inter R^{-1}=I_A$ e $R\bola R=R$.
+\item $R$ \'e uma ordem parcial estrita se e somente se $R^{-1}$ \'e uma ordem parcial estrita.
+\end{enumerate}
+
+%excercicio3
+\item Seja $A$ um conjunto n\ao vazio com $R,S$ rela\coes em $A$. Considere as seguintes conjecturas. Prove as verdadeiras e d\^e exemplos para aquelas que s\ao falsas.
+\begin{enumerate}[a)]
+\item $R$ \'e sim\'etrica implica $R\bola R$ sim\'etrica.
+\item $R\bola S^{-1}=S\bola R^{-1}$ implica que $R\bola S^{-1}$ seja sim\'etrica.
+\end{enumerate}
+
+%excercicio4
+\item Seja $R$ uma rela\cao de $A$ em $B$ e $S$ uma rela\cao  de $B$ em $C$. Mostre que:
+\begin{enumerate}[a)]
+\item $Dom(S\bola R)\subseteq Dom(R)$.
+\item $Im(S\bola R)\subseteq Im(S)$.
+{\bf{\it Resposta:} Seja ${\bf y\in Im(S\bola R)}$. Ent\ao existe ${\bf x}$ tal que ${\bf (x,y)\in S\bola R}$. Mas isto significa que que existe ${\bf z}$ tal que ${\bf (x,z)\in R}$ e ${\bf (z,y)\in S}$, consequentemente, ${\bf y\in Im(S)}$.}
+
+\item $Im(R)\subseteq Dom(S)$ implica $Dom(S\bola R)=Dom(R)$. A rec\ih proca \'e verdadeira? 
+\end{enumerate}
+
+%excercicio5. 
+\item Complete a demonstra\cao do teorema \ref{relto1}.
+
+%excercicio6
+\item Suponha que $R$ e $S$ sejam rela\coes de equival\^encia em um conjunto n\ao vazio $A$. Considere as seguintes conjecturas. Prove as verdadeiras e d\^e exemplos para aquelas que s\ao falsas. 
+\begin{enumerate}[a)]
+\item $R\uni S$ \'e uma rela\cao de equival\^encia implica que $R\bola S=S\bola R$.
+\item $R\uni S= R\bola S$ implica que $R\uni S$ \'e uma rela\cao de equival\^encia.
+\item $R\uni S= R\bola S$ implica que $R\bola S=S\bola R$.
+\end{enumerate}
+
+%excercicio7
+\item Seja $R$ a rela\cao $<$ nos inteiros. Mostre que $R$ \'e uma ordem parcial estrita. Tamb\'em mostre que $R\uni I_{\mathbb{Z}}$ (que \'e $\leq$) \'e uma ordem parcial.
+
+%excercicio8
+\item Seja $R$ uma ordem parcial em um conjunto n\ao vazio $A$. Mostre que $R-I_A$ \'e uma ordem parcial estrita em $A$.
+
+%excercicio9
+\item Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Prove ou d\^e contra-exemplos (refira-se ao excerc\ih cio \ref{relexer17}, da se\cao \ref{relacoes}):
+\begin{enumerate}[a)]
+\item $R_{ref}=R\uni I_A$. {\bf{\it Resposta:} Est\'a correto, falta a demonstra\caoi.}
+\item $R_{sim}=R\uni R^{-1}$.
+\item $R_{trans}=R\uni (R\bola R)$.
+\end{enumerate}
+
+%excercicio10
+\item Sejam $R,S$ e $T$ rela\coes entre conjuntos. Determine algumas condi\coes sobre $R,S$ e $T$ para garantir as seguintes conclus\ois. Demonstre que suas conjecturas est\ao corretas.
+\begin{enumerate}[a)]
+\item $R\bola S=R\bola T$ implica $S=T$.
+\item $S\bola R=T\bola R$ implica $S=T$.
+\end{enumerate}
+
+%excercicio11
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $R$ uma rela\cao em um conjunto n\ao vazio $A$. Se $R$ \'e transitiva ent\ao $R\bola R$ \'e transitiva.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Seja $R$ uma rela\cao transitiva em $A$. Sejam $a,b,c\in A$ com $(a,b),(b,c)\in R\bola R$. Ent\ao existem $d,e\in A$ tais que $(a,d),(d,b),(b,e),(e,c)\in R$. Como $R$ \'e transitiva $(a,b),(b,c)\in R$, isso implica que $(a,c)\in R\bola R$, logo $R\bola R$ \'e transitiva.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Seja, $A=\{1,2,3\}$ $R=\{(1,2),(2,2),(2,3),(1,3)\}$. Assim,
+\[
+R\bola R=\{(1,3),(1,2),(2,3),(2,2)\},
+\]
+logo temos $R$ transitiva e $R\bola R$ n\aoi.
+
+%excercicio12
+\item {\bf Acredite se quiser:} {\bf{\it Resposta:} Dica, A demonstra\cao est\'a incorreta.} 
+
+\noindent \textit{\textbf{Conjectura:}} Sejam $R,S$ rela\coes de equival\^encia em um conjunto n\ao vazio $A$. Se $R\bola S=S\bola R$ ent\ao $R\uni S$ \'e uma rela\cao de equival\^encia.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Sejam $R,S$ como acima. Claramente, $R\uni S$ \'e reflefiva. Se $(a,b)\in R\uni S$ ent\ao $(a,b)\in R$ ou $(a,b)\in S$. Se $(a,b)\in R$, e como $R$ \'e sim\'etrica, $(b,a)\in R$, logo $(b,a)\in R\uni S$. Por argumentos semelhantes, se $(a,b)\in S$ ent\ao $(b,a)\in S$, isto demonstra que $R\uni S$ \'e sim\'trica. Aogra, sejam $(a,b),(b,c)\in R\uni S$. Se ambos pertencem a $R$, ou se ambos pertencem a $S$, a transitividade de cada um implica que $R\uni S$ \'e transitiva. Portanto, suponha que $(a,b)\in R$ e $(b,c)\in S$. Como $R\bola S=S\bola R$ e $(a,c)\in S\bola R$, $(a,c)\in R\bola S$. Assim existe $d\in A$ tal que $(a,d)\in S$ e $(d,c)\in R$. Mas, ambos $R$ e $S$ s\ao sim\'etricos, portanto $(c,d)\in R$ e $(d,a)\in S$. Logo, $(c,a)\in R$. Mas $R$ \'e sim\'etrica, assim temos $(a,c)\in R$ e consequentemente $R\uni S$ \'e transitiva. Argumentos similares podem ser utilizados no caso $(a,b)\in S$ e $(b,c)\in R$.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam 
+\begin{equation*}
+ \begin{aligned}
+A=&\{a,b,c,d\},\\
+R=&I_A\uni\{(a,b),(b,a),(a,c),(c,a)\},\\
+S=&I_A\uni\{(c,d),(d,c),(a,c),(c,a),(d,a),(a,d)\}.
+ \end{aligned}
+\end{equation*}
+Ent\ao $R,S$ s\ao rela\coes de equival\^encia com $R\bola S=S\bola R$, mas $R\uni S$ cont\'em $(b,a)$ e $(a,d)$ mas n\ao $(b,d)$ e assim n\ao \'e transitiva.
+
+%excercicio13
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $R$ uma ordem total estrita em um conjunto n\ao vazio $A$. Ent\ao $S=(A\times A)-R$ \'e uma ordem total em $A$. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Como $R$ \'e irreflexiva, $I_A\inter R=\emptyset$ portanto $I_A\subseteq S$ e $S$ \'e reflexiva. Agora suponha que $(a,b),(b,c)\in S$. $R$ \'e completa, assim como $(a,b),(b,c)\in S$, temos que $(b,a),(c,b)\in R$. A trnasitividade de $R$ implica que $(c,a)\in R$. Se $(a,c)\in R$ ent\ao $(a,a)\in R$, que \'e imposs\ih vel, consequentemente $(a,c)\in S$ e $S$ \'e transitiva. Agora, suponha que $(a,b),(b,a)\in S$. Ent\ao devemos ter $a=b$, caso contr\'ario $R$ n\ao seria completa. Assim $S$ \'e uma ordem parcial. Se $a,b\in A$, $a\neq b$ e $(a,b)\notin S$, ent\ao $(a,b)\in R$, e como notado anteriormente, isto implica $(b,a)\in S$ e consequentemente $S$ \'e completa e assim uma ordem total.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2,3\}$ e $R=\{(1,2),(2,3),(3,1)\}$. Ent\ao
+\[
+S=\{(1,1),(2,2),(3,3),(2,1),(1,3),(3,2)\}
+\]
+n\ao \'e uma ordem total pois n\ao \'e transitiva ($(1,3),(3,2)\in S$, mas $(1,2)\notin S$).
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{equivalencia}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Sejam $A=\{1,2,3,4,5,6\}$ e $\Pi=\{\{2,4,6\},\{1,5\},\{3\}\}$. Liste os elementos de $A/\Pi$. Encontre $[2]_{A/\Pi}$. 
+{\bf{\it Resposta:} ${\bf [2]_{A/\Pi}=\{2,4,6\}}$.}
+
+%excercicio2
+\item Seja $\Pi$ uma parti\cao de $A$ e sejam $B,C\in\Pi$. Mostre que se $B\inter C=\emptyset$ ent\ao $B=C$
+
+%excercicio3
+\item\label{eqrexcerc3} Sejam $\Pi_1$ e $\Pi_2$ parti\coes de $A$. Dizemos que $\Pi_1$ \'e {\it mais fina}\index{Parti\cao Mais Fina} que $\Pi_2$ e escrevemos $\Pi_1\preceq\Pi_2$ se e somente se $\forall B\in \Pi_1, \exists C\in \Pi_2 \ni B\subseteq C$.
+\begin{enumerate}[a)]
+\item Se $A=\{1,2,3,4\}$, d\^e exemplos de parti\coes $\Pi_1$ e $\Pi_2$ tais que:
+\begin{enumerate}[i.]
+\item $\Pi_1\preceq\Pi_2$ {\bf{\it Resposta:} ${\bf \Pi_1=\{\{1\},\{2,3\},\{4\}\}}$ e ${\bf \Pi_2=\{\{1,2,3\},\{4\}\}}$.}
+\item $\Pi_1$ n\ao \'e mais fino que $\Pi_2$ e $\Pi_2$ n\ao \'e mais fino que $\Pi_1$ {\bf{\it Resposta:} ${\bf \Pi_1=\{\{1,2\},\{3,4\}\}}$ e ${\bf \Pi_2=\{\{1,3\},\{2,4\}\}}$.}
+\end{enumerate}
+\item Sejam $\Pi_1$ e $\Pi_2$ como no exemplo \ref{eqexe1} desta se\cao e seja $\Pi$ qualquer outra parti\cao de $A$. Mostre que $\Pi_1\preceq\Pi\preceq\Pi_2$.
+\end{enumerate}
+
+%excercicio4
+\item Seja $R$ uma rela\cao de equival\^encia em $A$. Mostre que $A/[A]_R=R$. {\bf{\it Resposta:} (Resposta parcial) Seja ${\bf (x,y)\in A/[A]_R }$. En\tao ${\bf x}$ e ${\bf y}$ s\ao ambos elementos da mesma classe de equival\^encia de $R$. Mas isso significa que ${\bf xRy}$ ou ${\bf (x,y)\in R}$. Consequentemente, ${\bf A/[A]_R\subseteq R}$.}
+
+%excercicio5
+\item Seja $\Pi$ uma parti\cao de $A$. Mostre que $[A]_{A/\Pi}=\Pi$.
+
+%excercicio6
+\item Sejam $R_1,R_2$ rela\coes de equival\^encia em A. Dizemos que $R_1$ \'e {\it mais fina}\index{Rela\caoi!Mais fina} que que $R_2$ e escrevemos $R_1\preceq R_2$ se e somente se $R_1\subseteq R_2$.
+\begin{enumerate}[a)]
+\item Seja $A=\{1,2,3,4\}$. D\^e exemplos de rela\coes de equival\^encia $R_1,R_2$ tais que:
+\begin{enumerate}[i)]
+\item $R_1\preceq R_2$. 
+{\bf{\it Resposta:} ${\bf R_1=\{(1,1),(2,2),(3,3),(4,4)\}}$ ${\bf R_2=\{(1,1),(2,2),(3,3),(4,4),(1,2),(2,1)\}}$.}
+\item $R_1$ n\ao \'e mais fino que $R_2$ e $R_2$ n\ao \'e mais fino que $R_1$. 
+\end{enumerate}
+\item Seja $A$ um conjunto n\ao vazio e seja $\Omega=\{R: R \textrm{ uma rela\cao de equival\^encia em $A$}\}$. Mostre que $\preceq$ \'e uma ordem parcial em $\Omega$. O que pode ser dito sobre $\preceq$ ser ou n\ao completa?
+\item Se $R_1$ e $R_2$ s\ao rela\coes de equival\^encia em uma conjunto n\ao vazio $A$ com $R_1\preceq R_2$, a parti\cao induzida por $R_1$ \'e mais fina que a parti\cao induzida por $R_2$? A rec\ih proca? Ou nada?
+\end{enumerate}
+
+%excercicio7
+\item\label{eqexcer7} Seja $\Psi$ e $\Pi$ parti\coes de um conjunto n\ao vazio $A$. Definimos
+\[
+\Psi\star\Pi=\{C\inter D: C\in\Psi, D\in\Pi,C\inter D\neq\emptyset\}.
+\]
+\begin{enumerate}[a)]
+\item Seja $A=\{1,2,3,4,5\}$, $\Psi=\{\{1,2,3\},\{4,5\}\}$ e $\Pi=\{\{1,2\},\{3,4\},\{5\}\}$. Encontre $\Psi\star\Pi$.
+{\bf{\it Resposta:} ${\bf \Psi\star\Pi=\{\{1,2\},\{3\},\{4\},\{5\}\}}$.}
+\item Mostre que se $\Psi$ e $\Pi$ s\ao parti\coes de um conjunto n\ao vazio $A$, ent\ao $\Psi\star\Pi$ \'e uma parti\cao de $A$.
+\item Mostre que $\Psi\star\Pi$ \'e mais fina que $\Psi$ e $\Pi$.
+\end{enumerate}
+
+%excercicio8
+\item Vamos generalizar a rela\cao de equival\^encia dada no exemplo \ref{relex11} sa se\cao \ref{relacoes} e discutido no come\cc o desta se\caoi. Seja $m\in\mathbb{N}$. Se $x,y\in\mathbb{Z}$, dizemos que $x\equiv y(mod \espaco m)$ se e somente se $m|(x-y)$. [Note que: $x\equiv y(mod \espaco m)$ \'e lido como ``$x$ \'e congruente a $y$ m\'odulo $m$.''] Assim, a rela\cao de equival\^encia mencionada anteiriormente era a congru\^encia m\'odulo $5$. Mais uma nota\caoi, escreveremos as classes de equival\^encia de congru\^encia m\'odulo $m$ como $[x]_m$ e denotaremos o conjunto de todas as classe de equival\^encia m\'odulo $m$ por $\mathbb{Z}_m$. Assim, $\mathbb{Z}_5=\{[1]_5,[2]_5,[3]_5,[4]_5,[5]_5\}$.
+\begin{enumerate}[a)]
+\item Encontre $[3]_3,[2]_3,[5]_1,$. {\bf{\it Resposta:} ${\bf [2]_3=\{2,5,8,11,...\}}$.}
+\item Encontre duas solu\coes para cada uma das seguintes:
+\begin{enumerate}[i)]
+\item $x\equiv 3(mod \espaco 14)$.
+\item $x^2\equiv 2(mod \espaco 7)$. {\bf{\it Resposta:} Uma solu\cao \'e ${\bf x=3}$.}
+\item $x^2\equiv 3(mod \espaco 7)$.
+\end{enumerate}
+\item Sejam $m,n\in\mathbb{N}$. Mostre que se $m|n$ ent\ao $\mathbb{Z}_n$ \'e mais fina que $\mathbb{Z}_m$.
+\item Seja $m\in\mathbb{N}$. Mostre que $\forall x,y,z\in\mathbb{Z}$, $x\equiv y(mod \espaco m)$ implica $x+z\equiv y+z(mod \espaco m)$ e $xz\equiv yz(mod \espaco m)$.
+\end{enumerate}
+
+%excercicio9
+\item Seja $R$ e $S$ rela\coes de equival\^encia de um conjunto n\ao vazio $A$. Sabemos que $R\inter S$ \'e tamb\'em uma rela\cao de equival\^encia em $A$.
+\begin{enumerate}[a)]
+\item Seja $x\in A$. Mostre que $[x]_{R\inter S}=[x]_R\inter[y]_S$. 
+\item Mostre que $[A]_{R\inter S}=[A]_R\star[A]_S$, onde $\star$ \'e a opera\cao definida no excerc\ih cio \ref{eqexcer7}.
+\end{enumerate}
+
+%excercicio10
+\item Se $p,q\in\mathbb{N}$, sabemos do excerc\ih cio \ref{eqexcer7} que $\mathbb{Z}_p\star\mathbb{Z}_q$ \'e uma parti\cao de $\mathbb{Z}$.  Existe $n\in\mathbb{N}$ tal que $\mathbb{Z}_p\star\mathbb{Z}_q=\mathbb{Z}_n$? Se for verdade, demonstre o resultado. Se for falso, d\^e um contra-exemplo para mostrar que esta parti\cao n\ao \'e desta forma.
+{\bf{\it Resposta:} Dica, compute alguns elementos de ${\bf \mathbb{Z}_2\star\mathbb{Z}_3}$.}
+
+%excercicio11
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $A$ um conjunto n\ao vazio e $\Pi,\Psi$ parti\coes de $A$. Se $\Pi\preceq\Psi$ e $\Psi\preceq\Pi$ ent\ao $\Pi=\Psi$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Sejam $\Pi,\Psi$ como acima e seja $B\in\Pi$. Como $\Pi\preceq\Psi$, existe $C\in\Psi $ tal que $B\subseteq C$. Mas como $\Psi\preceq\Pi$, $C\subseteq B$, e portanto $B=C$, logo $B\in\Psi$. Um argumento parecido mostra que $\Psi\subseteq\Pi$ e consequentemente temos $\Pi=\Psi$. 
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Seja $A=\{1,2,3\}$.
+\begin{equation*}
+ \begin{aligned}
+A=&\{1,2,3,4,5\},\\
+\Pi=&\{\{1,2\},\{3\},\{4,5\}\},\\
+\Psi=&\{\{1\},\{2,3,4\},\{5\}\},\\
+ \end{aligned}
+\end{equation*}
+Ent\ao $\Pi\preceq\Psi$ $(\{3\}\subseteq\{2,3,4\})$ e $\Psi\preceq\Pi$ $(\{1\}\subseteq\{1,2\})$, mas claramente $\Psi\neq\Pi$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{funcoes}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Seja $A=\{1,2,3,4,5,6\}$ e seja $f:A\to A$ dada por 
+\begin{equation*}
+ f(x)=\left\{ \begin{array}{lc}
+x+1, & \textrm{ se $x\neq 6$;} \\
+1,    & \textrm{ se $x=    6$.} \\
+\end{array}\right.   
+\end{equation*}
+\begin{enumerate}[a)]
+\item Encontre $f(3)$, $f(6)$, $f\bola f(3)$, $f(f(2))$. {\bf{\it Resposta:} ${\bf f(3)=4}$.}
+\item Encontre a pr\'e-imagem de $2$ e $1$.
+\item Mostre que $f$ \'e bijetora. {\bf{\it Resposta:} (Resposta Parcial) Se ${\bf x=1}$ ent\ao ${\bf f(6)=x}$, se ${\bf x\neq 1}$ ent\ao ${\bf f(x-1)=x}$ portanto ${\bf f}$ \'e sobrejetora.}
+\end{enumerate}
+
+%excercicio2
+\item Mostre que $f:\mathbb{R}\to\mathbb{R}$ dad por $f(x)=x^3$ \'e injetora e sobrejetora, enquanto que $g:\mathbb{R}\to\mathbb{R}$ dada por $g(x)=x^2-1$ n\ao \'e injetora nem sobrejetora. 
+
+%excercicio3
+\item\label{funcexerc3} Suponha $f:A\to B$ e $g:B\to C$. Mostre que $g\bola f:A\to C$.
+
+%excercicio4
+\item \begin{enumerate}[a)]
+\item Sejam $A,B$ e $f:A\to B$ dados por:
+\begin{equation*}
+ \begin{aligned}
+A=&\{1,2,3,4\},\\
+B=&\{1,2,3,\},\\
+f=&\{(1,3),(2,1),(3,1),(4,2)\}.
+ \end{aligned}
+\end{equation*}
+Encontre $f^{-1}\bola f$.
+{\bf{\it Resposta:} ${\bf f^{-1}\bola f=\{(1,1),(2,2),(3,3),(4,4),(2,3),(3,2)\}}$.}
+
+\item Sejam $A,B$ conjuntos n\ao vazios e $f:A\to B$. Mostre que $f^{-1}\bola f$ \'e uma rela\cao de equival\^encia em $A$. (Note que $f^{-1}$ pode ou n\ao ser uma fun\caoi). Tamb\'em mostre que $[x]_{f^{-1}\bola f}=\{y: f(x)=f(y)\}$.
+\end{enumerate}
+
+%excercicio5
+\item Seja $f:A\to B$. Prove que
+\begin{enumerate}[a)]
+\item $f$ \'e injetora se e somente se existe $g:B\to A$ tal que $g\bola f=I_A$.
+{\bf{\it Resposta:} Dica - Defina ${\bf g}$ como ${\bf g(y)=x}$ quando ${\bf y\in Im(f)}$ e onde ${\bf f(x)=y}$. Para ${\bf y\notin Im(f)}$ defina ${\bf g(y)}$ arbitrariamente.}
+
+\item $f$ \'e sobrejetora se e somente se existe $g:B\to A$ tal que $f\bola g=I_B$.
+\item $f$ \'e sobrejetora se e somente se $f\bola f^{-1}=I_B$.
+\end{enumerate}
+
+%excercicio6
+\item Sejam $f:A\to B$ e $g:B\to A$. Mostre que se $g\bola f=I_A$ e $f\bola g=I_B$ ent\ao $f$ \'e uma bije\cao e $g=f^{-1}$
+
+%excercicio7
+\item Seja $R$ uma rela\cao de equival\^encia em um conjunto n\ao vazio $A$. Definimos a rela\cao $\alpha$ de $A$ em $[A]_R$ por
+\[
+\alpha=\{(x,[x]_R): x\in A\}.
+\]
+\begin{enumerate}[a)]
+\item Mostre que $\alpha:A\to [A]_R$.
+\item Mostre que $\alpha$ \'e sobrejetora.
+\item Sob quais condi\coes $\alpha$ ser\'a injetora?
+\end{enumerate}
+
+%excercicio8
+\item Seja $f:A\to A$. Suponha que $f$ tamb\'em seja uma rela\cao de equival\^encia. O que podemos dizer sobre $f$? 
+{\bf{\it Resposta:} Dica - Pense sobre que fun\coes s\ao reflexivas.}
+
+%excercicio9
+\item Sejam $f:A\to B$ e $g:A\to B$. Demonstre ou d\^e contra-exemplos para as seguintes conjecturas:
+\begin{enumerate}[a)]
+\item $f\uni g:A\to B$.
+\item $f\inter g:A\to B$. {\bf{\it Resposta:} Dica - N\ao \'e verdade.}
+\item $f\uni g:A\to B$ implica $f=g$.
+\item $f\inter g:A\to B$ implica $f=g$.
+\end{enumerate}
+
+%excercicio10
+\item Seja $f:A\to B$ e $g:C\to D$, com $A\inter C=\emptyset$. [Para refrescar sua mem\'oria sobre restri\cois, veja o excerc\ih cio \ref{relexer13} da se\cao \ref{relacoes}]. 
+\begin{enumerate}[a)]
+\item Mostre que $f\uni g:A\uni C\to B\uni D$.
+\item Mostre que $f\uni g|_A=f$ e $f\uni g|_C=g$. 
+\end{enumerate}
+
+%excercicio11
+\item Seja $f:\mathbb{R}\to\mathbb{R}$ definida por $f(x)=\textrm{sen}(x).$
+\begin{enumerate}[a)]
+\item Mostre que $f$ n\ao \'e injetora.
+\item Mostre que $f|_{[\pi/2,\pi/2]}$ \'e injetora.
+\end{enumerate}
+
+%excercicio12
+\item Seja $A$ um conjunto n\ao vazio e seja 
+\[
+\Psi=\{\phi: \phi \textrm{ \'e uma parti\cao de } A\}.
+\] 
+Lembre-se que $\preceq$ (mais fino que) \'e uma rela\cao de ordem parcial em $\Psi$. Seja
+\[
+\Re=\{R: R \textrm{ \'e uma rela\cao de equival\^encia em } A\}.
+\]
+Sabemos que existe uma bije\cao entre os elementos de $\Psi$ e $\Re$, assim denotemos a rela\cao de equival\^encia associada com a parti\cao $\theta$ por $R_{\theta}$. Definimos s rela\cao $\sqsubseteq$ em $\Re$ por
+\[
+R_{\phi}\sqsubseteq R_{\theta} \textrm{ se e somente se } \phi \preceq \theta.
+\]
+\begin{enumerate}[a)]
+\item Mostre que $\sqsubseteq$ \'e uma ordem parcial em $\Re$.
+\item Mostre (ou d\^e um contra-exemplo):
+\[
+R_{\phi}\sqsubseteq R_{\theta} \textrm{ se e somente se } R_{\phi}\subseteq R_{\theta}.
+\]
+\end{enumerate}
+
+%excercicio13
+\item Suponha que $f:A\to B$ e $g:B\to C$, onde $A,B$ e $C$ s\ao conjuntos n\ao vazios. Demonstre ou d\^e contra-exemplos para as seguintes conjecturas:
+\begin{enumerate}[a)]
+\item $g\bola f$ bije\cao implica que $f$ \'e injetora. 
+\item $g\bola f$ bije\cao implica que $f$ \'e sobrejetora.
+\item $g\bola f$ bije\cao implica que $g$ \'e sobrejetora. {\bf{\it Resposta:} Dica - \'E verdade.}
+\item $g\bola f$ bije\cao implica que $g$ \'e injetora.
+\end{enumerate}
+
+%excercicio14
+\item Seja $f:A\to B$, com $R$ uma ordem total estrita em $A$ e $S$ uma ordem total estrita em $B$. Dizemos que $f$ \'e {\it monot\^onica}\index{Fun\caoi!Monot\^onica} se e somente se $\forall x,y\in A,$ $xRy$ implica $f(x)Sf(y)$.
+\begin{enumerate}[a)]
+\item Com a ordem usual ($<$) em $\mathbb{R}$, de um exemplo de uma fun\cao que seja monot\^onica.
+\item Com a ordem usual ($<$) em $\mathbb{R}$, de um exemplo de uma fun\cao que n\ao seja monot\^onica.
+\item Se $f:A\to B$ \'e monot\^onica, mostre que $f$ \'e injetora.
+\end{enumerate}
+
+%excercicio15
+\item {\bf Acredite se quiser:}  {\bf{\it Resposta:} Dica - A demonstra\cao n\ao est\'a correta.}
+
+\noindent \textit{\textbf{Conjectura:}} Seja $f:A\to B$ e seja $R$ uma ordem total estrita em $A$. Definimos a rela\cao $S$ em $B$ por
+\[
+xSy \leftrightarrow \exists a,b\in A \ni aRb\ee f(a)=x,f(b)=y.
+\]
+Ent\ao $S$ \'e uma ordem parcial estrita.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha que $f$ e $ R$ s\ao como acima e $S$ \'e definida como indicado. Seja $x\in B$ com $xSx$. Mas isto significa que existe $a\in A$ tal que $f(a)=x$. Assim $aRa$, que \'e imposs\ih vel, pois $R$ \'e irreflexiva, portanto $S$ \'e irreflexiva. Agora, suponha $x,y,z\in B$ com $xSy$, $ySz$. Ent\ao existem $a,b,c\in A$ tais que $f(a)=x$, $f(b)=y$ e $f(c)=z$ e $aRb$ e $bRc$. Como $R$ \'e transitiva, $aRc$ e portanto $xSz$, logo $S$ \'e transitiva.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2,3\}$, $B=\{1,2,3,4\}$ e $f:A\to B$ dada por $f(1)=1$, $f(2)=1$ e $f(3)=4$. Suponha,
+\[
+R=\{(1,2),(2,3),(1,3)\}
+\]
+Ent\ao $S=\{(1,2),(1,4)\}$, que \'e transitiva mas n\ao irreflexiva.
+
+%excercicio16
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $f:A\to B$ e $g:B\to A$. Se $g\bola f=I_A$ ent\ao $g=f^{-1}$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Sejam $f,g$ como acima e seja $x\in B$. Suponha que $y\in A$ \'e tal que $(x,y)\in g$. Seja $x\in B$ tal que $(y,z) \in f$. Como $g\bola f=I_A$, $(x,y)\in g$. Mas $(x,y)\in g$ e $g$ \'e uma fun\caoi, portanto $x=z$. Assim, $(x,y)\in f^{-1}$, logo $g\subseteq f^{-1}$. Agora suponha que $(x,y)\in f^{-1}$. Ent\ao $(y,x)\in f$. Como $g\bola f=I_A$, $(x,y)\in g$, logo $f^{-1}\subseteq g$ e portanto temos que $g=f^{-1}$.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2,3\}$, $B=\{1,2,3,4\}$ com
+\[
+f=\{(1,2),(2,1),(3,3)\}
+\]
+\[
+g=\{(2,1),(1,2),(3,3),(4,3)\}
+\]
+Ent\ao $g\bola f=I_A$ mas $g\neq f^{-1}$, pois $(4,3)\in g$.
+
+%excercicio17
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $f:A\to B$. Se $f^{-1}\bola f=I_A$ ent\ao $f$ \'e injetora.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Suponha que $f$ \'e como descrito acima e $x,y\in A$ com $f(x)=f(y)=z$. Ent\ao $f^{-1}(z)=x$ e $f^{-1}(z)=y$. Mas $f^{-1}$ \'e uma fun\caoi, portanto $x=y$ e assim $f$ \'e injetora.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{a,b,c\}$ e $B=\{1,2,3\}$ com $f(a)=1$, $f(b)=2$ e $f(c)=2$. En\tao $f^{-1}=\{(1,a),(2,b),(2,c)\}$ mas $f$ n\ao \'e injetora.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 2.7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{mfuncoes}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Sejam $A=\{1,2,3,4,5,6\}$, $B=\{2,3,4,5\}$ e $f:A\to B$ dada por $f(1)=f(4)=f(6)=3$; $f(2)=5$ e $f(3)=f(5)=4$. Encontre:
+\begin{enumerate}[a)]
+\item $f(\{1,2,3\})$, $f(A-\{2\})$ e $f(A)-\{2\}$. {\bf{\it Resposta:} ${\bf f(A-\{2\})=\{3,4\}}$.}
+\item $f^{-1}(\{3\})$, $f^{-1}(\{4,5\})$ e $f^{-1}(\{2\})$.
+\item $f(\{1,2\}\inter \{2,6\})$ e $f(\{1,2\})\inter f(\{2,6\})$. 
+\end{enumerate}
+
+%excercicio2
+\item Seja $f:A\to B$. Mostre que:
+\begin{enumerate}[a)]
+\item $C\subseteq D\subseteq A$ implica $f(C)\subseteq f(D)$.
+\item $C\subseteq A$ e $D \subseteq A$ implica que $f(C\uni D)=f(C)\uni f(D)$. 
+\item $C\subseteq B$ e $D \subseteq B$ implica que $f^{-1}(C\uni D)=f^{-1}(C)\uni f^{-1}(D)$.
+\item $C\subseteq B$ e $D \subseteq B$ implica que $f^{-1}(C\inter D)=f^{-1}(C)\inter f^{-1}(D)$.
+\item $C\subseteq A$ implica $C\subseteq f^{-1}(f(C))$ e d\^e um exemplo para mostrar que a igualdade n\ao vale. 
+
+{\bf{\it Resposta:} Resposta parcial - Seja ${\bf C=\{1\}}$. En\tao ${\bf f^{-1}(f(C))=\{-1,1\}}$.}
+
+\item $C\subseteq B$ implica $f(f^{-1}(C))\subseteq C$ e d\^e um exemplo para mostrar que a igualdade n\ao vale. 
+\end{enumerate}
+
+%excercicio3
+\item Seja $f:A\to B$. Para distinguir entre $f$ e a extens\ao de $f$ para subconjuntos de $A$, vamos definir $f^{\ast}$ a rela\cao de $\mathbb{P}(A)$ em $\mathbb{P}(B)$ por
+\[
+f^{\ast}=\{(C,f(C)): C\in \mathbb{P}(A)\},
+\]
+e $(f^{-1})^{\ast}$ a rela\cao de $\mathbb{P}(B)$ em $\mathbb{P}(A)$ por
+\[
+(f^{-1})^{\ast}=\{(C,f^{-1}(C)): C\in \mathbb{P}(B)\}.
+\]
+\begin{enumerate}[a)]
+\item Mostre que $f^{\ast}:\mathbb{P}(A)\to\mathbb{P}(B)$.
+\item Mostre que $(f^{-1})^{\ast}:\mathbb{P}(B)\to\mathbb{P}(A)$.
+\item Mostre que $f$ injetora se e somente se $f^{\ast}$ injetora.
+
+{\bf{\it Resposta:} Resposta parcial - Suponha que ${\bf f}$ seja injetora. Sejam ${\bf C,D\in\mathbb{P}(A)}$ com ${\bf f^{\ast}(C)=f^{\ast}(D)}$. Suponha $C\neq D$. Ent\aoi, existe ${\bf x\in C}$ tal que ${\bf x\notin D}$. Mas ${\bf f(x)\in f^{\ast}(C)=f^{\ast}(D)}$ assim dever\'a existir ${\bf y\neq x}$ pertencente ${\bf D}$ tal que ${\bf f(y)=f(x)}$. Mas isto contradiz a hip\'otese que ${\bf f}$ era injetora.}
+
+\item Mostre que $f$ sobrejetora se e somente se $f^{\ast}$ sobrejetora.
+\item Quando $(f^{-1})^{\ast}=(f^{\ast})^{-1}$?  
+\end{enumerate}
+
+%excercicio4
+\item Seja $A$ um conjunto n\ao vazio e seja $F=\{f: f:A\to A\}$. Ent\ao $\bola$ (composi\cao de fun\caoi) \'e uma opera\cao bin\'aria em $F$. Para responder o que segue o leitor usar\'a alguns dos teoremas demonstrados anteriormente.
+\begin{enumerate}[a)]
+\item Mostre que $\bola$ \'e associativa. 
+\item D\^e um exemplo para mostrar que $\bola$ n\ao \'e comutativa.
+\item Mostre que $I_A$ \'e a identidade para $\bola$.
+\item Quais elementos de $F$ t\^em inversa?
+\item D\^e exemplos de fun\coes idempotentes. {\bf{\it Resposta:} ${\bf I_A}$ \'e idempotentes.}
+\item Se $f$ \'e invert\ih vel e $f\bola g=f\bola h$, ent\ao $g=h$?
+\item Mostre que se $f$ e $g$ s\ao invert\ih veis ent\ao $f\bola g$ \'e tamb\'em invert\ih vel. Qual \'e o inverso de $f\bola g$?
+\end{enumerate}
+
+Talvez agora os nomes identidade e inverso como usados com fun\coes assumem mais significado agora, para $I$ \'e a identidade de $\bola$ e $f^{-1}$ \'e o inverso de $f$.
+
+%excercicio5
+\item Seja $\bullet$ uma opera\cao bin\'aria em $A$. Mostre que:
+\begin{enumerate}[a)]
+\item Se $e$ \'e a identidade de $\bullet$ ent\ao $e$ \'e idempotente para $\bullet$.
+\item Se $\bullet$ \'e associativa e comutativa e $a$ e $b$ s\ao ambos idempotentes para $\bullet$ ent\ao $a\bullet b$ \'e tamb\'em idempotente.
+\item Se $\bullet$ \'e associativa e $x$ e $y$ s\ao invert\ih veis ent\ao $x\bullet y$ \'e tamb\'em idempotente. Expresse a inversa de $x\bullet y$ em termos das inversas de $x$ e $y$.
+
+{\bf{\it Resposta:} Dica - Sejam ${\bf x^{\ast}}$ e ${\bf y^{\ast}}$ os inversos de ${\bf x}$ e ${\bf y}$ e compute ${\bf y^{\ast}\bullet x^{\ast}\bullet x\bullet y}$.}
+\end{enumerate}
+
+%excercicio6
+\item Seja $A$ um conjunto n\ao vazio. Ent\ao $\uni$, $\inter$ e $-$ s\ao opera\coes bin\'arias em $\mathbb{P}(A)$. O leitor pode quere citar os teoremas demonstrados anteriormente e outros excerc\i cios para trabalhar nos seguintes itens:
+\begin{enumerate}[a)]
+\item Mostre que $\uni$ e $\inter$ s\ao associativas e comutativas.
+\item D\^e exemplos para mostrar que $-$ n\ao \'e nem associativa nem comutativa.
+
+{\bf{\it Resposta:} (Resposta Parical) Se ${\bf A=\{1,2\}}$ ent\ao ${\bf \{1\}-\{2\}\neq\{2\}-\{1\}}$.}
+
+\item Mostre que cada elemento em $\mathbb{P}(A)$ \'e idempotente para $\uni$ e $\inter$.
+
+{\bf{\it Resposta:} Como ${\bf B\uni B=B\inter B=B}$ para todos os conjuntos ${\bf B}$, assim todos os conjuntos s\ao idempotentes para ambos ${\bf \uni}$ e ${\bf \inter}$.}
+
+\item Quais elementos s\ao idempotentes para $-$?
+\item Quais elementos s\ao invert\ih veis para $\uni$, $\inter$ e $-$?
+\end{enumerate}
+
+%excercicio7
+\item Seja $A$ um conjunto n\ao vazio. Definimos a opera\cao bin\'aria $\bullet$ em $\mathbb{P}(A)$ por
+\[
+X\bullet Y=(X-Y)\uni(Y-X).
+\]
+\begin{enumerate}[a)]
+\item Mostre que $\bullet$ \'e comutativa. {\bf{\it Resposta:} Dica - Seria \'util utilizar ${\bf X\bullet Y = (X\inter Y^C)\uni(Y\inter X^C)}$.}
+\item Mostre que $\bullet$ \'e associativa.
+\item Qual a identidade para $\bullet$?
+\item Mostre que cada elemento pertencente a $\mathbb{P}(A)$ \'e invert\ih vel.
+\item Se $X\subseteq A$, qual \'e o inverso de $X$ para $\bullet$? 
+\end{enumerate}
+
+%excercicio8
+\item Seja $F=\{f: f:\mathbb{R}\to\mathbb{R}, f(x)=ax+b, a\neq 0\}$. [$F$ \'e o conjunto de todas as fun\coes lineare n\ao constantes de $\mathbb{R}$ em $\mathbb{R}$.]
+\begin{enumerate}[a)]
+\item Mostre que $\bola$ (composi\cao de fun\cois) \'e uma opera\cao bin\'aria em $F$. {\bf{\it Resposta:} Dica - Mostre que se ${\bf f,g\in F}$ ent\ao ${\bf f\bola g\in F}$.}
+\item Qual a identidade para $\bola$?
+\item Quais elementos de $F$ s\ao invert\ih veis? {\bf{\it Resposta:} Dica - Pense nos gr\'aficos destas fun\cois.}
+\item Se $f$ \'e invert\ih vel, qual a inversa de $f$?
+\item Quais elementos de $F$ s\ao idempotentes? 
+\end{enumerate}
+
+%excercicio9
+\item Suponha que $\bullet$ seja uma opera\cao bin\'aria associativa em $A$. Seja $x$ um elemento fixo pertencente a $A$. Definimos uma outra rela\cao bin\'aria $\bullet_x$ em $A$ por
+\[
+a\bullet_x b=a\bullet(x\bullet b).
+\]
+Mostre que $\bullet_x$ \'e associativa.
+
+%excercicio10
+\item Mostre que a rela\cao $R$ do teorema \ref{functeo21} \'e uma rela\cao de equival\^encia.
+
+%excercicio11
+\item Seja $\bullet$ uma opera\cao bin\'aria em $A$. Se $B\subseteq A$, podemos considerar que a restri\cao de $\bullet$ a $B$, $\bullet|_B$. Esta restri\cao pode ou n\ao ser uma opera\cao bin\'aria em $B$. Se $\bullet|_B$ for uma opera\cao bin\'aria em $B$, dizemos que $B$ \'e fechado com respeito a $\bullet$. 
+\begin{enumerate}[a)]
+\item D\^e uma defini\cao precisa da restri\cao mencionada acima.
+\item Sejam $+,-$ as opera\coes alg\'ebricas usuais em $\mathbb{Z}$. Mostre que $\mathbb{N}$ \'e fechado com respeito a $+$, mas n\ao \'e fechado com respeiro a $-$.
+\item Se $\bullet$ \'e uma opera\cao bin\'aria em $A$ com $B\subseteq A$, mostre que $B$ \'e fechado com respeito a $\bullet$ se e somente se 
+\[
+\{x\bullet y: x,y\in B\}\subseteq B.
+\]
+\end{enumerate}
+
+%excercicio12
+\item Seja $f:A\to B$. Mostre que $f$ pode ser decomposta em uma sobreje\caoi, uma bije\cao e uma inje\caoi, isto \'e, existem fun\coes $\alpha, \beta$ e $\gamma$ tais que $f=\gamma\bola\beta\bola\alpha$ onde $\alpha$ \'e uma sobrej\caoi, $\beta$ \'e uma bije\cao e $\gamma$ \'e uma inje\caoi. [Dica: veja o teorema \ref{functeo21}.]
+
+%excercicio13
+\item Em \'algebra com frequ\^encia usamos a regra ``igual adicionado a igual \'e igual'', ou mais precisamente, se $a,b,c,d\in\mathbb{R}$ com $a=b$ e $c=d$ ent\ao $a+c=b+d$. Prove que esta afirma\cao est\'a correta.
+
+%excercicio14
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Seja $f:A\to B$ e $C,D\subseteq A$. Ent\ao $f(C\inter D)=f(C)\inter f(D)$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Sejam $C,D\in A$ e suponha $x\in f(C\inter D)$. Ent\ao existe $y\in C\inter D$ tal que $f(y)=x$. Claramente $y\in C$ e $y\in D$, assim $f(y)\in f(C)$ e $f(y)\in f(D)$, logo $x\in f(C)\inter f(D)$. Agora, suponha $x\in f(C)\inter f(D)$. Ent\ao existe $y\in C$ tal que $f(y)=x$ e existe $y\in D$ tal que $f(y)=x$. Mas $y\in C\inter D$, logo $x\in f(C\inter D)$. 
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2\}$, $B=\{1,2,3\}$ e seja $f:A\to B$ dada por $f(1)=1$ e $f(2)=1$. Se $C\{a\}$ e $D=\{2\}$, ent\ao $f(C\inter D)\emptyset$ enquanto que $f(C)\inter f(D)=\{1\}$. 
+
+%excercicio15
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} Sejam $A$ e $B$ conjuntos com $f:A\to B$. Ent\ao $f^{-1}\bola f$ (estas s\ao as fun\coes induzidas por conjuntos) \'e uma rela\cao de equival\^encia em $\mathbb{P}(A)$.
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Sejam $A$, $B$ e $f$ como descritos acima e por conveni\^encia, vamos denotar a composi\cao de fun\coes induzidas por comjuntos, $f^{-1}\bola f$, por $R$. Seja $C\in \mathbb{P}(A)$. Como $f^{-1}(f(C))=C$, $(C,C)\in R$ e portanto $R$ \'e reflexiva. Se $C,D \in \mathbb{P}(A)$, com $(C,D)\in R$ ent\ao temos que $f^{-1}(f(C))=D$. Assim,
+\[
+f(D)=f^{-1}(f(C))=f^{-1}\bola f(C)=I_B(f(C))=f(C).
+\]
+Como $f(C)=f(D)$ ent\ao $f^{-1}(f(C))=f^{-1}(f(D))$ logo, $(D,C)\in R$ e portanto $R$ \'e sim\'etrica. Agora suponha que $(C,D)\in R$ e $(D,E)\in R$. Assim $f^{-1}(f(C))=D$ e $f^{-1}(f(D))=E$. Portanto,
+\[
+E=f^{-1}(f(D))= (f^{-1}\bola f)(f^{-1}\bola f(C))=f^{-1}\bola (f\bola f^{-1})\bola f(C)=f^{-1}\bola I_B(f(C))=f^{-1}(f(C))
+\]
+e assim $(C,E)\in R$ e portanto $R$ \'e transitiva, consequentemente uma rela\cao de equival\^encia.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Sejam $A=\{1,2\}$, $B=\{1,2,3\}$ e $f:A\to B$ dada por $f(1)=1$ e $f(2)=1$. Ent\ao
+\[
+f^{-1}\bola f=\{(\emptyset,\emptyset),(\{1\},\{1,2\}), (\{1,2\},\{1,2\}), (\{2\},\{1,2\})\},
+\]
+que \'e sim\'etrica mas n\ao reflexiva.
+
+%excercicio16
+\item Seja $\mathcal{Q}=\{(m,n): m,n\in \mathbb{Z} \textrm{ com } n\neq 0\}$. Definimos uma rela\cao $R$ em $\mathcal{Q}$ por
+\[
+(m,n)R(x,y) \textrm { se e somente se } my=nx.
+\]
+\begin{enumerate}[a)]
+\item Mostre que $R$ \'e ima rela\cao de equival\^encia.
+\item Encontre tr\^es elementos de $[(1,2)]_R$ e tr\^es elementos de $[(1,-1)]_R$.
+
+{\bf{\it Resposta:} (Resposta Parcial) ${\bf (1,2),(2,4)}$ e ${\bf (5,10)}$ est\ao todos em ${\bf [(1,2)]_R}$.}
+
+\item Mostre que $\forall n\in\mathbb{Z}, n\neq 0$, $[(x,y)]_R=[(nx,ny)]_R$.
+
+{\bf{\it Resposta:} (Resposta Parcial) Seja ${\bf n\in\mathbb{N}}$, ${\bf n\neq 0}$ e suponha que ${\bf (w,z)\in[(nx,ny)]_R}$ En\tao ${\bf wny=znx}$. Como ${\bf n\neq 0}$, podemos dividir por ${\bf n}$, obtendo ${\bf wy=zx}$ portanto ${\bf (w,z)R(x,y)}$ ou ${\bf [(nx,ny)]_R\subseteq[(x,y)]_R}$.}
+
+\item Definimos a oera\cao bin\'aria $\star$ em $[\mathcal{Q}]_R$ por
+\[
+[(x,y)]_R\star [(m,n)]_R=[(xm,yn)]_R
+\]
+Mostre que esta opera\cao bin\'aria est\'a ``bem-definida'', isto \'e, se
+\[
+[(x,y)]_R=[(w,z)]_R \textrm{ e } [(m,n)]_R=[(p,q)]_R
+\]
+en\tao
+\[
+[(x,y)]_R\star[(m,n)]_R=[(w,z)]_R\star[(p,q)]_R.
+\]
+\item Podemos tentar definir outra opera\cao bin\'aria em $[\mathcal{Q}]_R$ por
+\[
+[(x,y)]_R\oplus[(w,z)]_R=[(x+w,y+z)]_R.
+\]
+Mostre, por exemplo, que esta ``opera\cao bin\'aria'' n\ao est\'a bem definida, e assim, n\ao \'e de fato uma opera\cao bin\'aria.
+\item  Tentamos novamente defifinido
+\[
+[(x,y)]_R+[(w,z)]_R=[(xz,yw,yz)]_R.
+\]
+Mostre que esta opera\cao bin\'aria est\'a bem definida.
+\end{enumerate}
+
+\indent [Nota: O leitor alerta pode ter feito a identifica\cao de $\mathcal{Q}$ com $\mathbb{Q}$, o conjunto dos n\'umeros racionais, com $m,n$ fazendo o papel de $m/n$. De fato, o que pensamos ser o n\'umero $1/2$ \'e realmente uma classe de esquival\^encia e igauldade de n\'umeros racionais \'e igualdade de classe de equival\^encia. Por isso no ensino b\'asico aprendemos que $1/2=3/6$.]
+
+%excercicio17
+\item Seja $f:\mathbb{N}\to\mathbb{N}_5$ (veja exerc\ih cio \ref{equivalenciaex8} da se\cao \ref{equivalencia} para esta nota\caoi) dada por $f(x)=[x]_5$. Sejam $R$ e $\alpha$ como no teorema \ref{functeo21}.
+\begin{enumerate}[a)]
+\item Encontre $[2]_R$ e $[9]_R$.
+\item Encontre $\alpha(4)$ e $\alpha(13)$.
+\item Definimos a opera\cao bin\'aria $+$ em $[\mathbb{N}]_R$ por
+\[
+[x]_R+[y]_R=[x+y]_R.
+\]
+Mostre que $+$ \'e de fato uma opera\cao bin\'aria.
+\item Mostre que $[5]_R$ \'e a identidade para $+$.
+\item Mostre que $\forall x,y\in \mathbb{N}$, $\alpha(x+y)=\alpha(x)+\alpha(y)$.
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 3.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{inducao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Demonstre as seguintes proposi\cois:
+\begin{enumerate}[a)]
+\item $\forall n\in\mathbb{N}, 1^2+2^2+3^2+...+n^2=\frac{1}{6}n(n+1)(2n+1)$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 1^2=\frac{1}{6}(1+1)(2+1)}$, que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf 1^2+2^2+3^2+...+k^2=\frac{1}{6}k(k+1)(2k+1)}$, então
+\begin{eqnarray*}
+{\bf 1^2+2^2+3^2+...+k^2+(k+1)^2}&=&{\bf  \left[\frac{1}{6}k(k+1)(2k+1)\right]+(k+1)^2}\\
+                          &=&{\bf  \frac{1}{6}(k+1)\left[k(2k+1)+6k+6\right]}\\
+                          &=&{\bf  \frac{1}{6}(k+1)\left(2k^2+k+6k+6\right)}\\
+                          &=&{\bf  \frac{1}{6}(k+1)\left(2k^2+7k+6\right)}\\
+                          &=&{\bf  \frac{1}{6}(k+1)(k+2)(2k+3)}\\
+                          &=&{\bf  \frac{1}{6}(k+1)[(k+1)+1][(2(k+1)+1]},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, 1^3+2^3+3^3+...+n^3=(\frac{1}{2}n(n+1))^2$.
+\item $\forall n\in\mathbb{N}, 1+3+5+...+(2n-1)=n^2$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 1=1^2}$, que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf 1+3+5+...+(2k-1)=k^2}$, então
+\begin{eqnarray*}
+{\bf 1+3+5+...+(2k-1)+(2k+1)}&=&{\bf  k^2+2k+1}\\
+                          &=&{\bf  (k+1)^2},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, 1+2^{-1}+2^{-2}+...+2^{-n}\leq 2$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 1+\frac{1}{2}\leq 2}$ que \'e verdade. Agora suponha ${\bf k\in\mathbb{N}}$ e ${\bf 1+2^{-1}+2^{-2}+...+2^{-k}\leq 2}$. Multiplicando esta igualdade por ${\bf \frac{1}{2}}$ obtemos ${\bf 2^{-1}+2^{-2}+...+2^{-(k+1)}\leq 1}$ e adicionando ${\bf 1}$ de cada lado vemos que a desigualdade vale para ${\bf k+1}$.}
+
+\item $\forall n\in\mathbb{N}, n\geq 2, \forall x,y\in\mathbb{R}, x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+...+xy^{n-2}+y^{n-1})$.
+\item $\forall n\in\mathbb{N}, 2|n(n+1)$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 2|(1\cdot 2)}$, que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf 2|k(k+1)}$, portanto ${\bf \exists m\in\mathbb{Z}}$ tal que ${\bf k(k+1)=2m}$, então
+\begin{eqnarray*}
+{\bf (k+1)(k+2)}&=&{\bf  k^2+3k+2}\\
+                          &=&{\bf  (k^2+k)+(2k+2)}\\
+                          &=&{\bf  2m+2k+2}\\
+                          &=&{\bf  2(m+k+1)},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, 7|(3^{2n+1}+2^{n+2})$ [Dica: $9=7+2$].
+\item $\forall n\in\mathbb{N}, 11|(8\cdot 10^{2n}+6\cdot 10^{2n-1}+9)$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 11|(800+60+9)}$ ou ${\bf 11|869}$,  que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf 11|(8\cdot 10^{2k}+6\cdot 10^{2k-1}+9}$, portanto ${\bf \exists m\in\mathbb{Z}}$ tal que ${\bf 8\cdot 10^{2k}+6\cdot 10^{2k-1}+9=11m}$, então
+\begin{eqnarray*}
+{\bf 8\cdot 10^{2(k+1)}+6\cdot 10^{2(k+1)-1}+9}&=&{\bf  8\cdot 10^{2k+2}+6\cdot 10^{2k+1}+9}\\
+                          &=&{\bf  100(8\cdot 10^{2k}+6\cdot 10^{2k-1}+9)-891}\\
+                          &=&{\bf  100[11m-891]}\\
+                          &=&{\bf  100[11m-11\cdot 81]}\\
+                          &=&{\bf  11[100(m-81)]},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, D^n_x x^n=n!$.
+\item $\forall n\in\mathbb{N}, 2^n>n$.
+\item $\forall n\in\mathbb{N}, \forall a,b\in\mathbb{R}, a>b>0$ implica $a^n>b^n$.
+\item $\forall n\in\mathbb{N}, n^n\geq n!$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 1^1\geq 1!}$ que \'e verdade. Agora suponha ${\bf k\in\mathbb{N}}$ e ${\bf k^k\geq k!}$. Assim, ${\bf  (k+1)^{k+1}=(k+1)^{k}(k+1)\geq k^k(k+1)\geq k!(k+1)=(k+1)!},$ logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, 9|(2\cdot 10^n+3\cdot 10^{n-1}+4)$.
+\item $\forall n\in\mathbb{N}, (1+1^{-1})(1+2^{-1})(1+3^{-1})...(1+n^{-1})=n+1$.
+\item $\forall n\in\mathbb{N}, 3+11+17+...+(8n-5)=4n^2-n$.
+\item $\forall n\in\mathbb{N}, 1+1/2^2+1/3^2+...+1/n^2\leq 2-1/n$.
+\item $\forall n\in\mathbb{N}, \forall a,b\in\mathbb{R}, a\geq 0, b\geq 0, a^n+b^n\geq(a+b/2)^n$.
+\item $\forall n\in\mathbb{N}, \forall a\in\mathbb{R}, a\neq 1, 1+a+a^2+...+a^n=(1-a^{n+1})/(1-a)$.
+
+{\bf{\it Resposta:} Quando ${\bf n=1}$ temos ${\bf 1+a=\frac{1-a^2}{1-a}=\frac{(1-a)(1+a)}{1-a}}$, que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf 1+a+a^2+...+a^k=(1-a^{k+1})/(1-a)}$, então
+\begin{eqnarray*}
+{\bf 1+a+a^2+...+a^k+a^{k+1}}&=&{\bf  \frac{1-a^{k+1}}{1-a}+a^{k+1}}\\
+                          &=&{\bf  \frac{1-a^{k+1}+a^{k+1}-a^{k+2}}{1-a}}\\
+                          &=&{\bf  \frac{1-a^{k+2}}{1-a}},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, (1\cdot 3\cdot 5)+(3\cdot 5\cdot 7)+...+[(2n-1)\cdot (2n+1)\cdot (2n+3)]=n(2n^3+8n^2+7n-2)$.
+\item $\forall n\in\mathbb{N}, 1/(1\cdot 3)+1/(2\cdot 4)+...1/[n\cdot(n+2)]=(3n^2+5n)/[4(n+1)(n+2)]$.
+\item $\forall n\in\mathbb{N}, (1-\frac{1}{2})(1-\frac{1}{3})...(1-\frac{1}{n})=\frac{1}{n}$.
+
+{\bf{\it Resposta:} Quando ${\bf n=2}$ temos ${\bf 1-\frac{1}{2}=\frac{1}{2} }$, que claramente é verdade. Agora suponha que ${\bf k\in\mathbb{N}}$ e ${\bf (1-\frac{1}{2})(1-\frac{1}{3})...(1-\frac{1}{k})=\frac{1}{k}}$, então
+\begin{eqnarray*}
+{\bf \left(1-\frac{1}{2}\right)\left(1-\frac{1}{3}\right)...\left(1-\frac{1}{k}\right)\left(1-\frac{1}{k+1}\right)}&=&{\bf  \frac{1}{k}\left(1-\frac{1}{k+1}\right)}\\
+                          &=&{\bf  \frac{1}{k}-\frac{1}{k(k+1)}}\\
+                          &=&{\bf  \frac{(k+1)-1}{k(k+1)}}\\
+                          &=&{\bf  \frac{k}{k(k+1)}}\\
+                          &=&{\bf  \frac{1}{k+1}},
+\end{eqnarray*}  
+logo \'e verdade para ${\bf k+1}$, que completa o passo de indu\cao e assim a demonstra\cao por indu\caoi.}
+
+\item $\forall n\in\mathbb{N}, (1-\frac{1}{2^2})(1-\frac{1}{3^2})...(1-\frac{1}{n^2})=\frac{1}{2}(1+\frac{1}{n})$.
+\end{enumerate}
+
+%excercicio2
+\item Mostre que para todos os n\'umeros naturais $n$, $n\geq 2$, existem inteiros n\ao negativos $a$ e $b$ tai que $n=2a+3b$.
+
+%excercicio3
+\item Encontre $n_0$ tal que $\forall n\in\mathbb{N}, n\geq n_0, n^2<(\frac{5}{4})^n$ e demonstre que o resultados est\'a correto.
+
+%excercicio4
+\item Suponha que a sequ\^encia de n\'umeros $(a_n)$ recursivamente como se segue: $a_1=1$ e para $n\geq 2$, seja $a_n=a_{n-1}+2\sqrt{a_{n-1}}+1$. Mostre que $\forall n\in\mathbb{N}, a_n$ \'e um inteiro.
+
+{\bf{\it Resposta:} Dica - Compute primeiro alguns poucos valores ${\bf a_n}$ e tente demonstrar um resultado mais forte no qual o resultado desejado ser\'a uma consequencia.}
+
+%excercicio5
+\item Para $n\in\mathbb{N}$, seja $a_n=1+2^{-1}+3^{-1}+...+n^{-1}$. Mostre que para cada $M\in\mathbb{N}$ existe um $n\in\mathbb{N}$ tal que $a_n>M$.
+
+%excercicio6
+\item {\bf Acredite se quiser:}   
+
+\noindent \textit{\textbf{Conjectura:}} $\forall n\in\mathbb{N}$, $n\geq 783$, $3n^4+15n-7$ \'e par. {\bf{\it Resposta:} Falso.}
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Quando $n=783$, $3n^4+15n-7=1.127.634.377.502$, que \'e par. Agora suponha, $n\geq 783$ e que $3n^4+15n-7$ seja par, assim existe $m\in\mathbb{N}$ tal que $3n^4+15n-7=2m$. Ent\ao
+\begin{eqnarray*}
+3(n+1)^4+15(n+1)-7&=& 3(n^4+4n^3+6n^2+4n+1)+15n+15-7\\
+                  &=& 3n^4+15n-7+12n^3+18n^2+12n+18 \\
+                  &=& 2(m+6n^3+9n^2+6n+9),
+\end{eqnarray*}  
+que \'e par.   {\bf{\it Resposta:} Falso.}
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Quando $n=1000$, $3n^4+15n-7$ \'e \ih mpar, pois $3n^4+15n$ \'e claramente divis\ih vel por $1000$, assim quando o $7$ \'e subtra\ih do, o resultado ser\'a \ih mpar. {\bf{\it Resposta:} Verdadeiro.}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% secao 3.3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Exerc\ih cios \ref{eqvinducao}}
+
+\begin{enumerate}[{\bf 1.}]
+
+%excercicio1
+\item Da demonstra\cao do teorema \ref{indteo1} definiu-se os conjuntos $T$ e $S^C$. Mostre que $T\subseteq S^C$.
+
+%excercicio2
+\item Mostre que $\mathbb{Z}$ n\ao tem o princ\ih pio da boa ordena\cao v\'alido, isto \'e, de um exemplo de um subconjunto n\ao vazio de $\mathbb{Z}$ que n\ao tenha um elemento m\ih nimo.
+
+{\bf{\it Resposta:} Dica - Considere o conjunto ${\bf S=\{n\in\mathbb{Z}: n<0\}}$.}
+
+%excercicio3
+\item Use o princ\ih pio da boa ordena\cao para mostrar que $\sqrt{3}$ \'e irracional. Tente a mesma t\'ecnica usada na demonstra\cao do teorema \ref{indteo4}. Mostre onde esta t\'ecnica falharia se ela fosse utilizada para mostrar que $\sqrt{4}$ \'e irracional.
+
+%excercicio4
+\item Use o princ\ih pio da boa ordena\cao para mostrar que $\sqrt{17}$ \'e irracional.
+
+%excercicio5
+\item Demonstre os excerc\ih cio \ref{inducaoexce1a} e \ref{inducaoexce1a} da se\cao \ref{inducao} usando o princ\ih pio da boa ordena\caoi.
+
+%excercicio6
+\item Demonstre as seguintes proposi\cois usando qualquer m\'etodo de sua prefer\^encia:
+\begin{enumerate}[a)]
+\item $\forall n\in\mathbb{N}, 1^4+2^4+...+n^4=\displaystyle\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$.
+\item $\forall n\in\mathbb{N}, 1^5+2^5+...+n^5=\displaystyle\frac{n^2(n+1)^2(2n^2+2n-1)}{12}$.
+\item $\forall n\in\mathbb{N}, 1^6+2^6+...+n^6=\displaystyle\frac{n^7}{7}+\frac{n^6}{2}+\frac{n^5}{2}-\frac{n^3}{6}+\frac{n}{42}$.
+\item $\forall n\in\mathbb{N}, 1\cdot 2+ 2\cdot 3+...+n(n+1)=\displaystyle\frac{n(n+1)(n+2)}{3}$.
+\item $\forall n\in\mathbb{N}, 2304|(7^{2n}-48n-1)$.
+\item $\forall n\in\mathbb{N}, \displaystyle\frac{1}{\sqrt{1}}+\frac{1}{\sqrt{2}}+...+\frac{1}{\sqrt{n}}\leq 2\sqrt{n}-1$.
+\item $\forall n\in\mathbb{N}, \forall k\in\mathbb{N}, 1^k+2^k+...+n^k\leq n^{k+1}$.
+\end{enumerate}
+
+%excercicio7
+\item Sejam $\alpha,\beta$ as solu\coes da equa\cao $x^2-x-1=0$, com $\alpha >0$. Para todo $n\in\mathbb{N}$, seja $F_n=(\alpha^n-\beta^n)/(\alpha-\beta)$.
+\begin{enumerate}[a)]
+\item Encontre $F_1,F_3$ e $F_4$. [Nota: Estes n\'umeros s\ao conhecidos como os {\it n\'umeros de Fibonacci}.] 
+
+{\bf{\it Resposta:} Dica - Note que ${\bf \alpha\beta=-1}$ e ${\bf \alpha+\beta=1}$.}
+
+\item Mostre que $\forall n\in\mathbb{N}$, $F_{n+2}=F_{n+1}+F_n$. [Nota: Esta recorr\^encia ser\'a \'util para o restante deste excerc\ih cio.]  
+\item Mostre que $\forall n\in\mathbb{N}$, $F_n$ \'e um inteiro.
+\item Mostre que $\forall n\in\mathbb{N}$, $F_n<(\frac{13}{8})^n$.
+\item Mostre que $\forall n\in\mathbb{N}$, $F^2_{n+1}-F_nF_{n+2}=(-1)^n$.
+\item Mostre que $\forall n\in\mathbb{N}$, $2|F_{3n}$, $2\not|\espaco F_{3n+1}$ e $2\not|\espaco F_{3n+2}$.
+\item Mostre que $\forall n\in\mathbb{N}$, 
+\[
+\sum_{i=1}^{n}F_i=F_{n+2}-1.
+\]
+\item Mostre que $\forall m,n\in\mathbb{N}$, $F_mF_n+F_{m+1}F_{n+1}=F_{m+n+1}$. 
+\item Suponha que definimos $S_n=F_{1}^{2}+F_{2}^{2}+...+F_{n}^{2}$. Encontre uma f\'ormula fechada para $S_n$ e demonstre que seu resultados est\'a correto.
+\end{enumerate}
+
+%excercicio8
+\item Suponha que definimos a sequ\^encia de n\'umeros $(r_n)$ recursivamente como se segue: $r_1=1$, $r_2=1/4$ e para $n\geq 2$,
+\[
+r_{n+1}=\frac{r_nr_{n-1}}{r_n+r_{n-1}+2\sqrt{r_nr_{n-1}}}.
+\]
+Mostre que $\forall n\in\mathbb{N}$, $r_n=F^{-2}_{n+1}$. ($F_n$ do excerc\ih cio anterior).
+
+{\bf{\it Resposta:} Dica - Use a recorr\^encia para ${\bf F_n}$ do exerc\ih cio ${\bf 7}$.}
+
+%excercicio9
+\item Mostre que para todo $n\in\mathbb{N}:$
+\begin{enumerate}[a)]
+\item $6400|(9^{2n}-80n-1)$.
+\item $3|(4^n+2)$.
+\item $13|(4^{2n+1}+3^{n+2})$.
+\item $24|(16^n+9^{3n-2}-1)$.
+\end{enumerate}
+
+%excercicio10
+\item Extenda o algoritmo da divis\ao (teorema \ref{indteo5}) para incluir o caso quando $a\leq 0$. Tamb\'em mostre que $q$ e $r$ s\ao \'unicos.
+
+%excercicio11
+\item Defina a sequ\^encia $(a_n)$ por $a_1=a_2=1$, e para $n\geq 3$, $a_n=4a_{n-1}+5a_{n-2}$. Mostre que para $n\geq 3$, $a_n=\frac{1}{15}5^n+\frac{2}{3}(-1)^{n+1}$.
+
+%excercicio12
+\item {\bf Acredite se quiser:}  
+
+\noindent \textit{\textbf{Conjectura:}} $\forall n\in\mathbb{N}, n$ \'e um primo ou $\exists p,q\in\mathbb{Z} \ni n=2^p3^q$. 
+
+\noindent \textit{\textbf{``Demonstra\caoi'':}} Claramente a asserc\ao \'e verdadeira quando $n=1$, pois $1=2^03^0$. Agora, suponha que isto seja verdade quando $1,2,...,k$. Se $k+1$ for primo, a demonstra\cao estar\'a terminada, potanto suponha que $k+1$ n\ao seja primo. Ent\ao $k+1=ab$, onde $1<a<k+1$ e $1<b<k+1$. Pela hip\'otese de indu\caoi, $a=2^p3^q$ e $b=2^r3^s$ para $p,q,r,s\in\mathbb{Z}$. Assim $k+1=2^{p+r}3^{q+s}$, que completa a demonstra\caoi.
+
+\noindent \textit{\textbf{``contra-exemplo'':}} Considere $25$. $25$ n\ao \'e primo e como $2\not|\espaco 25$ e $3\not|\espaco 25$, $25\neq 2^p3^q$ para quaisquer inteiros $p$ e $q$.
+\end{enumerate}
+

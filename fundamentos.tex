@@ -1,0 +1,157 @@
+\documentclass[11pt]{book}
+% pdflatex fundamentos.tex;makeindex fundamentos.idx ;pdflatex fundamentos.tex; bibtex fundamentos; bibtex fundamentos; pdflatex fundamentos.tex; pdflatex fundamentos.tex
+\setlength{\textwidth}{15.5cm} \setlength{\textheight}{22.0cm}
+\setlength{\topmargin}{-0.5cm} \setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\unitlength1cm
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[%
+  pdftitle={Instructions for use of the document class
+    elsart},%
+  pdfauthor={Simon Pepping},%
+  pdfsubject={The preprint document class elsart},%
+  pdfkeywords={instructions for use, elsart, document class},%
+  pdfstartview=FitH,%
+  bookmarks=true,%
+  bookmarksopen=true,%
+  breaklinks=true,%
+  colorlinks=true,%
+  linkcolor=blue,anchorcolor=blue,%
+  citecolor=blue,filecolor=blue,%
+  menucolor=blue,pagecolor=blue,%
+  urlcolor=blue]{hyperref}
+\else
+\usepackage[%
+  breaklinks=true,%
+  colorlinks=true,%
+  linkcolor=blue,anchorcolor=blue,%
+  citecolor=blue,filecolor=blue,%
+  menucolor=blue,pagecolor=blue,%
+  urlcolor=blue]{hyperref}
+\fi
+\usepackage{natbib}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{nomencl}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsfonts,textcomp,amsthm}
+\usepackage{color}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{float}
+\usetikzlibrary{shapes,backgrounds}
+\renewcommand{\baselinestretch}{1.6}
+\newcommand{\co}{\mathbb{C}}
+\newcommand{\re}{\mathbb{R}}
+\newcommand{\e}{\'e}
+\newcommand{\ee}{\wedge}
+\newcommand{\ou}{\vee}
+\newcommand{\nao}{\lnot}
+\newcommand{\Vau}{{\cal V}}
+\newcommand{\eh}{\'e }
+\newcommand{\aoi}{\~ao}
+\newcommand{\ao}{\~ao }
+\newcommand{\tao}{t\~ao }
+\newcommand{\ois}{\~oes}
+\newcommand{\oes}{\~oes }
+\newcommand{\caoi}{\c c\~ao}
+\newcommand{\cao}{\c c\~ao }
+\newcommand{\coes}{\c c\~oes }
+\newcommand{\cois}{\c c\~oes}
+\newcommand{\cc}{\c c}
+\newcommand{\ih}{\'{\i}}
+\newcommand{\pp}{$p$ }
+\newcommand{\qq}{$q$ }
+\newcommand{\rr}{$r$ }
+\newcommand{\parametro}{par\^ametro }
+\graphicspath{{Fig/}}
+\newcommand{\sen}{\mathrm{sen}\,}
+\newcommand{\fim}{\begin{flushright}$\Box$\end{flushright}}
+\newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\espaco}{\textrm{  }}
+\newcommand{\uni}{\cup}
+\newcommand{\inter}{\cap}
+\newcommand{\bola}{\circ}
+\setstretch{1.0}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{capa}
+\pagenumbering{roman}
+\frenchspacing
+%\theoremstyle{definition}
+\newtheorem{defin}{Defini\cao}[chapter]
+\newmdtheoremenv[%
+  backgroundcolor=lightgray!20,
+  linewidth=0.5pt,
+  topline=true,
+  rightline=true,
+  leftline=true,
+  bottomline=true,]{definb}{Defini\cao}[chapter]
+%\theoremstyle{plain}
+\newtheorem{teo}{Teorema }
+\newmdtheoremenv[%
+  linewidth=0.5pt,
+  topline=true,
+  rightline=true,
+  leftline=true,
+  bottomline=true,]{teob}{Teorema}[chapter]
+\newtheorem{axio}{Axioma }
+\newmdtheoremenv[%
+  linewidth=0.5pt,
+  topline=true,
+  rightline=true,
+  leftline=true,
+  bottomline=true,]{axiob}{Axioma}[chapter]
+\newtheorem{coro}{Corol\'a rio}
+\newtheorem{prop}{Proposi\cao } 
+\newtheorem{lem}{Lema }
+\newtheorem{ejem}{Exemplo}
+\newtheorem{nota}{Nota}
+\renewenvironment{proof}{{\bfseries Demonstra\caoi:}}{\qed}
+\def\demo{\bf{Demonstra\caoi:}}
+\def\udots{\rotatebox{90}{$\ddots$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{kurtz:1992,geronimo:franco:2006,stewart:tall:2015,chartrand:polimeni:zhang:2013,velleman:2006,cordeiro:2013,epstein:2006,rautenberg:2010,cori:2000,stoll:1979}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\input{prefacio}
+\input{capitulo1}
+\input{capitulo2}
+\input{capitulo3}
+%\input{capitulo4}
+\input{excercicios}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Refer\^encias Bibliogr\'aficas}
+\bibliography{bib_fundamentos}
+\bibliographystyle{abbrv}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\'Indice Remissivo}
+\printindex
+\end{document}

@@ -1,0 +1,1728 @@
+%!TEX root = fundamentos.tex
+\chapter{L\'ogica}
+\pagenumbering{arabic}
+\section{Introdu\cao}\label{introducao}
+
+Um amigo meu recentemente me disse que quando ele estudou l\'ogica ele ficava com sono. Eu respondi que ele parecia com sono e ele disse, ``Sim, estou como sono.'' Ent\ao ele adicionou, ``Portanto, voc\^e pode concluir que eu estava estudando l\'ogica.'' ``Certamente, n\aoi!'' eu respndi. ``Este \'e um bom exemplo de um argumento inv\'alido''. De fato, se voc\^e estivesse estudando l\'ogica \'e \'obvio que voc\^e n\ao teria aprendido muito.
+
+Este pequeno excerto de uma situa\cao da vida real  foi criado para ilustrar o fato que usamos l\'ogica em todos os dias de nossas vidas, embora nem sempre a usamos corretamente. A l\'ogica fornece o significado pelo qual obtemos conclus\oes e estabelecemos argumentos. A l\'ogica tamb\'em fornece regras pelas quais raciocinamos em matem\'atica. Para ser bem sucedido em matem\'atica teremos que entender precisamente as regras da l\'ogica. Claramente, podemos tamb\'em aplicar estas regras a outras \'areas da vida al\'em de matem\'atica e surpreender (ou desanimar) nossos amigos com nossa l\'ogica, mentes bem treinadas.
+
+Neste cap\ih tulo descreveremos os v\'arios conectivos usados em l\'ogica, desenvolver a nota\cao simb\'olica, descobrir algumas regras \'uteis de infer\^encia, discutir quantifica\cao e exibir alguma formas t\ih picas de demonstra\caoi. Embora nossa dicuss\ao sobre conectivos e tabelas verdade no come\cc o seja bastante mec\^anica e n\ao requereira muita reflex\aoi, ao final do cap\ih tulo estaremos analisando demonstra\coes e escrevendo algumas por n\'os mesmos, um processo menos mec\^anico e bem profundo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{e, ou, n\~ao e tabelas verdade}\label{eounao}
+
+Os blocos b\'asicos da l\'ogica s\~ao as {\it proposi\cois.}\index{Proposi\caoi} Por proposi\coes entendemos como uma senten\cc a declarativa a qual \'e verdadeira ou falsa, mas n\~ao ambas. Por exemplo, ``2 \'e maior que 3'' e ``todo tri\^angulo equil\'atero tem os tr\^es \^angulos congruentes'' s\~ao proposi\cois, enquanto ``$x \leq 3$'' e ``esta senten\cc a \'e falsa'' n\~ao o s\~ao (a primeira \'e uma senten\cc a declarativa mas n\~ao podemos dizer se \'e verdade at\'e definirmos o valor de $x$, tente determinar se a segunda \'e verdade). Denotaremos proposi\coes por letras min\'usculas, $p,q,r,s,$ etc. Em uma discuss\~ao  letras diferentes podem ou n\~ao representar proposi\coes diferentes, mas uma letra aparecendo mais de uma vez em uma dada discuss\~ao sempre ser\'a representada pela mesma proposi\caoi. Uma proposi\cao verdadeira dar\'a um valor verdade de V (de verdadeiro) e uma proposi\cao falsa dar\'a um valor verdade de F (de falso). Por exemplo, ``$2+3<7$'' tem valor verdade \index{Valor Verdade} de T enquanto ``$2+3=7$'' tem valor verdade de F.
+
+Estamos interessados em combinar simples proposi\coes (\`as vezes chamadas subproposi\cois) para gerar proposi\coes mais complicadas (ou compostas). Combinamos proposi\coes com conectivos, \index{Conectivos} entre os quais s\~ao ``e'',``ou'', e ``implica''.  Se $p,q$ s\~ao duas proposi\coes ent\~ao ``$p$ e $q$'' \'e tamb\'em uma proposi\caoi, chamada de conjun\cao \index{Conjun\caoi} de $p$ e $q$, e denotadas por
+\[
+p \ee q.
+\]
+
+O valor verdade de $p \ee q$ \index{Conectivos!``e''}depende dos valores verdade das proposi\coes \pp e \qq: $p \ee q$ \eh verdade quando ambos \pp e \qq s\ao verdade, caso contr\'ario \eh falso. Note que, esse \eh o significado usual de ``e'' que utilizamos em Portugu\^es. A palavra ``mas'' tem o mesmo sentido l\'ogico que ``e'' mesmo que no Portugu\^es corrente tenha uma conota\cao ligeiramente diferente. Uma maneira conveniente para representar este fato \eh utilizando a {\it tabela verdade}. \index{Tabela Verdade} Quando cada uma de duas proposi\coes \pp e \qq tem dois poss\ih veis valores verdade, juntos eles t\^em $2 \times 2=4$ poss\ih veis valores verdade, a tabela abaixo lista todas as possibilidades:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\ee$ \qq \\
+\hline
+V   & & V   & V \\
+V   & & F   & F \\
+F   & & V   & F \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+
+Ent\aoi, por exemplo, quando \pp \eh V e \qq \eh F (linha 2 da tabela verdade), $p \ee q$ \eh F. De fato, a tabela verdade pode ser tomada como a defini\cao do conectivo $\ee$. 
+
+Deve-se comentar aqui que a tabela verdade acima n\ao tem nada a ver com \pp e $q$, \eh apenas utilizado para definir $p \ee q$, a tabela verdade pode ser vista como o $x$ em $f(x)=3x+8$. O que a tabela verdade nos diz, por exemplo, \eh que quando a primeira proposi\cao \'e F e a segunda \'e V (terceira linha da tabela) a conjun\cao das duas proposi\coes \'e F.
+
+Outro conectivo comum \'e o ``ou''\index{Conectivos!``ou''}, \`as vezes chamado de {\it disjun\caoi}. \index{Disjun\caoi} A disjun\cao de \pp e $q$, denotada por
+\[
+p \ou q
+\]
+\'e verdade quando pelo menos um de $p,q$ \'e verdade. Isso \'e chamado de o ``ou inclusivo'', e corresponde ao ``e/ou'' que \`as vezes encontramos em documentos. Note que, em nossas conversas do dia a dia utilizamos o ``ou'' de maneira exclusiva, verdade somente quando {\it exatamente uma} das subproposi\coes \'e verdade. Por exemplo, a verdade de ``Quando voc\^e me ligou eu devo ter ido tomar banho ou ter passeado com o cachorro'' n\ao \'e esperada quando se inclui ambas as possibilidades. Em matem\'atica n\'os sempre usamos ``ou'' no sentido inclusivo como definido acima e a tabela verdade \'e dada abaixo: 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\ou$ \qq \\
+\hline
+V   & & V   & V \\
+V   & & F   & V \\
+F   & & V   & V \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+Dada uma proposi\cao $p$, podemos formar uma nova proposi\cao com o opostos do valor verdade, chamada de {\it nega\cao}\index{Nega\caoi} de $p$, tamb\'em denotada por
+\[
+\nao p,
+\]
+e \'e normalmente lida como ``n\ao $p$''.
+
+A tabela verdade da nega\cao \'e:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\pp & $\nao$ \pp\\
+\hline
+V   &  F \\
+F   &  V \\
+\hline
+\end{tabular}
+\end{table}
+
+Podemos formar a nega\cao de uma proposi\caoi, sem o entendimento do significado da mesma, com `` \'e falso que'' ou ``n\ao \'e o caso que'', mas a proposi\cao resultante \'e estranha e n\ao passa a real natureza da nega\caoi. Uma considera\cao mais precisa do siginificado da proposi\cao em quest\ao geralmente indicar\'a uma melhor maneira de expressar a nega\caoi, mais a frente veremos m\'etodos para negar proposi\coes compostas.
+
+Considere os seguintes exemplos abaixo:
+\begin{enumerate}[{\bf a)}]
+\item $3+5 > 7$
+\item N\ao \'e o caso que $3+5 > 7$
+\item $3+5 \leq 7$
+\item $x^2-3x+2=0$ n\ao \'e uma equa\cao quadr\'atica
+\item N\ao \'e verdade que $x^2-3x+2=0$ n\ao seja um equa\cao quadr\'atica
+\item $x^2-3x+2=0$ \'e uma equa\cao quadr\'atica  
+\end{enumerate}
+Note que, b) e c) s\ao nega\coes de a); e) e f) s\ao nega\coes de d), mas c) e f) s\ao mais adequadas que b) e e) respectivamente.
+
+Usaremos a mesma conven\cao para $\nao$ da que se usa em \'algebra, isto \'e, a nega\cao \'e aplicada somente ao pr\'oximo s\ih mbolo, o qual, neste caso, representa uma proposi\caoi. Ent\~ao, $\nao p \ou q$ significar\'a $(\nao p) \ou q$ ao inv\'es de $\nao (p \ou q)$, assim como $-3+4$ representa $1$ e n\ao $-7$. Com esta conven\cao evitamos ambiguidade quando negamos uma composta de proposi\coes em Portugu\^es. Por exemplo, como distinguimos entre $\nao p \ou q$ e $\nao (p \ou q)$ em Portugu\^es? Suponha que, \pp representa ``$2+2=4$'' e \qq representa ``$3+2<4$''. A proposi\cao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' deve significar $\lnot(p \ou q)$ ou $\lnot p \ou q$? Se usamos a mesma conven\cao que utilizamos para nosso s\ih mbolos, devemos ter $\lnot p \ou q$. Mas, se tomarmos esse significado, como diremos $\lnot (p \ou q)$? O problema parece ser o mesmo do equivalente ao par\^enteses que usamos para agrupamento. Vamos adotar a conven\cao que ``n\ao \'e o caso que'' (ou uma nega\cao similar) aplica-se a tudo que segue at\'e algum tipo grupamento claramente estabelecido. Ent\ao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' significaria $\lnot (p \ou q)$, enquanto que ``N\ao \'e o caso que $2+2=4$, ou $3+2<4$'' significaria $\lnot p \ou q$. Claramente, quando falamos, devemos ser muito cuidadosos usando pausas para, assim, indicar o significado correto.  
+
+Tabelas verdade podem ser utilizadas para expressar os poss\ih veis valores verdade de proposi\coes compostas construindo colunas de uma maneira met\'odica. Por exemplo, desejamos construir uma tabela verdade para $\lnot (p \ou \lnot q)$. Come\cc amos uma tabela verdade de quatro linhas (existem quatro possibilidades) da seguinte forma:    
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c r|}
+\hline
+\pp & & \qq & $\lnot$ & & ( & & \pp & & $\ou$ & & $\lnot$ & & \qq & & ) \\
+\hline
+V & & V &  & &  & &  & &  & &  & &  & &  \\
+V & & F &  & &  & &  & &  & &  & &  & &  \\
+F & & V &  & &  & &  & &  & &  & &  & &  \\
+F & & F &  & &  & &  & &  & &  & &  & &  \\
+\hline
+\end{tabular}
+\end{table}
+
+Os valores verdade s\ao preenchidos passo por passo:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c r|}
+\hline
+\pp & & \qq & $\lnot$ & & ( & & \pp & & $\ou$ & & $\lnot$ & & \qq & & ) \\
+\hline
+V & & V &  & &  & & V & &  & &  & & V & &  \\
+V & & F &  & &  & & V & &  & &  & & F & &  \\
+F & & V &  & &  & & F & &  & &  & & V & &  \\
+F & & F &  & &  & & F & &  & &  & & F & &  \\
+\hline
+\end{tabular}
+
+preenchemos as colunas \pp e \qq \\
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c r|}
+\hline
+\pp & & \qq & $\lnot$ & & ( & & \pp & & $\ou$ & & $\lnot$ & & \qq & & ) \\
+\hline
+V & & V &  & &  & & V & &  & & F & & V & &  \\
+V & & F &  & &  & & V & &  & & V & & F & &  \\
+F & & V &  & &  & & F & &  & & F & & V & &  \\
+F & & F &  & &  & & F & &  & & V & & F & &  \\
+\hline
+\end{tabular}
+
+preenchemos a coluna $\lnot$ \qq \\
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c r|}
+\hline
+\pp & & \qq & $\lnot$ & & ( & & \pp & & $\ou$ & & $\lnot$ & & \qq & & ) \\
+\hline
+V & & V &  & &  & & V & & V & & F & & V & &  \\
+V & & F &  & &  & & V & & V & & V & & F & &  \\
+F & & V &  & &  & & F & & F & & F & & V & &  \\
+F & & F &  & &  & & F & & V & & V & & F & &  \\
+\hline
+\end{tabular}
+
+preenchemos a coluna \pp $ \ou \nao$ \qq \\
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c r|}
+\hline
+\pp & & \qq & $\lnot$ & & ( & & \pp & & $\ou$ & & $\lnot$ & & \qq & & ) \\
+\hline
+V & & V & {\bf F} & &  & & V & & V & & F & & V & &  \\
+V & & F & {\bf F} & &  & & V & & V & & V & & F & &  \\
+F & & V & {\bf V} & &  & & F & & F & & F & & V & &  \\
+F & & F & {\bf F} & &  & & F & & V & & V & & F & &  \\
+\hline
+\end{tabular}
+
+preenchemos a coluna $\nao$ (\pp $ \ou \nao$ $q$)
+\end{table}
+
+Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima podem ser eliminados. Note, tamb\'em, que se a proposi\cao composta envolve $n$ subproposi\coes ent\ao sua tabela verdade requerir\'a $2^n$ linhas. Portanto, por exemplo, a proposi\cao composta de quatro subproposi\coes necessitar\'a de $2^4=16$ linhas.
+
+\paragraph{Exerc\ih cios \ref{eounao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Determine os valores verdade das seguintes proposi\coes 
+\begin{enumerate}[a)]
+\item $3\leq7$ e $4$ \'e um inteiro \ih mpar. 
+\item $3\leq7$ ou $4$ \'e um inteiro \ih mpar. 
+\item $2+1=3$ mas $4<4$.
+\item $5$ \'e \ih mpar ou divis\ih vel por $4$.
+\item N\ao \'e verdade que $2+2=5$ e $5>7$.
+\item N\ao \'e verdade que $2+2=5$ ou $5>7$.
+\item $3 \geq 3$.
+\end{enumerate}
+
+%excercicio2
+\item Suponha que representamos ``$7$ \'e um n\'umero par'' por \pp e ``$3+1=4$'' por \qq e ``$24$ \'e di\ih sivel por $8$'' por $r$. 
+\begin{enumerate}[a)]
+\item Escreva na forma s\ih mb\'olica e determine os valores verdade para:
+\begin{enumerate}[i)]
+\item $3+1 \neq 4$ e 24 \'e div\ih sivel por 8.
+\item N\ao \'e verdade que $7$ \'e \ih mpar ou $3+1=4$.
+\item $3+1=4$ mas 24 n\ao \'e div\ih sivel por 8.
+\end{enumerate}
+
+\item Escreva o que vem a seguir em palavras e determine os valores verdade para:
+\begin{enumerate}[i)]
+\item \pp $\ou$ $\nao$ $q$.
+\item $\nao$ ($r$ $\ee$ $q$).
+\item $\nao$ $r$ $\ou$ $\nao$ $q$.
+\end{enumerate}
+\end{enumerate}
+
+%excercicio3
+\item Construa a tabela verdade para:
+\begin{enumerate}[a)]
+\item $\nao$ $p$ $\ou$ $q$.
+\item $\nao$ $p$ $\ee$ $q$.
+\item ($\nao$ $p$ $\ou$ $q$) $\ee$ $r$.
+\item\label{eou3d} $\nao$ ($p$ $\ee$ $q$).
+\item $\nao$ $p$ $\ee$ $\nao$ $q$.
+\item\label{eou3f}$\nao$ $p$ $\ou$ $\nao$ $q$.
+\item\label{eou3g}$p$ $\ou$ $\nao$ $p$.
+\item $\nao$ ($\nao$ $p$).
+\end{enumerate}
+
+
+%excercicio4
+\item Construa nega\coes \'uteis para:
+\begin{enumerate}[a)]
+\item $3-4<7$.
+\item $3+1=5$ e $2 \leq 4$.
+\item $8$ \'e divis\ih vel por 3 mas $4$ n\ao \'e.
+\end{enumerate}
+
+%excercicio5
+\item Suponha que definimos o conectivo $\star$ dizendo que $p \star q$ \'e verdade somente quando \qq \'e verdade e \pp \'e falso, e \'e falso caso contr\'ario.
+\begin{enumerate}[a)]
+\item Escreva a tabela verdade de $p \star q$. 
+\item Escreva a tabela verdade de $q \star p$.
+\item Escreva a tabela verdade de $(p \star p) \star q$.
+\end{enumerate}
+
+%excercicio6
+\item Vamos denotar o ``ou exclusivo'' \`as vezes utilizado nas conversas do dia a dia por $\oplus$. Portanto, $p\oplus q$ ser\'a verdade exatamente quando uma condi\cao de $p,q$ \'e verdade e falso caso contr\'ario.
+\begin{enumerate}[a)]
+\item Escreva a tabela verdade de $p \oplus q$.
+\item Escreva a tabela verdade de $p \oplus p$ e $(p \oplus q) \oplus q$.
+\item Mostre que ``e/ou'' realmente significa ``e ou ou'', isto \'e, a tabela verdade para $(p \ee q)\oplus(p \oplus q)$ \'e a mesma tabela verdade que $(p \ou q)$.
+\item Mostre que n\ao faz diferen\cc a se tomamos o ``ou'' em ``e/ou'' como sendo inclusivo ($\ou$) ou exclusivo ($\oplus$).
+\end{enumerate}
+
+%excercicio7
+\item Explique a seguinte piada: Ansioso, o pai pergunta ao parteiro: ``Doutor, \'e homem ou mulher?'' O m\'edico responde: ``Sim.''
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Implica\cao e a bicondicional}\label{implicacao}
+
+Se tiv\'essemos que escrever a tabela verdade de $\nao$ ($p$ $\ee$ $q$) e $\nao$ $p$ $\ou$ $\nao$ $q$ (como, de fato, j\'a fizemos nos exerc\ih cios \ref{eou3d} e \ref{eou3f} acima) e compar\'a-las ent\aoi, notar\ih amos que essas duas proposi\coes tem os mesmos valores verdade e, portanto, em algum sentido s\ao iguais. Esse conceito \'e importante (importante suficiente para ter um nome), ent\ao a seguir fazemos a seguinte defini\caoi:
+
+Suponha que as duas proposi\coes $p,q$ tem a mesma tabela verdade. Ent\ao \pp e \qq s\ao ditos {\it logicamente equivalentes}\index{Equival\^encia L\'ogica}, e denotaremos por
+\[
+p \iff q.
+\] 
+Basicamente, quando duas proposi\coes s\ao logicamente equivalentes elas t\^em a mesma forma, e assim podemos utilizar uma ou a outra em outra proposi\cao ou teorema. \'E importante enfatizar que \'e a forma e n\ao o valor verdade da proposi\cao que determina se \'e (ou n\aoi) equivalente a uma outra proposi\caoi. Por exemplo, ``$2+2=4$'' e ``$7-5=2$'' s\ao ambas proposi\coes verdadeiras, mas n\ao s\ao logicamente equivalentes pois elas t\^em tabelas verdade diferentes (se representamos a primeira proposi\cao por \pp ent\ao a outra necessita um outro s\ih mbolo, digamos $q$, e sabemos que elas n\ao t\^em as mesmas tabelas verdade). Por outro lado, ``$2+3=5$ ou$3-4=2$'' e ``$3-4=2$ ou $2+3=5$'' s\ao logicamente equivalentes. Para ver isso, tome \pp representando ``$3-4=2$'' e \qq representando ``$2+3=5$''. A primeira proposi\cao tem a forma $q\ou p$ enquanto a segunda tem a forma $p\ou q$. Uma r\'apida inspe\cao das duas tabelas verdade nos mostra que estas duas proposi\coes t\^em, de fato, a mesma tabela verdade.
+
+Usando a ideia da equival\^encia l\'ogica podemos formular certas rela\coes entre nega\caoi, disjun\cao e conjun\caoi, tamb\'em chamadas de {\it Leis de DeMorgan}:\index{Lei!DeMorgan}
+
+Sejam $p,q$ proposi\coes quaisquer. Ent\ao
+\[
+\lnot (p \ou q) \iff \lnot p \ee \lnot q.
+\]
+\[
+\lnot (p \ee q) \iff \lnot p \ou \lnot q.
+\]
+J\'a verificamos a segunda destas rela\coes no exerc\ih cios \ref{eou3d} e \ref{eou3f} da se\cao \ref{eounao}. O leitor pode verificar a outra simplesmente comparando as tabelas verdade. Em outras palavras, as lei de DeMorgan dizem que, a nega\cao de uma conjun\cao \'e logicamente equivalente a disjun\cao das nega\cois; e a nega\cao de uma disjun\cao \'e logicamente equivalente a conjun\cao das nega\cois . Um erro comum \'e tratar $\lnot$ em l\'ogica como $-$ em \'algebra e pensar que $\lnot$ distribui sobre $\ou$ e $\ee$ assim  como $-$ distribui sobre $+$. Isto \'e, desde que $-(a+b)=-a+(-b)$, algu\'em poderia pensar que $\lnot (p \ou q) \iff \lnot p \ou \lnot q.$ Usando tabelas verdade pode-se ver que isso n\ao est\'a correto. Ent\aoi, enquanto nossa nota\cao l\'ogica parece de alguma forma ``tipo-\'algebra'' (e, de fato, \'e um certo tipo de \'algebra), suas regras diferem daquelas da \'agebra dos n\'umeros reais e n\ao devemos fazer o mesmo erro de assumir que certas opera\coes l\'ogicas se comportam de maneira an\'aloga aos nosso amigos alg\'ebricos $+$, $\times$ e $-$.
+
+Umas das formas proposicionais mais importantes em matem\'atica \'e a da {\it implica\cao},\index{Implica\caoi} tamb\'em chamada de {\it condicional}.\index{Condicional} De fato, todos os teoremas matem\'aticos s\ao de alguma forma uma implica\caoi: Se ``hip\'otese'' ent\ao ``conclus\aoi''. A forma geral de implica\cao \'e ``se \pp ent\ao $q$'', onde $p,q$ s\ao proposi\cois; vamos denotar este fato por:
+\[
+p \to q.
+\] 
+Na condicional $p \to q$, \pp \'e chamada de {\it premissa (ou hip\'otese ou antecedente)}\index{Premissa} e \qq \'e chamada de {\it conclus\ao (ou consequ\^encia ou tese ou consequente)}. \index{Conclus\~ao} A tabela verdade para $p \to q$ \'e  
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\to$ \qq \\
+\hline
+V   & & V   & V \\
+V   & & F   & F \\
+F   & & V   & V \\
+F   & & F   & V \\
+\hline
+\end{tabular}
+\end{table}
+
+Se pensarmos da maneira usual como damos significado ao {\it implica}, devemos concordar que as duas primeiras linhas da tabela verdade acima correspondem ao uso comum que fazemos, mas as duas \'ultimas linhas podem n\ao ser t\ao claras. \'E claro que, somos livres para definir os valores verdade dos v\'arios conectivos da maneira que quisermos e podemos ter a posi\cao que \'e essa a maneira que queremos definir {\it implica} (o que \'e de fato o caso) mas vale a pena ver que a defini\cao acima tamb\'em est\'a de acordo como usamos de forma di\'aria. Para este fim, vamos considerar o que ser\'a chamada ``A par\'abola do cliente n\ao satisfeito''. Imagine que compramos um produto, digamos um sab\ao em p\'o chamado {\it Limp\aoi}, depois de ouvir o comercial que dizia, ``Se voc\^e usar Limp\ao ent\ao sua roupa ficar\'a branca!'' Sob quais circunst\^ancias podemos reclamar com o fabricante? Uma r\'apida reflex\ao revela que certamente n\ao podemos reclamar se n\ao usamos Limp\ao (o comercial n\ao dizia nada sobre o que aconteceria se usassemos Omu, por exemplo), e n\ao poder\ih amos reclamar se usassemos Limp\ao e nossa roupa ficasse branca; portanto poder\ih amos reclamar somente no caso que tivessemos usado Limp\ao e nossa roupa n\ao ficasse branca (como prometido). Entretanto, a promessa do comercial \'e falsa somente quando ``Usamos Limp\ao e obtemos uma roupa que n\ao \'e branca'' \'e verdade. Vamos utilizar nossa nota\cao l\'ogica para examinar essa situa\cao de forma precisa. Sejam, \pp representando ``Usamos Limp\aoi,'' e \qq representando ``Nossa roupa est\'a branca.'' Ent\ao a promessa do comercial \'e
+\[
+p \to q
+\] 
+e podemos reclamar (isto \'e, a promessa \'e falsa) somente no caso quando
+\[
+p \ee \lnot q
+\]
+\'e verdadeira. Portanto, $p \ee \lnot q$ deve ser logicamente equivalente a $\lnot (p \to q)$, chamada a nega\cao de $p \to q$. \index{Implica\caoi!Nega\caoi} Escrevendo a tabela verdade para $p \ee \lnot q$, obtemos (convidamos o leitor a verificar isso): 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & \pp $\ee$ $\lnot$ \qq \\
+\hline
+V   & & V   & F \\
+V   & & F   & V \\
+F   & & V   & F \\
+F   & & F   & F \\
+\hline
+\end{tabular}
+\end{table}
+Como esta proposi\cao \'e logicamente equivalente \`a nega\cao de $p \to q$, a tabela verdade de $p \to q$ deve ser a nega\cao da tabela verdade acima (o qual \'e, veja o que foi feito anteriormente para verificar isso) e a nossa defini\cao l\'ogica da implica\cao realmente concorda com o senso comum. 
+
+Note que, somente o caso no qual $p \to q$ \'e falso \'e quando \pp \'e verdade e \qq \'e falso, isto \'e, quando a hip\'otese \'e verdadeira e a conclus\ao \'e falsa. Portanto as seguintes implica\coes s\ao todas verdadeiras:
+\begin{enumerate}[{\bf a)}]
+\item Se $2+2=4$ ent\ao $1+1=2$.
+\item Se $2+3=4$ ent\ao $1+1=5$.
+\item Se verde \'e vermelho ent\ao a lua \'e feita de queijo.
+\item Se verde \'e vermelho ent\ao a lua n\ao \'e feita de queijo.
+\item $7<2$ se $2<1$.
+\end{enumerate}
+
+Deve-se tamb\'em notar que se uma implica\cao \'e verdade ent\ao sua conclus\ao pode ser verdadeira ou falsa (veja os itens a) e b) acima), mas se a implica\cao \'e verdade e a hip\'otese \'e verdade ent\ao a conclus\ao necessariamente \'e verdade. Isso, claramente, \'e a forma b\'asica de um teorema matem\'atico: se sabemos que o teorema (uma implica\caoi) \'e correto (verdade) e a hip\'otese do teorema \'e verdade, podemos tomar a conclus\ao desse teorema como sendo verdade.
+
+Existem diversas maneiras de exprimir a condicional em Portugu\^es e todas a seguir s\ao consideradas logicamente consistentes:
+\begin{enumerate}[{\bf a)}]
+\item Se $p$ ent\ao $q$.
+\item $p$ implica $q$.
+\item $p$ \'e mais forte que $q$.
+\item $q$ \'e mais fraca que $p$.
+\item $p$ somente se $q$.
+\item $q$ se $p$.
+\item $p$ \'e suficiente para $q$.
+\item $q$ \'e necess\'aria para $p$.
+\item Uma condi\cao necess\'aria para $p$ \'e $q$.
+\item Uma condi\cao suficiente para $q$ \'e $p$.
+\end{enumerate}
+Na maior parte do tempo iremos utilizar as duas primeiras, mas \'e importante se familiarizar com o resto. Lembrando da defini\cao de $p \to q$ nos ajudar\'a a lembrar algumas dessas maneiras. Por exemplo, quando dizemos que ``$r$ \'e suficiente para $s$'', significa que a verdade de $r$ \'e suficiente para garantir a verdade de $s$, isto \'e, queremos dizer que $r \to s$. De forma similar, quando dizemos que ``$r$ \'e necess\'aria para $s$'', significa que quando $s$ \'e verdade, $r$ deve necessariamente ser verdade tamb\'em, isto \'e, queremos dizer que $s\to r$. 
+
+Quando observamos a tabela verdade para $p \to q$ notamos que n\ao \'e sim\'etrica com respeito a \pp e $q$, isto \'e, a tabela verdade para $p \to q$ n\ao \'e a mesma tabela verdade para $q\to p$. Em outras palavras, estas duas proposi\coes n\ao s\ao logicamente equivalentes e portanto n\ao podem ser substitu\ih das uma pela outra. Por causa desta falta de simetria \'e conveniente fazer a seguinte defini\caoi.
+
+Dada a implica\cao $p \to q$:
+\begin{enumerate}[i)]
+\item $q \to p$ \'e chamada sua {\it rec\ih proca}. \index{Implica\caoi!Rec\ih proca}
+\item $\nao q \to \nao p$ \'e chamada sua {\it contrapositiva}. \index{Implica\caoi!Contrapositiva}
+\item $\nao p \to \nao q$ \'e chamada sua {\it inversa}. \index{Implica\caoi!Inversa}
+\end{enumerate}
+Mesmo que o leitor j\'a tenha percebido isso, vale a pena dizer que a inversa de uma implica\cao \'e a contrapositiva de sua rec\ih proca (\'e tamb\'em a rec\ih proca da contrapositiva).
+
+Talvez o erro l\'ogico mais comum \'e aquele de confundir uma implica\cao com sua rec\ih proca (ou inversa). De fato, este erro parece estar na base de muitas propagandas. Por exemplo, se nos dizem que ``Se voc\^e usar Limp\ao ent\ao sua roupa ficar\'a branca!'' (que pode ser verdade), espera-se que aparentemente acreditemos que se n\ao usarmos Limp\ao ent\ao nossa roupa n\ao ficar\'a branca. Mas isso \'e a inversa, a qual \'e logicamente equivalente a rec\ih proca da reivindica\cao original. Portanto, vemos que podemos acreditar na fala da Limp\ao e, ainda, usar Omu com a consci\^encia limpa e usar roupas brancas. Entretanto, uma implica\cao e sua contrapositiva s\ao logicamente equivalentes (veja nos exerc\ih cios a seguir) e, portanto, podem ser usadas da mesma forma. Neste caso, isso significa que se nossas roupas n\ao s\ao brancas ent\ao n\ao usamos Limp\aoi.  
+
+O conectivo final que vamos considerar \'e o {\it bicondicional}.\index{Conectivos!Bicondicional}\index{Bicondicional} Se $p,q$ s\ao duas proposi\coes ent\ao ``\pp se e somente se $q$'', denotado por
+\[
+p \leftrightarrow q,
+\] 
+\'e chamado de {\it bicondicional} (n\ao confundir com a equival\^encia l\'ogica ``$\iff$'', embora haja uma rela\cao entre eles que ser\'a mostrada na pr\'oxima se\caoi). Dizemos que $p \leftrightarrow q$ \'e verdade quando $p,q$ t\^em o mesmo valor verdade e falso quando eles t\^em valor verdade distintos. Ent\ao a tabela verdade para a bicondicional \'e  
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c|}
+\hline
+\pp & & \qq & $p \leftrightarrow q$ \\
+\hline
+V   & & V   & V \\
+V   & & F   & F \\
+F   & & V   & F \\
+F   & & F   & V \\
+\hline
+\end{tabular}
+\end{table}
+
+Outras maneiras de expressar $p \leftrightarrow q$ s\aoi:
+\begin{enumerate}[i)]
+\item \pp \'e necess\'aria e suficiente para $q$.
+\item \pp \'e equivalente a $q$.
+\end{enumerate}
+Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma estreita conec\cao entre a condicional e a bicondicional. De fato, $p \leftrightarrow q$ \'e logicamente equivalente a $(p\to q)\ee(q\to p)$.
+
+\paragraph{Exerc\ih cios \ref{implicacao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Quais das seguintes proposi\coes s\ao logicamente equivalentes?
+\begin{enumerate}[a)]
+\item $p \ee \lnot q$.
+\item $p \to q$.
+\item $\lnot(\lnot p \ou q)$.
+\item $q \to \lnot p$.
+\item $\nao p \ou q$.
+\item $\lnot (p \to q)$.
+\item $p \to \nao q$.
+\item $\nao p \to \nao q$.
+\end{enumerate}
+
+%excercicio2
+\item Mostre que os seguintes pares s\ao logicamente equivalentes:
+\begin{enumerate}[a)]
+\item $p\ee(q\ou r)$; $(p\ee q)\ou(p\ee r)$ .
+\item $p\ou(q\ee r)$; $(p\ou q)\ee(p\ou r)$.
+\item $p\leftrightarrow q$; $(p \to q)\ee(q \to p)$.
+\item $p \to q$; $\lnot q \to \lnot p$.
+\end{enumerate}
+
+%excercicio3
+\item Mostre que os seguintes pares n\ao s\ao logicamente equivalentes:
+\begin{enumerate}[a)]
+\item $\nao(p \ee q)$; $\nao p \ee \nao q$.
+\item $\nao(p \ou q)$; $\nao p \ou \nao q$
+\item $p \to q$; $q \to p$.
+\item $\lnot (p \to q)$; $\lnot p \to \lnot q$.
+\end{enumerate}
+
+%excercicio4
+\item Determine:
+\begin{enumerate}[a)]
+\item A contrapositiva de $\lnot p\to q$.
+\item A rec\ih proca de $\lnot q \to p$.
+\item O inverso do contr\'ario de $q \to \lnot p$.
+\item A nega\cao de $p \to \lnot q$.
+\item A rec\ih proca de $\lnot p \ee q$.
+\end{enumerate}
+
+%excercicio5
+\item Indique quais das proposi\coes a seguir s\ao verdadeiras:
+\begin{enumerate}[a)]
+\item Se $2+1=4$ ent\ao $3+2=5$.
+\item Vermelho \'e branco se, e somente se, verde \'e azul.
+\item $2+1=3$ e $3+1=5$ implicam que $4$ \'e \ih mpar.
+\item Se $4$ \'e \ih mpar ent\ao $5$ \'e \ih mpar.
+\item Se $4$ \'e \ih mpar ent\ao $5$ \'e par.
+\item Se $5$ \'e \ih mpar ent\ao $4$ \'e \ih mpar. 
+\end{enumerate}
+
+%excercicio6
+\item Explique ou d\^e exemplos porque nenhum dos itens a seguir existem:
+\begin{enumerate}[a)]
+\item Uma implica\cao verdadeira com uma conclus\ao falsa.
+\item Uma implica\cao verdadeira com uma conclus\ao verdadeira.
+\item Uma implica\cao falsa com uma conclus\ao verdadeira.
+\item Uma implica\cao falsa com uma conclus\ao falsa.
+\item Uma implica\cao falsa com uma hip\'otese falsa.
+\item Uma implica\cao falsa com uma hip\'otese verdadeira.
+\item Uma implica\cao verdadeira com uma hip\'otese verdadeira.
+\item Uma implica\cao verdadeira com uma hip\'otese falsa. 
+\end{enumerate}
+
+%excercicio7
+\item Traduza em s\ih mbolos:
+\begin{enumerate}[a)]
+\item \pp sempre que $q$.
+\item \pp a menos que $q$.
+\end{enumerate}
+
+%excercicio8
+\item D\^e a nega\cao para $p \leftrightarrow q$ na forma que n\ao envolva uma bicondicional.
+
+%excercicio9
+\item Suponha que $p$, $\lnot q$ e $r$ s\ao verdade. Quais a seguir s\ao proposi\coes verdadeiras?
+\begin{enumerate}[a)]
+\item $p \to q$.
+\item $q \to p$.
+\item $p \to (q \ou r)$.
+\item $p \leftrightarrow q$.
+\item $p \leftrightarrow r$.
+\item $(p \ou q) \to p$.
+\item $(p \ee q) \to q$.
+\end{enumerate}
+
+%excercicio10
+\item Note que temos cinco ``conectivos'' l\'ogicos: $\ee$, $\ou$, $\to$, $\leftrightarrow$ e $\nao$, cada qual corresponde a uma constru\cao da linguagem comum. Do ponto de vista l\'ogico isto \'e de alguma forma um deperd\ih cio, desde que podemos expressar todos estes em termos de, apenas, $\nao$ e $\ee$. Ainda mais, se definirmos $p|q$ para ser falsa quando ambos \pp e \qq s\ao verdadeiros, e verdadeiro caso contr\'ario, podemos expressar todas as cinco formas em termos deste \'unico conectivo ($|$ \'e conhecido como Conectivo de Sheffer \index{Conectivos!de Sheffer} ou Conectivo Nou \index{Conectivos!``nou''}). Verifique parcialmente que os argumentos dados acima por
+\begin{enumerate}[a)]
+\item Econtrando a proposi\cao a qual equivale a $p \ou q$ usando apenas $\ee$ e $\nao$.
+\item Escrevendo a tabela verdade para $p|q$.
+\item Mostrando que $p|p$ \'e logicamente equivalente a $\nao p$.
+\item Mostrando que $(p|q)|(q|p)$ \'e logicamente equivalente a $p \ee q$.
+\end{enumerate}
+
+%excercicio11
+\item Escreva a rec\ih proca, a nega\cao e a contrapositiva das seguintes afirma\cois:
+\begin{enumerate}[a)]
+\item C\ao que ladra n\ao morde.
+\item Nem tudo que reluz \'e ouro.
+\item O que n\ao mata engorda.
+\item Quem n\ao tem c\ao ca\cc a com gato.
+\item Em boca fechada n\ao entra mosca.
+\item Onde h\'a fuma\cc a, h\'a fogo.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tautologias}\label{tautologias}
+
+Uma importante classe de proposi\coes s\ao aquelas que apresentam tabelas verdade contendo apenas V's na coluna final, isto \'e, proposi\coes que s\ao sempre verdadeiras e o fato de serem smpre verdadeiras depende da sua forma e n\ao a qualquer significado que pode ser dado a elas (por exemplo o exerc\ih cio \ref{eou3g} da se\cao \ref{eounao}: $p\ou \nao p$). Tais proposi\coes s\ao chamadas {\it tautologias}.\index{Tautologias} \'E importante fazermos uma distin\cao entre proposi\coes verdadeiras e tautologias. Por exemplo, ``2+2=4'' \'e uma proposi\cao verdadeira mas n\ao \'e uma tautologia pois sua forma \'e \pp a qual n\ao \'e sempre verdadeira. Por outro lado, ``$5$ \'e a ra\ih z primitiva de $17$ ou $5$ n\ao \'e uma ra\ih z primitiva de $17$'' \'e uma tautologia n\ao importanto o significado de ra\ih z primitiva. \'E uma tautologia em virtude de sua forma $p \ou \nao p$ apenas.
+
+A nega\cao de uma tautologia, isto \'e, a proposi\cao que sempre \'e falsa, \'e chamada de {\it contradi\cao}.\index{Contradi\caoi} Devemos, tamb\'em, fazer uma distin\cao entre contradi\coes e proposi\coes falsas da mesma forma que distinguimos tautologias de proposi\coes verdadeiras. Uma proposi\cao \'e uma contradi\cao baseada apenas em sua forma. Como exemplos, considere as tabelas verdade: 
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c r|}
+\hline
+\pp & & \qq & $p$ & & $\to$ & & ($p$ & & $\ou$ & & $q$) \\
+\hline
+V & & V & V & & {\bf V} & & V & & V & & V \\
+V & & F & V & & {\bf V} & & V & & V & & F \\
+F & & V & F & & {\bf V} & & F & & V & & F \\
+F & & F & F & & {\bf V} & & F & & F & & V \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|l c c c c c c c c c c c c|}
+\hline
+\pp & & \qq & ($p$ & & $\to$ & & $q$) & & $\ee$ & & ($p$ & & $\ee$ & & $\nao$ $q$)  \\
+\hline
+V & & V & V & & V & & V & & {\bf F} & & V & & F & & F  \\
+V & & F & V & & F & & F & & {\bf F} & & V & & V & & V  \\
+F & & V & F & & V & & V & & {\bf F} & & F & & F & & F  \\
+F & & F & F & & V & & F & & {\bf F} & & F & & F & & V  \\
+\hline
+\end{tabular}
+\end{table}
+
+Observe que, $p\to (p\ou q)$ \'e uma tautologia e $(p\to q)\ee(p \ee \nao q)$ \'e uma contradi\caoi.
+
+Usando a ideia de tautologia, talvez podemos deixar claro a distin\cao entre ``equivalente'' e ``logicamente equivalente''. Duas proposi\coes $p,q$ s\ao logicamente equivalentes se e somente se $p \leftrightarrow q$ \'e uma tautologia. De fato, $p \leftrightarrow q$ e $p\iff q$ s\ao proposi\coes em dois n\ih veis diferentes. Se pensarmos que ``$p$ \'e equivalente a $q$'' como uma proposi\caoi, ent\ao `` \pp \'e logicamente equivalente a $q$'' \'e uma proposi\cao sobre essa proposi\cao, chamada (meta)-proposi\cao ``\pp \'e equivalente a \qq \'e verdade.'' Por exemplo, $(p\to q)\leftrightarrow(\nao q \to \nao p)$ \'e uma implica\cao l\'ogica enquanto $p\to(p\ee q)$ n\ao \'e, esta implica\cao \'e ``apenas'' uma implica\cao que pode ser verdadeira ou n\aoi.
+
+Usamos a ideia de tautologia para definir o seguinte: dizemos que $p\to q$ \'e uma {\it implica\cao l\'ogica}\index{Implica\cao L\'ogica} (tamb\'em ``\pp implica logicamente $q$ ou \qq \'e uma consequencia l\'ogica de $p$'') se $p\to q$ \'e uma tautologia. \pp  implica logicamente \qq \'e denotado por
+\[
+p \Rightarrow q.
+\]
+Se \pp implica logicamente $q$, e \pp \'e verdade, ent\ao \qq tem que ser verdade tamb\'em. Por exemplo, $p\to(p\ou q)$ e $(p \ee q)\to p$ s\ao implica\coes l\'ogicas enquanto $p\to(p\ee q)$ n\ao \'e (quando \pp \'e V e \qq \'e F ent\ao a \'ultima implica\cao \'e F e portanto n\ao \'e uma tautologia).
+
+Tautologias s\ao as regras pelas quais n\'os raciocinamos. Para refer\^encia futura uma lista, com as mais comuns e com alguns de seus nomes, \'e dada abaixo. Para isso, $p,q,r$ representam proposi\cois, {\bf c} representa uma contradi\cao e {\bf t} representa uma tautologia.
+\newpage
+
+
+{\bf Lista de tautologias}
+
+\begin{tabu}{r l c c c l}
+   & & & \\\tabucline[2pt]{-}
+1. &$p\ou\nao p$ & & & &\\
+2. &$\nao(p\ee\nao p)$ & & & &\\
+3. &$p\to p$ & & & &\\
+4. & a) $p\leftrightarrow (p\ou p)$ & & & &Leis idempotentes \\
+   & b) $p\leftrightarrow (p\ee p)$ & & & & \\
+5. &$\nao\nao p \leftrightarrow p$ & && &Dupla nega\cao \index{Nega\caoi!Dupla}\\
+6. & a) $(p\ou q)\leftrightarrow(q\ou p)$ & & & &Comutatividade\index{Proposi\caoi!Comutatividade} \\
+   & b) $(p\ee q)\leftrightarrow(q\ee p)$ & & & & \\
+   & c) $(p\leftrightarrow q)\leftrightarrow(q\leftrightarrow p)$ & & & & \\
+7. & a) $(p\ou(q\ou r))\leftrightarrow((p\ou q)\ou r)$ & & & &Associatividade\index{Proposi\caoi!Associatividade} \\
+   & b) $(p\ee(q\ee r))\leftrightarrow((p\ee q)\ee r)$  & & &  &\\
+8. & a) $(p\ee(q\ou r))\leftrightarrow((p\ee q)\ou(p\ee r))$ & & & &Distributividade \index{Proposi\caoi!Distributividade} \\
+   & b) $(p\ou(q\ee r))\leftrightarrow((p\ou q)\ee(p\ou r))$  & & & & \\
+9. & a) $(p\ou{\bf c})\leftrightarrow p$ & & & &Identidades\index{Proposi\caoi!Identidades} \\
+   & b) $(p\ee{\bf c})\leftrightarrow {\bf c}$ & & & & \\
+   & c) $(p\ou{\bf t})\leftrightarrow {\bf t}$ & & & & \\
+   & d) $(p\ee{\bf t})\leftrightarrow$ p& & & & \\
+10. & a) $\nao(p\ee q)\leftrightarrow(\nao p \ou \nao q)$ & & & &Leis de DeMorgan \index{Lei!DeMorgan}\\
+    & b) $\nao(p\ou q)\leftrightarrow(\nao p \ee \nao q)$  & & & & \\
+11. & a) $(p \leftrightarrow q)\leftrightarrow((p\to q)\ee(q \to p))$ & & & &Equival\^encia \index{Equival\^encia}\\
+    & b) $(p \leftrightarrow q)\leftrightarrow((p\ee q)\ou(\nao p \ee \nao q))$ & & & & \\
+    & c) $(p \leftrightarrow q)\leftrightarrow(\nao p \leftrightarrow \nao q)$ & & & & \\
+12. & a) $(p\to q)\leftrightarrow(\nao p \ou q)$ & & & &Implica\cao \index{Implica\caoi} \\
+    & b) $\nao(p\to q)\leftrightarrow(p \ee\nao q)$  & & & & \\
+13. & $(p\to q)\leftrightarrow(\nao q \to \nao p)$ & & & &Contrapositiva\index{Contrapositiva} \\
+14. & $(p\to q)\leftrightarrow((p\ee\nao q)\to {\bf c})$ & & & &{\it Reductio ad absurdum}\index{Reductio ad Absurdum} \\
+15. & a) $((p\to r)\ee(q\to r))\leftrightarrow((p\ou q)\to r)$ & & & & \\
+    & b) $((p\to q)\ee(p\to r))\leftrightarrow((p\to (q\ee r))$  & & & & \\
+16. & $((p\ee q)\to r)\leftrightarrow(p\to(q \to r))$ & & & &Lei de exporta\cao\index{Lei!Exporta\caoi} \\
+17. & $p\to(p\ou q)$ & & & &Adi\cao\index{Adi\caoi} \\
+18. & $(p\ee q)\to p$ & & & &Simplica\cao\index{Simplifica\caoi} \\
+19. & $(p\ee(p\to q))\to q$ & & & &{\it Modus ponens}\index{Modus Ponens} \\
+20. & $((p\to q)\ee\nao q)\to\nao p$ & & & &{\it Modus tollens}\index{Modus Tollens} \\
+21. & $((p\to q)\ee(q\to r))\to(p\to r)$ & & & &Silogismo hipot\'etico\index{Silogismo!Hipot\'etico} \\
+22. & $((p\ou q)\ee\nao p)\to q$ & & & &Silogismo disjuntivo\index{Silogismo!Disjuntivo} \\
+23. & $(p\to {\bf c})\to\nao p$ & & & &Absurdo\index{Absurdo} \\
+24. & $((p\to q)\ee(r\to s))\to((p\ou r)\to(q\ou s))$ & & & & \\
+25. & $(p\to q)\to((p\ou r)\to(q\ou r))$ & & & & \\
+\tabucline[2pt]{-}
+\end{tabu}
+
+\newpage
+
+Observe na lista acima que, 4-16 s\ao equival\^encias l\'ogicas enquanto 17-25 s\ao implica\coes l\'ogicas.
+
+Uma das primeiras perguntas que os estudantes fazem quando v\^em uma lista como a acima \'e ``Tenho que memorizar esta tabela?'' A resposta \'e ``N\aoi, memoriza\cao n\ao \'e suficiente, voc\^e tem que saber todas elas! Elas t\^em que estar na sua forma de pensar.'' Em um primeiro momento, isto parece uma tarefa dif\ih cil, e talvez o seja. Mas algumas destas j\'a est\ao incorporadas na forma como pensamos. Por exemplo, se algu\'em diz, ``esta garrafa de \'agua \'e com g\'as ou sem g\'as. N\ao \'e com g\'as,'' o que conclu\ih mos sobre a garrafa de \'agua? Conclu\ih mos que \'e uma garrafa de \'agua sem g\'as, fazendo isso estamos usando o silogismo disjuntivo (item 22 da tabela de tautologias). De forma similar, algu\'em poderia dizer ``se eu leio o livro de fundamentos de matem\'atica antes da aula ent\ao eu gosto da aula. Eu li o livro de fundamentos de matem\'atica hoje antes da aula.'' Conclu\ih mos que a pessoa que disse isso, gostou da aula de hoje. Esta \'e uma aplica\cao do modus ponens (item 19 da tabela de tautologias). N\ao \'e importante que aprendamos os nomes das v\'arias equival\^encias e implica\cois, mas \'e importante que aprendamos suas formas para reconhecermos quando estamos utilizando-as. \'E importante tamb\'em reconhecer quando elas n\ao parecem/soam corretas, isto \'e, quando utilizamos alguma coisa que n\ao \'e uma impli\cao l\'ogica.
+
+
+
+\paragraph{Exerc\ih cios \ref{tautologias}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Verifique que 7 a), 9 b), 13 e 14 da lista acima s\ao tautologias.
+
+%excercicio2
+\item Determine quais das seguintes proposi\coes t\^em alguma forma presente na lista de tautologias (por exemplo, $(\nao q\ee p)\to\nao q$ tem a forma 18 da lista) e nestes casos, indique qual forma:
+\begin{enumerate}[a)]
+\item $\nao q\to(\nao q \ou\nao p)$.
+\item $q\to (q\ee\nao p)$.
+\item $(r\to\nao p)\leftrightarrow(\nao r\ou\nao p)$.
+\item $(p\to\nao q)\leftrightarrow\nao(\nao p\to q)$.
+\item $(\nao r\to q)\leftrightarrow(\nao q\to r)$.
+\item $(p\to(\nao r\ou q))\leftrightarrow((r\ee\nao q)\to\nao p)$.
+\item $r\to\nao(q\ee\nao r)$.
+\item $(\nao q\ou p)\ee q)\to p$.
+\end{enumerate}
+
+%excercicio3
+\item D\^e exemplos ou diga porque as proposi\coes a seguir n\ao existem:
+\begin{enumerate}[a)]
+\item Uma implica\cao l\'ogica com uma falsa conclus\aoi. 
+\item Uma implica\cao l\'ogica com uma conclus\ao verdadeira.
+\item Uma implica\cao l\'ogica com uma hip\'otese verdadeira e uma conclus\ao falsa.
+\end{enumerate}
+
+%excercicio4
+\item Quais das seguintes s\ao corretas?
+\begin{enumerate}[a)]
+\item $(p\to(q\ou r))\Rightarrow(p\to q)$.
+\item $((p\ou q)\to r)\Rightarrow(p\to r)$.
+\item $(p\ou(p\ee q))\iff p$.
+\item $((p\to q)\ee\nao p)\Rightarrow\nao q$.
+\end{enumerate}
+
+%excercicio5
+\item Quais das seguintes s\ao tautologias, contradi\coes ou nenhuma das duas?
+\begin{enumerate}[a)]
+\item $(p\ee\nao q)\to(q \ou \nao p)$.
+\item $\nao p \to p$.
+\item $\nao p \leftrightarrow p$.
+\item $(p\ee\nao p)\to p$.
+\item $(p\ee\nao p)\to q$.
+\item $(p\ee\nao q)\leftrightarrow(p\to q)$.
+\item $[(p\to q) \leftrightarrow r]\leftrightarrow[p\to(q\leftrightarrow r)]$.
+\end{enumerate}
+
+%excercicio6
+\item Quais dos seguintes s\ao corretos?
+\begin{enumerate}[a)]
+\item $(p\leftrightarrow q)\Rightarrow(p\to q)$.
+\item $(p\to q)\Rightarrow(p\leftrightarrow q)$.
+\item $(p\to q)\Rightarrow q$.
+\end{enumerate}
+
+%excercicio7
+\item $\to$ \'e associoativa? Isto \'e $((p \to q) \to r)\iff((p \to (q \to r))$.
+
+%excercicio8
+\item $\leftrightarrow$ \'e associoativa? Isto \'e $((p \leftrightarrow q) \leftrightarrow r)\iff((p \leftrightarrow (q \leftrightarrow r))$.
+
+%excercicio9
+\item Quais das seguintes proposi\coes verdadeiras s\ao tautologias?
+\begin{enumerate}[a)]
+\item Se $2+2=4$ ent\ao $5$ \'e \ih mpar.
+\item $3+1=4$ e $5+3=8$ implica $3+1=4$.
+\item $3+1=4$ e $5+3=8$ implica $3+2=5$.
+\item Vermelho \'e amarelo ou vermelho n\ao \'e amarelo.
+\item Vermelho \'e amarelo e vermelho \'e vermelho.
+\item $4$ \'e \ih mpar ou $2$ \'e par e $2$ \'e \ih mpar implica que $4$ \'e \ih mpar.
+\item $4$ \'e \ih mpar ou $2$ \'e par e $2$ \'e \ih mpar implica que $4$ \'e par.
+\end{enumerate}
+
+%excercicio10
+\item Quais das seguintes s\ao consequ\^encias l\'ogicas do conjunto de proposi\coes $p\ou q$, $r\to\nao q$, $\nao p$?
+\begin{enumerate}[a)]
+\item $q$.
+\item $r$.
+\item $\nao p\ou s$.
+\item $\nao r$.
+\item $\nao(\nao q\ee r)$.
+\item $q\to r$.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Argumentos e o princ\ih pio da demonstra\cao}\label{demonstracao}
+
+Quando ganhamos uma discuss\aoi? Claramente, tirando intimida\caoi, coer\cao ou amea\cc as. Estamos dizendo, convencer algu\'em da exatid\ao l\'ogica de sua posi\caoi. Poder\ih amos come\cc ar dizendo, ``Voc\^e aceita $p$,$q$ e $r$ verdade?'' Se a resposta \'e, ``Sim, qualquer pateta pode ver isso!'' ent\ao voc\^e diz ``Bem, ent\ao segue que $t$ deve ser verdade.'' Para ganhar essa discuss\aoi, deve ser o caso (e isso \'e o que podemos argumentar) que $(p\ee q\ee r)\to t$ \'e uma tautologia, isto \'e, n\ao existe de forma alguma que suas premissas ($p,q,r$ que seu amigo j\'a aceitou) sejam verdade e sua conclus\aoi, $t$, seja falsa. \'E assim a prova (demonstra\caoi) de um teorema matem\'atico. Na demonstra\cao devemos mostrar que sempre que as premissas do teorema s\ao verdade, ent\ao a conclus\ao \'e verdade tamb\'em. Agora, tentaremos colocar esta ideia de uma maneira mais formal e ent\ao discutir algumas t\'ecnicas para demonstrar que um teorema est\'a correto. Come\cc aremos com algumas defini\cois. 
+
+Um {\it argumento}\index{Argumento} (ou teorema) \'e uma proposi\cao da forma
+\[
+(p_1\ee p_2\ee ... \ee p_n)\to q.
+\] 
+
+Diremos que $p_1$, $p_2$, ..., $p_n$ s\ao {\it premissas}\index{Premissas} (ou hip\'otese\index{Hip\'otese}) e $q$ \'e a {\it conclus\aoi}.\index{Conclus\aoi} Um argumento \'e v\'alido (ou um teorema \'e verdade) se \'e uma tautologia. Neste caso, dizemos que $q$ (a conclus\aoi) \'e uma {\it consequ\^encia l\'ogica}\index{Consequ\^encia L\'ogica} de $p_1$, $p_2$, ..., $p_n$ (as premissas). 
+
+Observe que um argumento v\'alido \'e uma implica\cao l\'ogica. Pensando em tabelas verdade para a implica\cao vemos que isto significa que sempre que $p_1$, $p_2$, ..., $p_n$ s\ao verdade ent\ao $q$ tamb\'em \'e verdade. Vista por esta perspectiva, a defini\cao de argumento v\'alido dada acima parecer concordar com o significado que usualmente damos. Se as premissas s\ao todas verdade e o argumento \'e v\'alido ent\ao a conclus\ao \'e necessariamente verdade. Note que, se o argumento \'e v\'alido, a conclus\ao pode ser verdade ou falsa, tudo que est\'a afirmado \'e que se as premissas s\ao todas verdade ent\ao a conclus\ao necessariamente \'e verdade. Por exemplo, considere o seguinte argumento:
+\[
+(\nao q \ee (p\to q))\to \nao p.
+\]
+
+Uma maneira comum de exibir os argumentos \'e listar as premissas, tra\cc ar uma linha horizontal e ent\ao escrever a conclus\aoi. Assim, o argumento acima seria exibido como:
+\begin{eqnarray}\label{dem1}
+\begin{tabular}{l}
+$\nao q$ \\
+$\underline{p\to q}$ \\
+$\nao p$.
+\end{tabular}
+\end{eqnarray}
+
+Para testar a validade deste argumento, podemos utilizar a tabela verdade:
+\begin{table}[H]
+\centering
+\begin{tabular}{|l c r|c c c c c c c c c|}
+\hline
+\pp & & \qq & ($\nao q$ & & $\ee$ & & $p\to q$) & & $\to$ & & $\nao p$ \\
+\hline
+V & & V & F & & F & & V & & {\bf V} & & F \\
+V & & F & V & & F & & F & & {\bf V} & & F \\
+F & & V & F & & F & & V & & {\bf V} & & V \\
+F & & F & V & & V & & V & & {\bf V} & & V \\
+\hline
+\end{tabular}
+\end{table}
+Como o argumento \'e uma tautologia, isto \'e, um argumento v\'alido. Note que, isto significa que sempre que as premissas s\ao todas verdades (neste caso linha 4), a conclus\ao tamb\'em \'e verdade.
+
+Agora, considere o argumento:
+\begin{eqnarray}\label{dem2}
+\begin{tabular}{l}
+$\nao p$ \\
+$\underline{p\to q}$ \\
+$\nao q$.
+\end{tabular}
+\end{eqnarray}
+
+Novamente, escrevamos a tabela verdade:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l c r|c c c c c c c c c|}
+\hline
+\pp & & \qq & ($\nao p$ & & $\ee$ & & $p\to q$) & & $\to$ & & $\nao q$ \\
+\hline
+V & & V & F & & F & & V & & {\bf V} & & F \\
+V & & F & F & & F & & F & & {\bf V} & & V \\
+F & & V & V & & V & & V & & {\bf F} & & F \\
+F & & F & V & & V & & V & & {\bf V} & & V \\
+\hline
+\end{tabular}
+\end{table}
+
+Este argumento n\ao \'e uma tautologia (na linha 3 vemos que as premissas s\ao verdade mas a conclus\ao \'e falsa), n\ao \'e v\'alido.
+
+Para deixar estes exemplos um pouco mais concretos, sejam \pp ``$2+2=4$'' e \qq ``$3+5=7$''. Ent\aoi, o primeiro argumento \ref{dem1} se torna 
+\begin{eqnarray*}
+\begin{tabular}{l}
+$3+5\neq 7$ \\
+\underline{Se $2+2=4$, ent\ao $3+5=7$} \\
+$2+2\neq 4$.
+\end{tabular}
+\end{eqnarray*}
+
+O segundo \'e argumento \ref{dem2} \'e
+\begin{eqnarray*}
+\begin{tabular}{l}
+$2+2\neq 4$ \\
+\underline{Se $2+2=4$, ent\ao $3+5=7$} \\
+$3+5\neq 7$.
+\end{tabular}
+\end{eqnarray*}
+
+
+No primeiro caso (um argumento v\'alido) vemos que a conclus\ao \'e falsa, enquanto no segundo caso (um argumento inv\'alido) a conclus\ao \'e verdade! O que est\'a acontencendo aqui? A resposta \'e que a validade (ou falta dela) de um argumento \'e somente baseada na forma do argumento e n\ao tem nada a ver com a falsidade ou verdade das proposi\coes envolvidas (se esse n\ao fosse o caso, n\ao haveria maneira de representar de forma simb\'olica). Tamb\'em, \'e importante lembrar que a validade de um argumento garante a verdade da conclus\ao somente quando todas as premissas s\ao verdades. No primeiro argumento \ref{dem1} vemos que a segunda premissa, ``Se $2+2=4$, ent\ao $3+5=7$'', \'e falsa.
+
+Embora o procedimento acima de usar tabelas verdade para verificar a validade do argumento seja simples, n\ao \'e muito conveniente quando o n\'umero de proposi\coes \'e grande. Por exemplo, se existem oito proposi\cois, ent\ao a tabela verdade requeriria $2^8=256$ linhas.   
+
+Outro m\'etodo de demonstrar (provar) a validade de um argumento \'e chamada de {\it princ\ih pio de demonstra\cao}:\index{Princ\ih pio de Demonstra\cao}
+
+A demonstra\cao de que o argumento $(p_1\ee p_2\ee ...\ee p_n)\to q$ \'e v\'alido \'e uma sequ\^encia de proposi\coes $s_1,s_2,...,s_k$ de forma que $s_k$ (a \'ultima proposi\cao na sequ\^encia) \'e \qq e cada $s_i$, $1\leq i \leq k$, na sequ\^encia satisfaz um ou mais dos seguintes requerimentos:  
+\begin{enumerate}[{\bf a)}]
+\item $s_i$ \'e uma das hip\'oteses.
+\item $s_i$ \'e uma tautologia.
+\item $s_i$ \'e uma consequ\^encia l\'ogica das proposi\coes anteriores da sequ\^encia.
+\end{enumerate}
+
+Ent\ao vemos que sob esta suposi\cao de que as premissas s\ao verdade, cada proposi\cao na demonstra\cao tamb\'em ser\'a verdade e como a \'ultima proposi\cao da sequ\^encia \'e a conclus\ao do argumento, a demonstra\cao mostra (demonstra) que se todas as premissas s\ao verdade ent\ao a conclus\ao deve, necessariamente, ser verdade, isto \'e, o argumento \'e v\'alido.
+
+Como exemplo disso, vamos considerar o exemplo acima o qual verificamos usando a tabela verdade:
+\begin{eqnarray*}
+\begin{tabular}{l}
+$\nao q$ \\
+$\underline{p\to q}$ \\
+$\nao p$.
+\end{tabular}
+\end{eqnarray*}
+Quando se escreve uma demonstra\cao \'e \'util que o leitor inclua a justificativa para cada proposi\cao da sequ\^encia. Geralmente, n\ao inclu\ih mos os nomes e n\'umeros das tautologias que usamos, mas como ajuda aos iniciantes, as justificativas est\ao incluidas aqui.
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao q$ & & hip\'otese \\
+2. $p\to q$ & & hip\'otese \\
+3. $\nao q \to \nao p$ & & contrapositiva de 2. (13 da lista de tautologias) \\
+4. $\nao p$ & & consequ\^encia l\'ogica de 1. e 3. (19 da lista de tautologias, modus ponens) \\\tabucline[2pt]{-}
+\end{tabu} 
+
+Existem outras maneiras de fazer a demonstra\cao corretamente e mesmo  neste caso podemos proceder um pouco diferente:
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao q$ & & hip\'otese \\
+2. $p\to q$ & & hip\'otese \\
+3. $\nao p$ & & consequ\^encia l\'ogica de 1. e 2. (20 da lista de tautologias, modus tollens) \\\tabucline[2pt]{-}
+\end{tabu} 
+
+Considere o exemplo um pouco mais complicado:
+\begin{eqnarray}\label{dem3}
+\begin{tabular}{l}
+$p\ou q$ \\
+$q\to \nao p$ \\
+$\underline{p\to q}$ \\
+$q$.
+\end{tabular}
+\end{eqnarray}
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $q\to \nao p$ & & hip\'otese \\
+2. $p\to q$ & & hip\'otese \\
+3. $\nao q \to\nao p$ & & contrapositiva de 2. \\
+4. $(q\ou\nao q)\to\nao p$ & & consequ\^encia l\'ogica de 1. e 3. (15a da lista de tautologias) \\
+5. $q\ou\nao q$ & & tautologia \\
+6. $\nao p$ & & consequ\^encia l\'ogica de 4. e 5. (19 da lista de tautologias, modus ponens) \\
+7. $p\ou q$ & & hip\'otese \\
+8. $q$ & & consequ\^encia l\'ogica de 6. e 7. (22 da lista de tautologias, silogismo disjuntivo) \\\tabucline[2pt]{-}
+\end{tabu} 
+
+Outra demonstra\cao para o mesmo argumento (voc\^e poderia tentar encontrar outras demonstra\cois):
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $q\to \nao p$ & & hip\'otese \\
+2. $p\to q$ & & hip\'otese \\
+3. $p \to\nao q$ & & contrapositiva de 1. \\
+4. $p\to(q\ee\nao q)$ & & consequ\^encia l\'ogica de 2. e 3. (15b da lista de tautologias) \\
+5. $\nao p$ & & consequ\^encia l\'ogica de 4. (23 da lista de tautologias, absurdo) \\
+6. $p\ou q$ & & hip\'otese \\
+7. $q$ & & consequ\^encia l\'ogica de 5. e 6. (22 da lista de tautologias, silogismo disjuntivo) \\\tabucline[2pt]{-}
+\end{tabu} 
+
+Uma extens\ao do princ\ih pio de demonstra\caoi, chamado de m\'etodo de {\it demonstra\cao indireta}\index{Demonstra\caoi!Indireta} (ou demonstra\cao por contradi\caoi\index{Demonstra\caoi!Contradi\caoi}) \'e baseada na equival\^encia l\'ogica reductio ad absurdum (item 14 da lista de tautologias). Aplicando esta forma para nosso argumento temos:
+\[
+((p_1\ee p_2\ee ... \ee p_n)\to q)\leftrightarrow((p_1\ee p_2\ee ... \ee p_n \ee \nao q)\to{\bf c}).
+\]
+Como esta \'e uma equival\^encia l\'ogica podemos substituir o lado esquerdo pelo lado direito. Isto significa que em nossa demonstra\cao temos uma hip\'otese adicional, $\nao q$ (a nega\cao da conclus\aoi). Nossa demonstra\cao estar\'a completa assim que obtermos uma contradi\caoi.
+
+Como um exemplo deste m\'etodo, considere o argumento (\ref{dem3}) usado no exemplo anterior: 
+
+\begin{tabu}{l c l}
+   & &  \\\tabucline[2pt]{-}
+Proposi\cao & & Raz\ao\\\tabucline[2pt]{-}
+1. $\nao q$ & & hip\'otese (nega\cao da conclus\ao na prova indireta) \\
+2. $p\ou q$ & & hip\'otese \\
+3. $p$ & & consequ\^encia l\'ogica de 1. e 2. (22 da lista de tautologias, silogismo disjuntivo) \\
+4. $p\to q$ & & hip\'otese \\
+5. $q$ & & consequ\^encia l\'ogica de 3. e 4. (19 da lista de tautologias, modus ponens) \\
+6. $q\ee \nao q$ & & consequ\^encia l\'ogica de 1. e 5. (essa \'e a contradi\cao que procur\'avamos) \\
+7. $q$ & & consequ\^encia l\'ogica de 6. (prova indireta) \\\tabucline[2pt]{-}
+\end{tabu} 
+
+\'E interessante notar que  a hip\'otese $q\to\nao p$ n\ao foi usada nesta prova, embora estivesse nas duas provas anteriores. Voc\^e poderia tentar encontrar uma demonstra\cao direta da validade do argumento sem usar esta hip\'otese.
+
+O princ\ih pio de demonstra\cao fornece um bom m\'etodo de estabelecer a validade de um arguento mas tem a desvantegem de n\ao mostrar que um argumento \'e inv\'alido. O fato que de n\ao podermos dar uma demonstra\cao de um argumento particular n\ao \'e suficiente para mostrar que um argumento \'e inv\'alido. Entretanto, existe uma outra forma, sem usar tabelas verdade, de mostrar que um argumento \'e inv\'alido. Se recordarmos o que significa um argumento v\'alido, lembraremos que uma conclus\ao deve ser verdade sempre que todas as premissas s\ao verdade, portanto se encontrarmos uma maneira de encontrar um caso onde as premissas s\ao verdade e a conclus\ao \'e falsa, ent\ao mostramos que o argumento \'e inv\'alido. \`As vezes, fracassar em obter a demonstra\caoi, nos leva ao caso geralmente, chamado de {\it contra exemplo}\index{Contra Exemplo} de um arguento. Por exemplo, considere o seguinte argumento:
+\begin{eqnarray*}
+\begin{tabular}{l}
+$p\to q$ \\
+$\underline{\nao p\ou q}$ \\
+$q\to p$.
+\end{tabular}
+\end{eqnarray*}
+Sem muito esfor\cc o podemos ver que se \qq \'e V e \pp \'e falso ent\ao a conclus\ao \'e F enquanto ambas a premissas s\ao V, portanto, o argumento \'e inv\'alido.
+
+\paragraph{Exerc\ih cios \ref{demonstracao}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Determine a validade dos seguintes argumentos usando tabelas verdade:
+\begin{multicols}{3}
+\begin{enumerate}[a)]
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\underline{\nao p\ou q}$ \\
+$q\to p$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$r \to q$ \\
+$\underline{q}$ \\
+$\nao r$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\ou \nao q$ \\
+$\underline{\nao p}$ \\
+$\nao q$.
+\end{tabular}
+\end{enumerate}
+\end{multicols}
+
+%excercicio2
+\item D\^e exemplos nos itens a seguir sempre que poss\ih vel. Se n\ao for poss\ih vel, diga porque:
+\begin{enumerate}[a)]
+\item Um argumento inv\'alido com conclus\ao falsa.
+\item Um argumento v\'alido com uma conclus\ao verdadeira. 
+\item Um argumento inv\'alido com uma conclus\ao verdadeira.
+\item Um argumento v\'alido com uma conclus\ao falsa.
+\item Um argumento v\'alido com hip\'oteses verdeiras e uma conclus\ao falsa.
+\item Um argumento inv\'alido com hip\'oteses verdeiras e uma conclus\ao falsa.
+\item Um argumento v\'alido com hip\'oteses falsas e uma conclus\ao verdadeira.
+\end{enumerate}
+
+%excercicio3
+\item Determine a validade dos seguintes argumentos usando o princ\ih pios de demonstra\cao ou mostre por contra exemplo que \'e inv\'alido:
+
+\begin{multicols}{3}
+\begin{enumerate}[a)]
+\item \begin{tabular}{l}
+$\nao p\ou q$ \\
+\underline{$p$} \\
+$q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+\underline{$r\to \nao q$} \\
+$p\to\nao r$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$\nao p\ou q$ \\
+\underline{$\nao r\to \nao q$} \\
+$p\to\nao r$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$q\ou\nao p$ \\
+\underline{$\nao q$} \\
+$p$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+\underline{$\nao p$} \\
+$p\to q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$(p\ee q)\to(r\ee s)$ \\
+\underline{$\nao r$} \\
+$\nao p\ou\nao q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\nao q \to \nao r$ \\
+$s\to(p\ou r)$ \\
+\underline{$s$} \\
+$q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$q\to \nao r$ \\
+\underline{$\nao r\to\nao p$} \\
+$\nao(p\ee q)$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$\nao r \to \nao q$ \\
+\underline{$r\to\nao p$} \\
+$\nao p$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+\underline{$p\to\nao p$} \\
+$\nao p$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\ou q$ \\
+$p\to r$ \\
+\underline{$\nao r$} \\
+$q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p$ \\
+$q\to\nao p$ \\
+$\nao q\to(r\ou\nao s)$ \\
+\underline{$\nao r$} \\
+$\nao s$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to(q\ou s)$ \\
+\underline{$q\to r$} \\
+$p\to(r\ou s)$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to\nao q$ \\
+$q\to p$ \\
+\underline{$r\to p$} \\
+$\nao q$.
+\end{tabular}
+
+\item \begin{tabular}{l}
+$p\to q$ \\
+$r\to s$ \\
+\underline{$\nao(p\to s)$} \\
+$q\ee\nao r$.
+\end{tabular}
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Quantificadores}\label{quantificadores}
+
+Quando iniciamos nossa discuss\ao sobre proposi\coes notamos que ``$x<3$'' n\ao era uma proposi\cao porque n\ao sab\ih amos o que $x$ representava, portanto n\ao pudemos definir um valor verdade. Neste caso, chamamos $x$ uma vari\'avel (um s\ih mbolo que pode tomar v\'arios valores) e ``$x<3$'' uma {\it fun\cao proposicional}.\index{Func\ao Proposicional} De fato, isto \'e um pequeno abuso de linguagem pois ``$x<3$'' \'e realmente fun\cao de valor proposicional, isto \'e para cada (devidamente escolhido) valor de $x$ temos uma proposi\caoi. Esta \'e similar as fun\coes de valores reais que estudamos nos cursos de pr\'e c\'alculo. Por exemplo, se $f$ \'e uma fun\cao dada por $f(x)=2x-3$, ent\ao para cada valor de $x$ no dom\ih nio de $f$ (o qual tomaremos como o conjunto dos n\'umeros reais), $f$ retorna um valor real, isto \'e $f(x)$ \'e um n\'umero real. Portanto, $f(-1)=-5$, $f(5)=7$. Se adotarmos uma nota\cao funcional para ``$x<3$,'' digamos $p(x)$ e seja o dom\ih nio de $p$ o conjunto dos n\'umeros reais, ent\ao para cada escolha de $x$ no dom\ih nio de $p$, $p(x)$ \'e uma proposi\caoi. Por exemplo, quando $x=2$, obtemos $p(2)$ que significa ``$2<3$'' e quando $x=8$, obtemos $p(8)$ ou ``$8<3$.'' note que $p(2)$ \'e uma proposi\cao verdadeira enquanto $p(8)$ \'e uma proposi\cao falsa. 
+
+Assim, diremos que se $r$ \'e uma senten\cc a declarativa contendo uma ou mais vari\'aveis e $r$ se torna uma proposi\cao quando valores particulares (\`as vezes chamados {\it interpreta\cois}\index{Interpreta\cois}) s\ao dados para as vari\'aveis, ent\ao $r$ \'e uma fun\cao proposicional. Como \'e no caso com fun\coes que tomam valores reais do pr\'e c\'alculo, o conjunto dos poss\ih veis valores para a vari\'avel \'e chamado {\it dom\ih nio da fun\cao proposicional.\index{Dom\ih nio de uma Fun\cao Proposicional}} \`As vezes o dom\ih nio ser\'a explicitamente definido, \`as vezes o dom\ih nio ser\'a inferido do contexto. Denotaremos as fun\coes proposicionais por $p,q,$ etc., e (como no caso das fun\coes reais) usamos $p(x)$, $q(x,y)$ (para ser lidos como ``$p$ de $x$'', ``$q$ de $x,y$'') para indicar ``f\'ormulas'' para estas fun\cois. Portanto, se $p(x)$ \'e ``$x<3$'' ent\ao $p(1), p(-7), p(0)$ s\ao verdadeiras, enquanto $p(3), p(12), p(\pi)$ s\ao falsas, se $q(x,y)$ \'e ``$x<y$'', ent\ao $q(1,2), q(-2,14), q(0,5)$ s\ao verdadeiras, enquanto $q(0,0), q(2,1), q(\pi,3)$ s\ao falsas. 
+
+Suponha que $D$ \'e o dom\ih nio da fun\cao proposicional $p$. Sabemos que podemos transformar $p$ em uma proposi\cao substituindo v\'arios membros de $D$ em $p$, entretanto esta n\ao \'e a \'unica forma na qual $p$ pode ser transformada em uma proposi\caoi. O outro m\'etodo \'e chamado {\it quantifica\cao}\index{Quantifica\caoi} e existem duas formas  de quantificarmos fun\coes proposicionais. Na primeira, procedemos a fun\cao proposicional com ``para todo $x$ em $D$'' (ou ``para cada $x$ em $D$''), na segunda procedemos a fun\cao proposicional com ``existe um $x$ em $D$ tal que'' (or ``algum $x$ em $D$ tem a propriedade que''). A nota\cao que usaremos para isso \'e
+\[
+\textrm{Para todo $x$ em $D$, $p(x)$ \'e denotada por $\forall x$ em $D, p(x).$}
+\] 
+\[
+\textrm{Existe um $x$ em $D$, tal que $p(x)$ \'e denotada por $\exists x$ em $D \ni p(x).$}
+\] 
+
+$\forall$ \'e chamado o {\it quantificador universal}\index{Quantificador!Universal} e \'e lido como ``para todo,'' $\exists$ \'e chamado {\it quantificador existencial}\index{Quantificador!Existencial} e \'e lido como ``existe'' e $\ni$ \'e o s\ih mbolo para ``tal que.'' Determinamos valores verdade para estas proposi\coes de acordo com o significado usual que damos para ``para todos'' e ``existe'':
+\[
+\forall x \textrm{ em } D, p(x)
+\] 
+ser\'a dado valor verdade de V se $p(x)$ for verdade para cada interpreta\cao de $x$ em $D$, caso contr\'ario, o valor verdade \'e F.
+\[
+\exists x \textrm{ em } D \ni p(x)
+\] 
+ser\'a dado valor verdade de V se $p(x)$ \'e verdade para pelo menos uma interpreta\cao de $x$ em $D$, caso contr\'ario ser\'a dado o valor verdade de F. Portanto, vemos que se $D$ \'e finito, digamos com elementos $x_1,x_2,...,x_n$, ent\ao
+\[
+\forall x \textrm{ em } D, p(x)
+\] 
+\'e equivalente a uma conjun\caoi, isto \'e,
+\[
+p(x_1)\ee p(x_2)\ee ... \ee p(x_n),
+\]
+enquanto
+\[
+\exists x \textrm{ em } D \ni p(x)
+\]
+\'e equivalente a uma disjun\caoi, isto \'e
+\[
+p(x_1)\ou p(x_2)\ou ... \ou p(x_n).
+\]
+Por exemplo, se $D=\{1,2,3,4\}$, $S=\{-1,0,1,2\}$ e $p$ \'e a fun\cao proposicional dada por $p(x)$ \'e ``$x<3$'' ent\ao 
+\[
+\forall x \textrm{ em } D, p(x)
+\]
+\'e falsa (pois $p(3)$ \'e falsa), enquanto
+\[
+\forall x \textrm{ em } S, p(x); \quad \exists x \textrm{ em } D \ni p(x); \quad \exists x \textrm{ em } S \ni p(x) 
+\]
+s\ao verdade. Note que o valor verdade da fun\cao proposicional quantificada depende do dom\ih nio usado. Com $p$ e $S$ como acima, vamos dar uma olhada de outra forma.
+\[
+\forall x \textrm{ em } S, p(x)
+\]
+\'e equivalente a
+\[
+p(-1)\ee p(0)\ee p(1) \ee p(2),
+\]
+enquanto,
+\[
+\exists x \textrm{ em } S \ni p(x)
+\]
+\'e equivalente a
+\[
+p(-1)\ou p(0)\ou p(1) \ou p(2).
+\]
+Portanto, se voc\^e fosse uma programa de computador (digamos) checando os valores verdade para $\forall x \textrm{ em } S, p(x)$, voc\^e teria que tomar cada elemento $x$ em $S$ e checar o valor verdade para $p(x)$. Assim que voc\^e encontrasse uma valor falso voc\^e retornaria o valor falso para $\forall x \textrm{ em } S, p(x)$, caso contr\'ario retornaria o valor verdade depois de checar cada elemento de $S$. De forma similar, para determinar o valor verdade de $\exists x \textrm{ em } S \ni p(x)$, voc\^e tomaria cada elemento $x$ de $S$ e checaria o valor verdade de $p(x)$. Assim que voc\^e encontrasse um verdade, voc\^e retornaria verdade para o valor verdade de $\exists x \textrm{ em } S \ni p(x)$, caso contr\'ario, voc\^e retornaria falso depois de checar todos os elementos de $S$.
+
+Com o vimos acima em mente, devemos ser capazes de considerar o caso especial (degenerado) quando o dom\ih nio em quest\ao \'e vazio (cont\'em nenhum elemento). Por exemplo, qual valor verdade deve ser atribu\ih do as proposi\coes ``Todos matem\'aticos com altura superior a 3 metros gostam de chocolate'' e `` Existe um matem\'atico com mais de 3 metros de altura que gosta de chocolate''? Se $D$ \'e o conjunto dos matem\'aticos com mais de 3 metros de altura (um exemplo de conjunto vazio) e seja $p(x)$ ``$x$ gosta de chocolate'' as proposi\coes enunciadas se tornam 
+\[
+\forall x \textrm{ em } D, p(x) \quad \textrm{ e } \quad \exists x \textrm{ em } D \ni p(x).
+\]
+Para o primeiro ser falso devemos produzir matem\'atico alto que n\ao gosta de chocolate. Como n\ao h\'a (suficientes) matem\'aticos altos, certamente n\ao podemos produzir um que n\ao goste de chocolate, assim, a primeira proposi\cao deve ser verdade. De forma similar, para a segunda ser verdade devemos produzir um matem\'atico alto que goste de chocolate. N\ao podemos, logo a segunda proposi\cao \'e falsa. Para resumir, se $D$ \'e vazio ent\ao n\ao importando o que seja $p(x)$ temos,
+\[
+\forall x \textrm{ em } D, p(x) \textrm{ verdade } \quad \textrm{ e } \quad \exists x \textrm{ em } D \ni p(x) \textrm{ falso. }
+\]
+O leitor pode n\ao gostar disso, mas \'e assim que \'e.
+
+Um pouco de reflex\ao revelar\'a como formar nega\coes de fun\coes proposicionais quantificadas. Considere, $\forall x \textrm{ em } D, p(x)$. Se esta proposi\cao \'e falsa ent\ao $p(x)$ n\ao \'e verdade para todas as interpreta\coes de $x$ em $D$, isto \'e, existe pelo menos um valor de $x$ tal que $p(x)$ \'e falso. Assim, vemos que:
+\[
+\nao(\forall x \textrm{ em } D, p(x))\leftrightarrow \exists x \textrm{ em } D \ni \nao p(x).
+\]
+Usando racioc\ih nio similar, obtemos 
+\[
+\nao(\exists x \textrm{ em } D \ni p(x))\leftrightarrow \forall x \textrm{ em } D, \nao p(x).
+\]
+Se $D$, \'e finito, estas s\ao apenas extens\oes das leis de DeMorgan, tente criar um exemplo para ver isso.
+
+Para ilustrar a nega\cao de uma fun\cao proposicional quantificada, considere
+\[
+\forall x \textrm{ em } D, [p(x)\to q(x)].
+\]
+Usando as ideias acima, obtemos como nega\cao
+\[
+\exists x \textrm{ em } D \ni [p(x) \ee \nao q(x)].
+\]
+
+Uma das principais dificuldades para lidar com as fun\coes proposicionais quantificadas dadas em nossa l\ih ngua (neste caso Portugu\^es) \'e determinar a correta forma l\'ogica das declara\coes quantificadas. \'E claro que, se nos \'e dado algo como ``Existe um inteiro tal que seu quadrado \'e $9$,'' \'e f\'acil ver que que sua forma \'e
+\[
+\exists x \textrm{ em } \mathbb{Z} \ni p(x),
+\]
+onde $\mathbb{Z}$ \'e o conjunto dos inteiros e $p(x)$ \'e ``$x^2=9$.'' Infelizmente, na maior parte dos casos a representa\cao em Portugu\^es n\ao \'e t\ao simples e uma tradu\cao correta em s\ih mbolos (que mostra claramente a forma l\'ogica)  requer um entendimento do significado  da senten\cc a. A tradu\cao n\ao pode ser feita de uma maneira determinada e f\'acil, ou de acordo a um simples algoritmo. \`As vezes, a pr\'opria quantifica\cao n\ao \'e mencionada explicitamente, mas entendida ou inferida. Isto, tamb\'em, \'e verdade para o dom\ih nio, mesmo que o quantificador estiver presente. Por exemplo,  a maioria das defini\coes e teoremas matem\'aticos envolvem quantificadores, entretanto, muito frequentemente n\ao est\ao aparentes para os leitor descuidado (claro que nenhum de nosos leitores estuda matem\'atica de forma descuidada). Assim, ``Se $f$ \'e diferenci\'avel ent\ao \'e cont\ih nua'' realmente significa ``Para todas as fun\coes $f$ (em algum conjunto de fun\cois), se $f$ \'e diferenci\'avel, ent\ao $f$ \'e cont\ih nua.'' \'E geralmente uma aposta segura assumir que todo teorema tem um quantificador universal escondido em algum lugar, expressado ou impl\ih cito.
+
+Al\'em de encontrar os quantificadores, outro problema que pode surgir \'e a determina\cao da forma correta para a fun\cao proposicional quantificada. Por exemplo, ``Todos estudantes de l\'ogica entendem quantificadores'' claramente envolve o quantificador universal, mas qual \'e a sua forma correta? Se deixamos o dom\ih nio $D$ ser o conjunto dos estudantes, $p(x)$ ser\'a ``$x$ \'e um estudante de l\'ogica'' e $q(x)$ ser\'a ``$x$ entende quantificadores'' ent\ao a possibilidade parece ser $\forall x \textrm{ em } D, p(x)\ee q(x)$. Mas isto significa ``Todo estudante \'e um estudante de l\'ogica e entende quantificadores'', que n\ao \'e a mensagem da proposi\cao original. A correta interpreta\cao \'e: ``$\forall x \textrm{ em } D, p(x)\to q(x)$,'' que significa ``Para todo estudante, se o estudante \'e um estudante de l\'ogica ent\ao aquele estudante entende quantificadores.''  De forma similar, podemos ficar tentados a representar ``Alguns estudantes de l\'ogica entendem quantificadores'' por $\exists x \textrm{ em } D \ni p(x)\to q(x)$. Entretanto, isto n\ao est\'a correto, pode n\ao existir estudantes de l\'ogica em nosso conjunto de estudantes, fazendo $\exists x \textrm{ em } D \ni p(x)\to q(x)$ ser verdade enquanto a verdadeira proposi\cao ser\'a verdade somente se existir pelo menos um estudante de l\'ogica o qual entende de quantificadores. A proposi\cao dada pode ser corretamente interpretada por $\exists x \textrm{ em } D \ni p(x)\ee q(x)$, que significa que existe pelo menos um estudante que \'e estudante de l\'ogica e que entende de quantificadores. Devemos perceber que estas formas s\ao de alguma meneira dependentes do dom\ih nio pois se simplificamos coisas ou restringimos nosso dom\ih nio para apenas o conjunto de estudante de l\'ogica (digamos $D'$), ent\ao a primeira proposi\cao se torna $\forall x \textrm{ em } D', q(x)$ e a segunda se torna $\exists x \textrm{ em } D' \ni q(x)$. Para resumir:
+\[
+\textrm{todo $p$ \'e um $q$}
+\]
+pode ser representado por
+\[
+\forall x \textrm{ em } D, p(x)\to q(x)
+\]
+enquanto para
+\[
+\textrm{algum $p$ \'e um $q$}
+\]
+\'e dado por
+\[
+\exists x \textrm{ em } D \ni p(x)\ee q(x),
+\]
+($D$ sendo o dom\ih nio em quest\aoi).
+
+Uma forma de determinar se voc\^e entende a vers\ao em linguagem de uma fun\cao proposicional quantificada \'e tentar neg\'a-la. Existem v\'arias maneiras de abordar este tipo de problema. Aquela que requer a menor experi\^encia \'e traduzir a senten\cc a para a forma simb\'olica, usar as j\'a bem conhecidas regras para a nega\cao de proposi\cao e fun\coes proposicionais quantificadas e ent\ao traduzir o resultado de volta para o Portugu\^es. Depois de alguma pr\'atica voc\^e deve ser capaz de negar algumas senten\cc as diretamente, mas mesmo com consider\'avel experi\^encia \'e \'util usar as representa\coes simb\'olicas para clarificar a estrutura.
+
+Como exemplo do fato descrito acima, suponha que desejamos negar ``Todos estudantes de l\'ogica entendem quantificadores.'' Com $D$, $p$ e $q$ como antes, a representa\cao simb\'olica \'e
+\[
+\forall x \textrm{ em } D, p(x)\to q(x).
+\]
+Procedendo com a nega\cao passo a passo, temos
+
+\begin{tabular}{l}
+$\nao[\forall x \textrm{ em } D, p(x)\to q(x)]$ \\
+$\leftrightarrow \exists x \textrm{ em } D \ni \nao[p(x)\to q(x)]$  \\
+$\leftrightarrow \exists x \textrm{ em } D \ni p(x) \ee\nao q(x)$.
+\end{tabular}
+
+Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' \'e ``Existe um estudante que \'e estudante de l\'ogica e que n\ao entende quantificadores,'' ou, ainda mais, no estilo da proposi\cao original ``Alguns estudante de l\'ogica n\ao entendem quantificadores.'' Para um entendimento mais profundo voc\^e poderia se perguntar ``O que faria `Todos os estudante de l\'ogica entende quantificadores' ser falsa?'' Depois de um pouco de reflex\aoi, responder\ih amos, ``Tem que existir um estudante de l\'ogica que n\ao entende quantificadores,'' que, claramente, ser\'a verdade quando nossa nega\cao ``Algum estudante de l\'ogica n\ao entende quantificadores'' \'e verdade.
+
+\paragraph{Exerc\ih cios \ref{quantificadores}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Traduza as seguintes senten\cc as para a forma simb\'olica, indicando as escolhas apropriadas para dom\ih nios:
+\begin{enumerate}[a)]
+\item Existe um inteiro $x$ tal que $4=x+2$.
+\item Para todos inteiros $x$, $4=x+2$.
+\item Todo tri\^angulo equil\'atero \'e equi\^angulo.
+\item Todos estudantes gostam de l\'ogica.
+\item Alguns estudantes n\ao gostam de l\'ogica.
+\item Nenhum homem \'e uma ilha.
+\item Todo mundo que entende l\'ogica gosta dela.
+\item Cada pessoa tem uma m\~ae.
+\item Entre todos os inteiros existem uns que s\ao primos.
+\item Alguns inteiros s\ao pares e divis\ih veis por 3.
+\item Alguns inteiros s\ao pares ou divis\ih veis por 3.
+\item Todos grupos c\ih clicos s\ao abelianos.
+\item Pelo menos uma das letras de {\it banana} \'e uma vogal.
+\item Um dia no pr\'oximo m\^es \'e uma sexta-feira.
+\item $x^2-4=0$ tem uma solu\cao positiva.
+\item Cada solu\cao de $x^2-4=0$ \'e positiva.
+\item Nenhuma solu\cao de $x^2-4=0$ \'e positiva.
+\item Um candidato ser\'a o vencedor.
+\item Cada elemento do conjunto $A$ \'e um elemento do conjunto $B$.
+\end{enumerate}
+
+%excercicio2
+\item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.
+
+%excercicio3
+\item Sejam $D$ o conjunto dos n\'umeros naturais (isto \'e, $D=\{1,2,3,4,5,...\}$), $p(x)$ ``$x$ \'e par'', $q(x)$ ``$x$ \'e divis\ih vel por $3$'' e $r(x)$ ``$x$ \'e div\ih sivel por $4$.'' Para cada uma das proposi\coes abaixo, expresse em Portugu\^es, determine seu valor verdade e d\^e uma nega\cao em Portugu\^es.  
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, p(x)$.
+\item $\forall x \textrm{ em } D, p(x)\ou q(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to q(x)$.
+\item $\forall x \textrm{ em } D, p(x)\ou r(x)$.
+\item $\forall x \textrm{ em } D, p(x)\ee q(x)$.
+\item $\exists x \textrm{ em } D \ni r(x)$.
+\item $\exists x \textrm{ em } D \ni p(x)\ee q(x)$.
+\item $\exists x \textrm{ em } D \ni p(x)\to q(x)$.
+\item $\exists x \textrm{ em } D \ni q(x)\to q(x+1)$.
+\item $\exists x \textrm{ em } D \ni p(x) \leftrightarrow q(x+1)$.
+\item $\forall x \textrm{ em } D, r(x)\to p(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to\nao q(x)$.
+\item $\forall x \textrm{ em } D, p(x)\to p(x+2)$.
+\item $\forall x \textrm{ em } D, r(x)\to r(x+4)$.
+\item $\forall x \textrm{ em } D, q(x)\to q(x+1)$.
+\end{enumerate}
+
+%excercicio4
+\item Para cada uma das proposi\coes do exerc\ih cio acima (se poss\ih vel) d\^e um exemplo de um dom\ih nio $D'$ tal que as proposi\coes tenham o valor verdade oposto daquele que tinha em $D$, o conjunto dos n\'umeros naturais.
+
+%excercicio5
+\item As seguintes proposi\coes s\ao sempre, \`as vezes ou nunca verdade? D\^e exemplos de dom\ih nios $D$ e a fun\cao proposicional $p$ ou raz\oes para justificar suas respostas. 
+\begin{enumerate}[a)]
+\item $[\forall x \textrm{ em } D, p(x)]\to[\exists x \textrm{ em } D \ni p(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\to[\forall x \textrm{ em } D, p(x)]$.
+\item $[\forall x \textrm{ em } D, \nao p(x)]\to\nao[\forall x \textrm{ em } D, p(x)]$.
+\item $[\exists x \textrm{ em } D \ni \nao p(x)]\to \nao[\exists x \textrm{ em } D \ni p(x)]$.
+\item $\nao[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, \nao p(x)]$.
+\item $\nao[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni \nao p(x)]$.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Mais quantificadores}\label{mquantificadores}
+
+Muitas senten\cc as matem\'aticas envolvem mais de um quantificador. Alguns exemplos destas senten\cc as s\ao ``Para cada n\'umero inteiro $n$ existe um inteiro $k$ tal que $n=2k$,'' ``Para cada linha $l$ e para cada ponto $p$ n\ao pertencente a $l$, existe uma linha $l'$ que passa por $p$ e \'e paralela a $l$,'' ``Para todo $y$ em $B$ existe um $x$ em $A$ tal que $f(x)=y,$'' ``Para todo $x$ no dom\ih nio de $f$  e para cada $\epsilon >0$ existe um $\delta >0$ tal que $|x-c|<\delta$ implica $|f(x)-L|<\epsilon,$'' ``Para cada $x$ em $G$ existe um $x'$ em $G$ tal que $xx'=e.$'' Como pode ser esperado, as dificuldades que se apresentavam quando consideramos um quantificador persiste quando temos mais de um quantificador e, adicionalmente, novas dificuldades surgem, portanto teremos que ser especialmente cuidadosos nas an\'alises destas quantifica\coes de n\ih vel superior.
+
+Vamos dar uma olhada na estrutura de uma proposi\cao envolvendo dois quantificadores diferentes, digamos
+\[
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y).
+\]
+Como lemos isto? Como sempre, lemos da direita para a esquerda, a proposi\cao acima significa
+\[
+\forall x \textrm{ em } S, [\exists y \textrm{ em } T \ni  p(x,y)].
+\]
+Assim, se $S=\{1,2\}$ e $T=\{3,4\}$ ent\ao teremos (aplicando o quantificador universal primeiro, como requerido):
+\[
+[\exists y \textrm{ em } T \ni  p(1,y)]\ee[\exists y \textrm{ em } T \ni  p(2,y)].
+\]
+Agora, aplicando o quantificador existencial
+\begin{equation}\label{quant1}
+[p(1,3)\ou p(1,4)]\ee[p(2,3)\ou p(2,4)].
+\end{equation}
+Em contraste, considere a mesma fun\cao proposicional com a ordem dos quantificadores invertida, isto \'e
+\[
+\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y).
+\]
+Procedendo da mesma forma, obtemos
+\[
+[\forall x \textrm{ em } S, p(x,3)]\ou[\forall x \textrm{ em } S, p(x,4)].
+\]
+e consequentemente,
+\begin{equation}\label{quant2}
+[p(1,3)\ee p(1,4)]\ou[p(2,3)\ee p(2,4)].
+\end{equation}
+Note que as duas fun\coes proposicionais apresentadas n\ao s\ao equivalentes, por exemplo, se $p(1,3)$ e $p(2,4)$ s\ao ambas verdade enquanto $p(2,3)$ e $p(1,4)$ s\ao ambas falsas ent\ao (\ref{quant1}) \'e verdade mas (\ref{quant2}) \'e falsa.
+
+Um exemplo um pouco mais concreto disso \'e: sejam $S=\{1,2\}$ e $p(x,y)$ ``$x=y.$'' Ent\ao (o leitor dever\'a fornecer os detalhes)
+\[
+\forall x \textrm{ em } S, \exists y \textrm{ em } S \ni  p(x,y)
+\]
+se torna
+\[
+[\exists y \textrm{ em } S \ni  1=y]\ee[\exists y \textrm{ em } S \ni  2=y]
+\]
+que \'e,
+\[
+[1=1 \ou 1=2]\ee[2=1 \ou 2=2],
+\]
+uma proposi\cao verdadeira, enquanto
+\[
+\exists y \textrm{ em } S \ni \forall x \textrm{ em } S, p(x,y)
+\]
+\'e
+\[
+[\forall x \textrm{ em } S, x=1]\ou[\forall x \textrm{ em } S, x=2]
+\]
+ou
+\[
+[1=1 \ee 1=2]\ou[2=1 \ee 2=2],
+\]
+uma proposi\cao falsa.
+
+Note que se a proposi\cao da forma
+\[
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\]
+\'e verdadeira, ent\ao para cada $x$ em $S$ deve necessariamente existir algum $y$ em $T$ tal que $p(x,y)$ seja verdade, entretanto a escolha de $y$ pode depender da escolha de $x$. Por outro lado, para que
+\[
+\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\]
+seja verdade deve existir algum $y$ em $T$, digamos $y_0$, tal que, para este particular $y_0$, $p(x,y_0)$ seja verdade para cada escolha de $x$ em $S$.
+
+Seria \'util se tiv\'essemos uma forma gr\'afica para olhar para isto. Suponha que $S=\{1,2,3,4\}$ e $T=\{1,2,3\}$. Podemos representar todas as doze poss\ih vies escolhas em uma tabela retangular como abaixo, com $\circ$ indicando as possibilidades.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccccccc}
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 3}} & $\circ$ & \quad& $\circ$ &\quad & $\circ$ &\quad & $\circ$ \\
+\multicolumn{1}{c}{{\bf T}} &  \multicolumn{1}{c|}{{\bf 2}} & $\circ$ & \quad& $\circ$ &\quad & $\circ$ &\quad & $\circ$ \\
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 1}} & $\circ$ & \quad& $\circ$ &\quad & $\circ$ &\quad & $\circ$ \\\cline{3-9}
+                            &                               & {\bf 1} & \quad& {\bf 2} &\quad & {\bf 3} &\quad & {\bf 4} \\
+                            &                               &         & \quad&         &{\bf S}&        &\quad &   \\
+\end{tabular}
+\end{table}
+
+Como sempre, vamos representar o primeiro conjunto ($S$) ao longo do eixo horizontal e o segundo conjunto ($T$) ao longo do eixo vertical. Para entender como as coordenas s\ao representadas, os valores s\ao mostrados abaixo:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccccccc}
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 3}} & $(1,3)$ & \quad& $(2,3)$ &\quad & $(3,3)$ &\quad & $(4,3)$ \\
+\multicolumn{1}{c}{{\bf T}} &  \multicolumn{1}{c|}{{\bf 2}} & $(1,2)$ & \quad& $(2,2)$ &\quad & $(3,2)$ &\quad & $(4,2)$ \\
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 1}} & $(1,1)$ & \quad& $(2,1)$ &\quad & $(3,1)$ &\quad & $(4,1)$ \\\cline{3-9}
+                            &                               & {\bf 1} & \quad& {\bf 2} &\quad & {\bf 3} &\quad & {\bf 4} \\
+                            &                               &         & \quad&         &{\bf S}&        &\quad &   \\
+\end{tabular}
+\end{table}
+
+Agora, suponha que $p(1,1)$, $p(2,3)$, $p(3,2)$ e $p(4,1)$ s\ao verdade e para todos os outros valores de $x$ e $y$, $p(x,y)$ \'e falsa (os valores verdadeiros s\ao representados por ret\^angulos na figura abaixo):
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccccccc}
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 3}} & $\circ$ & \quad& \frame{$\circ$} &\quad & $\circ$ &\quad & $\circ$ \\
+\multicolumn{1}{c}{{\bf T}} &  \multicolumn{1}{c|}{{\bf 2}} & $\circ$ & \quad& $\circ$ &\quad & \frame{$\circ$} &\quad & $\circ$ \\
+\multicolumn{1}{c}{       } &  \multicolumn{1}{c|}{{\bf 1}} & \frame{$\circ$} & \quad& $\circ$ &\quad & $\circ$ &\quad & \frame{$\circ$} \\\cline{3-9}
+                            &                               & {\bf 1} & \quad& {\bf 2} &\quad & {\bf 3} &\quad & {\bf 4} \\
+                            &                               &         & \quad&         &{\bf S}&        &\quad &   \\
+\end{tabular}
+\end{table}
+Baseada na figura acima vemos que para
+\begin{equation}\label{quant3}
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\end{equation}
+ser verdade deve existir pelo menos um ret\^angulo em cada coluna vertical, enquanto para
+\begin{equation}\label{quant4}
+\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\end{equation}
+ser verdade deve existir uma linha horizontal inteira de ret\^angulos. Assim, para o exemplo dado, (\ref{quant3}) \'e verdade enquanto (\ref{quant4}) \'e falsa. Deve estar claro que sempre que (\ref{quant4}) for verdade (uma linha inteira de ret\^angulos), (\ref{quant3}) deve tamb\'em ser verdade (pelo menos um ret\^angulo em cada coluna).
+
+Para um exemplo mais ``caseiro'' disso, sejam $S$ o conjunto de todas as pessoas e $p(x,y)$ representando ``$y$ \'e m\~ae de $x$.'' Ent\ao $\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)$ significa todo mundo tem uma m\~ae enquanto $\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)$ significa que existe uma pessoa que \'e m\~ae de todo mundo, claramente duas senten\cc as diferentes.
+
+Vamos tentar entender outro exemplo caseiro: ``Para cada cachorro no sof\'a existe uma pulga no carpete com a propriedade que se o cachorro \'e preto ent\ao a pulga mordeu o cachorro.'' Algumas quest\oes que devemos ser capazes de responder (se entendemos o significado da senten\cc a) s\ao ``Qual \'e a nega\cao desta senten\cc a?'' O que podemos dizer de seus valores verdade se
+\begin{enumerate}[a)]
+\item n\ao h\'a nenhum cachorro preto no sof\'a? 
+\item uma pulga em particular mordeu todos os cachorros?
+\item existe um cachorro preto n\ao mordido?
+\item n\ao h\'a pulgas no carpete?
+\end{enumerate}
+Como responder\ih amos estas quest\ois? Se n\ao podemos responder-las imediatamente, uma boa maneira para come\cc ar \'e traduzir a proposi\cao para a forma simb\'olica. Sejam $S$ o conjunto dos cachorros, $C$ o conjunto das pulgas no carpete, $p(x)$ ``$x$ \'e preto'', e $q(x,y)$  ``$y$ mordeu $x$.'' Ent\ao a proposi\cao \'e
+\[
+\forall x \textrm{ em } S, \exists y \textrm{ em } C \ni  p(x)\to q(x,y).
+\]
+A nega\cao pode ser tratada de uma maneira simples passo a passo:
+\begin{equation*}
+ \begin{aligned}
+&\nao[\forall x \textrm{ em } S, \exists y \textrm{ em } C \ni  p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \ni \nao[\exists y \textrm{ em } C \ni  p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \ni \forall y \textrm{ em } C,  \nao[p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \ni \forall y \textrm{ em } C,  p(x)\ee\nao q(x,y).
+ \end{aligned}
+\end{equation*}
+Assim a nega\caoi, em Portugu\^es, \'e ``Existe um cachorro no sof\'a tal que, para cada pulga no carpete, o cachorro \'e preto e a pulga n\ao mordeu o cachorro,'' ou de forma mais fluida, ``Tem um cachorro preto no sof\'a que n\ao foi mordido.'' Agora devemos ser capazes de responder as outras quest\~oes que foram formuladas anteriormente. Na situa\cao a) a proposi\cao \'e verdade pois deve existir um cachorro preto n\ao mordido para esta ser falsa; a situa\cao b) \'e verdade pois $q(x,y)$ ser\'a verdade para todos os cachorros $x$; a situ\cao c) \'e falsa pois sua nega\cao \'e verdade. O valor verdade na situa\cao na situa\cao d) n\ao pode ser decidido sem mais informa\cois. Se existe um cachorro preto no sof\'a ent\ao a proposi\cao \'e falsa, se n\ao h\'a cachorros pretos ent\ao \'e verdade. Isto nos d\'a um exemplo de uma variedade de quest\oes que podemos ser capazes de responder se entendermos so significado de tal fun\cao proposicional quantificada.
+
+Com dois quantificadores e dois dom\ih nios existem oito ordens poss\ih veis nas quais os quantificadores podem ocorrer. J\'a notamos que quando os quantificadores s\ao mistos (isto \'e, um universal e um existencial), a ordem \'e importante:
+\[
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\]
+n\ao \'e necessariamente o mesmo que
+\[
+\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\]
+Se ambos os quantificadores s\ao os mesmos, temos equival\^encia (isto se deve ao fato que os conectivos s\ao todos os mesmos, $\ou$ para $\exists$ e $\ee$ para $\forall$; apenas a ordem \'e diferente e sabemos que ambos $\ou$ e $\ee$ comutam), assim:
+\[
+[\exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y)]\leftrightarrow[\exists y \textrm{ em } T \ni \exists x \textrm{ em } S \ni p(x,y)]
+\]
+e
+\[
+[\forall x \textrm{ em } S, \forall y \textrm{ em } T, p(x,y)]\leftrightarrow[\forall y \textrm{ em } T, \forall x \textrm{ em } S, p(x,y)]
+\]
+Se o dom\ih nio \'e o mesmo para ambos os quantificadores, geralmente encurtamos as equival\^encias acima escrevendo-as como:
+\begin{equation*}
+ \begin{aligned}
+  &\forall x,y \textrm{ em } S, p(x,y) \textrm{ para }  \forall x \textrm{ em } S, \forall y \textrm{ em } T, p(x,y) \textrm{ e }\\
+  &\exists x,y \textrm{ em } S \ni p(x,y) \textrm{ para } \exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y).
+ \end{aligned}
+\end{equation*}
+Enquanto as forma mistas n\ao s\ao equivalentes, podemos dizer que
+\[
+[\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)]\Rightarrow[\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)].
+\]
+Isto se deve ao fato, como observamos acima, que se o lado esquerdo \'e verdadeiro ent\ao existe pelo menos um elemento de $T$, digamos $y_0$, que faz $p(x,y_0)$ ser verdade para todos os $x$ em $S$, portanto este $y_0$ pode ser usado para cada $x$ no lado direito.
+
+H\'a outro conjunto de dificuldades que podem surgir, e que \'e distinguir, por exemplo
+\begin{equation*}
+ \begin{aligned}
+  \textrm{ `` Todo inteiro \'e par ou \ih mpar,'' }
+   \end{aligned}
+\end{equation*}
+e
+\begin{equation*}
+ \begin{aligned}
+  \textrm{ `` Todo inteiro \'e par ou todo inteiro \'e \ih mpar.'' }
+   \end{aligned}
+\end{equation*}
+
+\'E f\'acil ver (esperamos), que estas proposic\oes n\ao s\ao equivalentes, pois a primeira \'e verdade enquanto a segunda \'e falsa. Para ajudar a analisar esta situa\caoi, vamos p\^or estas proposi\coes na forma simb\'olica. Sejam $D$ o conjunto dos inteiros, $p(x)$ ``$x$ \'e par,'' e $q(x)$ ``$x$ \'e \ih mpar,'' ent\ao a primeira proposi\cao \'e
+\[
+\forall x \textrm{ em } D, [p(x)\ou q(x)],
+\]
+enquanto que a segunda \'e
+\[
+[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)].
+\]
+A raz\ao para estas duas proposic\oes n\ao serem equivalentes \'e essencialmente a mesma raz\ao para n\ao termos equival\^encia para quantificadores mistos; o $\forall$ envolve ``e's'' e tomado em conjun\cao com o ``ou,'' a ordem na qual as interpret\coes ocorrem muda de sentido. Usando o mesmo racioc\ih nio poder\ih amos suspeitar que
+\[
+\exists x \textrm{ em } D \ni [p(x)\ee q(x)],
+\]
+e
+\[
+[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)],
+\]
+n\ao sejam equivalentes. Tamb\'em, como $p\to q$ \'e equivalente a uma disjun\cao $(\nao p \ou q)$, esperar\ih amos que
+\[
+\forall x \textrm{ em } D, [p(x)\to q(x)]
+\]
+e
+\[
+[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, q(x)].
+\] 
+n\ao sejam equivalentes. Nossas supeitas s\ao bem fundamentadas como nenhum destes pares \'e equivalente. Entretanto, em cada par existe uma que implica a outra, portanto temos as seguintes implica\coes l\'ogicas:
+\begin{eqnarray*}
+\{[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]\} \Rightarrow \forall x \textrm{ em } D, [p(x)\ou q(x)],\\
+\exists x \textrm{ em } D \ni [p(x)\ee q(x)] \Rightarrow \{[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]\}, \\
+\forall x \textrm{ em } D, [p(x)\to q(x)] \Rightarrow \{[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, q(x)]\}.
+\end{eqnarray*} 
+Devemos, tamb\'em, suspeitar que a ordem de ``$\forall$'' e ``$\ee$'' ou ``$\exists$'' e ``$\ou$'' n\ao muda o significado e, novamente, estaria correto que
+\[
+\{[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]\} \Leftrightarrow \forall x \textrm{ em } D, [p(x)\ee q(x)],
+\]
+e
+\[
+\exists x \textrm{ em } D \ni [p(x)\ou q(x)] \Leftrightarrow \{[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]\}.
+\]
+
+As ideias e m\'etodos de an\'alise que usamos para senten\cc as envolvendo dois quantificadores podem ser extendidas para tr\^es (ou mais) quantificadores. Alguns destes exemplos foram inclu\ih dos nos exerc\ih cios.
+
+
+\paragraph{Exerc\ih cios \ref{mquantificadores}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Traduza as seguintes senten\cc as para a forma simb\'olica, indicando as escolhas apropriadas para dom\ih nios:
+\begin{enumerate}[a)]
+\item Para cada inteiro par $n$ existe um inteiro $k$ tal que $n=2k$.
+\item Para cada reta $l$ e cada ponto $p$ que n\ao est\'a em $l$ existe uma reta $l'$ que passa por $p$ que \'e paralela a $l$.
+\item Para cada $y$ em $B$ existe um $x$ em $A$ tal que $f(x)=y$.
+\item Para cada $x$ no dom\ih nio de $f$ e para cada $\epsilon >0$ existe $\delta >0$ tal que $|x-c|<\delta$ implica $|f(x)-L|<\epsilon$.
+\item Para cada $x$ em $G$ existe um $x'$ em $G$ tais que $xx'=e$.
+\item Se todo inteiro \'e \ih mpar ent\ao todo inteiro \'e par.
+\item Algu\'em ama algu\'em em algum momento.
+\item Entre todas as pulgas do carpete existe uma para a qual existe em todos os cachorros no sof\'a uma mordida que aquela pulga fez.
+\item Para cada inteiro $n$ existe outro inteiro maior que $2n$.
+\item A soma de quaisquer dois inteiros pares \'e par.
+\item Todo subconjunto fechado e limitado de $\mathbb{R}$ \'e compacto.
+\end{enumerate}
+
+%excercicio2
+\item Encontre a nega\cao para cada uma das proposi\coes no exerc\ih cio acima.
+
+%excercicio3
+\item Sejam $p(x,y)$ representando ``$x+2>y$'' e $D$ o conjunto dos n\'umeros naturais ($D=\{1,2,3,...\}$, tamb\'em denotado por $\mathbb{N}$). Escreva em palavras e determine o valor verdade de
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, \exists y \textrm{ em } D \ni p(x,y)$.
+\item $\exists x \textrm{ em } D \ni \forall y \textrm{ em } D, p(x,y)$.
+\item $\forall x \textrm{ em } D, \forall y \textrm{ em, } p(x,y)$.
+\item $\exists x \textrm{ em } D \ni \exists y \textrm{ em } D \ni p(x,y)$.
+\item $\forall y \textrm{ em } D, \exists x \textrm{ em } D \ni p(x,y)$.
+\item $\exists y \textrm{ em } D \ni \forall x \textrm{ em } D, p(x,y)$.
+\end{enumerate} 
+
+%excercicio4
+\item Sejam $D=\{1,2\}$, $p(x)$ ``$x$ \'e par'' e $q(x)$ ``$x$ \'e \ih mpar.'' Escreva em detalhes as seguintes quantifica\coes como conjun\coes e disjun\coes  das interpreta\coes (como feito no come\cc o desta se\caoi):
+\begin{enumerate}[a)]
+\item $\forall x \textrm{ em } D, [p(x)\ee q(x)]$.
+\item $[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]$.
+\item $\forall x \textrm{ em } D, [p(x)\ou q(x)]$.
+\item $[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ou q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]$.
+\item $[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]$.
+\end{enumerate}
+
+%excercicio5
+\item D\^e alguns exemplos para mostrar que as seguintes implica\coes l\'ogicas n\ao s\ao equival\^encias l\'ogicas:
+\begin{enumerate}[a)]
+\item $\{[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]\}\Rightarrow \forall x \textrm{ em } D, [p(x)\ou q(x)]$.
+\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]\}$.
+\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]\}$.
+\end{enumerate}
+
+%excercicio6
+\item Determine a rela\cao (se existir uma) entre
+\[
+\exists x \textrm{ em } D \ni [p(x)\to q(x)]
+\]
+e
+\[
+[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)].
+\]
+
+%excercicio7
+\item Mostre que a segunda equival\^encia l\'ogica em cada uma dos pares pode ser obtida da primeira por nega\caoi: 
+\begin{enumerate}[a)]
+\item 
+\[
+[\exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y)]\Leftrightarrow[\exists y \textrm{ em } T \ni \exists x \textrm{ em } S \ni p(x,y)]
+\]
+e
+\[
+[\forall x \textrm{ em } S, \forall y \textrm{ em } T, p(x,y)]\Leftrightarrow[\forall y \textrm{ em } T, \forall x \textrm{ em } S, p(x,y)]
+\]
+
+\item 
+\[
+\{[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]\}\Leftrightarrow \forall x \textrm{ em } D, [p(x)\ee q(x)]
+\]
+e
+\[
+\exists x \textrm{ em } D \ni [p(x)\ou q(x)]\Leftrightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]\}.
+\]
+\end{enumerate}
+
+%excercicio8
+\item Considere as seguinte proposic\aoi: ``Para toda galinha na gaiola e para toda cadeira na cozinha existe uma frigideira no arm\'ario tal que se o ovo da galinha est\'a na frigideira ent\ao a galinha est\'a a menos de dois metros da cadeira.''
+\begin{enumerate}[a)]
+\item Traduza esta proposic\ao para a forma simb\'olica.
+\item Expresse a nega\cao em s\ih mbolos e em Portugu\^es.
+\item D\^e dois exemplos de ciscunst\^ancias nas quais a proposi\cao seria verdade.
+\item D\^e dois exemplos de ciscunst\^ancias nas quais a proposi\cao seria falsa.
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{M\'etodos de demonstra\cao}\label{metdem}
+
+Agora que aprendemos o b\'asico de l\'ogica, precisamos colocar em pr\'atica nossas ideias para demonstra\cao de teoremas. Claramente que, como j\'a observamos lendo livros texto de matem\'atica, as demonstra\coes s\ao escritas de uma maneira informal em vez do estilo bastante formal em nossas demonstra\coes na se\cao \ref{demonstracao}. Mas, apesar desta \'obvia diferen\cc a de estilo, a estrutura l\'ogica \'e a mesma em cada caso: assumindo que as hip\'oteses s\ao verdade, escrevemos uma sequ\^encia de proposi\coes que s\ao consequ\^encias l\'ogicas do que escrevemos anteriormente, encerrando com a conclus\ao do teorema. Por exemplo, considere o seguinte teorema e prova:
+\\
+\\
+{\bf Teorema:} Se $m$ e $n$ s\ao inteiros pares ent\ao $m+n$ \'e um inteiro par. (Lembre-se que um inteiro $n$ \'e par se, e somente se, existe um inteiro $k$ tal que $n=2k$; $n$ \'e \ih mpar se, e somente se, existe um inteiro $k$ tal que $n=2k=1$.)
+\\
+\\
+{\demo} Sejam $m$ e $n$ inteiros pares. Ent\ao existem $j$ e $k$ inteiros tais que $m=2j$ e $n=2k$. Ent\ao $m+n=2j+2k=2(j+k)$. Portanto, $m+n$ \'e par. \fim
+
+Aqui apresentamos o que \'e conhecido por {\it demonstra\cao direta}:\index{Demonstra\caoi!Direta} come\cc amos assumindo a hip\'otese ($m$ e $n$ s\ao inteiros pares) e desenvolvemos uma sequ\^encia de consequ\^encias l\'ogicas, encerrando com a conclus\ao ($m+n$ \'e par). Note que h\'a alguns quantificadores escondidos que precisam ser examinados. Uma senten\cc a completa do teorema seria ``$\forall m, \forall n$ ($m$ \'e um inteiro par e $n$ \'e um inteiro par) $\to$ ($m+n$ \'e um inteiro par).'' Como foi que provamos este teorema considerando apenas dois inteiros ($m$ e $n$) quando quer\ih amos demonstrar que a conclus\ao vale para todos os inteiros? Seria diferente se tivessemos observado que $2$ e $4$ s\ao pares e que sua soma, $6$, \'e par? Sim, muito diferente! A demonstra\cao acima cont\'em um exemplo do uso de vari\'aveis ``fixas mas arbitr\'arias.'' Observando que $2+4=6$ e que $6$ \'e par somente mostra qie o teorema \'e verdade para estes dois n\'umeros. Entretanto, se escolhemos dois inteiros pares e n\ao assumimos nada mais sobre eles ent\ao o mesmo racioc\ih nio pode ser usado para qualquer par de inteiros pares, ent\ao a prova \'e geral e vale para todos os inteiros pares. Assim, o termo ``fixo mas arbitr\'ario'': $m$ e $n$ s\ao fixos (e podemos fazer c\'alculos com eles), mas s\ao arbitr\'arios (n\ao t\^em nenhuma propriedade que n\ao s\ao compartilhas por todos os inteiros pares).
+
+Existem dois outros m\'etodos de demonstra\cao usados usualmente, ambos baseados nas familiares equival\^encias l\'ogicas: as equival\^encias {\it contrapositiva}\index{Contrapositiva} e {\it reductio ad absurdum}\index{Reductio ad Absurdum}. Para conveni\^encia listamos as duas equival\^encias aqui novamente (lembre que ${\bf c}$ representa uma contradi\caoi, a proposi\cao que \'e sempre falsa):
+\begin{eqnarray*}
+&(p\to q)\Leftrightarrow(\nao q \to \nao p) \quad\quad \textrm{ contrapositiva }\\
+&(p\to q)\Leftrightarrow((p\ee\nao q)\to {\bf c})\quad\quad \textrm{ reductio ad absurdum. }
+\end{eqnarray*} 
+Vejamos o que elas nos dizem para demonstrar um teorema. Suponha que estamos interessados em provar um teorema, digamos $p\to q$. A lei contrapositiva nos diz que isso \'e equivalente a sua contrapositiva, $\nao q\to\nao p.$ Assim, poder\ih amos provar o teorema assumindo $\nao q$ e encerrando com $\nao p$; isto \'e come\cc amos com a nega\cao da conclus\ao do teorema e encerramos com a nega\cao da hip\'otese. Chamaremos esta demonstra\cao de demonstra\cao por contrapositiva\index{Demonstra\caoi!Contrapositiva}. Por exemplo, considere a demonstra\cao por contrapositiva do teorema acima, onde nosso ponto de partida ser\'a que $m+n$ n\ao \'e par (a nega\cao da conclus\aoi): 
+\\
+\\
+{\demo} Suponha que $m,n$ sejam inteiros e que $m+n$ n\ao \'e par, isto \'e $m+n$ \'e \ih mpar. Ent\ao existe um inteiro $k$ tal que $m+n=2k+1$. Agora, $m$ \'e par ou \ih mpar. Se $m$ for \ih mpar, a demonstra\cao estar\'a finalizada, portanto assuma que $m$ \'e par. Ent\ao existe um inteiro $j$ tal que $m=2j$. Portanto,
+\[
+n=(m+n)-m=2k+1-2j=2(k-j)+1,
+\] 
+portanto $n$ \'e \ih mpar e a demonstra\cao est\'a completa.  \fim
+
+Existem v\'arios pontos neste demonstra\cao por contrapositiva que devem ser analisados. Para ajudar a ver isso, vamos analisar a forma do teorema negligenciando os quantificadores. Sejam $p$ ``$m$ \'e um inteiro par,'' $q$ ``$n$ \'e um inteiro par'' e $r$ ``$m+n$ \'e um inteiro par.'' Ent\ao o teorema \'e
+\[
+(p\ee q)\to r.
+\]
+Assim a contrapositiva \'e 
+\[
+\nao r\to\nao(p\ee q).
+\]
+Podemos usar a lei de DeMorgan para obter a forma logicamente equivalente:
+\[
+\nao r \to (\nao p \ou\nao q),
+\]
+e essa \'e a forma usada na demonstra\cao acima. Uma tradu\cao disto em palavras seria ``Se $m+n$ \'e \ih mpar ent\ao $m$ \'e \ih mpar ou $n$ \'e \ih mpar.'' Assim a forma contrapositiva do teorema tem uma disjun\cao como conclus\aoi. Relembre que uma disjun\cao \'e verdade quando pelo menos uma das subproposi\coes \'e verdade, ent\ao para mostrar que a conclus\ao \'e verdade precisamos mostrar que $m$ \'e \ih mpar ou $n$ \'e \ih mpar. A demonstra\cao acima fez isso dizendo que se $m$ \'e \ih mpar ou par (lembre-se que $p\ou\nao p$ \'e uma tautologia) e ent\ao analisando ambos os casos (um exemplo de an\'alise exaustiva): se $m$ \'e \ih mpar ent\ao ``$m$ \'e \ih mpar ou $n$ \'e \ih mpar'' \'e verdade e o teorema est\'a demonstrado; se $m$ \'e par ent\ao $n$ \'e \ih mpar (um pouco de trabalho foi requerido aqui) ent\ao ``$m$ \'e \ih mpar ou $n$ \'e \ih mpar'' \'e ainda verdade, o que completa a demonstra\caoi. Essa \'e a t\'ecnica comum para mostrar que uma disjun\cao \'e verdade, isto \'e se uma subproposi\cao \'e verdade, estamos prontos, portanto assumimos que uma subproposi\cao \'e falsa e mostramos que a outra subproposi\cao deve necessariamente ser verdade.
+
+O m\'etodo de demonstra\cao baseado na equival\^encia {\it reductio ad absurdum} \'e chamado de {\it demonstra\cao indireta}\index{Demonstra\caoi!Indireta} ou {\it demonstra\cao por contradi\cao}\index{Demonstra\caoi!Contradi\caoi} foi discutido na se\cao \ref{demonstracao}. Lembre-se que isso envolve  come\cc ar com uma hip\'otese adicional, a nega\cao da conclus\aoi, e a demonstra\cao estar\'a completa quando uma contradi\cao \'e obtida. Como um exemplo, a demonstra\cao indireta ou por contradi\cao do teorema enunciado acima:
+\\
+\\
+{\demo} Suponha que $m,n$ sejam inteiros pares e que $m+n$ seja \ih mpar. Ent\ao existem inteiros $j,k$ tais que $m=2j$ e $m+n=2k+1.$ Assim 
+\[
+n=(m+n)-m=2k+1-2j=2(k-j)+1.
+\]
+Portanto, $n$ \'e \ih mpar e par, uma contradi\caoi, que completa a demonstra\caoi.  \fim 
+
+Antes de analisar esta demonstra\caoi, estejamos certos que entendemos a equival\^encia {\it reductio ad absurdum}. Lembre-se que $p\ee\nao q$ \'e a nega\cao de $p\to q$ portanto a equival\^encia {\it reductio ad absurdum} \'e equivalente a
+\[
+(p\to q)\Leftrightarrow (\nao(p\to q)\to {\bf c}).
+\]
+Se a proposi\cao implica uma contradi\cao (relembre que ${\bf c}$ representa uma contradi\caoi) ent\ao a proposi\cao deve ser necessariamente falsa (absurdo, n\'umero 23 da lista de tautologias na se\cao \ref{tautologias}). Assim, se $\nao(p\to q)\to {\bf c}$ \'e verdade, $\nao(p\to q)$ deve necessariamente ser falso, isto \'e, $p\to q$ \'e verdade. O que isso nos diz sobre a demonstra\cao indireta \'e que ao inv\'es  de demonstrar $p\to q$, podemos mostrar $(p\ee\nao q)\to {\bf c}$, isto \'e mostrar que a conjun\cao da hip\'otese original, $p$, e a nega\cao da conclus\aoi, $\nao q$, nos leva a uma contradi\caoi.
+
+Traduzindo isso para o teorema enunciado acima, a forma da demonstra\cao indireta \'e (usando $p,q,r$ como antes):
+\[
+(p\ee q \ee\nao r)\to {\bf c},
+\]
+ou, em palavras, ``$m$ \'e um inteiro par e $n$ \'e um inteiro par e $m+n$ \'e um inteiro \ih mpar implica em uma contradi\caoi.'' A particular contradi\cao que obtemos em nosso caso foi ``$n$ \'e par e $n$ \'e \ih mpar (n\ao par),'' embora qualquer contradi\cao tenha servido tamb\'em. Uma das vantagens da demonstra\cao indireta \'e que ela nos d\'a uma hip\'otese adicional para trabalhar e \'e particularmente \'util para provar a n\ao exist\^encia de objetos matem\'aticos.
+
+Vamos, agora, resumir os tr\^es m\'etodos de demonstra\caoi:
+\begin{enumerate}[{\bf a)}]
+\item {\bf Demonstra\cao direta:} Assuma as hip\'oteses, desenvolva a demonstra\cao (corpo da demonstra\caoi) e chegue a conclus\aoi.
+\item {\bf Demonstra\cao por contrapositiva:} Assuma a nega\cao da conclus\aoi, desenvolva a demonstra\cao (corpo da demonstra\caoi) e chegue na nega\cao das hip\'oteses.
+\item {\bf Demonstra\cao indireta ou por contradi\caoi:} Assuma as hip\'oteses e a nega\cao da conclus\aoi, desenvolva a demonstra\cao (corpo da demonstra\caoi) e chegue a uma contradi\caoi.
+\end{enumerate}
+Em cada uma destas formas, ``corpo da demonstra\caoi'' representa as consequ\^encias l\'ogicas que seguem das premissas e nos levam a uma ``conclus\aoi,'' que pode ser a conclus\ao original, a nega\cao das hip\'oteses ou uma contradi\caoi.
+
+Se um teorema a ser demonstrado tem a forma $p\leftrightarrow q$, ent\ao a demonstra\cao deve ser quebrada em duas partes, uma para mostrar que $p\to q$ e a outra para mostrar a rec\ih proca, $q\to p.$
+
+Como foi no caso dos princ\ih pios de demonstra\caoi, n\ao usamos nossas t\'ecnicas de demonstra\cao para mostar que uma conjectura \'e falsa. Naturalmente, nossa incapacidade de produzir uma demonstra\cao para a verdade da conjectura n\ao \'e suficiente para garantir sua falsidade, logo devemos utilizar contra-exemplos. Se tivessemos a seguinte conjectura:
+
+\begin{center}
+``Se $x$ \'e um inteiro \ih mpar e $y$ \'e um inteiro par ent\ao $x+y$ \'e par'' \\
+\end{center}
+
+\noindent podemos mostrar que ela \'e falsa produzindo um contra-exemplo $x=3$ e $y=2$ e observar que $x$ \'e \ih mpar e $y$ \'e par e que sua soma, $5$, \'e \ih mpar. Assim, ter\ih amos produzido um exemplo satisfazendo as hip\'oteses, mas n\ao a conclus\aoi.
+
+\'E importante perceber que o processo de produzir demonstra\coes escritas de proposi\coes consiste de duas partes: entender as ideias que fazem a demonstra\cao funcionar e escrever a demonstra\cao de uma maneira l\'ogica e intelig\ih vel. Estas duas partes requerem  atividades mentais distintas e, por um lado,  a intera\cao de \emph{insights} criativos \'e necess\'aria para o rigor da l\'ogica. Por outro lado, elas s\ao uma das principais atra\coes da matem\'atica.
+
+Quando algu\'em l\^e um livro de matem\'atica, \'e poss\ih vel ter a impress\ao que a matem\'atica se desenvolve de uma forma linear e l\'ogica, cada novo resultado seguindo o rastro dos resultados anteriores. Isto \'e de alguma forma ilus\'orio, a apresenta\cao formal da matem\'atica n\ao espelha a atividade mental envolvida em sua cria\caoi. Tem mais tentativa e erro, considera\cao de exemplos, come\cc os errados e outras atividades que acontecem nos bastidores antes que a forma final da demonstra\cao surja ao olhos do p\'ublico. De fato, na tentativa de escrever uma demonstra\caoi, a escrita acontece ao final, depois que um entedimento \'e obtido de porque a conclus\ao segue das hip\'oteses. Assim, quando perguntado para demonstrar alguma coisa, n\ao espere come\cc ar a escrever a demonstra\cao imediatamente, pensar e entender v\^em antes.
+
+\paragraph{Exerc\ih cios \ref{metdem}}
+
+\begin{enumerate}[{\bf 1.}]
+%excercicio1
+\item Escreva a primeira e  \'ultima linhas da demonstra\cao direta, por contrapositiva e indireta dos seguintes teoremas abaixo: 
+\begin{enumerate}[a)]
+\item Se $m$ \'e um inteiro par ent\ao $m^2$ \'e par. 
+\item Se $f$ \'e uma fun\cao diferenci\'avel ent\ao $f$ \'e uma fun\cao cont\ih nua.
+\item $L$ \'e uma tranforma\cao linear injetora se e somente se $Ker(L)=\{0\}$.
+\item Se ($a_n$) \'e monot\^onica e limitada ent\ao ($a_n$) converge.
+\item A imagem homom\'orfica de um grupo c\ih clico \'e um grupo c\ih clico.
+\item Se o \'unico termos n\ao zero de uma expans\ao $p-$\'adica de $n$ \'e $1$ ent\ao $n=p^k$ para algum $k\leq 0$.
+\item Se $f$ n\ao \'e cont\ih nua em $c$ ent\ao $\lim_{x\to c}f(x)$ n\ao existe ou $\lim_{x\to c}f(x)\neq f(c)$. 
+\item Todo conjunto fechado e limitado de $\mathbb{R}$ \'e compacto.
+\item Se $m$ \'e um inteiro da forma $2,4,p^n,2p^n$ onde $p$ \'e um primo \ih mpar e $n$ \'e um inteiro positivo ent\ao $m$ tem ra\ih zes primitivas.
+\end{enumerate}
+
+%excercicio2
+\item Determine quais das seguintes ``demonstra\cois'' s\ao corretas e quais s\ao incorretas. Se a demonstra\cao est\'a correta, indique o tipo e se a demonstra\cao est\'a incorreta, indique porque a demonstra\cao \'e incorreta.
+\\
+\\
+{\bf Teorema:} Se $x$ e $y$ s\ao inteiros pares ent\ao $x-y$ \'e um inteiro par.
+
+\begin{enumerate}[a)]
+\item ``Demonstra\cao 1'': Suponha que $x$ e $y$ s\ao ambos inteiros \ih mpares. Ent\ao existem inteiros $j,k$ tais que $x=2j+1$ e $y=2k+1$. Assim,
+\[
+x-y=2j+1-(2k+1)=2(j-k)
+\] 
+que \'e par.
+\item ``Demonstra\cao 2'': Suponha que $x-y$ seja par e $x$ \ih mpar. Ent\ao existem inteiros $j,k$ tais que $x-y=2j$ e $x=2k+1$. Assim,
+\[
+y=y-x+x=-2j+(2k+1)=2(k-j)+1
+\] 
+portanto $y$ \'e \ih mpar, uma contradi\caoi.
+\item ``Demonstra\cao 3'': Suponha que $x-y$ seja \ih mpar. Ent\ao existe um inteiro $j$ tal que $x-y=2j+1$. Se $y$ \'e par , oteorema est\'a demonstrado. Portanto, suponha que $y$ seja \ih mpar, digamos $y=2k+1$ para algum inteiro $k$. Assim,
+\[
+x=x-y+y=2j+1-(2k+1)=2(j-k)+1
+\]
+logo $x$ \'e par e a demonstra\cao est\'a completa.
+\item ``Demonstra\cao 4'': Suponha que $x$ seja par e $x-y$ seja par tamb\'em. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $x-y=2k$. Assim,
+\[
+y=x-(x-y)=2j-2k=2(j-k)
+\]
+logo $y$ tamb\'em \'e par.
+\item ``Demonstra\cao 5'': Suponha que $x,y$ sejam pares e $x-y$ \ih mpar. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $y=2k$. Assim,
+\[
+x-y=2j-2k=2(j-k)
+\] 
+portanto $x-y$ \'e par. Mas isto contradiz nossa premissa que $x-y$ \'e \ih mpar, logo a demonstra\cao est\'a completa.
+\item ``Demonstra\cao 6'': Suponha que $x-y$ seja \ih mpar, digamos $x-y=2j+1$ para algum inteiro $j$. Se $x$ \'e \ih mpar o teorema estar\'a demonstrado. Portanto, assuma que $x$ seja par, digamos $x=2k$ para algum inteiro $k$. Ent\aoi,
+\[
+y=x-(x-y)=2k-(2j+1)=2(k-j)-1=2(k-j-1)+1
+\]
+logo, $y$ \'e \ih mpar e o teorema est\'a demonstrado.
+\item ``Demonstra\cao 7'': Suponha que $x$ e $y$ sejam ambos pares. Ent\ao existem inteiros $j,k$ tais que $x=2j$ e $y=2k$. Assim,
+\[
+x-y=2j-2k=2(j-k)
+\]
+portanto, $x-y$ \'e par.
+\item ``Demonstra\cao 8'': Suponha que $x-y$ seja par. Ent\ao se $x$ for \ih mpar, o teorema estar\'a demonstrado. Logo, suponha que $x$ seja par. Ent\ao existem inteiros $j,k$ tais que $x-y=2j$ e $x=2k$. Assim, 
+\[
+y=x-(x-y)=2k-2j=2(k-j)
+\]
+logo, $y$ tamb\'em \'e par.
+\item ``Demonstra\cao 9'': Suponha que $x-y$ seja \ih mpar, digamos $x-y=2j+1$ para algum inteiro $j$. Ent\ao se $x$ \'e \ih mpar, digamos $x=2k+1$ para algum $k$, teremos
+\[
+y=x-(x-y)=2k+1-(2j+1)=2(k-j)
+\]
+logo $y$ \'e par e a demonstra\cao est\'a completa.
+\item ``Demonstra\cao 10'': Suponha que $x$ e $y$ sejam \ih mpares e $x-y$ \ih mpar tamb\'em. Ent\ao existem inteiros $j,k$ tais que $x=2j+1$ e $y=2k+1$. Assim,
+\[
+x-y=2j+1-(2k+1)=2(j-k)
+\]
+logo, $x-y$ \'e \ih mpar e par, uma contradi\caoi.
+\end{enumerate}
+
+%excercicio3
+\item D\^e a demonstra\cao direta, por contrapositiva e indireta (se poss\ih vel) de:
+\begin{enumerate}[a)]
+\item Se $x$ \'e um inteiro par e $y$ \'e um inteiro \ih mpar ent\ao $x+y$ \'e um inteiro \ih mpar. 
+\item Se $x$ e $y$ s\ao inteiros \ih mpares ent\ao $xy$ \'e um inteiro \ih mpar.
+\end{enumerate}
+
+%excercicio4
+\item Para as seguintes conjecturas, demonstre que \'e verdade ou d\^e um contra-exemplo para mostrar que \'e falso: 
+\begin{enumerate}[a)]
+\item Se $x$ \'e um inteiro e $4x$ \'e par ent\ao $x$ \'e par.
+\item Se $x$ \'e um inteiro par ent\ao $4x$ \'e par.
+\item Se $x$ \'e um inteiro e $x^2$ \'e par ent\ao $x$ \'e par.
+\item Se $x$ \'e um inteiro e $3x$ \'e par ent\ao $x$ \'e par.
+\item Se $x,y,z$ s\ao inteiros e $x+y+z$ \'e \ih mpar ent\ao um n\'umero de $x,y,z$ \'e \ih mpar.
+\end{enumerate}
+
+%excercicio5
+\item Pareceria que poderia existir uma quarta forma de demonstra\caoi, uma demonstra\cao indireta da contrapositiva de um teorema. Explique porque este fato n\ao foi mencionado na discuss\ao acima.
+\end{enumerate}
