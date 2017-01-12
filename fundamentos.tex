@@ -97,15 +97,6 @@
 \input{capa}
 \pagenumbering{roman}
 \frenchspacing
-%\theoremstyle{definition}
-\newtheorem{defin}{Defini\cao}[chapter]
-\newmdtheoremenv[%
-  backgroundcolor=lightgray!20,
-  linewidth=0.5pt,
-  topline=true,
-  rightline=true,
-  leftline=true,
-  bottomline=true,]{definb}{Defini\cao}[chapter]
 %\theoremstyle{plain}
 \newtheorem{teo}{Teorema }
 \newmdtheoremenv[%
@@ -123,10 +114,20 @@
   bottomline=true,]{axiob}{Axioma}[chapter]
 \newtheorem{coro}{Corol\'a rio}
 \newtheorem{prop}{Proposi\cao }
-\newtheorem{lem}{Lema }
+\newtheorem{lem}{Lema}
 \newtheorem{ejem}{Exemplo}
 \newtheorem{nota}{Nota}
 \renewenvironment{proof}{{\bfseries Demonstra\caoi:}}{\qed}
+\theoremstyle{definition}
+\newtheorem{defin}{Defini\cao}[chapter]
+\newmdtheoremenv[%
+  backgroundcolor=lightgray!20,
+  linewidth=0.5pt,
+  topline=true,
+  rightline=true,
+  leftline=true,
+  bottomline=true,]{definb}{Defini\cao}[chapter]
+
 \def\demo{\bf{Demonstra\caoi:}}
 \def\udots{\rotatebox{90}{$\ddots$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

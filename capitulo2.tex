@@ -40,15 +40,15 @@ O conjunto $A$ \'e {\it igual}\index{Conjuntos!Igualdade} ao conjunto $B$, denot
  
 Assim dois conjuntos s\ao iguais se e somente se eles t\^em os mesmos elementos, por exemplo,
 \[
-\{1,2,3\}=\{2,3,1\}=\{x|a\leq x\leq 3 \textrm{ e $x$ \'e um inteiro.}\}.
+\{1,2,3\}=\{2,3,1\}=\{x:a\leq x\leq 3 \textrm{ e $x$ \'e um inteiro.}\}.
 \]
 
 Existem muitos conjuntos que s\ao frequentemente usados em matem\'atica, por isso damos a eles nomes especiais. Talvez este conjuntos s\ao familiares a voc\^e:
 \begin{eqnarray*}
-\mathbb{N}&=&\{x|\espaco x \textrm{ \'e um inteiro e $x\geq 1$}\}=\{1,2,3,4\ldots\} \textrm{ {\bf (conjunto dos n\'umeros naturais)}}\\
-\mathbb{Z}&=&\{x|\espaco x \textrm{ \'e um inteiro}\}=\{\ldots,-2,-1,0,1,2,\ldots\} \textrm{ {\bf (conjunto dos n\'umeros inteiros)}}\\
+\mathbb{N}&=&\{x:\espaco x \textrm{ \'e um inteiro e $x\geq 1$}\}=\{1,2,3,4\ldots\} \textrm{ {\bf (conjunto dos n\'umeros naturais)}}\\
+\mathbb{Z}&=&\{x:\espaco x \textrm{ \'e um inteiro}\}=\{\ldots,-2,-1,0,1,2,\ldots\} \textrm{ {\bf (conjunto dos n\'umeros inteiros)}}\\
 \mathbb{Q}&=&\left\{\dfrac{x}{y}: \espaco x,y\in\mathbb{Z},y\neq 0\right\}=\left\{\ldots,\dfrac{-4}{3},\dfrac{-3}{2},\dfrac{-2}{1},\dfrac{-1}{1},\dfrac{0}{2},\dfrac{1}{3},\dfrac{2}{4},\ldots\right\} \textrm{ {\bf (conjunto dos n\'umeros racionais)}}\\
-\mathbb{R}&=&\{x|\espaco \textrm{ \'e um n\'umero real}\} \textrm{ {\bf (conjunto dos n\'umeros reais)}}
+\mathbb{R}&=&\{x:\espaco \textrm{ \'e um n\'umero real}\} \textrm{ {\bf (conjunto dos n\'umeros reais)}}
 \end{eqnarray*}
 Suponha que $A=\{1,2,3\}$ e $B=\{1,2,3,4\}$. Facilmente vemos que $A\neq B$ ($4\in B$ mas $4\notin A$) mas podemos ver que todos os elementos de $A$ s\ao tamb\'em elementos de $B$. Isto \'e um importante conceito, por isso daremos um nome:
 
@@ -84,7 +84,7 @@ A\not\subset B, \espaco B\subset C, \espaco C\subset \mathbb{N}.
 
 Permitindo que um conjunto seja uma cola\cao de objetos, obviamente \'e poss\ih vel ter uma cole\cao sem objetos, poe exemplo, o conjunto de todos os estudantes de matem\'atica que tem mais de seis metros de altura. Chamamos um conjunto se elementos de {\it conjunto vazio}.\index{Conjuntos!Vazio} Se tivermos dois conjuntos, digamos, o conjunto descrito acima e o conjunto de todos os professores de matem\'atica que t\^em menos de seis milimetros de altura. Podemos ver que estes conjuntos s\ao iguais desde que ambos satisfazem a defini\cao de igualdade de conjuntos. Assim, como quaisquer dois conjuntos como os acima s\ao iguais, ent\ao existe apenas um conjunto vazio com isso podemos dizer o conjunto vazio que \'e representado, $\varnothing$ e em s\ih mbolos por
 \[
-\varnothing = \{x| \espaco p(x)\ee \nao p(x)\},
+\varnothing = \{x: \espaco p(x)\ee \nao p(x)\},
 \]  
 onde $p$ \'e qualquer fun\cao proposicional.
 
@@ -238,7 +238,7 @@ Para ter certeza que estas ideias est\ao claras, vamos considerar alguns exemplo
 
 Seja $\mathbb{U}$ o conjunto dos n\'umeros naturais (usualmente denotado por $\mathbb{N}$), isto \'e,
 \[
-\mathbb{U}=\mathbb{N}=\{x|\espaco x \textrm{ \'e um inteiro e $x\geq 1$}\}=\{1,2,3,4\ldots\}
+\mathbb{U}=\mathbb{N}=\{x:\espaco x \textrm{ \'e um inteiro e $x\geq 1$}\}=\{1,2,3,4\ldots\}
 \]
 Definimos
 \begin{eqnarray*}
@@ -567,9 +567,9 @@ Como outro exemplo, sejam $D=\mathbb{R}$ e $p(x)$ ``$x^2-3x+2=0$'' e $q(x)$ ``$\
 Podemos utilizar nossas opera\coes de conjuntos para expressar os conjuntos verdade da composi\cao de fun\coes proposicionais. Deve estar claro que se $P,Q$ correpondem, respectivamente, aos conjuntos verdade das fun\coes proposicionais $p,q$ ent\ao
 \begin{equation*}
  \begin{aligned}
-P\inter Q&=\{x|\espaco p(x)\ee q(x))\} \textrm{ \'e o conjunto verdade para } p(x)\ee q(x),\\
-P\uni Q&=\{x|\espaco p(x)\ou q(x))\} \textrm{ \'e o conjunto verdade para } p(x)\ou q(x),\\
-P^C&=\{x|\espaco \nao p(x)\} \textrm{ \'e o conjunto verdade para } \nao p(x).
+P\inter Q&=\{x:\espaco p(x)\ee q(x))\} \textrm{ \'e o conjunto verdade para } p(x)\ee q(x),\\
+P\uni Q&=\{x:\espaco p(x)\ou q(x))\} \textrm{ \'e o conjunto verdade para } p(x)\ou q(x),\\
+P^C&=\{x:\espaco \nao p(x)\} \textrm{ \'e o conjunto verdade para } \nao p(x).
  \end{aligned}
 \end{equation*}
 O que podemos dizer do conjunto verdade para $p(x)\to q(x)$? Recordemos que
@@ -578,7 +578,7 @@ O que podemos dizer do conjunto verdade para $p(x)\to q(x)$? Recordemos que
 \]
 portanto, vemos que
 \[
-P^C\uni Q=\{x|\espaco \nao p(x)\ou q(x)\} \textrm{ \'e o conjunto verdade para } p(x)\to q(x).
+P^C\uni Q=\{x:\nao p(x)\ou q(x)\} \textrm{ \'e o conjunto verdade para } p(x)\to q(x).
 \]
 Como um exemplo disso, sejam $D=\{1,2,3,4,5,6\}$, $p(x)$ ``$x$ \'e par,'' $q(x)$ ``$x$ \'e \ih mpar'' e $r(x)$ ``$x$ \'e $2$ ou $3$.'' Ent\ao (o leitor \'e convidado a verificar os resultados por si mesmo):
 \begin{equation*}
