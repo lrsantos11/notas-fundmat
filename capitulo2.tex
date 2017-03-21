@@ -761,7 +761,7 @@ Podemos ilustrar $A\times B$ com um arranjo retangular:
 \end{table}
 Note que $A\times B\neq B\times A$ e que $A\times C=B\times C$ n\ao implica que $A=B$.
 
-Muito frequentemente no Portugu\^es comum (que \'e diferente da linguagem que os matem\'aticos ``falam'') se refere a objetos relacionados a outros. Por exemplo, poder\ih amos dizer, ``Ela est\'a relacionada a mim, ela \'e minha tia'' ou ``A notas que obtenho est\ao relacionadas a quantidade de tempo que estudo.'' Em matem\'atica, rela\coes entre objetos s\ao muito importantes, por isoo queremos este conceito mais preciso. A seguinte defini\cao faz isso, embora provavelmente n\ao seja imediatamente \'obvio  que ela personifica nossa ideia de rela\caoi. 
+Muito frequentemente no Portugu\^es comum (que \'e diferente da linguagem que os matem\'aticos ``falam'') nos referimos a  objetos relacionados a outros. Por exemplo, poder\ih amos dizer, ``\emph{Ela est\'a relacionada a mim, ela \'e minha tia}'' ou ``\emph{A notas que obtenho est\ao relacionadas a quantidade de tempo que estudo}.'' Em matem\'atica, rela\coes entre objetos s\ao muito importantes, por isso queremos deixar este conceito mais preciso. A seguinte defini\cao faz isso, embora provavelmente n\ao seja imediatamente \'obvio  que ela personifica nossa ideia de rela\caoi. 
 \begin{definb}
 Sejam $A,B$ conjuntos. Uma {\it rela\cao de $A$ em $B$}\index{Rela\caoi} \'e um subconjunto de $A\times B$. Se $R$ \'e uma rela\cao de $A$ em $B$ e $(a,b)\in R$ ser\'a denotada por $aRb$. O {\it dom\ih nio}\index{Rela\caoi!Dom\ih nio} de $R$, denotado por $\Dom(R)$, \'e o conjunto de todos os primeiros elementos dos elementos de $R$, em s\ih mbolos
 \begin{equation*}
@@ -804,7 +804,7 @@ Antes de procedermos adiante, alguns outros exemplos nos ajudar\ao a fixar as no
 
 \item\label{relex1} Sejam $A$ o conjunto de todas as pessoas vivas no mundo e para $x,y\in A$ defina $xRy$ se e somente se $y$ \'e um dos pais de $x$. Ent\ao $R$ \'e uma rela\cao em $A$. Os pares ordenados pertencentes a $R$ s\ao da forma $(x,\textrm{um dos pais de $x$})$. $\Dom(R)=\{x: \textrm{ um dos pais de $x$ est\'a vivo}\}$ e $\Ima(R)=\{x: \textrm{ $x$ \'e um pai com uma crian\cc a viva.}\}$  
 
-\item\label{relex2} Seja $A=\mathbb{R}$ (o conjunto dos n\'umeros reais) e para $x,y\in \mathbb{R}$ defina $xRy$ se e somente se $y=x^2$. Ent\ao $R$ \'e uma rela\cao em $\mathbb{R}$ e os pares ordenados de $R$ s\ao da forma $(x,x^2)$. De fato, os pares ordenados em $R$ s\ao apenas pares ordenados na fun\cao $y=x^2$, a par\'abola. Na verdade, todas as fun\coes de pr\'e-c\'alculo e c\'alculo s\ao rela\coes em $\mathbb{R}$. Neste exemplo, $\Dom(R)=\mathbb{R}$ e $\Ima(R)=\{x: x\leq 0\}$.
+\item\label{relex2} Seja $A=\mathbb{R}$ (o conjunto dos n\'umeros reais) e para $x,y\in \mathbb{R}$ defina $xRy$ se e somente se $y=x^2$. Ent\ao $R$ \'e uma rela\cao em $\mathbb{R}$ e os pares ordenados de $R$ s\ao da forma $(x,x^2)$. De fato, os pares ordenados em $R$ s\ao apenas pares ordenados na fun\cao $y=x^2$, a par\'abola. Na verdade, todas as fun\coes de pr\'e-c\'alculo e c\'alculo s\ao rela\coes em $\mathbb{R}$. Neste exemplo, $\Dom(R)=\mathbb{R}$ e $\Ima(R)=\{x: x\geq 0\}$.
 
 \item\label{relex3} Seja $A$ um conjunto qualquer e para $x,y\in A$ defina $xRy$ e e somente se $x=y$. Ent\ao $R$ \'e uma rela\cao em $A$. Os pares ordenados em $R$ s\ao da forma $(x,x)$. Aqui, $\Dom(R)=\Ima(R)=A$.
 
@@ -813,7 +813,7 @@ Antes de procedermos adiante, alguns outros exemplos nos ajudar\ao a fixar as no
 R=\{(\varnothing,\varnothing),(\varnothing,\{1\}),(\varnothing,\{2\}),(\varnothing,A),(\{1\},\{1\}),(\{1\},A),(\{2\},\{2\}),(\{2\},A),(A,A)\}.
 \]
 
-\item\label{relex5} Seja $A$ o conjunto das pessoas do Brasil e seja $B$ o conjunto dos inteirosn positivos menores que $10^{10}$. Ent\ao para $x\in A$ e $y\in B$ dizemos que $xRy$ se e somente se $y$ \'e o n\'umero do CPF de $x$. Ent\ao $R$ \'e uma rela\cao de $A$ em $B$. Os pares ordenados de $R$ s\ao da forma (pessoa, CPF da pessoa).  $\Dom(R)=\{x: x \textrm{ tem CPF}\}$ e $\Ima(R)=\{x: x \textrm{ \'e o CPF de algu\'em}\}$. N\ao podemos listar todos os elementos de $R$ aqui, seria insano!
+\item\label{relex5} Seja $A$ o conjunto das pessoas do Brasil e seja $B$ o conjunto dos inteiros positivos menores que $10^{10}$. Ent\ao para $x\in A$ e $y\in B$ dizemos que $xRy$ se e somente se $y$ \'e o n\'umero do CPF de $x$. Ent\ao $R$ \'e uma rela\cao de $A$ em $B$. Os pares ordenados de $R$ s\ao da forma (pessoa, CPF da pessoa).  $\Dom(R)=\{x: x \textrm{ tem CPF}\}$ e $\Ima(R)=\{x: x \textrm{ \'e o CPF de algu\'em}\}$. N\ao podemos listar todos os elementos de $R$ aqui, seria insano!
 
 \item\label{relex6} Seja $A=\{1,2,3\}$ e seja $B=\{1,2\}$ Ent\ao $R=\{(3,1),(3,2)\}$, $S=\varnothing$ e $T=A\times B$ s\ao todos rela\coes de $A$ em $B$. $\Dom(R)=\{3\}$ e $\Ima(R)=\{1,2\}$, $\Dom(R)=\Ima(R)=\varnothing$, $\Dom(R)=A$ e $\Ima(R)=B$. Note que, as rela\coes n\ao precisam ``fazer sentido'' ou ter alguma regra especial ou ter algum padr\aoi. A defini\cao permite que qualquer subconjunto de $A\times B$ seja uma rel\cao de $A$ em $B$.
 
@@ -828,7 +828,7 @@ R=\{(\varnothing,\varnothing),(\varnothing,\{1\}),(\varnothing,\{2\}),(\varnothi
 \item\label{relex11} Seja $\mathbb{N}$ o conjunto dos n\'umeros naturais e para $x,y\in\mathbb{N}$, define-se $xRy$ se e somente se $5|(x-y)$. Ent\ao $R$ \'e uma rela\cao em $\mathbb{N}$ com $\Dom(R)=\Ima(R)=\mathbb{N}$. Alguns exemplos t\ih picos pertencentes a $R$ s\ao $(10,5)$, $(5,10)$, $(3,43)$ e $(482,257)$. 
 \end{enumerate}
 
-Observe que nossa maneira de escrever rela\cois, $xRy$, que pode ter parecido um pouco estranho em um primeiro momento, \'e de fato a forma que usualmente escrevemos algumas ``rela\coes bem conhecidas'', como $=$ (igual a), $\leq$ (menor ou igual a), $subseteq$ (subconjunto de), $\sim$ (similar a), $|$ (divide), $\Leftrightarrow$ (logicamente equivalente a). Devemos tamb\'em notar que, muitos dos exemplo acima s\ao familiares a n\'os, s\'o n\ao sab\ih amos que eles eram chamados de rela\cois!
+Observe que nossa maneira de escrever rela\cois, $xRy$, que pode ter parecido um pouco estranho em um primeiro momento, \'e de fato a forma que usualmente escrevemos algumas ``rela\coes bem conhecidas'', como $=$ (igual a), $\leq$ (menor ou igual a), $\subseteq$ (subconjunto de), $\sim$ (similar a), $|$ (divide), $\Leftrightarrow$ (logicamente equivalente a). Devemos tamb\'em notar que, muitos dos exemplo acima s\ao familiares a n\'os, s\'o n\ao sab\ih amos que eles eram chamados de rela\cois!
 
 Existem certas propriedades que uma rela\cao me uma conjunto pode ou n\ao ter. Algumas das mais importantes s\ao definidas abaixo:
 \begin{definb}\label{reldef1}
