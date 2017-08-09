@@ -3,23 +3,23 @@
 \pagenumbering{arabic}
 \section{Introdu\cao}\label{introducao}
 
-Um amigo meu recentemente me disse que quando ele estudou l\'ogica ele ficava com sono. Eu respondi que ele parecia com sono e ele disse, ``Sim, estou como sono.'' Ent\ao ele adicionou, ``Portanto, voc\^e pode concluir que eu estava estudando l\'ogica.'' ``Certamente, n\aoi!'' eu respndi. ``Este \'e um bom exemplo de um argumento inv\'alido''. De fato, se voc\^e estivesse estudando l\'ogica \'e \'obvio que voc\^e n\ao teria aprendido muito.
+Um amigo meu recentemente me disse que quando ele estudou l\'ogica ele ficava com sono. Eu respondi que ele parecia com sono e ele disse, ``Sim, estou como sono''. Ent\ao ele adicionou, ``Portanto, voc\^e pode concluir que eu estava estudando l\'ogica.'' ``Certamente, n\aoi!'' eu respndi. ``Este \'e um bom exemplo de um argumento inv\'alido''. De fato, se voc\^e estivesse estudando l\'ogica \'e \'obvio que voc\^e n\ao teria aprendido muito.
 
 Este pequeno excerto de uma situa\cao da vida real  foi criado para ilustrar o fato que usamos l\'ogica em todos os dias de nossas vidas, embora nem sempre a usamos corretamente. A l\'ogica fornece o significado pelo qual obtemos conclus\oes e estabelecemos argumentos. A l\'ogica tamb\'em fornece regras pelas quais raciocinamos em matem\'atica. Para ser bem sucedido em matem\'atica teremos que entender precisamente as regras da l\'ogica. Claramente, podemos tamb\'em aplicar estas regras a outras \'areas da vida al\'em de matem\'atica e surpreender (ou desanimar) nossos amigos com nossa l\'ogica, mentes bem treinadas.
 
 Neste cap\ih tulo descreveremos os v\'arios conectivos usados em l\'ogica, desenvolver a nota\cao simb\'olica, descobrir algumas regras \'uteis de infer\^encia, discutir quantifica\cao e exibir alguma formas t\ih picas de demonstra\caoi. Embora nossa dicuss\ao sobre conectivos e tabelas verdade no come\cc o seja bastante mec\^anica e n\ao requereira muita reflex\aoi, ao final do cap\ih tulo estaremos analisando demonstra\coes e escrevendo algumas por n\'os mesmos, um processo menos mec\^anico e bem profundo.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{e, ou, n\~ao e tabelas verdade}\label{eounao}
+\section{Conectivos e, ou, n\~ao e tabelas verdade}\label{eounao}
 
-Os blocos b\'asicos da l\'ogica s\~ao as \emph{proposi\cois.}\index{Proposi\caoi} Por proposi\coes entendemos como uma senten\cc a declarativa a qual \'e verdadeira ou falsa, mas n\~ao ambas. Por exemplo, ``2 \'e maior que 3'' e ``todo tri\^angulo equil\'atero tem os tr\^es \^angulos congruentes'' s\~ao proposi\cois, enquanto ``$x \leq 3$'' e ``esta senten\cc a \'e falsa'' n\~ao o s\~ao (a primeira \'e uma senten\cc a declarativa mas n\~ao podemos dizer se \'e verdade at\'e definirmos o valor de $x$, tente determinar se a segunda \'e verdade). Denotaremos proposi\coes por letras min\'usculas, $p,q,r,s,$ etc. Em uma discuss\~ao  letras diferentes podem ou n\~ao representar proposi\coes diferentes, mas uma letra aparecendo mais de uma vez em uma dada discuss\~ao sempre ser\'a representada pela mesma proposi\caoi. Uma proposi\cao verdadeira dar\'a um valor verdade de V (de verdadeiro) e uma proposi\cao falsa dar\'a um valor verdade de F (de falso). Por exemplo, ``$2+3<7$'' tem valor verdade \index{Valor Verdade} de T enquanto ``$2+3=7$'' tem valor verdade de F.
+Os blocos b\'asicos da l\'ogica s\~ao as \emph{proposi\cois.}\index{Proposi\caoi} Por proposi\coes entendemos como uma senten\cc a declarativa a qual \'e verdadeira ou falsa, mas n\~ao ambas. Por exemplo, ``2 \'e maior que 3'' e ``todo tri\^angulo equil\'atero tem os tr\^es \^angulos congruentes'' s\~ao proposi\cois, enquanto ``$x \leq 3$'' e ``esta senten\cc a \'e falsa'' n\~ao o s\~ao (a primeira \'e uma senten\cc a declarativa mas n\~ao podemos dizer se \'e verdade at\'e definirmos o valor de $x$, tente determinar se a segunda \'e verdade). Denotaremos proposi\coes por letras min\'usculas, $p,q,r,s,$ etc. Em uma discuss\~ao  letras diferentes podem ou n\~ao representar proposi\coes diferentes, mas uma letra aparecendo mais de uma vez em uma dada discuss\~ao sempre ser\'a representada pela mesma proposi\caoi. Uma proposi\cao verdadeira dar\'a um valor verdade de V (de verdadeiro) e uma proposi\cao falsa dar\'a um valor verdade de F (de falso). Por exemplo, ``$2+3<7$'' tem valor verdade \index{Valor Verdade} de V enquanto ``$2+3=7$'' tem valor verdade de F.
 
 Estamos interessados em combinar simples proposi\coes (\`as vezes chamadas subproposi\cois) para gerar proposi\coes mais complicadas (ou compostas). Combinamos proposi\coes com conectivos, \index{Conectivos} entre os quais s\~ao ``e'',``ou'', e ``implica''.  Se $p,q$ s\~ao duas proposi\coes ent\~ao ``$p$ e $q$'' \'e tamb\'em uma proposi\caoi, chamada de conjun\cao \index{Conjun\caoi} de $p$ e $q$, e denotadas por
 \[
 p \ee q.
 \]
 
-O valor verdade de $p \ee q$ \index{Conectivos!``e''}depende dos valores verdade das proposi\coes \pp e \qq: $p \ee q$ \eh verdade quando ambos \pp e \qq s\ao verdade, caso contr\'ario \eh falso. Note que, esse \eh o significado usual de ``e'' que utilizamos em Portugu\^es. A palavra ``mas'' tem o mesmo sentido l\'ogico que ``e'' mesmo que no Portugu\^es corrente tenha uma conota\cao ligeiramente diferente. Uma maneira conveniente para representar este fato \eh utilizando a \emph{tabela verdade}. \index{Tabela Verdade} Quando cada uma de duas proposi\coes \pp e \qq tem dois poss\ih veis valores verdade, juntos eles t\^em $2 \times 2=4$ poss\ih veis valores verdade, a tabela abaixo lista todas as possibilidades:
+O \emph{valor verdade} de $p \ee q$ \index{Conectivos!``e''}depende dos valores verdade das proposi\coes \pp e \qq: $p \ee q$ \eh verdade quando ambos \pp e \qq s\ao verdade, caso contr\'ario \eh falso. Note que, esse \eh o significado usual de ``e'' que utilizamos em Portugu\^es. A palavra ``mas'' tem o mesmo sentido l\'ogico que ``e'' mesmo que no Portugu\^es corrente tenha uma conota\cao ligeiramente diferente. Uma maneira conveniente para representar este fato \eh utilizando a \emph{tabela verdade}. \index{Tabela Verdade} Quando cada uma de duas proposi\coes \pp e \qq tem dois poss\ih veis valores verdade, juntos eles t\^em $2 \times 2=4$ poss\ih veis valores verdade, a tabela abaixo lista todas as possibilidades:
 \begin{table}[h]
 \centering
 \begin{tabular}{|l c r|c|}
@@ -36,13 +36,13 @@ F   & & F   & F \\
 
 Ent\aoi, por exemplo, quando \pp \eh V e \qq \eh F (linha 2 da tabela verdade), $p \ee q$ \eh F. De fato, a tabela verdade pode ser tomada como a defini\cao do conectivo $\ee$. 
 
-Deve-se comentar aqui que a tabela verdade acima n\ao tem nada a ver com \pp e $q$, \eh apenas utilizado para definir $p \ee q$, a tabela verdade pode ser vista como o $x$ em $f(x)=3x+8$. O que a tabela verdade nos diz, por exemplo, \eh que quando a primeira proposi\cao \'e F e a segunda \'e V (terceira linha da tabela) a conjun\cao das duas proposi\coes \'e F.
+Deve-se comentar aqui que a tabela verdade acima n\ao tem nada a ver com \pp e $q$, já que \eh apenas utilizada para definir $p \ee q$. A tabela verdade pode ser vista como o $x$ em $f(x)=3x+8$. O que a tabela verdade nos diz, por exemplo, \eh que quando a primeira proposi\cao \'e F e a segunda \'e V (terceira linha da tabela) a conjun\cao das duas proposi\coes \'e F. Você pode verificar sua compreensão disso fazendo o exercício \ref{exerc:1.2-5} desta seção.
 
 Outro conectivo comum \'e o ``ou''\index{Conectivos!``ou''}, \`as vezes chamado de \emph{disjun\caoi}. \index{Disjun\caoi} A disjun\cao de \pp e $q$, denotada por
 \[
-p \ou q
+p \ou q,
 \]
-\'e verdade quando pelo menos um de $p,q$ \'e verdade. Isso \'e chamado de o ``ou inclusivo'', e corresponde ao ``e/ou'' que \`as vezes encontramos em documentos. Note que, em nossas conversas do dia a dia utilizamos o ``ou'' de maneira exclusiva, verdade somente quando \emph{exatamente uma} das subproposi\coes \'e verdade. Por exemplo, a verdade de ``Quando voc\^e me ligou eu devo ter ido tomar banho ou ter passeado com o cachorro'' n\ao \'e esperada quando se inclui ambas as possibilidades. Em matem\'atica n\'os sempre usamos ``ou'' no sentido inclusivo como definido acima e a tabela verdade \'e dada abaixo: 
+\'e verdade quando pelo menos um de $p,q$ \'e verdade. Isso \'e chamado de o ``\emph{ou inclusivo}'', e corresponde ao ``e/ou'' que \`as vezes encontramos em documentos. Note que, em nossas conversas do dia a dia utilizamos o ``ou'' de maneira exclusiva, isto é, tem valor verdade V somente quando \emph{exatamente uma} das subproposi\coes \'e verdade. Por exemplo, a verdade de ``Quando voc\^e me ligou eu devo ter ido tomar banho ou ter passeado com o cachorro'' n\ao \'e esperada quando se inclui ambas as possibilidades. Em matem\'atica n\'os \emph{sempre usamos ``ou'' no sentido inclusivo} como definido acima e a tabela verdade \'e dada abaixo: 
 \begin{table}[H]
 \centering
 \begin{tabular}{|l c r|c|}
@@ -75,7 +75,7 @@ F   &  V \\
 \end{tabular}
 \end{table}
 
-Podemos formar a nega\cao de uma proposi\caoi, sem o entendimento do significado da mesma, com `` \'e falso que'' ou ``n\ao \'e o caso que'', mas a proposi\cao resultante \'e estranha e n\ao passa a real natureza da nega\caoi. Uma considera\cao mais precisa do siginificado da proposi\cao em quest\ao geralmente indicar\'a uma melhor maneira de expressar a nega\caoi, mais a frente veremos m\'etodos para negar proposi\coes compostas.
+Podemos formar a nega\cao de uma proposi\caoi, sem o entendimento do significado da mesma, com `` \'e falso que'' ou ``n\ao \'e o caso que'', mas a proposi\cao resultante \'e estranha e n\ao passa a real natureza da nega\caoi. Uma considera\cao mais precisa do siginificado da proposi\cao em quest\ao geralmente indicar\'a uma melhor maneira de expressar a nega\caoi. Mais adiante veremos métodos para negar proposi\coes compostas.
 
 Considere os seguintes exemplos abaixo:
 \begin{enumerate}[{\bf a)}]
@@ -88,7 +88,7 @@ Considere os seguintes exemplos abaixo:
 \end{enumerate}
 Note que, b) e c) s\ao nega\coes de a); e) e f) s\ao nega\coes de d), mas c) e f) s\ao mais adequadas que b) e e) respectivamente.
 
-Usaremos a mesma conven\cao para $\nao$ da que se usa em \'algebra, isto \'e, a nega\cao \'e aplicada somente ao pr\'oximo s\ih mbolo, o qual, neste caso, representa uma proposi\caoi. Ent\~ao, $\nao p \ou q$ significar\'a $(\nao p) \ou q$ ao inv\'es de $\nao (p \ou q)$, assim como $-3+4$ representa $1$ e n\ao $-7$. Com esta conven\cao evitamos ambiguidade quando negamos uma composta de proposi\coes em Portugu\^es. Por exemplo, como distinguimos entre $\nao p \ou q$ e $\nao (p \ou q)$ em Portugu\^es? Suponha que, \pp representa ``$2+2=4$'' e \qq representa ``$3+2<4$''. A proposi\cao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' deve significar $\lnot(p \ou q)$ ou $\lnot p \ou q$? Se usamos a mesma conven\cao que utilizamos para nosso s\ih mbolos, devemos ter $\lnot p \ou q$. Mas, se tomarmos esse significado, como diremos $\lnot (p \ou q)$? O problema parece ser o mesmo do equivalente ao par\^enteses que usamos para agrupamento. Vamos adotar a conven\cao que ``n\ao \'e o caso que'' (ou uma nega\cao similar) aplica-se a tudo que segue at\'e algum tipo grupamento claramente estabelecido. Ent\ao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' significaria $\lnot (p \ou q)$, enquanto que ``N\ao \'e o caso que $2+2=4$, ou $3+2<4$'' significaria $\lnot p \ou q$. Claramente, quando falamos, devemos ser muito cuidadosos usando pausas para, assim, indicar o significado correto.  
+Usaremos a mesma conven\cao para $\nao$ da que se usa em álgebra elementar; com efeito, a nega\cao \'e aplicada somente ao pr\'oximo s\ih mbolo, o qual, neste caso, representa uma proposi\caoi. Ent\~ao, $\nao p \ou q$ significar\'a $(\nao p) \ou q$ ao inv\'es de $\nao (p \ou q)$, assim como $-3+4$ representa $1$ e n\ao $-7$. Com esta conven\cao evitamos ambiguidade quando negamos uma composta de proposi\coes em Portugu\^es. Por exemplo, como distinguimos entre $\nao p \ou q$ e $\nao (p \ou q)$ em Portugu\^es? Suponha que, \pp representa ``$2+2=4$'' e \qq representa ``$3+2<4$''. A proposi\cao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' deve significar $\lnot(p \ou q)$ ou $\lnot p \ou q$? Se usamos a mesma conven\cao que utilizamos para nosso s\ih mbolos, devemos ter $\lnot p \ou q$. Mas, se tomarmos esse significado, como diremos $\lnot (p \ou q)$? O problema parece ser o mesmo do equivalente ao par\^enteses que usamos para agrupamento. Vamos adotar a conven\cao que ``n\ao \'e o caso que'' (ou uma nega\cao similar) aplica-se a tudo que segue at\'e algum tipo grupamento claramente estabelecido. Ent\ao ``N\ao \'e o caso que $2+2=4$ ou $3+2<4$'' significaria $\lnot (p \ou q)$, enquanto que ``N\ao \'e o caso que $2+2=4$, ou $3+2<4$'' significaria $\lnot p \ou q$. Claramente, quando falamos, devemos ser muito cuidadosos usando pausas para, assim, indicar o significado correto.  
 
 Tabelas verdade podem ser utilizadas para expressar os poss\ih veis valores verdade de proposi\coes compostas construindo colunas de uma maneira met\'odica. Por exemplo, desejamos construir uma tabela verdade para $\lnot (p \ou \lnot q)$. Come\cc amos uma tabela verdade de quatro linhas (existem quatro possibilidades) da seguinte forma:    
 \begin{table}[h]
@@ -173,7 +173,7 @@ preenchemos a coluna $\nao$ (\pp $ \ou \nao$ $q$)
 
 Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima podem ser eliminados. Note, tamb\'em, que se a proposi\cao composta envolve $n$ subproposi\coes ent\ao sua tabela verdade requerir\'a $2^n$ linhas. Portanto, por exemplo, a proposi\cao composta de quatro subproposi\coes necessitar\'a de $2^4=16$ linhas.
 
-\paragraph{Exerc\ih cios \ref{eounao}}
+\paragraph{Exerc\ih cios \ref{eounao}} \label{exer:1.2}
 
 \begin{enumerate}[{\bf 1.}]
 %excercicio1
@@ -208,6 +208,7 @@ Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima pod
 
 %excercicio3
 \item Construa a tabela verdade para:
+\begin{multicols}{2}
 \begin{enumerate}[a)]
 \item $\nao$ $p$ $\ou$ $q$.
 \item $\nao$ $p$ $\ee$ $q$.
@@ -218,10 +219,11 @@ Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima pod
 \item\label{eou3g}$p$ $\ou$ $\nao$ $p$.
 \item $\nao$ ($\nao$ $p$).
 \end{enumerate}
+\end{multicols}
 
 
 %excercicio4
-\item Construa nega\coes \'uteis para:
+\item Construa nega\coes \emph{\'uteis} para:
 \begin{enumerate}[a)]
 \item $3-4<7$.
 \item $3+1=5$ e $2 \leq 4$.
@@ -229,7 +231,7 @@ Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima pod
 \end{enumerate}
 
 %excercicio5
-\item Suponha que definimos o conectivo $\star$ dizendo que $p \star q$ \'e verdade somente quando \qq \'e verdade e \pp \'e falso, e \'e falso caso contr\'ario.
+\item Suponha que definimos o conectivo $\star$ dizendo que $p \star q$ \'e verdade somente quando \qq \'e verdade e \pp \'e falso, e \'e falso caso contr\'ario. \label{exerc:1.2-5}
 \begin{enumerate}[a)]
 \item Escreva a tabela verdade de $p \star q$. 
 \item Escreva a tabela verdade de $q \star p$.
@@ -246,7 +248,7 @@ Depois que alguma experi\^encia \'e obtida, muitos dos passos escritos acima pod
 \end{enumerate}
 
 %excercicio7
-\item Explique a seguinte piada: Ansioso, o pai pergunta ao parteiro: ``Doutor, \'e homem ou mulher?'' O m\'edico responde: ``Sim.''
+\item Explique a seguinte piada: Ansioso, o pai pergunta ao obstetra: ``Doutor, \'e menino ou menina?'' O m\'edico responde: ``Sim.''
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -383,8 +385,45 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 
 \begin{enumerate}[{\bf 1.}]
 %excercicio1
+\item Escreva as sente\c{c}as a seguir usando os s\'imbolos da lógica matemática:
+
+\begin{enumerate}[a)] 
+\item Se eu sou feliz, voc\^e \'e infeliz e se voc\^e \'e infeliz, eu n\~ao
+sou feliz.
+\item Jos\'e vir\'a a festa e Maria n\~ao gostar\'a ou Jos\'e n\~ao vir\'a a
+festa e Maria gostar\'a da festa.
+\item A novela ser\'a exibida, a menos que seja exibido programa pol\'itico.
+\item Se chover irei para casa, caso contr\'ario, ficarei no escrit\'orio.
+\item Se Maria \'e bonita, inteligente e sens\'ivel, e se Rodrigo ama Maria,
+ent\~ao ele \'e feliz.
+\item Se Sr.~Oscar \'e feliz, Sra.~Oscar \'e infeliz e se Sra.~Grotta \'e
+feliz, Sr. Grotta \'e infeliz.
+\item Maur\'icio vir\'a \`a festa e K\'atia n\~ao vir\'a, ou Maur\'icio n\~ao
+vir\'a festa e K\'atia ficar\'a Infeliz.
+\item Irei ao teatro hoje somente se for uma pe\c{c}a de com\'edia.
+\item Se minha namorada vier, irei ao teatro somente se for uma pe\c{c}a de
+drama.
+\end{enumerate}
+
+%excercicio2
+\item Seja as proposi\c{c}\~oes ``$p$: Rafael joga futebol'' e ``$q$: Rafael joga
+basquete''. Escreva na linguagem usual as seguintes proposi\c{c}\~oes:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $p\ou q $
+\item $p\ee q$
+\item $p\ee \neg q $
+\item $\neg p \ee \neg q$
+\item $\neg(\neg p)$  
+\item $\neg (\neg p \ee \neg q)$
+\end{enumerate}
+\end{multicols}
+
+
+%excercicio3
 \item Quais das seguintes proposi\coes s\ao logicamente equivalentes?
 \begin{enumerate}[a)]
+\begin{multicols}{2}
 \item $p \ee \lnot q$.
 \item $p \to q$.
 \item $\lnot(\lnot p \ou q)$.
@@ -393,9 +432,10 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item $\lnot (p \to q)$.
 \item $p \to \nao q$.
 \item $\nao p \to \nao q$.
+\end{multicols}
 \end{enumerate}
 
-%excercicio2
+%excercicio4
 \item Mostre que os seguintes pares s\ao logicamente equivalentes:
 \begin{enumerate}[a)]
 \item $p\ee(q\ou r)$; $(p\ee q)\ou(p\ee r)$ .
@@ -404,7 +444,7 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item $p \to q$; $\lnot q \to \lnot p$.
 \end{enumerate}
 
-%excercicio3
+%excercicio5
 \item Mostre que os seguintes pares n\ao s\ao logicamente equivalentes:
 \begin{enumerate}[a)]
 \item $\nao(p \ee q)$; $\nao p \ee \nao q$.
@@ -413,7 +453,7 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item $\lnot (p \to q)$; $\lnot p \to \lnot q$.
 \end{enumerate}
 
-%excercicio4
+%excercicio6
 \item Determine:
 \begin{enumerate}[a)]
 \item A contrapositiva de $\lnot p\to q$.
@@ -423,7 +463,7 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item A rec\ih proca de $\lnot p \ee q$.
 \end{enumerate}
 
-%excercicio5
+%excercicio7
 \item Indique quais das proposi\coes a seguir s\ao verdadeiras:
 \begin{enumerate}[a)]
 \item Se $2+1=4$ ent\ao $3+2=5$.
@@ -434,7 +474,7 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item Se $5$ \'e \ih mpar ent\ao $4$ \'e \ih mpar. 
 \end{enumerate}
 
-%excercicio6
+%excercicio8
 \item Explique ou d\^e exemplos porque nenhum dos itens a seguir existem:
 \begin{enumerate}[a)]
 \item Uma implica\cao verdadeira com uma conclus\ao falsa.
@@ -447,18 +487,19 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item Uma implica\cao verdadeira com uma hip\'otese falsa. 
 \end{enumerate}
 
-%excercicio7
+%excercicio9
 \item Traduza em s\ih mbolos:
 \begin{enumerate}[a)]
 \item \pp sempre que $q$.
 \item \pp a menos que $q$.
 \end{enumerate}
 
-%excercicio8
+%excercicio10
 \item D\^e a nega\cao para $p \leftrightarrow q$ na forma que n\ao envolva uma bicondicional.
 
-%excercicio9
+%excercicio11
 \item Suponha que $p$, $\lnot q$ e $r$ s\ao verdade. Quais a seguir s\ao proposi\coes verdadeiras?
+\begin{multicols}{2}
 \begin{enumerate}[a)]
 \item $p \to q$.
 \item $q \to p$.
@@ -468,17 +509,18 @@ Como os nomes (bicondicional, se e somente se) e a nota\cao sugerem, existe uma 
 \item $(p \ou q) \to p$.
 \item $(p \ee q) \to q$.
 \end{enumerate}
+\end{multicols}
 
-%excercicio10
-\item Note que temos cinco ``conectivos'' l\'ogicos: $\ee$, $\ou$, $\to$, $\leftrightarrow$ e $\nao$, cada qual corresponde a uma constru\cao da linguagem comum. Do ponto de vista l\'ogico isto \'e de alguma forma um deperd\ih cio, desde que podemos expressar todos estes em termos de, apenas, $\nao$ e $\ee$. Ainda mais, se definirmos $p|q$ para ser falsa quando ambos \pp e \qq s\ao verdadeiros, e verdadeiro caso contr\'ario, podemos expressar todas as cinco formas em termos deste \'unico conectivo ($|$ \'e conhecido como Conectivo de Sheffer \index{Conectivos!de Sheffer} ou Conectivo Nou \index{Conectivos!``nou''}). Verifique parcialmente que os argumentos dados acima por
+%excercicio12
+\item Note que temos cinco ``conectivos'' l\'ogicos: $\ee$, $\ou$, $\to$, $\leftrightarrow$ e $\nao$, cada qual corresponde a uma constru\cao da linguagem comum. Acontece que do ponto de vista l\'ogico isto \'e, de alguma forma, um deperd\ih cio já que podemos expressar todos estes conectivos em termos de, apenas, $\nao$ e $\ee$. Ainda mais, se definirmos $p\mid q$ para ser falsa quando ambos \pp e \qq s\ao verdadeiros, e verdadeiro caso contr\'ario, podemos expressar todas as cinco formas em termos deste \'unico conectivo ($\mid $ \'e conhecido como Conectivo de Sheffer\index{Conectivos!de Sheffer} ou Conectivo Nou\index{Conectivos!``nou''}). Verifique parcialmente que os argumentos dados acima por
 \begin{enumerate}[a)]
-\item Econtrando a proposi\cao a qual equivale a $p \ou q$ usando apenas $\ee$ e $\nao$.
-\item Escrevendo a tabela verdade para $p|q$.
-\item Mostrando que $p|p$ \'e logicamente equivalente a $\nao p$.
-\item Mostrando que $(p|q)|(q|p)$ \'e logicamente equivalente a $p \ee q$.
+\item Encontrando a proposi\cao a qual equivale a $p \ou q$ usando apenas $\ee$ e $\nao$.
+\item Escrevendo a tabela verdade para $p\mid q$.
+\item Mostrando que $p\mid p$ \'e logicamente equivalente a $\nao p$.
+\item Mostrando que $(p\mid q)\mid (q\mid p)$ \'e logicamente equivalente a $p \ee q$.
 \end{enumerate}
 
-%excercicio11
+%excercicio13
 \item Escreva a rec\ih proca, a nega\cao e a contrapositiva das seguintes afirma\cois:
 \begin{enumerate}[a)]
 \item C\ao que ladra n\ao morde.
@@ -587,7 +629,9 @@ Tautologias s\ao as regras pelas quais n\'os raciocinamos. Para refer\^encia fut
 
 Observe na lista acima que, 4-16 s\ao equival\^encias l\'ogicas enquanto 17-25 s\ao implica\coes l\'ogicas.
 
-Uma das primeiras perguntas que os estudantes fazem quando v\^em uma lista como a acima \'e ``Tenho que memorizar esta tabela?'' A resposta \'e ``N\aoi, memoriza\cao n\ao \'e suficiente, voc\^e tem que saber todas elas! Elas t\^em que estar na sua forma de pensar.'' Em um primeiro momento, isto parece uma tarefa dif\ih cil, e talvez o seja. Mas algumas destas j\'a est\ao incorporadas na forma como pensamos. Por exemplo, se algu\'em diz, ``esta garrafa de \'agua \'e com g\'as ou sem g\'as. N\ao \'e com g\'as,'' o que conclu\ih mos sobre a garrafa de \'agua? Conclu\ih mos que \'e uma garrafa de \'agua sem g\'as, fazendo isso estamos usando o silogismo disjuntivo (item 22 da tabela de tautologias). De forma similar, algu\'em poderia dizer ``se eu leio o livro de fundamentos de matem\'atica antes da aula ent\ao eu gosto da aula. Eu li o livro de fundamentos de matem\'atica hoje antes da aula.'' Conclu\ih mos que a pessoa que disse isso, gostou da aula de hoje. Esta \'e uma aplica\cao do modus ponens (item 19 da tabela de tautologias). N\ao \'e importante que aprendamos os nomes das v\'arias equival\^encias e implica\cois, mas \'e importante que aprendamos suas formas para reconhecermos quando estamos utilizando-as. \'E importante tamb\'em reconhecer quando elas n\ao parecem/soam corretas, isto \'e, quando utilizamos alguma coisa que n\ao \'e uma impli\cao l\'ogica.
+Uma das primeiras perguntas que os estudantes fazem quando v\^em uma lista como a acima \'e ``Tenho que memorizar esta tabela?'' A resposta \'e ``N\aoi, memoriza\cao n\ao \'e suficiente, voc\^e tem que saber todas elas! Elas t\^em que estar na sua forma de pensar.'' Em um primeiro momento, isto parece uma tarefa dif\ih cil, e talvez o seja. Mas algumas destas j\'a est\ao incorporadas na forma como pensamos. Por exemplo, se algu\'em diz: ``vendemos  garrafas de \'agua \'e com g\'as ou sem g\'as. Está n\ao \'e com g\'as,'' o que conclu\ih mos sobre a garrafa de \'agua? Conclu\ih mos que \'e uma garrafa de \'agua sem g\'as e fazendo isso estaremos usando o \emph{silogismo disjuntivo} (item 22 da tabela de tautologias). De forma similar, algu\'em poderia dizer ``se eu leio o livro de fundamentos de matem\'atica antes da aula ent\ao eu gosto da aula. Eu li o livro de fundamentos de matem\'atica hoje antes da aula.'' Conclu\ih mos que a pessoa que disse isso, gostou da aula de hoje. Esta \'e uma aplica\cao do \emph{modus ponens} (item 19 da tabela de tautologias), uma das mais básicas e importantes equivalências lógicas e formas de racioncínio.
+
+ N\ao \'e importante que aprendamos os nomes das v\'arias equival\^encias e implica\cois, mas \'e importante que aprendamos suas formas para reconhecermos quando estamos utilizando-as. \'E importante tamb\'em reconhecer quando elas n\ao parecem ou soam corretas, isto \'e, quando utilizamos alguma coisa que n\ao \'e uma impli\cao l\'ogica.
 
 
 
