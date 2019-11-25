@@ -1078,16 +1078,16 @@ Suponha que $D$ \'e o dom\ih nio da fun\cao proposicional $p$. Sabemos que podem
 \textrm{Para todo $x$ em $D$, $p(x)$ \'e denotada por $\forall x$ em $D, p(x).$}
 \] 
 \[
-\textrm{Existe um $x$ em $D$, tal que $p(x)$ \'e denotada por $\exists x$ em $D \ni p(x).$}
+\textrm{Existe um $x$ em $D$, tal que $p(x)$ \'e denotada por $\exists x$ em $D \mid  p(x).$}
 \] 
 
-$\forall$ \'e chamado o \emph{quantificador universal}\index{Quantificador!Universal} e \'e lido como ``para todo'', $\exists$ \'e chamado \emph{quantificador existencial}\index{Quantificador!Existencial} e \'e lido como ``existe'' e $\ni$ \'e o s\ih mbolo para ``tal que''. Determinamos valores verdade para estas proposi\coes de acordo com o significado usual que damos para ``para todos'' e ``existe'':
+$\forall$ \'e chamado o \emph{quantificador universal}\index{Quantificador!Universal} e \'e lido como ``para todo'', $\exists$ \'e chamado \emph{quantificador existencial}\index{Quantificador!Existencial} e \'e lido como ``existe'' e $\mid $ \'e o s\ih mbolo para ``tal que''. Determinamos valores verdade para estas proposi\coes de acordo com o significado usual que damos para ``para todos'' e ``existe'':
 \[
 \forall x \textrm{ em } D, p(x)
 \] 
 ser\'a dado valor verdade de V se $p(x)$ for verdade para cada interpreta\cao de $x$ em $D$, caso contr\'ario, o valor verdade \'e F.
 \[
-\exists x \textrm{ em } D \ni p(x)
+\exists x \textrm{ em } D \mid  p(x)
 \] 
 ser\'a dado valor verdade de V se $p(x)$ \'e verdade para pelo menos uma interpreta\cao de $x$ em $D$, caso contr\'ario ser\'a dado o valor verdade de F. Portanto, vemos que se $D$ \'e finito, digamos com elementos $x_1,x_2,\ldots,x_n$, ent\ao
 \[
@@ -1099,7 +1099,7 @@ p(x_1)\ee p(x_2)\ee \ldots \ee p(x_n),
 \]
 enquanto
 \[
-\exists x \textrm{ em } D \ni p(x)
+\exists x \textrm{ em } D \mid  p(x)
 \]
 \'e equivalente a uma disjun\caoi, isto \'e
 \[
@@ -1111,7 +1111,7 @@ Por exemplo, se $D=\{1,2,3,4\}$, $S=\{-1,0,1,2\}$ e $p$ \'e a fun\cao proposicio
 \]
 \'e falsa (pois $p(3)$ \'e falsa), enquanto
 \[
-\forall x \textrm{ em } S, p(x); \quad \exists x \textrm{ em } D \ni p(x); \quad \exists x \textrm{ em } S \ni p(x) 
+\forall x \textrm{ em } S, p(x); \quad \exists x \textrm{ em } D \mid  p(x); \quad \exists x \textrm{ em } S \mid  p(x) 
 \]
 s\ao verdade. Note que o valor verdade da fun\cao proposicional quantificada depende do dom\ih nio usado. Com $p$ e $S$ como acima, vamos dar uma olhada de outra forma.
 \[
@@ -1123,31 +1123,31 @@ p(-1)\ee p(0)\ee p(1) \ee p(2),
 \]
 enquanto,
 \[
-\exists x \textrm{ em } S \ni p(x)
+\exists x \textrm{ em } S \mid  p(x)
 \]
 \'e equivalente a
 \[
 p(-1)\ou p(0)\ou p(1) \ou p(2).
 \]
-Portanto, se voc\^e fosse uma programa de computador (digamos) checando os valores verdade para $\forall x \textrm{ em } S, p(x)$, voc\^e teria que tomar cada elemento $x$ em $S$ e verificar o valor verdade para $p(x)$. Assim que voc\^e encontrasse uma valor falso voc\^e retornaria o valor falso para $\forall x \textrm{ em } S, p(x)$, caso contr\'ario retornaria o valor verdade depois de verificar cada elemento de $S$. De forma similar, para determinar o valor verdade de $\exists x \textrm{ em } S \ni p(x)$, voc\^e tomaria cada elemento $x$ de $S$ e verificaria o valor verdade de $p(x)$. Assim que voc\^e encontrasse um verdade, voc\^e retornaria verdade para o valor verdade de $\exists x \textrm{ em } S \ni p(x)$, caso contr\'ario, voc\^e retornaria falso depois de verificar todos os elementos de $S$.
+Portanto, se voc\^e fosse uma programa de computador (digamos) checando os valores verdade para $\forall x \textrm{ em } S, p(x)$, voc\^e teria que tomar cada elemento $x$ em $S$ e verificar o valor verdade para $p(x)$. Assim que voc\^e encontrasse uma valor falso voc\^e retornaria o valor falso para $\forall x \textrm{ em } S, p(x)$, caso contr\'ario retornaria o valor verdade depois de verificar cada elemento de $S$. De forma similar, para determinar o valor verdade de $\exists x \textrm{ em } S \mid  p(x)$, voc\^e tomaria cada elemento $x$ de $S$ e verificaria o valor verdade de $p(x)$. Assim que voc\^e encontrasse um verdade, voc\^e retornaria verdade para o valor verdade de $\exists x \textrm{ em } S \mid  p(x)$, caso contr\'ario, voc\^e retornaria falso depois de verificar todos os elementos de $S$.
 
 Com o vimos acima, em mente devemos ser capazes de considerar o caso especial (degenerado) quando o dom\ih nio em quest\ao \'e vazio (cont\'em nenhum elemento). Por exemplo, qual valor verdade deve ser atribu\ih do as proposi\coes ``Todos matem\'aticos com altura superior a 3 metros gostam de chocolate'' e `` Existe um matem\'atico com mais de 3 metros de altura que gosta de chocolate''? Se $D$ \'e o conjunto dos matem\'aticos com mais de 3 metros de altura (um exemplo de conjunto vazio) e seja $p(x)$ ``$x$ gosta de chocolate'' as proposi\coes enunciadas se tornam 
 \[
-\forall x \textrm{ em } D, p(x) \quad \textrm{ e } \quad \exists x \textrm{ em } D \ni p(x).
+\forall x \textrm{ em } D, p(x) \quad \textrm{ e } \quad \exists x \textrm{ em } D \mid  p(x).
 \]
 Para o primeiro ser falso devemos encontrar matem\'atico alto que n\ao gosta de chocolate. Como n\ao h\'a (suficientes) matem\'aticos altos, certamente n\ao podemos encontrar um que n\ao goste de chocolate, assim, a primeira proposi\cao deve ser verdade. De forma similar, para a segunda ser verdade devemos encontrar um matem\'atico alto que goste de chocolate. N\ao podemos, logo a segunda proposi\cao \'e falsa. Para resumir, se $D$ \'e vazio ent\ao n\ao importando o que seja $p(x)$ temos,
 \[
-\forall x \textrm{ em } D, p(x) \textrm{ verdade } \quad \textrm{ e } \quad \exists x \textrm{ em } D \ni p(x) \textrm{ falso. }
+\forall x \textrm{ em } D, p(x) \textrm{ verdade } \quad \textrm{ e } \quad \exists x \textrm{ em } D \mid  p(x) \textrm{ falso. }
 \]
 O leitor pode n\ao gostar disso, mas \'e assim que \'e.
 
 Um pouco de reflex\ao revelar\'a como formar nega\coes de fun\coes proposicionais quantificadas. Considere, $\forall x \textrm{ em } D, p(x)$. Se esta proposi\cao \'e falsa ent\ao $p(x)$ n\ao \'e verdade para todas as interpreta\coes de $x$ em $D$, isto \'e, existe pelo menos um valor de $x$ tal que $p(x)$ \'e falso. Assim, vemos que:
 \[
-\nao(\forall x \textrm{ em } D, p(x))\leftrightarrow \exists x \textrm{ em } D \ni \nao p(x).
+\nao(\forall x \textrm{ em } D, p(x))\leftrightarrow \exists x \textrm{ em } D \mid  \nao p(x).
 \]
 Usando racioc\ih nio similar, obtemos 
 \[
-\nao(\exists x \textrm{ em } D \ni p(x))\leftrightarrow \forall x \textrm{ em } D, \nao p(x).
+\nao(\exists x \textrm{ em } D \mid  p(x))\leftrightarrow \forall x \textrm{ em } D, \nao p(x).
 \]
 Se $D$, \'e finito, estas s\ao apenas extens\oes das leis de DeMorgan, tente criar um exemplo para ver isso.
 
@@ -1157,16 +1157,16 @@ Para ilustrar a nega\cao de uma fun\cao proposicional quantificada, considere
 \]
 Usando as ideias acima, obtemos como nega\cao
 \[
-\exists x \textrm{ em } D \ni [p(x) \ee \nao q(x)].
+\exists x \textrm{ em } D \mid  [p(x) \ee \nao q(x)].
 \]
 
 Uma das principais dificuldades para lidar com as fun\coes proposicionais quantificadas dadas em nossa l\ih ngua (neste caso Portugu\^es) \'e determinar a correta forma l\'ogica das declara\coes quantificadas. \'E claro que, se nos \'e dado algo como ``Existe um inteiro tal que seu quadrado \'e $9$,'' \'e f\'acil ver que que sua forma \'e
 \[
-\exists x \textrm{ em } \mathbb{Z} \ni p(x),
+\exists x \textrm{ em } \mathbb{Z} \mid  p(x),
 \]
 onde $\mathbb{Z}$ \'e o conjunto dos inteiros e $p(x)$ \'e ``$x^2=9$.'' Infelizmente, na maior parte dos casos a representa\cao em Portugu\^es n\ao \'e t\ao simples e uma tradu\cao correta em s\ih mbolos (que mostra claramente a forma l\'ogica)  requer um entendimento do significado  da senten\cc a. A tradu\cao n\ao pode ser feita de uma maneira determinada e f\'acil, ou de acordo a um simples algoritmo. \`As vezes, a pr\'opria quantifica\cao n\ao \'e mencionada explicitamente, mas entendida ou inferida. Isto, tamb\'em, \'e verdade para o dom\ih nio, mesmo que o quantificador estiver presente. Por exemplo,  a maioria das defini\coes e teoremas matem\'aticos envolvem quantificadores, entretanto, muito frequentemente n\ao est\ao aparentes para os leitor descuidado (claro que nenhum de nosos leitores estuda matem\'atica de forma descuidada). Assim, ``Se $f$ \'e diferenci\'avel ent\ao \'e cont\ih nua'' realmente significa ``Para todas as fun\coes $f$ (em algum conjunto de fun\cois), se $f$ \'e diferenci\'avel, ent\ao $f$ \'e cont\ih nua.'' \'E geralmente uma aposta segura assumir que todo teorema tem um quantificador universal escondido em algum lugar, expressado ou impl\ih cito.
 
-Al\'em de encontrar os quantificadores, outro problema que pode surgir \'e a determina\cao da forma correta para a fun\cao proposicional quantificada. Por exemplo, ``Todos estudantes de l\'ogica entendem quantificadores'' claramente envolve o quantificador universal, mas qual \'e a sua forma correta? Se deixamos o dom\ih nio $D$ ser o conjunto dos estudantes, $p(x)$ ser\'a ``$x$ \'e um estudante de l\'ogica'' e $q(x)$ ser\'a ``$x$ entende quantificadores'' ent\ao a possibilidade parece ser $\forall x \textrm{ em } D, p(x)\ee q(x)$. Mas isto significa ``Todo estudante \'e um estudante de l\'ogica e entende quantificadores'', que n\ao \'e a mensagem da proposi\cao original. A correta interpreta\cao \'e: ``$\forall x \textrm{ em } D, p(x)\to q(x)$,'' que significa ``Para todo estudante, se o estudante \'e um estudante de l\'ogica ent\ao aquele estudante entende quantificadores.''  De forma similar, podemos ficar tentados a representar ``Alguns estudantes de l\'ogica entendem quantificadores'' por $\exists x \textrm{ em } D \ni p(x)\to q(x)$. Entretanto, isto n\ao est\'a correto, pode n\ao existir estudantes de l\'ogica em nosso conjunto de estudantes, fazendo $\exists x \textrm{ em } D \ni p(x)\to q(x)$ ser verdade enquanto a verdadeira proposi\cao ser\'a verdade somente se existir pelo menos um estudante de l\'ogica o qual entende de quantificadores. A proposi\cao dada pode ser corretamente interpretada por $\exists x \textrm{ em } D \ni p(x)\ee q(x)$, que significa que existe pelo menos um estudante que \'e estudante de l\'ogica e que entende de quantificadores. Devemos perceber que estas formas s\ao de alguma meneira dependentes do dom\ih nio pois se simplificamos coisas ou restringimos nosso dom\ih nio para apenas o conjunto de estudante de l\'ogica (digamos $D'$), ent\ao a primeira proposi\cao se torna $\forall x \textrm{ em } D', q(x)$ e a segunda se torna $\exists x \textrm{ em } D' \ni q(x)$. Para resumir:
+Al\'em de encontrar os quantificadores, outro problema que pode surgir \'e a determina\cao da forma correta para a fun\cao proposicional quantificada. Por exemplo, ``Todos estudantes de l\'ogica entendem quantificadores'' claramente envolve o quantificador universal, mas qual \'e a sua forma correta? Se deixamos o dom\ih nio $D$ ser o conjunto dos estudantes, $p(x)$ ser\'a ``$x$ \'e um estudante de l\'ogica'' e $q(x)$ ser\'a ``$x$ entende quantificadores'' ent\ao a possibilidade parece ser $\forall x \textrm{ em } D, p(x)\ee q(x)$. Mas isto significa ``Todo estudante \'e um estudante de l\'ogica e entende quantificadores'', que n\ao \'e a mensagem da proposi\cao original. A correta interpreta\cao \'e: ``$\forall x \textrm{ em } D, p(x)\to q(x)$,'' que significa ``Para todo estudante, se o estudante \'e um estudante de l\'ogica ent\ao aquele estudante entende quantificadores.''  De forma similar, podemos ficar tentados a representar ``Alguns estudantes de l\'ogica entendem quantificadores'' por $\exists x \textrm{ em } D \mid  p(x)\to q(x)$. Entretanto, isto n\ao est\'a correto, pode n\ao existir estudantes de l\'ogica em nosso conjunto de estudantes, fazendo $\exists x \textrm{ em } D \mid  p(x)\to q(x)$ ser verdade enquanto a verdadeira proposi\cao ser\'a verdade somente se existir pelo menos um estudante de l\'ogica o qual entende de quantificadores. A proposi\cao dada pode ser corretamente interpretada por $\exists x \textrm{ em } D \mid  p(x)\ee q(x)$, que significa que existe pelo menos um estudante que \'e estudante de l\'ogica e que entende de quantificadores. Devemos perceber que estas formas s\ao de alguma meneira dependentes do dom\ih nio pois se simplificamos coisas ou restringimos nosso dom\ih nio para apenas o conjunto de estudante de l\'ogica (digamos $D'$), ent\ao a primeira proposi\cao se torna $\forall x \textrm{ em } D', q(x)$ e a segunda se torna $\exists x \textrm{ em } D' \mid  q(x)$. Para resumir:
 \[
 \textrm{todo $p$ \'e um $q$}
 \]
@@ -1180,7 +1180,7 @@ enquanto para
 \]
 \'e dado por
 \[
-\exists x \textrm{ em } D \ni p(x)\ee q(x),
+\exists x \textrm{ em } D \mid  p(x)\ee q(x),
 \]
 ($D$ sendo o dom\ih nio em quest\aoi).
 
@@ -1194,8 +1194,8 @@ Procedendo com a nega\cao passo a passo, temos
 
 \begin{tabular}{l}
 $\nao[\forall x \textrm{ em } D, p(x)\to q(x)]$ \\
-$\leftrightarrow \exists x \textrm{ em } D \ni \nao[p(x)\to q(x)]$  \\
-$\leftrightarrow \exists x \textrm{ em } D \ni p(x) \ee\nao q(x)$.
+$\leftrightarrow \exists x \textrm{ em } D \mid  \nao[p(x)\to q(x)]$  \\
+$\leftrightarrow \exists x \textrm{ em } D \mid  p(x) \ee\nao q(x)$.
 \end{tabular}
 
 Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' \'e ``Existe um estudante que \'e estudante de l\'ogica e que n\ao entende quantificadores,'' ou, ainda mais, no estilo da proposi\cao original ``Alguns estudante de l\'ogica n\ao entendem quantificadores.'' Para um entendimento mais profundo voc\^e poderia se perguntar ``O que faria `Todos os estudante de l\'ogica entende quantificadores' ser falsa?'' Depois de um pouco de reflex\aoi, responder\ih amos, ``Tem que existir um estudante de l\'ogica que n\ao entende quantificadores,'' que, claramente, ser\'a verdade quando nossa nega\cao ``Algum estudante de l\'ogica n\ao entende quantificadores'' \'e verdade.
@@ -1238,11 +1238,11 @@ Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' 
 \item $\forall x \textrm{ em } D, p(x)\to q(x)$.
 \item $\forall x \textrm{ em } D, p(x)\ou r(x)$.
 \item $\forall x \textrm{ em } D, p(x)\ee q(x)$.
-\item $\exists x \textrm{ em } D \ni r(x)$.
-\item $\exists x \textrm{ em } D \ni p(x)\ee q(x)$.
-\item $\exists x \textrm{ em } D \ni p(x)\to q(x)$.
-\item $\exists x \textrm{ em } D \ni q(x)\to q(x+1)$.
-\item $\exists x \textrm{ em } D \ni p(x) \leftrightarrow q(x+1)$.
+\item $\exists x \textrm{ em } D \mid  r(x)$.
+\item $\exists x \textrm{ em } D \mid  p(x)\ee q(x)$.
+\item $\exists x \textrm{ em } D \mid  p(x)\to q(x)$.
+\item $\exists x \textrm{ em } D \mid  q(x)\to q(x+1)$.
+\item $\exists x \textrm{ em } D \mid  p(x) \leftrightarrow q(x+1)$.
 \item $\forall x \textrm{ em } D, r(x)\to p(x)$.
 \item $\forall x \textrm{ em } D, p(x)\to\nao q(x)$.
 \item $\forall x \textrm{ em } D, p(x)\to p(x+2)$.
@@ -1256,12 +1256,12 @@ Assim, a nega\cao de ``Todos estudantes de l\'ogica entendem quantificadores.'' 
 %excercicio5
 \item As seguintes proposi\coes s\ao sempre, \`as vezes ou nunca verdade? D\^e exemplos de dom\ih nios $D$ e a fun\cao proposicional $p$ ou raz\oes para justificar suas respostas. 
 \begin{enumerate}[a)]
-\item $[\forall x \textrm{ em } D, p(x)]\to[\exists x \textrm{ em } D \ni p(x)]$.
-\item $[\exists x \textrm{ em } D \ni p(x)]\to[\forall x \textrm{ em } D, p(x)]$.
+\item $[\forall x \textrm{ em } D, p(x)]\to[\exists x \textrm{ em } D \mid  p(x)]$.
+\item $[\exists x \textrm{ em } D \mid  p(x)]\to[\forall x \textrm{ em } D, p(x)]$.
 \item $[\forall x \textrm{ em } D, \nao p(x)]\to\nao[\forall x \textrm{ em } D, p(x)]$.
-\item $[\exists x \textrm{ em } D \ni \nao p(x)]\to \nao[\exists x \textrm{ em } D \ni p(x)]$.
+\item $[\exists x \textrm{ em } D \mid  \nao p(x)]\to \nao[\exists x \textrm{ em } D \mid  p(x)]$.
 \item $\nao[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, \nao p(x)]$.
-\item $\nao[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni \nao p(x)]$.
+\item $\nao[\exists x \textrm{ em } D \mid  p(x)]\to[\exists x \textrm{ em } D \mid  \nao p(x)]$.
 \end{enumerate}
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1282,15 +1282,15 @@ Muitas senten\cc as matem\'aticas envolvem mais de um quantificador. Alguns exem
 
 Vamos dar uma olhada na estrutura de uma proposi\cao envolvendo dois quantificadores diferentes, digamos
 \[
-\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y).
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y).
 \]
 Como lemos isto? Como sempre, lemos da direita para a esquerda, a proposi\cao acima significa
 \[
-\forall x \textrm{ em } S, [\exists y \textrm{ em } T \ni  p(x,y)].
+\forall x \textrm{ em } S, [\exists y \textrm{ em } T \mid   p(x,y)].
 \]
 Assim, se $S=\{1,2\}$ e $T=\{3,4\}$ ent\ao teremos (aplicando o quantificador universal primeiro, como requerido):
 \[
-[\exists y \textrm{ em } T \ni  p(1,y)]\ee[\exists y \textrm{ em } T \ni  p(2,y)].
+[\exists y \textrm{ em } T \mid   p(1,y)]\ee[\exists y \textrm{ em } T \mid   p(2,y)].
 \]
 Agora, aplicando o quantificador existencial
 \begin{equation}\label{quant1}
@@ -1298,7 +1298,7 @@ Agora, aplicando o quantificador existencial
 \end{equation}
 Em contraste, considere a mesma fun\cao proposicional com a ordem dos quantificadores invertida, isto \'e
 \[
-\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y).
+\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y).
 \]
 Procedendo da mesma forma, obtemos
 \[
@@ -1312,11 +1312,11 @@ Note que as duas fun\coes proposicionais apresentadas n\ao s\ao equivalentes, po
 
 Um exemplo um pouco mais concreto disso \'e: sejam $S=\{1,2\}$ e $p(x,y)$ ``$x=y.$'' Ent\ao (o leitor dever\'a fornecer os detalhes)
 \[
-\forall x \textrm{ em } S, \exists y \textrm{ em } S \ni  p(x,y)
+\forall x \textrm{ em } S, \exists y \textrm{ em } S \mid   p(x,y)
 \]
 se torna
 \[
-[\exists y \textrm{ em } S \ni  1=y]\ee[\exists y \textrm{ em } S \ni  2=y]
+[\exists y \textrm{ em } S \mid   1=y]\ee[\exists y \textrm{ em } S \mid   2=y]
 \]
 que \'e,
 \[
@@ -1324,7 +1324,7 @@ que \'e,
 \]
 uma proposi\cao verdadeira, enquanto
 \[
-\exists y \textrm{ em } S \ni \forall x \textrm{ em } S, p(x,y)
+\exists y \textrm{ em } S \mid  \forall x \textrm{ em } S, p(x,y)
 \]
 \'e
 \[
@@ -1338,11 +1338,11 @@ uma proposi\cao falsa.
 
 Note que se a proposi\cao da forma
 \[
-\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y)
 \]
 \'e verdadeira, ent\ao para cada $x$ em $S$ deve necessariamente existir algum $y$ em $T$ tal que $p(x,y)$ seja verdade, entretanto a escolha de $y$ pode depender da escolha de $x$. Por outro lado, para que
 \[
-\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y)
 \]
 seja verdade deve existir algum $y$ em $T$, digamos $y_0$, tal que, para este particular $y_0$, $p(x,y_0)$ seja verdade para cada escolha de $x$ em $S$.
 
@@ -1386,15 +1386,15 @@ Agora, suponha que $p(1,1)$, $p(2,3)$, $p(3,2)$ e $p(4,1)$ s\ao verdade e para t
 \end{table}
 Baseada na figura acima vemos que para
 \begin{equation}\label{quant3}
-\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y)
 \end{equation}
 ser verdade deve existir pelo menos um ret\^angulo em cada coluna vertical, enquanto para
 \begin{equation}\label{quant4}
-\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y)
 \end{equation}
 ser verdade deve existir uma linha horizontal inteira de ret\^angulos. Assim, para o exemplo dado, (\ref{quant3}) \'e verdade enquanto (\ref{quant4}) \'e falsa. Deve estar claro que sempre que (\ref{quant4}) for verdade (uma linha inteira de ret\^angulos), (\ref{quant3}) deve tamb\'em ser verdade (pelo menos um ret\^angulo em cada coluna).
 
-Para um exemplo mais ``caseiro'' disso, sejam $S$ o conjunto de todas as pessoas e $p(x,y)$ representando ``$y$ \'e m\~ae de $x$.'' Ent\ao $\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)$ significa todo mundo tem uma m\~ae enquanto $\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)$ significa que existe uma pessoa que \'e m\~ae de todo mundo, claramente duas senten\cc as diferentes.
+Para um exemplo mais ``caseiro'' disso, sejam $S$ o conjunto de todas as pessoas e $p(x,y)$ representando ``$y$ \'e m\~ae de $x$.'' Ent\ao $\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y)$ significa todo mundo tem uma m\~ae enquanto $\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y)$ significa que existe uma pessoa que \'e m\~ae de todo mundo, claramente duas senten\cc as diferentes.
 
 Vamos tentar entender outro exemplo caseiro: ``Para cada cachorro no sof\'a existe uma pulga no carpete com a propriedade que se o cachorro \'e preto ent\ao a pulga mordeu o cachorro.'' Algumas quest\oes que devemos ser capazes de responder (se entendemos o significado da senten\cc a) são: 
 \begin{itemize}
@@ -1410,30 +1410,30 @@ Vamos tentar entender outro exemplo caseiro: ``Para cada cachorro no sof\'a exis
 \end{itemize}
 Como responder\ih amos estas quest\ois? Se n\ao podemos respondê-las imediatamente, uma boa maneira para come\cc ar \'e traduzir a proposi\cao para a forma simb\'olica. Sejam $S$ o conjunto dos cachorros, $C$ o conjunto das pulgas no carpete, $p(x)$ ``$x$ \'e preto'', e $q(x,y)$  ``$y$ mordeu $x$.'' Ent\ao a proposi\cao \'e
 \[
-\forall x \textrm{ em } S, \exists y \textrm{ em } C \ni  p(x)\to q(x,y).
+\forall x \textrm{ em } S, \exists y \textrm{ em } C \mid   p(x)\to q(x,y).
 \]
 A nega\cao pode ser tratada de uma maneira simples passo a passo:
 \begin{equation*}
  \begin{aligned}
-&\nao[\forall x \textrm{ em } S, \exists y \textrm{ em } C \ni  p(x)\to q(x,y)]\\
-&\leftrightarrow \exists x \textrm{ em } S \ni \nao[\exists y \textrm{ em } C \ni  p(x)\to q(x,y)]\\
-&\leftrightarrow \exists x \textrm{ em } S \ni \forall y \textrm{ em } C,  \nao[p(x)\to q(x,y)]\\
-&\leftrightarrow \exists x \textrm{ em } S \ni \forall y \textrm{ em } C,  p(x)\ee\nao q(x,y).
+&\nao[\forall x \textrm{ em } S, \exists y \textrm{ em } C \mid   p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \mid  \nao[\exists y \textrm{ em } C \mid   p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \mid  \forall y \textrm{ em } C,  \nao[p(x)\to q(x,y)]\\
+&\leftrightarrow \exists x \textrm{ em } S \mid  \forall y \textrm{ em } C,  p(x)\ee\nao q(x,y).
  \end{aligned}
 \end{equation*}
 Assim a nega\caoi, em Portugu\^es, \'e ``Existe um cachorro no sof\'a tal que, para cada pulga no carpete, o cachorro \'e preto e a pulga n\ao mordeu o cachorro,'' ou de forma mais fluida, ``Tem um cachorro preto no sof\'a que n\ao foi mordido.'' Agora devemos ser capazes de responder as outras quest\~oes que foram formuladas anteriormente. Na situa\cao a) a proposi\cao \'e verdade pois deve existir um cachorro preto n\ao mordido para esta ser falsa; a situa\cao b) \'e verdade pois $q(x,y)$ ser\'a verdade para todos os cachorros $x$; a situ\cao c) \'e falsa pois sua nega\cao \'e verdade. O valor verdade na situa\cao na situa\cao d) n\ao pode ser decidido sem mais informa\cois. Se existe um cachorro preto no sof\'a ent\ao a proposi\cao \'e falsa, se n\ao h\'a cachorros pretos ent\ao \'e verdade. Isto nos d\'a um exemplo de uma variedade de quest\oes que podemos ser capazes de responder se entendermos so significado de tal fun\cao proposicional quantificada.
 
 Com dois quantificadores e dois dom\ih nios existem oito ordens poss\ih veis nas quais os quantificadores podem ocorrer. J\'a notamos que quando os quantificadores s\ao mistos (isto \'e, um universal e um existencial), a ordem \'e importante:
 \[
-\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)
+\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y)
 \]
 n\ao \'e necessariamente o mesmo que
 \[
-\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)
+\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y)
 \]
 Se ambos os quantificadores s\ao os mesmos, temos equival\^encia (isto se deve ao fato que os conectivos s\ao todos os mesmos, $\ou$ para $\exists$ e $\ee$ para $\forall$; apenas a ordem \'e diferente e sabemos que ambos $\ou$ e $\ee$ comutam), assim:
 \[
-[\exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y)]\leftrightarrow[\exists y \textrm{ em } T \ni \exists x \textrm{ em } S \ni p(x,y)]
+[\exists x \textrm{ em } S \mid  \exists y \textrm{ em } T \mid  p(x,y)]\leftrightarrow[\exists y \textrm{ em } T \mid  \exists x \textrm{ em } S \mid  p(x,y)]
 \]
 e
 \[
@@ -1443,12 +1443,12 @@ Se o dom\ih nio \'e o mesmo para ambos os quantificadores, geralmente encurtamos
 \begin{equation*}
  \begin{aligned}
   &\forall x,y \textrm{ em } S, p(x,y) \textrm{ para }  \forall x \textrm{ em } S, \forall y \textrm{ em } T, p(x,y) \textrm{ e }\\
-  &\exists x,y \textrm{ em } S \ni p(x,y) \textrm{ para } \exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y).
+  &\exists x,y \textrm{ em } S \mid  p(x,y) \textrm{ para } \exists x \textrm{ em } S \mid  \exists y \textrm{ em } T \mid  p(x,y).
  \end{aligned}
 \end{equation*}
 Enquanto as forma mistas n\ao s\ao equivalentes, podemos dizer que
 \[
-[\exists y \textrm{ em } T \ni \forall x \textrm{ em } S, p(x,y)]\Rightarrow[\forall x \textrm{ em } S, \exists y \textrm{ em } T \ni  p(x,y)].
+[\exists y \textrm{ em } T \mid  \forall x \textrm{ em } S, p(x,y)]\Rightarrow[\forall x \textrm{ em } S, \exists y \textrm{ em } T \mid   p(x,y)].
 \]
 Isto se deve ao fato, como observamos acima, que se o lado esquerdo \'e verdadeiro ent\ao existe pelo menos um elemento de $T$, digamos $y_0$, que faz $p(x,y_0)$ ser verdade para todos os $x$ em $S$, portanto este $y_0$ pode ser usado para cada $x$ no lado direito.
 
@@ -1475,11 +1475,11 @@ enquanto que a segunda \'e
 \]
 A raz\ao para estas duas proposic\oes n\ao serem equivalentes \'e essencialmente a mesma raz\ao para n\ao termos equival\^encia para quantificadores mistos; o $\forall$ envolve ``e's'' e tomado em conjun\cao com o ``ou,'' a ordem na qual as interpret\coes ocorrem muda de sentido. Usando o mesmo racioc\ih nio poder\ih amos suspeitar que
 \[
-\exists x \textrm{ em } D \ni [p(x)\ee q(x)],
+\exists x \textrm{ em } D \mid  [p(x)\ee q(x)],
 \]
 e
 \[
-[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)],
+[\exists x \textrm{ em } D \mid  p(x)]\ee[\exists x \textrm{ em } D \mid  q(x)],
 \]
 n\ao sejam equivalentes. Tamb\'em, como $p\to q$ \'e equivalente a uma disjun\cao $(\nao p \ou q)$, esperar\ih amos que
 \[
@@ -1492,7 +1492,7 @@ e
 n\ao sejam equivalentes. Nossas supeitas s\ao bem fundamentadas como nenhum destes pares \'e equivalente. Entretanto, em cada par existe uma que implica a outra, portanto temos as seguintes implica\coes l\'ogicas:
 \begin{eqnarray*}
 \{[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]\} \Rightarrow \forall x \textrm{ em } D, [p(x)\ou q(x)],\\
-\exists x \textrm{ em } D \ni [p(x)\ee q(x)] \Rightarrow \{[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]\}, \\
+\exists x \textrm{ em } D \mid  [p(x)\ee q(x)] \Rightarrow \{[\exists x \textrm{ em } D \mid  p(x)]\ee[\exists x \textrm{ em } D \mid  q(x)]\}, \\
 \forall x \textrm{ em } D, [p(x)\to q(x)] \Rightarrow \{[\forall x \textrm{ em } D, p(x)]\to[\forall x \textrm{ em } D, q(x)]\}.
 \end{eqnarray*} 
 Devemos, tamb\'em, suspeitar que a ordem de ``$\forall$'' e ``$\ee$'' ou ``$\exists$'' e ``$\ou$'' n\ao muda o significado e, novamente, estaria correto que
@@ -1501,7 +1501,7 @@ Devemos, tamb\'em, suspeitar que a ordem de ``$\forall$'' e ``$\ee$'' ou ``$\exi
 \]
 e
 \[
-\exists x \textrm{ em } D \ni [p(x)\ou q(x)] \Leftrightarrow \{[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]\}.
+\exists x \textrm{ em } D \mid  [p(x)\ou q(x)] \Leftrightarrow \{[\exists x \textrm{ em } D \mid  p(x)]\ou[\exists x \textrm{ em } D \mid  q(x)]\}.
 \]
 
 As ideias e m\'etodos de an\'alise que usamos para senten\cc as envolvendo dois quantificadores podem ser extendidas para tr\^es (ou mais) quantificadores. Alguns destes exemplos foram inclu\ih dos nos exerc\ih cios.
@@ -1532,12 +1532,12 @@ As ideias e m\'etodos de an\'alise que usamos para senten\cc as envolvendo dois 
 %excercicio3
 \item Sejam $p(x,y)$ representando ``$x+2>y$'' e $D$ o conjunto dos n\'umeros naturais ($D=\{1,2,3,\ldots\}$, tamb\'em denotado por $\mathbb{N}$). Escreva em palavras e determine o valor verdade de
 \begin{enumerate}[a)]
-\item $\forall x \textrm{ em } D, \exists y \textrm{ em } D \ni p(x,y)$.
-\item $\exists x \textrm{ em } D \ni \forall y \textrm{ em } D, p(x,y)$.
+\item $\forall x \textrm{ em } D, \exists y \textrm{ em } D \mid  p(x,y)$.
+\item $\exists x \textrm{ em } D \mid  \forall y \textrm{ em } D, p(x,y)$.
 \item $\forall x \textrm{ em } D, \forall y \textrm{ em, } p(x,y)$.
-\item $\exists x \textrm{ em } D \ni \exists y \textrm{ em } D \ni p(x,y)$.
-\item $\forall y \textrm{ em } D, \exists x \textrm{ em } D \ni p(x,y)$.
-\item $\exists y \textrm{ em } D \ni \forall x \textrm{ em } D, p(x,y)$.
+\item $\exists x \textrm{ em } D \mid  \exists y \textrm{ em } D \mid  p(x,y)$.
+\item $\forall y \textrm{ em } D, \exists x \textrm{ em } D \mid  p(x,y)$.
+\item $\exists y \textrm{ em } D \mid  \forall x \textrm{ em } D, p(x,y)$.
 \end{enumerate} 
 
 %excercicio4
@@ -1547,30 +1547,30 @@ As ideias e m\'etodos de an\'alise que usamos para senten\cc as envolvendo dois 
 \item $[\forall x \textrm{ em } D, p(x)]\ee[\forall x \textrm{ em } D, q(x)]$.
 \item $\forall x \textrm{ em } D, [p(x)\ou q(x)]$.
 \item $[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]$.
-\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]$.
-\item $[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]$.
-\item $\exists x \textrm{ em } D \ni [p(x)\ou q(x)]$.
-\item $[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]$.
-\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]$.
-\item $[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]$.
+\item $\exists x \textrm{ em } D \mid  [p(x)\ee q(x)]$.
+\item $[\exists x \textrm{ em } D \mid  p(x)]\ee[\exists x \textrm{ em } D \mid  q(x)]$.
+\item $\exists x \textrm{ em } D \mid  [p(x)\ou q(x)]$.
+\item $[\exists x \textrm{ em } D \mid  p(x)]\ou[\exists x \textrm{ em } D \mid  q(x)]$.
+\item $\exists x \textrm{ em } D \mid  [p(x)\to q(x)]$.
+\item $[\exists x \textrm{ em } D \mid  p(x)]\to[\exists x \textrm{ em } D \mid  q(x)]$.
 \end{enumerate}
 
 %excercicio5
 \item D\^e alguns exemplos para mostrar que as seguintes implica\coes l\'ogicas n\ao s\ao equival\^encias l\'ogicas:
 \begin{enumerate}[a)]
 \item $\{[\forall x \textrm{ em } D, p(x)]\ou[\forall x \textrm{ em } D, q(x)]\}\Rightarrow \forall x \textrm{ em } D, [p(x)\ou q(x)]$.
-\item $\exists x \textrm{ em } D \ni [p(x)\ee q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ee[\exists x \textrm{ em } D \ni q(x)]\}$.
-\item $\exists x \textrm{ em } D \ni [p(x)\to q(x)]\Rightarrow\{[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)]\}$.
+\item $\exists x \textrm{ em } D \mid  [p(x)\ee q(x)]\Rightarrow\{[\exists x \textrm{ em } D \mid  p(x)]\ee[\exists x \textrm{ em } D \mid  q(x)]\}$.
+\item $\exists x \textrm{ em } D \mid  [p(x)\to q(x)]\Rightarrow\{[\exists x \textrm{ em } D \mid  p(x)]\to[\exists x \textrm{ em } D \mid  q(x)]\}$.
 \end{enumerate}
 
 %excercicio6
 \item Determine a rela\cao (se existir uma) entre
 \[
-\exists x \textrm{ em } D \ni [p(x)\to q(x)]
+\exists x \textrm{ em } D \mid  [p(x)\to q(x)]
 \]
 e
 \[
-[\exists x \textrm{ em } D \ni p(x)]\to[\exists x \textrm{ em } D \ni q(x)].
+[\exists x \textrm{ em } D \mid  p(x)]\to[\exists x \textrm{ em } D \mid  q(x)].
 \]
 
 %excercicio7
@@ -1578,7 +1578,7 @@ e
 \begin{enumerate}[a)]
 \item 
 \[
-[\exists x \textrm{ em } S \ni \exists y \textrm{ em } T \ni p(x,y)]\Leftrightarrow[\exists y \textrm{ em } T \ni \exists x \textrm{ em } S \ni p(x,y)]
+[\exists x \textrm{ em } S \mid  \exists y \textrm{ em } T \mid  p(x,y)]\Leftrightarrow[\exists y \textrm{ em } T \mid  \exists x \textrm{ em } S \mid  p(x,y)]
 \]
 e
 \[
@@ -1591,7 +1591,7 @@ e
 \]
 e
 \[
-\exists x \textrm{ em } D \ni [p(x)\ou q(x)]\Leftrightarrow\{[\exists x \textrm{ em } D \ni p(x)]\ou[\exists x \textrm{ em } D \ni q(x)]\}.
+\exists x \textrm{ em } D \mid  [p(x)\ou q(x)]\Leftrightarrow\{[\exists x \textrm{ em } D \mid  p(x)]\ou[\exists x \textrm{ em } D \mid  q(x)]\}.
 \]
 \end{enumerate}
 

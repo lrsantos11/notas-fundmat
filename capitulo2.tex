@@ -65,7 +65,7 @@ A \subseteq B \leftrightarrow (\forall x,\espaco x\in A \to x\in B).
 \]
 Se $A$ n\ao \'e um subconjunto de $B$, escreveremos $A\not\subseteq B$. Aplicando nossas t\'ecnicas para nega\cao de fun\coes proposicionais quantificadas obtemos:
 \[
-A\not\subseteq B \leftrightarrow \nao(\forall x,\espaco x\in A \to x\in B) \leftrightarrow (\exists x \ni \espaco x\in A \to x\notin B).
+A\not\subseteq B \leftrightarrow \nao(\forall x,\espaco x\in A \to x\in B) \leftrightarrow (\exists x \mid  \espaco x\in A \to x\notin B).
 \]
 Note que, para qualquer conjunto $A$, \'e verdade que $A \subseteq A$. Se $A \subseteq B$ mas $A\neq B$ ent\ao diremos que $A$ \'e um {\it subconjunto pr\'oprio}\index{Subconjunto Pr\'oprio} de $B$ e escrevemos
 \[
@@ -520,7 +520,7 @@ A\Longrightarrow B,
 \]
 e se somente se,
 \[
-\forall p\in B,\exists q_1,q_2,\ldots,q_n \in A \ni (q_1\ee q_2\ee \ldots \ee q_n)\Rightarrow p.
+\forall p\in B,\exists q_1,q_2,\ldots,q_n \in A \mid  (q_1\ee q_2\ee \ldots \ee q_n)\Rightarrow p.
 \]
 Assim, se $A$ \'e mais forte que $B$, ent\ao toda proposi\cao pertencente a $B$ \'e uma consequ\^encia l\'ogica de uma conjun\cao de proposi\coes pertencentes a $A$. Por exemplo, se
 \begin{equation*}
@@ -606,7 +606,7 @@ Vejamos o que quantificadores significam em termos de conjuntos verdade:
 \begin{equation*}
  \begin{aligned}
 & \forall x \in D, p(x)\leftrightarrow P=D,\\
-& \exists x \in D \ni p(x)\leftrightarrow P\neq\varnothing.
+& \exists x \in D \mid  p(x)\leftrightarrow P\neq\varnothing.
  \end{aligned}
 \end{equation*}
 Al\'em disso, agora podemos ser um pouco mais expl\ih citos sobre o que quisemos dizer acima quando falamos que duas fun\coes proposicionais eram equivalentes. Quisemos dizer que seus conjuntos verdade s\ao iguais, isto \'e,
@@ -635,7 +635,7 @@ portanto,
 \]
 Da mesma forma,
 \[
-\exists x\in D\ni p(x)\ou q(x)
+\exists x\in D\mid  p(x)\ou q(x)
 \]
 ser\'a verdade se e somente se
 \[
@@ -647,7 +647,7 @@ P\neq\varnothing \textrm{ ou } Q\neq\varnothing,
 \]
 consequentemente, isto \'e equivalente a 
 \[
-[\exists x\in D\ni p(x)]\ou[\exists x\in D\ni q(x)].
+[\exists x\in D\mid  p(x)]\ou[\exists x\in D\mid  q(x)].
 \]
 Al\'em disso,
 \[
@@ -696,7 +696,7 @@ ser\'a verdade quando $P=Q=D$ ou quando $P\neq D$ ($Q$ pode ser qualquer coisa n
 \item O conjunto verdade para $r(x)\to\nao p(x)$.
 \item $P^C\uni Q$.
 \item A fun\cao proposicional que tem $\{1,2,3,5,7\}$ como seu conjunto verdade.
-\item O conjunto verdade de $\exists x \in D \ni r(x)\to p(x)$.
+\item O conjunto verdade de $\exists x \in D \mid  r(x)\to p(x)$.
 \item O conjunto verdade de $\forall x\in D, p(x)\ou q(x)$.
 \item O conjunto verdade de $[\forall x\in D, p(x)]\ou[\forall x\in D, q(x)]$.
 \item O conjunto verdade de $[\forall x\in D, q(x)]\to[\forall x\in D, r(x)]$.
@@ -709,8 +709,8 @@ ser\'a verdade quando $P=Q=D$ ou quando $P\neq D$ ($Q$ pode ser qualquer coisa n
 \item Considere os seguintes pares de proposi\cois. Para cada proposi\cao do par determine as condi\coes para $P,Q$ que garantam que ela seja verdade. E mostrar que sempre que a segunda (de cada par) seja verdade, a primeira dever\'a ser verdade. D\^e um exemplo para mostrar que a primeira pode ser verdade e a segunda falsa.
 \begin{enumerate}[a)]
 \item $[\forall x\in D, p(x)\ou q(x)]; [\forall x\in D, p(x) \ou \forall x \in D, q(x)]$.
-\item $[\exists x\in D\ni p(x)\ee \exists x\in D\ni q(x)];[\exists x\in D\ni p(x)\ee q(x)]$.
-\item $[\exists x\in D\ni p(x)\to q(x)];[\exists x\in D\ni p(x) \to \exists x\in D\ni q(x)]$.
+\item $[\exists x\in D\mid  p(x)\ee \exists x\in D\mid  q(x)];[\exists x\in D\mid  p(x)\ee q(x)]$.
+\item $[\exists x\in D\mid  p(x)\to q(x)];[\exists x\in D\mid  p(x) \to \exists x\in D\mid  q(x)]$.
 \end{enumerate}
 
 %excercicio4
@@ -823,7 +823,7 @@ R=\{(\varnothing,\varnothing),(\varnothing,\{1\}),(\varnothing,\{2\}),(\varnothi
 
 \item\label{relex9} Seja $\mathbb{R}$ o conjunto dos n\'umeros reais e para $x,y\in\mathbb{R}$ define-se $xRy$ se e somente se $x\leq y$ (note que: $x\leq y$ se e somente se $x<y$ ou $x=y$). Ent\ao $R$ \'e uma rela\cao em $\mathbb{R}$ com $\Dom(R)=\Ima(R)=\mathbb{R}$. Alguns elmentos t\ih picos pertencentes a $R$ s\ao $(2,3)$ $(2,2)$ $(3,\pi)$ $(\pi,4)$ $(2,e)$ ou $(e,3)$.
  
-\item\label{relex10} Seja $\mathbb{Z}$ o conjunto dos n\'umeros inteiros e para $x,y\in\mathbb{Z}$ definimos $xRy$ se e somente se $x$ divide $y$, denotados por $x|y$ (note que: isto est\'a definido como: $x|y\leftrightarrow\exists z\in \mathbb{Z},\ni y=xz$. Assim, $3|6$, $2|8$, $-3|6$, $3|-9$ e $2|0$, enquanto que $2$ n\ao divide $9$, denotado por $2\not\vert\espaco 9$). Ent\ao $R$ \'e uma rela\cao em $\mathbb{Z}$ com $\Dom(R)=\Ima(R)=\mathbb{Z}$ (todo inteiro divide a si mesmo). Alguns elementos t\ih picos pertencentes a $R$ s\ao $(1,3)$, $(7,21)$, $(1001,1001)$, $(-1,3)$, $(-2,6)$, $(1001,2002)$ e $(3,0)$.
+\item\label{relex10} Seja $\mathbb{Z}$ o conjunto dos n\'umeros inteiros e para $x,y\in\mathbb{Z}$ definimos $xRy$ se e somente se $x$ divide $y$, denotados por $x|y$ (note que: isto est\'a definido como: $x|y\leftrightarrow\exists z\in \mathbb{Z},\mid  y=xz$. Assim, $3|6$, $2|8$, $-3|6$, $3|-9$ e $2|0$, enquanto que $2$ n\ao divide $9$, denotado por $2\not\vert\espaco 9$). Ent\ao $R$ \'e uma rela\cao em $\mathbb{Z}$ com $\Dom(R)=\Ima(R)=\mathbb{Z}$ (todo inteiro divide a si mesmo). Alguns elementos t\ih picos pertencentes a $R$ s\ao $(1,3)$, $(7,21)$, $(1001,1001)$, $(-1,3)$, $(-2,6)$, $(1001,2002)$ e $(3,0)$.
 
 \item\label{relex11} Seja $\mathbb{N}$ o conjunto dos n\'umeros naturais e para $x,y\in\mathbb{N}$, define-se $xRy$ se e somente se $5|(x-y)$. Ent\ao $R$ \'e uma rela\cao em $\mathbb{N}$ com $\Dom(R)=\Ima(R)=\mathbb{N}$. Alguns exemplos t\ih picos pertencentes a $R$ s\ao $(10,5)$, $(5,10)$, $(3,43)$ e $(482,257)$. 
 \end{enumerate}
@@ -1232,7 +1232,7 @@ Embora possamos usar opera\coes de conjuntos para obter novas rela\coes de antig
 \begin{definb}
 Seja $R$ uma rela\cao de $A$ em $B$ e seja $S$ uma rela\cao de $B$ em $C$. Ent\ao $R$ {\it composta com}\index{Rela\caoi!Composta} $S$, denotada por $S\circ R$, \'e a rela\cao de $A$ em $C$ dada por 
 \[
-S\circ R=\{(x,z): \exists y\in B\ni [(x,y)\in R\ee (y,z)\in S]\}.
+S\circ R=\{(x,z): \exists y\in B\mid  [(x,y)\in R\ee (y,z)\in S]\}.
 \]
 \end{definb}
 
@@ -1642,7 +1642,7 @@ A demonstra\cao deste fato interessante ser\'a deixada como excerc\ih cio.
 \item Seja $\Pi$ uma parti\cao de $A$ e sejam $B,C\in\Pi$. Mostre que se $B\inter C=\varnothing$ ent\ao $B=C$
 
 %excercicio3
-\item\label{eqrexcerc3} Sejam $\Pi_1$ e $\Pi_2$ parti\coes de $A$. Dizemos que $\Pi_1$ \'e {\it mais fina}\index{Parti\cao Mais Fina} que $\Pi_2$ e escrevemos $\Pi_1\preceq\Pi_2$ se e somente se $\forall B\in \Pi_1, \exists C\in \Pi_2 \ni B\subseteq C$.
+\item\label{eqrexcerc3} Sejam $\Pi_1$ e $\Pi_2$ parti\coes de $A$. Dizemos que $\Pi_1$ \'e {\it mais fina}\index{Parti\cao Mais Fina} que $\Pi_2$ e escrevemos $\Pi_1\preceq\Pi_2$ se e somente se $\forall B\in \Pi_1, \exists C\in \Pi_2 \mid  B\subseteq C$.
 \begin{enumerate}[a)]
 \item Se $A=\{1,2,3,4\}$, d\^e exemplos de parti\coes $\Pi_1$ e $\Pi_2$ tais que:
 \begin{enumerate}[i.]
@@ -1768,7 +1768,7 @@ O seguinte teorema \'e \'util para determinar quando duas fun\coes s\ao iguais:
 Sejam $f:A\to B$ e $g:A\to B$. Ent\ao $f=g$ se e somente se $\forall x\in A, f(x)=g(x)$.
 \end{teob}
 \begin{proof}
-Primeiro, suponha que $f=g$ e seja $z\in A$. Ent\ao $\exists y\in B\ni (z,y)\in f$. Mas como $f=g$, $(z,y)\in g$. Assim $y=g(z)$ portanto $f(z)=g(z)$.
+Primeiro, suponha que $f=g$ e seja $z\in A$. Ent\ao $\exists y\in B\mid  (z,y)\in f$. Mas como $f=g$, $(z,y)\in g$. Assim $y=g(z)$ portanto $f(z)=g(z)$.
 
 Agora, suponha que $\forall x\in A, f(x)=g(x)$. Como fun\coes s\ao rela\coes e rela\coes s\ao conjuntos de pares ordenados, para mostrar que $f=g$ devemos mostrar que s\ao iguais como conjuntos de pares ordenados. Para este fim, seja $(w,z)\in f$. Ent\ao $z=f(w)=g(w)$, portanto $(w,z)\in g$ e assim temos que $f\subseteq g$. Trocando $f$ por $g$ no argumento acima, mostramos que $g\subseteq f$. Assim segue que $f=g$. 
 \end{proof}
@@ -2017,7 +2017,7 @@ R_{\phi}\sqsubseteq R_{\theta} \textrm{ se e somente se } R_{\phi}\subseteq R_{\
 
 \noindent \textit{\textbf{Conjectura:}} Seja $f:A\to B$ e seja $R$ uma ordem total estrita em $A$. Definimos a rela\cao $S$ em $B$ por
 \[
-xSy \leftrightarrow \exists a,b\in A \ni aRb\ee f(a)=x,f(b)=y.
+xSy \leftrightarrow \exists a,b\in A \mid  aRb\ee f(a)=x,f(b)=y.
 \]
 Ent\ao $S$ \'e uma ordem parcial estrita.
 
@@ -2113,7 +2113,7 @@ Seja $\bullet$ uma opera\cao bin\'aria em um conjunto $A$. Ent\aoi:
 \item Dizemos que $\bullet$ \'e {\it comutativa}\index{Opera\cao Bin\'aria!Comutativa} se e somente se $\forall a,b\in A, a\bullet b=b\bullet a$.
 \item Dizemos que $\bullet$ \'e {\it associativa}\index{Opera\cao Bin\'aria!Associativa} se e somente se $\forall a,b,c\in A, a\bullet(b\bullet c)=(a\bullet b)\bullet c$.
 \item Dizemos que $e\in A$ \'e uma {\it identidade}\index{Opera\cao Bin\'aria!Identidade} para $\bullet$ se e somente se $\forall a\in A, a\bullet e=e\bullet a=a$.
-\item Se $e$ \'e uma identidade para $\bullet$ e $x\in A$, dizemos que $x$ \'e {\it invert\ih vel}\index{Opera\cao Bin\'aria!Elemento Inverso} se e somente se $\exists y\in A \ni x\bullet y=y\bullet x=e$. Tal $y$ \'e chamado um {\it inverso} de $x$.
+\item Se $e$ \'e uma identidade para $\bullet$ e $x\in A$, dizemos que $x$ \'e {\it invert\ih vel}\index{Opera\cao Bin\'aria!Elemento Inverso} se e somente se $\exists y\in A \mid  x\bullet y=y\bullet x=e$. Tal $y$ \'e chamado um {\it inverso} de $x$.
 \item Dizemos que $a\in A$ \'e {\it idempotente}\index{Opera\cao Bin\'aria!Elemento Idempotente} para $\bullet$ se e somente se $a\cdot a=a$.
 \end{enumerate}
 \end{definb}
